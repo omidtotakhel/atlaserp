@@ -1,0 +1,2487 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_freight
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 10:16+0000\n"
+"PO-Revision-Date: 2026-07-01 10:16+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Chinese (Traditional)\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#, python-format
+msgid "%(count)d job(s) closed."
+msgstr "已關閉 %(count)d 個作業。"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#, python-format
+msgid "%(count)d job(s) marked delivered."
+msgstr "已將 %(count)d 個作業標記為已交付。"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#, python-format
+msgid "%(count)d job(s) marked in transit."
+msgstr "已將 %(count)d 個作業標記為運送中。"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#, python-format
+msgid "%(count)d job(s) moved to Booked."
+msgstr "已將 %(count)d 個作業移至「已預訂」。"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_kanban
+msgid "&gt;"
+msgstr ""
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+msgid "(none)"
+msgstr "(無)"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.container.iso.type,name:eh_log_freight.iso_22r1
+msgid "20-foot Reefer"
+msgstr "20 英尺冷藏櫃"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.container.iso.type,name:eh_log_freight.iso_22g1
+msgid "20-foot Standard Dry"
+msgstr "20 英尺標準乾貨櫃"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_iso_type_form
+msgid "40' High Cube Standard Container"
+msgstr "40' 高櫃標準貨櫃"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.container.iso.type,name:eh_log_freight.iso_45g1
+msgid "40-foot High Cube Dry"
+msgstr "40 英尺高櫃乾貨櫃"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.container.iso.type,name:eh_log_freight.iso_45r1
+msgid "40-foot Reefer High Cube"
+msgstr "40 英尺高櫃冷藏櫃"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.container.iso.type,name:eh_log_freight.iso_42g1
+msgid "40-foot Standard Dry"
+msgstr "40 英尺標準乾貨櫃"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_iso_type_form
+msgid "40HC"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:eh.log.freight.container.iso.type,name:eh_log_freight.iso_l5g1
+msgid "45-foot High Cube Dry"
+msgstr "45 英尺高櫃乾貨櫃"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid ""
+"<i class=\"fa fa-ship\" title=\"Sea\" style=\"font-size:1.6rem;color:#D4A055;\" attrs=\"{'invisible': [('mode', '!=', 'sea')]}\"/>\n"
+"                                        <i class=\"fa fa-plane\" title=\"Air\" style=\"font-size:1.6rem;color:#D4A055;\" attrs=\"{'invisible': [('mode', '!=', 'air')]}\"/>\n"
+"                                        <i class=\"fa fa-truck\" title=\"Road\" style=\"font-size:1.6rem;color:#D4A055;\" attrs=\"{'invisible': [('mode', '!=', 'road')]}\"/>\n"
+"                                        <i class=\"fa fa-train\" title=\"Rail\" style=\"font-size:1.6rem;color:#D4A055;\" attrs=\"{'invisible': [('mode', '!=', 'rail')]}\"/>\n"
+"                                        <i class=\"fa fa-random\" style=\"font-size:1.6rem;color:#D4A055;\" attrs=\"{'invisible': [('mode', '!=', 'multimodal')]}\"/>"
+msgstr ""
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "<span class=\"o_stat_text\">Sale Order</span>"
+msgstr "<span class=\"o_stat_text\">銷售訂單</span>"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "<strong>Direction:</strong>"
+msgstr "<strong>方向:</strong>"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "<strong>Job:</strong>"
+msgstr "<strong>職位：</strong>"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "<strong>Mode:</strong>"
+msgstr "<strong>模式：</strong>"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "<strong>State:</strong>"
+msgstr "<strong>狀態：</strong>"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone__source__api
+msgid "API"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__accrual_date
+msgid "Accrual Date"
+msgstr "計提日期"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_cost_line__state__accrued
+msgid "Accrued"
+msgstr "已計提"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_needaction
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_needaction
+msgid "Action Needed"
+msgstr "需要採取行動"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__active
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__active
+msgid "Active"
+msgstr "啟用"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_freight_job_activity
+msgid "Activities"
+msgstr "活動"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "活動異常圖示"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_state
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_state
+msgid "Activity State"
+msgstr "活動狀態"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "活動類型圖示"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__actual_at
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Actual"
+msgstr "實際"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Actual (from cost and revenue ledger)"
+msgstr "實際（來自成本與收入分類帳）"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__total_actual_cost
+msgid "Actual Cost"
+msgstr "實際成本"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__eta_actual
+msgid "Actual ETA"
+msgstr "實際 ETA"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__etd_actual
+msgid "Actual ETD"
+msgstr "實際 ETD"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__actual_gross_margin
+msgid "Actual Gross Margin"
+msgstr "實際毛利"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__actual_gross_margin_pct
+msgid "Actual Gross Margin (%)"
+msgstr "實際毛利率 (%)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__milestone_actual_count
+msgid "Actual Milestones"
+msgstr "實際里程碑"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__total_actual_revenue
+msgid "Actual Revenue"
+msgstr "實際收入"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__margin_drift_pct
+msgid ""
+"Actual margin percentage minus planned margin percentage expressed in "
+"percentage points. Negative drift means the job is performing worse than the"
+" original quotation; positive means better."
+msgstr "實際利潤率百分比減去計劃利潤率百分比，以百分點表示。負偏差表示該作業表現不如原始報價；正偏差表示更好。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_milestone__variance_hours
+msgid ""
+"Actual minus planned in hours. Positive means late, negative means early. "
+"Empty when either side is missing."
+msgstr "實際減去計劃（以小時計）。正值表示延遲，負值表示提前。任一方缺失時為空。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone__source__adapter
+msgid "Adapter"
+msgstr "轉接器"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_mass_advance_form
+msgid "Advance"
+msgstr "預支"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__mode__air
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__air
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Air"
+msgstr "空運"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__flight_number
+msgid "Air only."
+msgstr "僅限空運。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__chargeable_weight_kg
+msgid "Air: max(actual, volumetric)."
+msgstr "空運：max(actual, volumetric)。"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_air_arrived
+msgid "Aircraft Arrived at Destination Airport"
+msgstr "飛機已抵達目的地機場"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_air_departed
+msgid "Aircraft Departed"
+msgstr "飛機已起飛"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__amount
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__amount
+msgid "Amount"
+msgstr "金額"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__amount_company_currency
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__amount_company_currency
+msgid "Amount (Company Currency)"
+msgstr "金額（公司貨幣）"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__analytic_account_id
+msgid "Analytic Account"
+msgstr "分析帳戶"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__any
+msgid "Any Mode"
+msgstr "任何模式"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__at_destination
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__at_destination
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_mass_advance__target_state__at_destination
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "At Destination"
+msgstr "在目的地"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__at_terminal
+msgid "At Terminal"
+msgstr "在貨運站"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_sale_order__eh_log_attach_freight_job_id
+msgid "Attach to existing job"
+msgstr "附加到現有作業"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件數目"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__analytic_account_id
+msgid ""
+"Auto-created on demand. Cost lines and revenue lines tagged with this "
+"account roll up into the job's P and L."
+msgstr "依需求自動建立。以此科目標記的成本行與收入行會彙總至該工作的損益表中。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__number
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "BL Number"
+msgstr "提單號碼"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__bl_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Bill of Lading"
+msgstr "提單"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#, python-format
+msgid ""
+"Bill of lading %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"提單 %(name)s 無法從 %(current)s 轉移到 %(target)s。允許從 %(current)s "
+"進行的轉換：%(allowed)s。"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#, python-format
+msgid "Bill of lading %(name)s moved to %(state)s."
+msgstr "提單 %(name)s 已轉移到 %(state)s。"
+
+#. module: eh_log_freight
+#: model:ir.model.constraint,message:eh_log_freight.constraint_eh_log_freight_bl_number_unique_per_company
+msgid ""
+"Bill of lading number must be unique per (company, type). If you are "
+"receiving a duplicate from a carrier, contact the carrier for clarification "
+"before recording it."
+msgstr "提單號碼必須在每個（公司、類型）下唯一。如果您收到承運商的重複提單，請在記錄之前聯絡承運商進行釐清。"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#: model:ir.actions.act_window,name:eh_log_freight.action_eh_log_freight_bl
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__bl_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__bl_ids
+#: model:ir.ui.menu,name:eh_log_freight.menu_eh_log_freight_bls
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_list
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Bills of Lading"
+msgstr "提單"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__booked
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_mass_advance__target_state__booked
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Booked"
+msgstr "已預約"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_booked
+msgid "Booking Confirmed"
+msgstr "預訂已確認"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_air_booked
+msgid "Booking Confirmed (Air)"
+msgstr "預訂已確認（空運）"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__booking_date
+msgid "Booking Date"
+msgstr "預訂日期"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_road_border
+msgid "Border Crossing"
+msgstr "邊境口岸"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__bulk
+msgid "Bulk"
+msgstr "批次"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_mass_advance_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_cost_line__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_revenue_line__state__cancelled
+msgid "Cancelled"
+msgstr "已取消"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid "Cancelled freight job(s): <strong>%(names)s</strong>."
+msgstr "已取消的貨運工作：<strong>%(names)s</strong>。"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid ""
+"Cannot attach to freight job %(name)s because it is %(state)s. Only open "
+"jobs accept new attached orders; for closed jobs raise a Variation."
+msgstr ""
+"無法附加到貨運工作 %(name)s，因為它處於 %(state)s "
+"狀態。只有開放中的工作才接受新的附加訂單；對於已關閉的工作，請提出變更（Variation）。"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Cargo"
+msgstr "貨物"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__cargo_description
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__cargo_description
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__cargo_description
+msgid "Cargo Description"
+msgstr "貨物描述"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_road_loaded
+msgid "Cargo Loaded"
+msgstr "貨物已裝載"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_air_received
+msgid "Cargo Received at Origin Airport"
+msgstr "貨物已於始發機場接收"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_air_released
+msgid "Cargo Released at Destination"
+msgstr "貨物已於目的地放行"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Cargo Summary"
+msgstr "貨物摘要"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__carrier_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Carrier"
+msgstr "承運商"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__number
+msgid ""
+"Carrier-issued bill of lading number (e.g. MAEU1234567 for sea, 020-12345678"
+" for air). Captured on issue."
+msgstr "承運人簽發的提單號（例如海運為 MAEU1234567，空運為 020-12345678）。於簽發時記錄。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__charge_code_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__charge_code_id
+msgid "Charge Code"
+msgstr "費用代碼"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Chargeable (kg)"
+msgstr "計費重量（公斤）"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__chargeable_weight_kg
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__chargeable_weight_kg
+msgid "Chargeable Weight (kg)"
+msgstr "計費重量（公斤）"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Close"
+msgstr "關閉"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Close Job"
+msgstr "關閉作業"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__state__closed
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__closed
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_mass_advance__target_state__closed
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Closed"
+msgstr "已關閉"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__closed_at
+msgid "Closed At"
+msgstr "關閉時間"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__is_terminal
+msgid "Closes the Job"
+msgstr "關閉作業"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__code
+msgid "Code"
+msgstr "程式碼"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__freight_payment_terms__collect
+msgid "Collect"
+msgstr "收集"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_cost_line__state__committed
+msgid "Committed (PO)"
+msgstr "已承諾 (PO)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container_iso_type__alias_code
+msgid ""
+"Common operator alias (20GP, 40GP, 40HC, 20RF, 40RF, 20OT, 40FR, ...). "
+"Operators search by alias more than by the formal ISO code."
+msgstr ""
+"常用營運方別名（20GP, 40GP, 40HC, 20RF, 40RF, 20OT, 40FR, ...）。營運方按別名搜尋多於按正式的 ISO "
+"代碼搜尋。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__company_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__company_ids
+msgid "Companies"
+msgstr "公司"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__company_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__company_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__company_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__company_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__company_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__company_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Company"
+msgstr "公司"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Confirm Booking"
+msgstr "確認預訂"
+
+#. module: eh_log_freight
+#: model_terms:ir.actions.act_window,help:eh_log_freight.action_eh_log_freight_job
+msgid ""
+"Confirm a logistics quotation to spawn a freight job here.\n"
+"                    Direct creation from this menu is restricted to managers."
+msgstr ""
+"確認物流報價以在此處產生貨運作業。\n"
+"                    從此選單直接建立僅限管理員。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__consignee_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__consignee_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Consignee"
+msgstr "收貨人"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Consolidation"
+msgstr "合併"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_form
+msgid "Container"
+msgstr "貨櫃"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_discharged
+msgid "Container Discharged"
+msgstr "貨櫃已卸載"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_gate_in
+msgid "Container Gate-In at Origin Terminal"
+msgstr "貨櫃於起運碼頭進場"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_gate_out
+msgid "Container Gate-Out at Destination Terminal"
+msgstr "貨櫃於目的碼頭出場"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_iso_type_form
+msgid "Container ISO Type"
+msgstr "貨櫃 ISO 類型"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_container_iso_type
+msgid "Container ISO Type (ISO 6346)"
+msgstr "貨櫃 ISO 類型 (ISO 6346)"
+
+#. module: eh_log_freight
+#: model:ir.actions.act_window,name:eh_log_freight.action_eh_log_freight_container_iso_type
+#: model:ir.ui.menu,name:eh_log_freight.menu_eh_log_freight_container_iso_types
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_iso_type_list
+msgid "Container ISO Types"
+msgstr "貨櫃 ISO 類型"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_loaded
+msgid "Container Loaded On Vessel"
+msgstr "貨櫃已裝船"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__container_number
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Container No."
+msgstr "貨櫃編號"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_container.py:0
+#, python-format
+msgid ""
+"Container number %(num)s does not match the ISO 6346 format (4 letters + 7 "
+"digits, e.g. MSCU1234567). Either fix the number, set Manual Number "
+"Override, or untick the check."
+msgstr ""
+"貨櫃編號 %(num)s 不符合 ISO 6346 格式（4 個字母 + 7 位數字，例如 "
+"MSCU1234567）。請更正編號、設定手動編號覆寫，或取消勾選該檢查。"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_container.py:0
+#, python-format
+msgid ""
+"Container number %(num)s fails the ISO 6346 check digit. Expected check "
+"digit %(expected)d, got %(actual)d. Either correct the number or set Manual "
+"Number Override if you have verified the discrepancy is intentional."
+msgstr ""
+"貨櫃編號 %(num)s 未通過 ISO 6346 檢查碼。預期檢查碼為 %(expected)d，實際為 "
+"%(actual)d。請更正編號，或在確認差異確為有意時設定手動編號覆寫。"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#: model:ir.actions.act_window,name:eh_log_freight.action_eh_log_freight_container
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__container_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__container_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__container_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__container_ids
+#: model:ir.ui.menu,name:eh_log_freight.menu_eh_log_freight_containers
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_list
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Containers"
+msgstr "容器"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Cost"
+msgstr "成本"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Cost Ledger"
+msgstr "成本分類帳"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__cost_line_ids
+msgid "Cost Lines"
+msgstr "成本明細"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__mode__courier
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__courier
+msgid "Courier or Express"
+msgstr "快遞或速遞"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Created Month"
+msgstr "建立月份"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Created Quarter"
+msgstr "建立季度"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Created Today"
+msgstr "今日建立"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Created Year"
+msgstr "建立年份"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__create_uid
+msgid "Created by"
+msgstr "建立人員"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__create_date
+msgid "Created on"
+msgstr "建立於"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__direction__cross_trade
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Cross Trade"
+msgstr "交叉盤交易"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__company_currency_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__currency_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__currency_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__company_currency_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__currency_id
+msgid "Currency"
+msgstr "貨幣"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__customer_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__customer_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Customer"
+msgstr "客戶"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__customer_invoice_line_id
+msgid "Customer Invoice Line"
+msgstr "客戶發票行"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone__source__portal
+msgid "Customer Portal"
+msgstr "客戶入口網站"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__customer_reference
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Customer Reference"
+msgstr "客戶參照"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_any_customs_cleared
+msgid "Customs Cleared"
+msgstr "已清關"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__cutoff_date
+msgid "Cutoff Date"
+msgstr "截止日期"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Dates"
+msgstr "日期"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__delivered
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__delivered
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_mass_advance__target_state__delivered
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Delivered"
+msgstr "已送貨"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__delivered_at
+msgid "Delivered At"
+msgstr "交付時間"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__description
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__description
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__description
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__description
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Description"
+msgstr "說明"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Destination"
+msgstr "目的地"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__destination_country_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Destination Country"
+msgstr "目的地國家"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__destination_location
+msgid "Destination Location"
+msgstr "目標位置"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__direction
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Direction"
+msgstr "方向"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__is_disbursement
+msgid "Disbursement"
+msgstr "撥付"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__discharged_at
+msgid "Discharged"
+msgstr "已解除"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__display_name
+msgid "Display Name"
+msgstr "顯示名稱"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Document"
+msgstr "文件"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__bl_type
+msgid "Document Type"
+msgstr "文件類型"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__state__draft
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Draft"
+msgstr "草稿"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__dry
+msgid "Dry"
+msgstr "乾貨"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone__source__edi
+msgid "EDI"
+msgstr ""
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+msgid "ERP Heritage Logistics"
+msgstr "ERP Heritage 物流"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_kanban
+msgid "ETA"
+msgstr "預計到達時間"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "ETA planned"
+msgstr "計劃預計到達 (ETA)"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "ETD planned"
+msgstr "計劃預計離開 (ETD)"
+
+#. module: eh_log_freight
+#: model:ir.model.constraint,message:eh_log_freight.constraint_eh_log_freight_milestone_job_type_unique
+msgid ""
+"Each milestone type may appear only once per job. Edit the existing row "
+"instead of creating a duplicate."
+msgstr "每種里程碑類型在每個作業中只能出現一次。請編輯現有列，而不是建立重複項。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__direction__export
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Export"
+msgstr "匯出"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__release_type__express
+msgid "Express Release"
+msgstr "快速放行"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__family
+msgid "Family"
+msgstr "家庭"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Field"
+msgstr "欄位"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__flat_rack
+msgid "Flat Rack"
+msgstr "平板架櫃"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__flight_number
+msgid "Flight"
+msgstr "航班"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_follower_ids
+msgid "Followers"
+msgstr "關注人"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "關注人（業務夥伴）"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__activity_type_icon
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome 圖示，例如，fa-task"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__parent_bl_id
+msgid ""
+"For HBL or HAWB, points to the consolidating MBL or MAWB. Drives the "
+"consolidation report."
+msgstr "對於 HBL 或 HAWB，指向進行併裝的 MBL 或 MAWB。驅動併裝報表。"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_bl
+msgid "Freight Bill of Lading"
+msgstr "貨運提單"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_container
+msgid "Freight Container or ULD"
+msgstr "貨運貨櫃或 ULD"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_job
+msgid "Freight Forwarding Job"
+msgstr "貨運承攬任務"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Freight Job"
+msgstr "貨運任務"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid "Freight Job %s"
+msgstr "貨運作業 %s"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_cost_line
+msgid "Freight Job Cost Line"
+msgstr "貨運作業成本行"
+
+#. module: eh_log_freight
+#: model:ir.actions.report,name:eh_log_freight.action_report_eh_log_freight_job
+msgid "Freight Job File"
+msgstr "貨運作業檔案"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_revenue_line
+msgid "Freight Job Revenue Line"
+msgstr "貨運作業收入行"
+
+#. module: eh_log_freight
+#: model:ir.actions.act_window,name:eh_log_freight.action_eh_log_freight_job
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__job_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_sale_order__eh_log_freight_job_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_sale_order__eh_log_freight_job_ids
+#: model:ir.ui.menu,name:eh_log_freight.menu_eh_log_freight_jobs
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_list
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_sale_order_form_eh_log_freight
+msgid "Freight Jobs"
+msgstr "貨運作業"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_pivot
+msgid "Freight Jobs Analysis"
+msgstr "貨運作業分析"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_calendar
+msgid "Freight Jobs by Created Date"
+msgstr "按建立日期的貨運作業"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_graph
+msgid "Freight Jobs by State"
+msgstr "按狀態的貨運作業"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid "Freight Jobs from %s"
+msgstr "來自 %s 的貨運作業"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_milestone
+msgid "Freight Milestone"
+msgstr "貨運里程碑"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_milestone_type
+msgid "Freight Milestone Type"
+msgstr "貨運里程碑類型"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__freight_payment_terms
+msgid "Freight Terms"
+msgstr "貨運條款"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+msgid "Freight booked"
+msgstr "貨運已預訂"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#, python-format
+msgid "Freight job %(name)s moved to %(state)s."
+msgstr "貨運作業 %(name)s 已移至 %(state)s。"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid ""
+"Freight job <strong>%(name)s</strong> already exists for this order; "
+"skipping duplicate spawn."
+msgstr "此訂單的貨運作業 <strong>%(name)s</strong> 已存在；跳過重複產生。"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid "Freight job <strong>%(name)s</strong> reactivated on re-confirmation."
+msgstr "貨運作業 <strong>%(name)s</strong> 已在重新確認時重新啟用。"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid "Freight job <strong>%(name)s</strong> spawned from this confirmation."
+msgstr "貨運作業 <strong>%(name)s</strong> 已從此確認產生。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__gate_in_at
+msgid "Gate-In"
+msgstr "進閘"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__gate_out_at
+msgid "Gate-Out"
+msgstr "出閘"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Gross (kg)"
+msgstr "毛重 (kg)"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Gross Margin"
+msgstr "毛利"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__gross_margin_pct
+msgid "Gross Margin (%)"
+msgstr "毛利率 (%)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__gross_margin
+msgid "Gross Margin (Planned)"
+msgstr "毛利(計劃)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__gross_weight_kg
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__gross_weight_kg
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__gross_weight_kg
+msgid "Gross Weight (kg)"
+msgstr "毛重 (kg)"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Gross margin"
+msgstr "毛利率"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+msgid "Group by Customer"
+msgstr "按客戶分組"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+msgid "Group by Mode"
+msgstr "依模式分組"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+msgid "Group by Stage"
+msgstr "依階段分組"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "Group by State"
+msgstr "依狀態分組"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "Group by Type"
+msgstr "依類型分組"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "HAWB"
+msgstr ""
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "HBL"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__has_message
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__has_message
+msgid "Has Message"
+msgstr "有訊息"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__height_high_cube
+msgid "High Cube"
+msgstr "高櫃"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__bl_type__hawb
+msgid "House Air Waybill"
+msgstr "分空運提單"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__child_bl_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "House BLs"
+msgstr "分提單"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__bl_type__hbl
+msgid "House Bill of Lading"
+msgstr "分提單"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__id
+msgid "ID"
+msgstr "識別號"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "ISO"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container__container_number
+msgid ""
+"ISO 6346 container number: 4 letters (owner code + category) + 6 digits "
+"(serial) + 1 check digit. Validated on save unless 'Manual Override' is set."
+msgstr "ISO 6346 貨櫃號：4 個字母（所有者代碼 + 類別）+ 6 位數字（序號）+ 1 位檢查碼。儲存時驗證，除非設定了「手動覆寫」。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container_iso_type__code
+msgid ""
+"ISO 6346 size and type code (e.g. 22G1 for 20' Standard, 42G1 for 40' "
+"Standard, 45G1 for 40' High Cube). The human-friendly short alias goes in "
+"alias_code."
+msgstr ""
+"ISO 6346 尺寸和類型代碼（例如 22G1 表示 20 英尺標準型，42G1 表示 40 英尺標準型，45G1 表示 40 "
+"英尺高櫃）。便於人識別的簡短別名放在 alias_code 中。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container__iso_type_id
+msgid ""
+"ISO 6346 size/type code (e.g. 22G1 = 20ft general purpose, 42G1 = 40ft "
+"general, 45R1 = 40ft HC reefer). Drives capacity defaults and reefer / DG "
+"flags."
+msgstr ""
+"ISO 6346 尺寸/類型代碼（例如 22G1 = 20 英尺通用型，42G1 = 40 英尺通用型，45R1 = 40 英尺 HC "
+"冷藏型）。用於設定預設容量以及冷藏 / DG 標誌。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__code
+msgid "ISO Code"
+msgstr "ISO 代碼"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__iso_type_id
+msgid "ISO Type"
+msgstr "ISO 類型"
+
+#. module: eh_log_freight
+#: model:ir.model.constraint,message:eh_log_freight.constraint_eh_log_freight_container_iso_type_code_unique
+msgid "ISO container code must be unique."
+msgstr "ISO 貨櫃代碼必須唯一。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_exception_icon
+msgid "Icon"
+msgstr "圖示"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "用於指示異常活動的圖示。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__message_needaction
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "勾選代表有新訊息需要您留意。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__message_has_error
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__message_has_error
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "勾選代表有訊息發生傳送錯誤。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__direction__import
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Import"
+msgstr "匯入"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__in_transit
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_mass_advance__target_state__in_transit
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "In Transit"
+msgstr "運送中"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+msgid "In transit"
+msgstr "運送中"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__incoterm_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__incoterm_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Incoterm"
+msgstr "國際貿易術語"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__incoterm_id
+msgid ""
+"Incoterm 2020 governing the cargo handover. Drives whose insurance covers "
+"the trip, who pays freight, and where the risk transfer occurs."
+msgstr "規範貨物交接的 Incoterm 2020。決定由誰的保險承保運輸、由誰支付運費以及風險轉移發生的地點。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__alias_code
+msgid "Industry Alias"
+msgstr "產業別名"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__inner_volume_cbm
+msgid "Inner Volume (m3)"
+msgstr "內部容積 (m3)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__invoice_date
+msgid "Invoice Date"
+msgstr "發票日期"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_revenue_line__state__invoiced
+msgid "Invoiced"
+msgstr "已開立發票"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_cost_line__state__invoiced
+msgid "Invoiced (Vendor Bill)"
+msgstr "已開票（供應商帳單）"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_is_follower
+msgid "Is Follower"
+msgstr "是關注人"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Issue"
+msgstr "議題"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__issue_date
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Issue Date"
+msgstr "簽發日期"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__state__issued
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "Issued"
+msgstr "已發出"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__carrier_id
+msgid "Issuing carrier (shipping line for sea, airline for air)."
+msgstr "簽發承運人（海運為船公司，空運為航空公司）。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__job_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__job_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__job_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__job_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__job_id
+msgid "Job"
+msgstr "工作"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#, python-format
+msgid ""
+"Job %(name)s cannot move from %(current)s to %(target)s. Allowed transitions"
+" from %(current)s: %(allowed)s."
+msgstr ""
+"作業 %(name)s 無法從 %(current)s 移至 %(target)s。從 %(current)s 允許的轉換：%(allowed)s。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__name
+msgid "Job Reference"
+msgstr "作業參考"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Lane"
+msgstr "運輸路線"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Lane and Parties"
+msgstr "運輸路線與相關方"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Last 30 Days"
+msgstr "過去30天"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Last 7 Days"
+msgstr "過去7天"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__write_uid
+msgid "Last Updated by"
+msgstr "最後更新者"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__write_date
+msgid "Last Updated on"
+msgstr "最後更新於"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__length_ft
+msgid "Length (ft)"
+msgstr "長度 (ft)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__state
+msgid ""
+"Lifecycle: Draft (created from quote) > Booked (carrier confirmed) > In "
+"Transit (departed) > At Destination (arrived) > Delivered (POD signed) > "
+"Closed (file finalised). State changes only via the action buttons; direct "
+"writes to this field are blocked."
+msgstr ""
+"生命週期：Draft（從報價建立）> Booked（承運人確認）> In Transit（已出發）> At Destination（已抵達）> "
+"Delivered（POD 已簽署）> Closed（檔案已定稿）。狀態僅可透過動作按鈕變更；禁止直接寫入此欄位。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__loaded_at
+msgid "Loaded On Board"
+msgstr "已裝船"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "MAWB"
+msgstr ""
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "MBL"
+msgstr ""
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_form
+msgid "MSCU1234567"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_main_attachment_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone__source__manual
+msgid "Manual"
+msgstr "手動"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__manual_number_override
+msgid "Manual Number Override"
+msgstr "手動編號覆寫"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_kanban
+msgid "Margin"
+msgstr "毛利"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__margin_drift_pct
+msgid "Margin Drift (pp)"
+msgstr "利潤率漂移 (百分點)"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Margin Summary"
+msgstr "利潤率摘要"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Mark Delivered"
+msgstr "標記為已送達"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_mass_advance
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_mass_advance_form
+msgid "Mass-advance Freight Jobs"
+msgstr "批量推進貨運作業"
+
+#. module: eh_log_freight
+#: model:ir.actions.act_window,name:eh_log_freight.action_eh_log_freight_mass_advance
+msgid "Mass-advance State"
+msgstr "批量推進狀態"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/wizards/eh_log_freight_mass_action.py:0
+msgid "Mass-advance complete"
+msgstr "批量推進完成"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__bl_type__mawb
+msgid "Master Air Waybill"
+msgstr "主空運提單"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__bl_type__mbl
+msgid "Master Bill of Lading"
+msgstr "主提單"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__max_gross_kg
+msgid "Max Gross Weight (kg)"
+msgstr "最大毛重 (kg)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__max_payload_kg
+msgid "Max Payload (kg)"
+msgstr "最大酬載 (kg)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_has_error
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_has_error
+msgid "Message Delivery error"
+msgstr "訊息遞送錯誤"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_ids
+msgid "Messages"
+msgstr "訊息"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__type_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Milestone"
+msgstr "里程碑"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Milestone Timeline"
+msgstr "里程碑時間軸"
+
+#. module: eh_log_freight
+#: model:ir.model.constraint,message:eh_log_freight.constraint_eh_log_freight_milestone_type_code_unique
+msgid "Milestone type code must be unique."
+msgstr "里程碑類型代碼必須唯一。"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__milestone_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Milestones"
+msgstr "里程碑"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_revenue_line__is_disbursement
+msgid ""
+"Mirrors the charge code's disbursement flag. Disbursement lines are excluded"
+" from gross-margin computation."
+msgstr "鏡像收費代碼的墊付標記。墊付行不計入毛利率計算。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__mode
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__mode
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Mode"
+msgstr "模式"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/wizards/eh_log_freight_mass_action.py:0
+#, python-format
+msgid ""
+"Moved %(moved)d job(s) to %(state)s. Skipped %(skipped)d job(s) that were "
+"not in a compatible state."
+msgstr "已將 %(moved)d 個工作移至 %(state)s。略過了 %(skipped)d 個未處於相容狀態的工作。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__mode__multimodal
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__multimodal
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Multimodal"
+msgstr "多模態"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "我的活動截止時間"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "My Company"
+msgstr "我的公司"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "My Jobs"
+msgstr "我的作業"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__name
+msgid "Name"
+msgstr "名稱"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+msgid "New"
+msgstr "新增"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一活動截止日期"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_summary
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一活動摘要"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一活動類型"
+
+#. module: eh_log_freight
+#: model_terms:ir.actions.act_window,help:eh_log_freight.action_eh_log_freight_job
+msgid "No freight jobs yet"
+msgstr "尚無貨運任務"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__notes
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__notes
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__notes
+msgid "Notes"
+msgstr "備註"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__notify_party_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__notify_party_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Notify Party"
+msgstr "通知方"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Number"
+msgstr "號碼"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_needaction_counter
+msgid "Number of Actions"
+msgstr "動作數量"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_has_error_counter
+msgid "Number of errors"
+msgstr "錯誤數量"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "需要採取行動的訊息數目"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "有發送錯誤的郵件數量"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__on_board
+msgid "On Board"
+msgstr "已裝船"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__onboard_date
+msgid "On Board Date"
+msgstr "裝船日期"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+msgid "Open"
+msgstr "開啟"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Open (not closed/cancelled)"
+msgstr "開放（未關閉/未取消）"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__open_top
+msgid "Open Top"
+msgstr "開頂"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container__bl_id
+msgid ""
+"Optional link to the bill of lading carrying this container. Set "
+"automatically when a BL line references the container."
+msgstr "指向承載此貨櫃的提單的選填連結。當某個 BL 行參照該貨櫃時自動設定。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__notify_party_id
+msgid ""
+"Optional. Third party to notify on arrival, typically the customs broker or "
+"warehouse operator. Goes onto the BL."
+msgstr "選填。到貨時需通知的第三方，通常是報關行或倉庫營運方。將填入 BL。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_sale_order__eh_log_attach_freight_job_id
+msgid ""
+"Optional. When set, confirming this quotation does NOT spawn a new freight "
+"job; the lines on this order are treated as additional revenue / cost lines "
+"for the selected existing job. Use this when you raise an extra charge "
+"(additional THC, demurrage, customs query fee, etc.) against a freight job "
+"that's already in flight."
+msgstr ""
+"選填。設定後，確認此報價單不會產生新的貨運作業；此訂單上的明細行將被視為所選現有作業的額外收入/成本行。當您針對一個正在進行中的貨運作業收取額外費用（額外"
+" THC、滯期費、海關查驗費等）時使用此項。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__sale_order_line_ids
+msgid "Order Lines"
+msgstr "訂單明細"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Origin"
+msgstr "原始"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__origin_country_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Origin Country"
+msgstr "原產國/原產地"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__origin_location
+msgid "Origin Location"
+msgstr "起運地點"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__release_type__original
+msgid "Original BL"
+msgstr "正本提單 BL"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__other
+msgid "Other"
+msgstr "其他"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__purchase_order_line_id
+msgid "PO Line"
+msgstr "採購訂單明細"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__package_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__package_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__package_count
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Packages"
+msgstr "包裹"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_revenue_line__state__paid
+msgid "Paid"
+msgstr "已付款"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__parent_bl_id
+msgid "Parent BL"
+msgstr "上級提單 BL"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Parties"
+msgstr "各方"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__pickup_at
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__picked_up
+msgid "Picked Up"
+msgstr "已取貨"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__place_of_delivery
+msgid "Place of Delivery"
+msgstr "交貨地點"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__place_of_receipt
+msgid "Place of Receipt"
+msgstr "收貨地點"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__planned_at
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__planned
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_cost_line__state__planned
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_revenue_line__state__planned
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Planned"
+msgstr "已安排"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Planned (from quotation)"
+msgstr "已規劃（來自報價單）"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__total_planned_cost
+msgid "Planned Cost"
+msgstr "計劃成本"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__eta_planned
+msgid "Planned ETA"
+msgstr "計劃 ETA"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__etd_planned
+msgid "Planned ETD"
+msgstr "計劃 ETD"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__milestone_planned_count
+msgid "Planned Milestones"
+msgstr "計劃里程碑"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__pod_name
+msgid "Port or Airport of Discharge"
+msgstr "卸貨港口或機場"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__pol_name
+msgid "Port or Airport of Loading"
+msgstr "裝貨港口或機場"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__freight_payment_terms__prepaid
+msgid "Prepaid"
+msgstr "預付"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_any_pod_received
+msgid "Proof of Delivery Received"
+msgstr "已收到交貨證明"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__quantity
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__quantity
+msgid "Quantity"
+msgstr "數量"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__sale_order_id
+msgid ""
+"Quotation the job was spawned from. Optional: operators also open jobs "
+"directly for shipments booked outside a quotation (agent nominations, inter-"
+"branch moves, ad-hoc bookings), so a job may legitimately have no sale "
+"order."
+msgstr ""
+"產生該工作的報價單。選填：操作員也會直接為在報價單之外預訂的貨運開啟工作（代理提名、分公司間調撥、臨時預訂），因此某項工作合理地可能沒有銷售訂單。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__mode__rail
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__rail
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Rail"
+msgstr "鐵路"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__reefer
+msgid "Reefer"
+msgstr "冷藏櫃"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__name
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Reference"
+msgstr "編號"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Release"
+msgstr "釋放"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__release_type
+msgid "Release Type"
+msgstr "釋放類型"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__state__released
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "Released"
+msgstr "已釋放"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__is_required
+msgid "Required"
+msgstr "必填項"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_user_id
+msgid "Responsible User"
+msgstr "責任使用者"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__returned
+msgid "Returned"
+msgstr "退回"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__returned_at
+msgid "Returned to Depot"
+msgstr "已退回倉庫"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Revenue"
+msgstr "收入"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__total_revenue
+msgid "Revenue (Planned)"
+msgstr "收入（計畫）"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Revenue Ledger"
+msgstr "收入分類帳"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__revenue_line_ids
+msgid "Revenue Lines"
+msgstr "收入明細列"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__mode__road
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__road
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Road"
+msgstr "路況（預設）"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "簡訊發送錯誤"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__sale_order_line_id
+msgid "SO Line"
+msgstr "SO 明細列"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__sale_order_id
+msgid "Sale Order"
+msgstr "銷售訂單"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Sale Order Lines"
+msgstr "銷售訂單資料行"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid ""
+"Sale order <strong>%(so)s</strong> attached as an additional charge / "
+"variation source."
+msgstr "銷售訂單 <strong>%(so)s</strong> 已作為附加費用／變更來源附加。"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_sale_order
+msgid "Sales Order"
+msgstr "銷售訂單"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__mode__sea
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__sea
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Sea"
+msgstr "海運"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__vessel_name
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__voyage_number
+msgid "Sea only."
+msgstr "僅限海運。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__onboard_date
+msgid "Sea: shipped-on-board endorsement date. Air: cargo received date."
+msgstr "海運：裝船背書日期。空運：貨物接收日期。"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Seal"
+msgstr "封條"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__seal_number
+msgid "Seal No."
+msgstr "封條編號"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Search Freight Jobs"
+msgstr "搜尋貨運作業"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__release_type__seaway
+msgid "Seaway"
+msgstr "海運航道"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__sequence
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__sequence
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__sequence
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__sequence
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__sequence
+msgid "Sequence"
+msgstr "序列號"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Set At Destination"
+msgstr "在目的地設定"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Set In Transit"
+msgstr "設定為運送中"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_cost_line__vendor_bill_line_id
+msgid "Set when the cost has been billed by the vendor."
+msgstr "當供應商已就該成本開立帳單時設定。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_cost_line__purchase_order_line_id
+msgid ""
+"Set when the cost was raised through procurement. Empty for manual accruals."
+msgstr "當成本透過採購產生時設定。手動應計項目為空。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__shipper_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__shipper_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Shipper"
+msgstr "發貨人"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__shipper_reference
+msgid "Shipper Reference"
+msgstr "發貨人參考號"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+msgid "Shipper country mismatch"
+msgstr "發貨人國家/地區不符"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#, python-format
+msgid ""
+"Shipper is in %(shipper_country)s but the declared origin is %(origin)s. "
+"Verify before creating the customs declaration."
+msgstr "發貨人位於 %(shipper_country)s，但申報的原產地為 %(origin)s。在建立報關單之前請核實。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container__manual_number_override
+msgid ""
+"Skip ISO 6346 check digit validation. Use only for known-bad numbers from "
+"upstream documents that must flow through unchanged for traceability."
+msgstr "略過 ISO 6346 檢查碼驗證。僅用於上游文件中已知有誤、但必須原樣通過以維持可追溯性的編號。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__source
+msgid "Source"
+msgstr "來源"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_milestone_type__code
+msgid ""
+"Stable identifier (BOOKED, GATE_IN, VESSEL_SAILED, VESSEL_ARRIVED, GATE_OUT,"
+" DELIVERED, CUSTOMS_CLEARED, POD_RECEIVED, ...)."
+msgstr ""
+"穩定的識別碼（BOOKED、GATE_IN、VESSEL_SAILED、VESSEL_ARRIVED、GATE_OUT、DELIVERED、CUSTOMS_CLEARED、POD_RECEIVED、...）。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_cost_line__charge_code_id
+msgid ""
+"Standardised charge code so cost analytics group consistently with the "
+"corresponding revenue line."
+msgstr "標準化收費代碼，使成本分析與對應的收入行一致地分組。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__state
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__state
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__state
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__state
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__state
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "State"
+msgstr "狀態"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__activity_state
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"根據活動的狀態 \n"
+" 逾期：已經超過截止日期 \n"
+" 現今：活動日期是當天 \n"
+" 計劃：未來活動。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__total_actual_cost
+msgid ""
+"Sum of cost ledger lines (in company currency) excluding cancelled lines. "
+"Reflects committed and accrued and invoiced costs against the job."
+msgstr "成本分類帳行之和（以公司貨幣計），不含已取消的行。反映針對該作業的已承諾、已計提及已開立發票成本。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__total_actual_revenue
+msgid ""
+"Sum of non-disbursement revenue ledger lines in company currency, excluding "
+"cancelled lines."
+msgstr "以公司貨幣計的非墊付收入分類帳行之和，不含已取消的行。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__tank
+msgid "Tank"
+msgstr "儲罐"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__target_state
+msgid "Target State"
+msgstr "目標狀態"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone__source__telematics
+msgid "Telematics"
+msgstr "車載資通訊"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__release_type__telex
+msgid "Telex Release"
+msgstr "電放"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__consignee_id
+msgid "The party taking delivery at destination."
+msgstr "在目的地接收交付的一方。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__shipper_id
+msgid "The party tendering the cargo at origin."
+msgstr "在起運地交付貨物的一方。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__customer_id
+msgid ""
+"The party who placed the booking and is invoiced. Defaults from the sale "
+"order partner."
+msgstr "下達訂艙並接受開票的一方。預設取自銷售訂單的合作夥伴。"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "This Month"
+msgstr "本月"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "This Year"
+msgstr "今年"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid ""
+"This order's lines are attached to existing freight job "
+"<strong>%(name)s</strong>. No new job spawned."
+msgstr "此訂單的行已附加到現有貨運作業 <strong>%(name)s</strong>。未產生新作業。"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_form
+msgid "Timeline"
+msgstr "時間軸"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_road_booked
+msgid "Trip Confirmed"
+msgstr "行程已確認"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container_iso_type__height_high_cube
+msgid "True for 9'6\" containers; False for standard 8'6\"."
+msgstr "9'6\" 貨櫃為 True；標準 8'6\" 為 False。"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Type"
+msgstr "類型"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "記錄的異常活動的類型。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__unit_cost
+msgid "Unit Cost"
+msgstr "單位成本"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__unit_price
+msgid "Unit Price"
+msgstr "單價"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Value"
+msgstr "值"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Variance (h)"
+msgstr "差異 (小時)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__variance_hours
+msgid "Variance (hours)"
+msgstr "差異 (小時)"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_road_arrived
+msgid "Vehicle Arrived Destination"
+msgstr "車輛已抵達目的地"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_road_departed
+msgid "Vehicle Departed Origin"
+msgstr "車輛已離開始發地"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__vendor_id
+msgid "Vendor"
+msgstr "供應商"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__vendor_bill_line_id
+msgid "Vendor Bill Line"
+msgstr "供應商帳單明細"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__ventilated
+msgid "Ventilated"
+msgstr "通風的"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__vessel_name
+msgid "Vessel"
+msgstr "船舶"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_arrived
+msgid "Vessel Arrived at Destination Port"
+msgstr "船舶已抵達目的港"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_sailed
+msgid "Vessel Sailed"
+msgstr "船舶已開航"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__volume_cbm
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__volume_cbm
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__volume_cbm
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Volume (m3)"
+msgstr "體積 (m3)"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#, python-format
+msgid ""
+"Volumetric chargeable weight (%(vol).1f kg) is significantly higher than "
+"gross weight (%(gross).1f kg). Confirm the chargeable basis with the carrier"
+" and the customer."
+msgstr "體積計費重量 (%(vol).1f kg) 明顯高於毛重 (%(gross).1f kg)。請與承運人和客戶確認計費基準。"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+msgid "Volumetric weight dominates"
+msgstr "體積重量占主導"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__voyage_number
+msgid "Voyage"
+msgstr "航次"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__website_message_ids
+msgid "Website Messages"
+msgstr "網站資訊"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__website_message_ids
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__website_message_ids
+msgid "Website communication history"
+msgstr "網站溝通記錄"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_milestone_type__is_terminal
+msgid ""
+"When checked, recording an actual datetime for this milestone advances the "
+"job into its terminal closed state."
+msgstr "勾選後，為此里程碑記錄實際日期時間會將作業推進至其最終關閉狀態。"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_milestone_type__is_required
+msgid ""
+"When checked, the milestone is auto-added to every job timeline matching the"
+" mode."
+msgstr "勾選後，該里程碑會自動加入與該模式相符的每個作業時間軸中。"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#, python-format
+msgid ""
+"[EHL-BL-001] %(name)s cannot be issued without a BL number. Capture the "
+"carrier-issued number first."
+msgstr "[EHL-BL-001] 沒有 BL 編號,無法簽發 %(name)s。請先錄入承運人簽發的編號。"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+msgid ""
+"[EHL-BL-002] State changes on a bill of lading must go through the action "
+"buttons. Direct writes are rejected."
+msgstr "[EHL-BL-002] 提單的狀態變更必須透過動作按鈕進行。直接寫入將被拒絕。"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+msgid ""
+"[EHL-JOB-STATE-002] State changes on a freight job must go through the "
+"action buttons (Book, Set In Transit, Deliver, Close, Cancel). Direct writes"
+" are rejected."
+msgstr ""
+"[EHL-JOB-STATE-002] 貨運任務的狀態變更必須透過操作按鈕進行（Book、Set In "
+"Transit、Deliver、Close、Cancel）。直接寫入將被拒絕。"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_kanban
+msgid "cbm"
+msgstr ""
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_kanban
+msgid "kg /"
+msgstr ""

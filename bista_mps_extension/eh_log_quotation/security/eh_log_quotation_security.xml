@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="0">
+    <data>
+
+        <!--
+            No new privilege groups; this module reuses
+            eh_log_base.group_eh_log_user / _manager / _auditor.
+
+            The Approve action on sale.order checks
+            group_eh_log_manager at runtime; the rest of the form
+            extension is read-write for any logistics user.
+        -->
+
+    </data>
+</odoo>

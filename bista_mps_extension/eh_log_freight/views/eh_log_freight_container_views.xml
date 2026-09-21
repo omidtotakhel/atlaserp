@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!-- Container ISO type master -->
+
+        <record id="view_eh_log_freight_container_iso_type_list" model="ir.ui.view">
+            <field name="name">eh.log.freight.container.iso.type.list</field>
+            <field name="model">eh.log.freight.container.iso.type</field>
+            <field name="arch" type="xml">
+                <tree string="Container ISO Types">
+                    <field name="alias_code"/>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="family"/>
+                    <field name="length_ft" optional="show"/>
+                    <field name="height_high_cube" optional="hide"/>
+                    <field name="inner_volume_cbm" optional="hide"/>
+                    <field name="max_payload_kg" optional="hide"/>
+                    <field name="active" optional="hide"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_eh_log_freight_container_iso_type_form" model="ir.ui.view">
+            <field name="name">eh.log.freight.container.iso.type.form</field>
+            <field name="model">eh.log.freight.container.iso.type</field>
+            <field name="arch" type="xml">
+                <form string="Container ISO Type">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="alias_code"/>
+                            <h1>
+                                <field name="alias_code" placeholder="40HC"/>
+                            </h1>
+                            <field name="name" placeholder="40' High Cube Standard Container"/>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                                <field name="family"/>
+                                <field name="length_ft"/>
+                                <field name="height_high_cube"/>
+                            </group>
+                            <group>
+                                <field name="inner_volume_cbm"/>
+                                <field name="max_payload_kg"/>
+                                <field name="max_gross_kg"/>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="description" colspan="2"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_eh_log_freight_container_iso_type" model="ir.actions.act_window">
+            <field name="name">Container ISO Types</field>
+            <field name="res_model">eh.log.freight.container.iso.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Container instance -->
+
+        <record id="view_eh_log_freight_container_list" model="ir.ui.view">
+            <field name="name">eh.log.freight.container.list</field>
+            <field name="model">eh.log.freight.container</field>
+            <field name="arch" type="xml">
+                <tree string="Containers" decoration-info="state in ('planned', 'picked_up')" decoration-warning="state == 'on_board'" decoration-success="state in ('delivered', 'returned')">
+                    <field name="container_number"/>
+                    <field name="iso_type_id"/>
+                    <field name="job_id"/>
+                    <field name="bl_id" optional="show"/>
+                    <field name="seal_number" optional="show"/>
+                    <field name="state"/>
+                    <field name="gross_weight_kg" optional="show"/>
+                    <field name="gate_in_at" optional="show"/>
+                    <field name="gate_out_at" optional="show"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_eh_log_freight_container_form" model="ir.ui.view">
+            <field name="name">eh.log.freight.container.form</field>
+            <field name="model">eh.log.freight.container</field>
+            <field name="arch" type="xml">
+                <form string="Container">
+                    <header>
+                        <field name="state" widget="statusbar" statusbar_visible="planned,picked_up,at_terminal,on_board,at_destination,delivered,returned"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="container_number"/>
+                            <h1>
+                                <field name="container_number" placeholder="MSCU1234567"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="job_id" options="{'no_create': True}"/>
+                                <field name="iso_type_id" options="{'no_create': True}"/>
+                                <field name="bl_id" options="{'no_create': True}"/>
+                                <field name="seal_number"/>
+                                <field name="manual_number_override" widget="boolean_toggle"/>
+                            </group>
+                            <group>
+                                <field name="gross_weight_kg"/>
+                                <field name="volume_cbm"/>
+                                <field name="package_count"/>
+                            </group>
+                        </group>
+                        <group string="Cargo">
+                            <field name="cargo_description" colspan="2"/>
+                        </group>
+                        <group string="Timeline">
+                            <group>
+                                <field name="pickup_at"/>
+                                <field name="gate_in_at"/>
+                                <field name="loaded_at"/>
+                            </group>
+                            <group>
+                                <field name="discharged_at"/>
+                                <field name="gate_out_at"/>
+                                <field name="returned_at"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_eh_log_freight_container" model="ir.actions.act_window">
+            <field name="name">Containers</field>
+            <field name="res_model">eh.log.freight.container</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

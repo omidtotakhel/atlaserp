@@ -1,0 +1,2487 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 10:15+0000\n"
+"PO-Revision-Date: 2026-07-01 10:15+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+msgid "(none configured)"
+msgstr "(कुछ भी कॉन्फ़िगर नहीं किया गया)"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "<strong>Credential resolution order</strong>"
+msgstr "<strong>क्रेडेंशियल समाधान क्रम</strong>"
+
+#. module: eh_log_base
+#: model_terms:ir.actions.act_window,help:eh_log_base.action_eh_log_charge_code
+msgid ""
+"A starter set of universally recognised codes is seeded\n"
+"                    on install. Add country or contract specific codes here."
+msgstr ""
+"इंस्टॉल के समय सार्वभौमिक रूप से मान्यता प्राप्त कोडों का एक प्रारंभिक सेट\n"
+"                    सीड किया जाता है। यहां देश या अनुबंध विशिष्ट कोड जोड़ें।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__api_key
+msgid "API Key"
+msgstr "एपीआई कुंजी"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__api_version
+msgid "API Version Implemented"
+msgstr "कार्यान्वित API संस्करण"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__as2
+msgid "AS2 (EDI)"
+msgstr ""
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_ata
+msgid "ATA Carnet"
+msgstr "ATA कार्नेट"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Above this percentage of the credit limit the system raises a warning."
+msgstr ""
+"क्रेडिट सीमा के इस प्रतिशत से ऊपर होने पर सिस्टम एक चेतावनी जारी करता है।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_needaction
+msgid "Action Needed"
+msgstr "कार्रवाई की ज़रूरत है"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__active
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__active
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__active
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_search
+msgid "Active"
+msgstr "ऐक्टिव"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_ids
+msgid "Activities"
+msgstr "गतिविधियाँ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "ऐक्टिविटी एक्सेप्शन डेकोरेशन"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_state
+msgid "Activity State"
+msgstr "ऐक्टिविटी स्टेट"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "ऐक्टिविटी टाइप आइकॉन"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__adapter_call
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Adapter Call"
+msgstr "एडाप्टर कॉल"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Adapter Call Retention"
+msgstr "एडाप्टर कॉल प्रतिधारण"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Adapter Message"
+msgstr "एडाप्टर संदेश"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_adapter_payload_max_chars
+msgid "Adapter Message Payload Max Chars"
+msgstr "एडाप्टर संदेश पेलोड अधिकतम वर्ण"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Adapter Message Payload Truncation"
+msgstr "एडाप्टर संदेश पेलोड कटौती"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_profile.py:0
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_adapter_message
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_adapter_messages
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_list
+msgid "Adapter Messages"
+msgstr "एडाप्टर संदेश"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Adapter Profile"
+msgstr "एडाप्टर प्रोफ़ाइल"
+
+#. module: eh_log_base
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_adapter_profile
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_adapter_profiles
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_list
+msgid "Adapter Profiles"
+msgstr "एडाप्टर प्रोफ़ाइल"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_adapter_payload_max_chars
+msgid ""
+"Adapter messages are truncated above this size before storage to keep the "
+"database lean. Truncation happens after redaction."
+msgstr ""
+"इस आकार से बड़े एडाप्टर संदेश डेटाबेस को हल्का रखने के लिए भंडारण से पहले "
+"काट दिए जाते हैं। कटौती संपादन (रिडैक्शन) के बाद होती है।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__message_type
+msgid ""
+"Adapter-defined message label, e.g. 'declaration_submit', 'health_check', "
+"'status_query'."
+msgstr ""
+"एडाप्टर द्वारा परिभाषित संदेश लेबल, जैसे 'declaration_submit', "
+"'health_check', 'status_query'।"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_adapters
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Adapters"
+msgstr "एडाप्टर"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__air
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__air
+msgid "Air"
+msgstr "वायु"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__carrier_air
+msgid "Air Carrier"
+msgstr "एयर कैरियर"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_afr
+msgid "Air Freight"
+msgstr "एयर फ्रेट"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_awb
+msgid "Air Waybill Fee"
+msgstr "एयर वेबिल शुल्क"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+msgid ""
+"An encrypted credential could not be decrypted. The encryption salt or "
+"database UUID has changed. Re-set the credential under Settings > ERP "
+"Heritage Logistics > Adapters."
+msgstr ""
+"एक एन्क्रिप्टेड क्रेडेंशियल को डिक्रिप्ट नहीं किया जा सका। एन्क्रिप्शन साल्ट"
+" या डेटाबेस UUID बदल गया है। क्रेडेंशियल को सेटिंग्स > ERP Heritage "
+"Logistics > Adapters के तहत फिर से सेट करें।"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+msgid ""
+"An encrypted credential is stored but the Python 'cryptography' library is "
+"not installed on the server. Install it or replace the parameter with an "
+"environment variable."
+msgstr ""
+"एक एन्क्रिप्टेड क्रेडेंशियल संग्रहीत है लेकिन सर्वर पर Python की "
+"'cryptography' लाइब्रेरी स्थापित नहीं है। इसे स्थापित करें या पैरामीटर को एक"
+" एनवायरनमेंट वेरिएबल से बदलें।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__ancillary
+msgid "Ancillary"
+msgstr "सहायक"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__any
+msgid "Any Mode"
+msgstr "कोई भी मोड"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__applies_to_modes
+msgid "Applies To Modes"
+msgstr "मोड पर लागू होता है"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Approval"
+msgstr "अनुमति"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__approval
+msgid "Approval Decision"
+msgstr "अनुमोदन निर्णय"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Approvals"
+msgstr "अप्रूवल"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_attachment_count
+msgid "Attachment Count"
+msgstr "अटैचमेंट की संख्या"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_audit
+msgid "Audit"
+msgstr "ऑडिट"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__audit_note
+msgid "Audit Note"
+msgstr "ऑडिट टिप्पणी"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Authentication"
+msgstr "प्रमाणीकरण"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__auth_method
+msgid "Authentication Method"
+msgstr "प्रमाणीकरण विधि"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__request_headers
+msgid ""
+"Authentication headers redacted before storage; Content-Type, Accept, and "
+"other operational headers retained."
+msgstr ""
+"प्रमाणीकरण हेडर संग्रहण से पहले संपादित कर दिए जाते हैं; Content-Type, "
+"Accept और अन्य परिचालन हेडर बनाए रखे जाते हैं।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__endpoint_url
+msgid ""
+"Base URL for sandbox or production calls. Mock environment ignores this "
+"field. Reference data files supply the published default; operators override"
+" for private endpoints."
+msgstr ""
+"सैंडबॉक्स या उत्पादन कॉल के लिए बेस URL। मॉक वातावरण इस फ़ील्ड को अनदेखा "
+"करता है। संदर्भ डेटा फ़ाइलें प्रकाशित डिफ़ॉल्ट प्रदान करती हैं; ऑपरेटर निजी "
+"एंडपॉइंट के लिए इसे ओवरराइड करते हैं।"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "Behaviour"
+msgstr "व्यवहार"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_bl
+msgid "Bill of Lading Fee"
+msgstr "लदान बिल शुल्क"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__direction__both
+msgid "Both"
+msgstr "दोनों"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_baf
+msgid "Bunker Adjustment Factor"
+msgstr "बंकर समायोजन कारक"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_cmr
+msgid "CMR Road Consignment Note"
+msgstr "CMR सड़क परेषण नोट"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_insurance
+msgid "Cargo Insurance"
+msgstr "कार्गो बीमा"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_manifest
+msgid "Cargo Manifest"
+msgstr "माल घोषणापत्र"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__category
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__category
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__category
+msgid "Category"
+msgstr "वर्ग"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_coo
+msgid "Certificate of Origin"
+msgstr "उद्गम प्रमाणपत्र"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Charge Code"
+msgstr "शुल्क कोड"
+
+#. module: eh_log_base
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_charge_code
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_charge_codes
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_list
+msgid "Charge Codes"
+msgstr "शुल्क कोड"
+
+#. module: eh_log_base
+#: model:ir.model.constraint,message:eh_log_base.constraint_eh_log_charge_code_code_unique
+msgid ""
+"Charge code must be unique. Pick a different code or edit the existing one "
+"instead of duplicating."
+msgstr ""
+"शुल्क कोड अद्वितीय होना चाहिए। डुप्लिकेट करने के बजाय कोई भिन्न कोड चुनें या"
+" मौजूदा को संपादित करें।"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Circuit Breaker"
+msgstr "सर्किट ब्रेकर"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__circuit_breaker_cooldown_seconds
+msgid "Circuit Breaker Cooldown (s)"
+msgstr "सर्किट ब्रेकर कूलडाउन (से)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__circuit_breaker_threshold
+msgid "Circuit Breaker Threshold"
+msgstr "सर्किट ब्रेकर सीमा"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Classification"
+msgstr "वर्गीकरण"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__code
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__code
+msgid "Code"
+msgstr "कोड"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__applies_to_modes
+msgid ""
+"Comma-separated list of modes the document applies to "
+"(sea,air,road,rail,multimodal,courier) or 'any'. Used to filter the "
+"checklist when the job mode is set."
+msgstr ""
+"अल्पविराम से अलग की गई उन मोड की सूची जिन पर दस्तावेज़ लागू होता है "
+"(sea,air,road,rail,multimodal,courier) या 'any'। जॉब मोड सेट होने पर "
+"चेकलिस्ट को फ़िल्टर करने के लिए उपयोग किया जाता है।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__commercial
+msgid "Commercial Document"
+msgstr "वाणिज्यिक दस्तावेज़"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_cominv
+msgid "Commercial Invoice"
+msgstr "वाणिज्यिक चालान"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_res_company
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__company_ids
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__company_ids
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__company_ids
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__company_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Companies"
+msgstr "कंपनियां"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__company_id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__company_id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__company_id
+msgid "Company"
+msgstr "कंपनी"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__completed_at
+msgid "Completed"
+msgstr "पूरा हुआ"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__compliance
+msgid "Compliance and Sanctions"
+msgstr "अनुपालन और प्रतिबंध"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_res_config_settings
+msgid "Config Settings"
+msgstr "कॉन्फ़िगरेशन सेटिंग"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_configuration
+msgid "Configuration"
+msgstr "कॉन्फ़िगरेशन"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__config_change
+msgid "Configuration Change"
+msgstr "कॉन्फ़िगरेशन परिवर्तन"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__circuit_breaker_threshold
+msgid ""
+"Consecutive failure count that trips the circuit breaker. While tripped, the"
+" adapter rejects calls immediately and schedules a half-open probe."
+msgstr ""
+"लगातार विफलताओं की संख्या जो सर्किट ब्रेकर को ट्रिप करती है। ट्रिप रहने के "
+"दौरान, एडाप्टर कॉल्स को तुरंत अस्वीकार करता है और एक हाफ-ओपन प्रोब निर्धारित"
+" करता है।"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_form
+msgid "Context"
+msgstr "संदर्भ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__context_json
+msgid "Context (JSON)"
+msgstr "संदर्भ (JSON)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__correlation_id
+msgid "Correlation ID"
+msgstr "सहसंबंध ID"
+
+#. module: eh_log_base
+#: model_terms:ir.actions.act_window,help:eh_log_base.action_eh_log_adapter_profile
+msgid ""
+"Country localisation modules ship default sandbox profiles\n"
+"                    on install. Profiles default to mock environment so a\n"
+"                    fresh install never accidentally calls a live regulator."
+msgstr ""
+"देश स्थानीयकरण मॉड्यूल इंस्टॉल पर डिफ़ॉल्ट सैंडबॉक्स प्रोफ़ाइल\n"
+"                    प्रदान करते हैं। प्रोफ़ाइल डिफ़ॉल्ट रूप से मॉक वातावरण पर सेट होती हैं ताकि\n"
+"                    नई इंस्टॉलेशन कभी भी गलती से किसी लाइव नियामक को कॉल न करे।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__courier
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__courier
+msgid "Courier or Express"
+msgstr "कूरियर या एक्सप्रेस"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__created_at
+msgid "Created"
+msgstr "बनाया गया"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__create_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__create_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__create_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__create_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__create_uid
+msgid "Created by"
+msgstr "इन्होंने बनाया"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__create_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__create_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__create_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__create_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__create_date
+msgid "Created on"
+msgstr "इस तारीख को बनाया गया"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__credential_purpose
+msgid "Credential Purpose Key"
+msgstr "क्रेडेंशियल उद्देश्य कुंजी"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__credential_status
+msgid "Credential Status"
+msgstr "क्रेडेंशियल स्थिति"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+#, python-format
+msgid ""
+"Credential for '%(purpose)s' is not configured. Tried environment variables:"
+" %(env)s. Tried ir.config_parameter key: %(param)s. Set one of these values "
+"in your deployment configuration or under Settings > ERP Heritage Logistics "
+"> Adapters."
+msgstr ""
+"'%(purpose)s' के लिए क्रेडेंशियल कॉन्फ़िगर नहीं किया गया है. आजमाए गए "
+"पर्यावरण चर: %(env)s. आजमाई गई ir.config_parameter कुंजी: %(param)s. इनमें "
+"से किसी एक मान को अपने परिनियोजन कॉन्फ़िगरेशन में या Settings > ERP Heritage"
+" Logistics > Adapters के अंतर्गत सेट करें."
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_profile.py:0
+#, python-format
+msgid ""
+"Credential for profile %(name)s is not resolvable. Underlying error: %(err)s"
+msgstr ""
+"प्रोफ़ाइल %(name)s के लिए क्रेडेंशियल हल नहीं किया जा सकता. अंतर्निहित "
+"त्रुटि: %(err)s"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Credit Exposure Warning"
+msgstr "क्रेडिट एक्सपोज़र चेतावनी"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_credit_warning_pct
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_credit_warning_pct
+msgid "Credit Exposure Warning (%)"
+msgstr "क्रेडिट एक्सपोज़र चेतावनी (%)"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_caf
+msgid "Currency Adjustment Factor"
+msgstr "मुद्रा समायोजन कारक"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_clrnc
+msgid "Customs Clearance Fee"
+msgstr "सीमा शुल्क निकासी शुल्क"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_decl
+msgid "Customs Declaration"
+msgstr "सीमा शुल्क घोषणा"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__customs
+msgid "Customs Document"
+msgstr "सीमा शुल्क दस्तावेज़"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_duty
+msgid "Customs Duty"
+msgstr "सीमा शुल्क"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__customs
+msgid "Customs and Duties"
+msgstr "सीमा शुल्क और कर"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Cycle"
+msgstr "चक्र"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_dgd
+msgid "Dangerous Goods Declaration"
+msgstr "खतरनाक माल घोषणा"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__related_record_id
+msgid ""
+"Database id of the originating record. Pair with related_model for the back "
+"link."
+msgstr ""
+"मूल रिकॉर्ड का डेटाबेस ID। बैक लिंक के लिए related_model के साथ जोड़ें।"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Days before expiry the system raises an activity to the account owner."
+msgstr ""
+"समाप्ति से पहले जितने दिनों में सिस्टम खाता स्वामी के लिए एक गतिविधि बनाता "
+"है।"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Days to keep adapter call events."
+msgstr "एडाप्टर कॉल इवेंट रखने के दिन।"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid ""
+"Days to keep manual override events. Compliance evidence usually requires "
+"the longest window."
+msgstr ""
+"मैन्युअल ओवरराइड इवेंट रखने के दिन। अनुपालन साक्ष्य के लिए आमतौर पर सबसे "
+"लंबी अवधि आवश्यक होती है।"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Days to keep state transition events."
+msgstr "स्थिति संक्रमण इवेंट रखने के दिन।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__dead_letter
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Dead Letter"
+msgstr "डेड लेटर"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__default_currency_id
+msgid "Default Currency"
+msgstr "डिफ़ॉल्ट मुद्रा"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__default_expense_account_id
+msgid "Default Expense Account"
+msgstr "डिफ़ॉल्ट एक्सपेंस अकाउंट"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__expiry_warning_days
+msgid "Default Expiry Warning (days)"
+msgstr "डिफ़ॉल्ट समाप्ति चेतावनी (दिन)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_default_incoterm_id
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_default_incoterm_id
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Default Incoterm"
+msgstr "डिफ़ॉल्ट इंकोटर्म"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_default_mode
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_default_mode
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Default Logistics Mode"
+msgstr "डिफ़ॉल्ट लॉजिस्टिक्स मोड"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__default_revenue_account_id
+msgid "Default Revenue Account"
+msgstr "डिफ़ॉल्ट राजस्व खाता"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Defaults"
+msgstr "डिफ़ॉल्ट"
+
+#. module: eh_log_base
+#: model_terms:ir.actions.act_window,help:eh_log_base.action_eh_log_charge_code
+msgid "Define your charge code catalogue"
+msgstr "अपना शुल्क कोड कैटलॉग परिभाषित करें"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__health_check_status__degraded
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Degraded"
+msgstr "अवक्रमित"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_dlvord
+msgid "Delivery Order"
+msgstr "डिलीवरी ऑर्डर"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__description
+msgid "Description"
+msgstr "विवरण"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__destination
+msgid "Destination Charges"
+msgstr "गंतव्य शुल्क"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_delivery
+msgid "Destination Delivery"
+msgstr "गंतव्य वितरण"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_destination_doc
+msgid "Destination Documentation"
+msgstr "गंतव्य दस्तावेज़ीकरण"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_dthc
+msgid "Destination Terminal Handling"
+msgstr "गंतव्य टर्मिनल हैंडलिंग"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_dthc_air
+msgid "Destination Terminal Handling (Air)"
+msgstr "गंतव्य टर्मिनल हैंडलिंग (वायु)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__description
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "Detail"
+msgstr "विवरण"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__direction
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__direction
+msgid "Direction"
+msgstr "दिशा"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__is_disbursement
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+msgid "Disbursement"
+msgstr "वितरण"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__is_disbursement
+msgid ""
+"Disbursement charges are passed through at cost; the margin guard ignores "
+"them when checking gross margin."
+msgstr ""
+"वितरण शुल्क लागत पर पास किए जाते हैं; सकल मार्जिन की जाँच करते समय मार्जिन "
+"गार्ड उन्हें अनदेखा करता है।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__display_name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__display_name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__display_name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__display_name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__display_name
+msgid "Display Name"
+msgstr "डिस्प्ले का नाम"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "Document Type"
+msgstr "दस्तावेज़ प्रकार"
+
+#. module: eh_log_base
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_document_type
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_document_types
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_list
+msgid "Document Types"
+msgstr "दस्तावेज़ प्रकार"
+
+#. module: eh_log_base
+#: model:ir.model.constraint,message:eh_log_base.constraint_eh_log_document_type_code_unique
+msgid "Document type code must be unique."
+msgstr "दस्तावेज़ प्रकार कोड अद्वितीय होना चाहिए।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__documentation
+msgid "Documentation"
+msgstr "दस्तावेज़"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__health_check_status__down
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Down"
+msgstr "डाउन"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__edi_partner
+msgid "EDI Partner"
+msgstr "EDI पार्टनर"
+
+#. module: eh_log_base
+#: model:res.groups,name:eh_log_base.group_eh_log_auditor
+msgid "EH Logistics Auditor (read-only)"
+msgstr "EH लॉजिस्टिक्स ऑडिटर (केवल पढ़ने के लिए)"
+
+#. module: eh_log_base
+#: model:res.groups,name:eh_log_base.group_eh_log_manager
+msgid "EH Logistics Manager"
+msgstr "EH लॉजिस्टिक्स प्रबंधक"
+
+#. module: eh_log_base
+#: model:res.groups,name:eh_log_base.group_eh_log_user
+msgid "EH Logistics User"
+msgstr "EH लॉजिस्टिक्स उपयोगकर्ता"
+
+#. module: eh_log_base
+#: model:ir.actions.server,name:eh_log_base.ir_cron_eh_log_event_gc_ir_actions_server
+#: model:ir.cron,cron_name:eh_log_base.ir_cron_eh_log_event_gc
+msgid "EH Logistics: prune old operational events"
+msgstr "EH लॉजिस्टिक्स: पुरानी परिचालन घटनाओं को हटाएं"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_brand
+msgid "ERP Heritage Brand Attribution"
+msgstr "ERP Heritage ब्रांड एट्रिब्यूशन"
+
+#. module: eh_log_base
+#: model:ir.module.category,name:eh_log_base.privilege_eh_logistics
+#: model_terms:ir.ui.view,arch_db:eh_log_base.eh_log_report_footer
+#: model_terms:ir.ui.view,arch_db:eh_log_base.eh_log_report_header
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "ERP Heritage Logistics"
+msgstr "ERP Heritage लॉजिस्टिक्स"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_ux_mixin
+msgid "ERP Heritage UX Mixin"
+msgstr ""
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+msgid ""
+"Encrypted credential storage requires the Python 'cryptography' library. "
+"Install it on the server or store credentials via environment variables "
+"instead."
+msgstr ""
+"एन्क्रिप्टेड क्रेडेंशियल संग्रहण के लिए Python 'cryptography' लाइब्रेरी "
+"आवश्यक है। इसे सर्वर पर इंस्टॉल करें या इसके बजाय एन्वायरनमेंट वेरिएबल्स के "
+"माध्यम से क्रेडेंशियल संग्रहीत करें।"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid ""
+"Encrypted ir.config_parameter under the <code>eh_log.credentials.</code> "
+"namespace."
+msgstr ""
+"<code>eh_log.credentials.</code> नेमस्पेस के अंतर्गत एन्क्रिप्टेड "
+"ir.config_parameter।"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Endpoint"
+msgstr "एंडपॉइंट"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__environment
+msgid "Environment"
+msgstr "एन्वायरमेंट"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid ""
+"Environment variable (e.g. "
+"<code>EH_LOG_&lt;PROVIDER&gt;_&lt;PURPOSE&gt;</code>)."
+msgstr ""
+"पर्यावरण चर (उदा. <code>EH_LOG_&lt;PROVIDER&gt;_&lt;PURPOSE&gt;</code>)।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__severity__error
+msgid "Error"
+msgstr "त्रुटि!"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__error_code
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__error_code
+msgid "Error Code"
+msgstr "त्रुटि कोड"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__error_message
+msgid "Error Message"
+msgstr "त्रुटि संदेश"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Errors only"
+msgstr "केवल त्रुटियाँ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_event_retention_adapter_days
+msgid "Event Retention: Adapter Calls (days)"
+msgstr "इवेंट प्रतिधारण: एडाप्टर कॉल (दिन)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_event_retention_override_days
+msgid "Event Retention: Manual Overrides (days)"
+msgstr "इवेंट प्रतिधारण: मैन्युअल ओवरराइड (दिन)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_event_retention_state_days
+msgid "Event Retention: State Transitions (days)"
+msgstr "इवेंट प्रतिधारण: स्थिति परिवर्तन (दिन)"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "Expiry Tracking"
+msgstr "समाप्ति ट्रैकिंग"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Explicit caller default (avoid in production)."
+msgstr "स्पष्ट कॉलर डिफ़ॉल्ट (उत्पादन में इससे बचें)।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__direction__export
+msgid "Export"
+msgstr "एक्सपोर्ट करें"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__carrier_express
+msgid "Express Carrier"
+msgstr "एक्सप्रेस कैरियर"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__failure
+msgid "Failure"
+msgstr "विफल"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__mode
+msgid ""
+"Filters rate-sheet selection so an air-only charge does not surface on a "
+"sea-freight quotation."
+msgstr ""
+"रेट-शीट चयन को फ़िल्टर करता है ताकि केवल-वायु शुल्क समुद्री माल भाड़े के "
+"उद्धरण पर न दिखे।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__financial
+msgid "Financial Document"
+msgstr "वित्तीय दस्तावेज़"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_follower_ids
+msgid "Followers"
+msgstr "फ़ॉलोवर"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "फ़ॉलोवर (पार्टनर)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "फॉन्ट के बेहतरीन आइकॉन जैसे, फा-टॉस्क"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__description
+msgid ""
+"Free-form notes for the operator. Surfaced on the rate sheet editor and on "
+"charge-line tooltips in quotations."
+msgstr ""
+"ऑपरेटर के लिए मुक्त-रूप नोट्स। रेट शीट एडिटर पर और कोटेशन में चार्ज-लाइन "
+"टूलटिप्स पर दिखाई देते हैं।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__freight
+msgid "Freight"
+msgstr "माल ढुलाई"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_fsc
+msgid "Fuel Surcharge"
+msgstr "ईंधन अधिभार"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "General"
+msgstr "सामान्य"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__regulator
+msgid "Government Regulator"
+msgstr "सरकारी नियामक"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_search
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Group by Category"
+msgstr "श्रेणी के अनुसार समूहित करें"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Group by Environment"
+msgstr "पर्यावरण के अनुसार समूहित करें"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Group by Message Type"
+msgstr "संदेश प्रकार के अनुसार समूह बनाएं"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+msgid "Group by Mode"
+msgstr "मोड के अनुसार समूह बनाएं"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Group by Profile"
+msgstr "प्रोफ़ाइल के अनुसार समूह बनाएं"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Group by Provider Kind"
+msgstr "प्रदाता प्रकार के अनुसार समूह बनाएं"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Group by Status"
+msgstr "स्थिति के अनुसार समूह बनाएं"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Group by User"
+msgstr "उपयोगकर्ता के अनुसार समूह बनाएं"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "HBL"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__basic
+msgid "HTTP Basic"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__http_status
+msgid "HTTP Status"
+msgstr "HTTP स्थिति"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_handling
+msgid "Handling"
+msgstr "हैंडलिंग"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__has_message
+msgid "Has Message"
+msgstr "मैसेज है"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Health"
+msgstr "स्वास्थ्य"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_health
+msgid "Health Certificate"
+msgstr "स्वास्थ्य प्रमाणपत्र"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__health_check_message
+msgid "Health Check Message"
+msgstr "हेल्थ चेक संदेश"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__health_check_at
+msgid "Health Checked At"
+msgstr "स्वास्थ्य जांच की गई"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__health_check_status
+msgid "Health Status"
+msgstr "स्वास्थ्य स्थिति"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__health_check_status__ok
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Healthy"
+msgstr "स्वस्थ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__is_taxable_at_destination
+msgid ""
+"Hint for the tax engine in the customs broker module. When False, the charge"
+" is exempt at destination clearance."
+msgstr ""
+"कस्टम्स ब्रोकर मॉड्यूल में टैक्स इंजन के लिए संकेत। False होने पर, गंतव्य "
+"क्लीयरेंस पर यह शुल्क छूट प्राप्त है।"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_hawb
+msgid "House Air Waybill"
+msgstr "हाउस एयर वेबिल"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_hbl
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "House Bill of Lading"
+msgstr "हाउस बिल ऑफ लैडिंग"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_kyc_warning_days
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_kyc_warning_days
+msgid ""
+"How many days before a KYC document expires the system creates an activity "
+"for the partner's account owner."
+msgstr ""
+"KYC दस्तावेज़ की समाप्ति से कितने दिन पहले सिस्टम भागीदार के खाता स्वामी के "
+"लिए एक गतिविधि बनाता है।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__expiry_warning_days
+msgid ""
+"How many days before expiry the system raises an activity to the document "
+"owner. 0 disables the warning."
+msgstr ""
+"समाप्ति से कितने दिन पहले सिस्टम दस्तावेज़ स्वामी के लिए एक गतिविधि उठाता "
+"है। 0 चेतावनी को अक्षम कर देता है।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__related_record_display
+msgid ""
+"Human-readable reference (e.g. customs declaration number) snapshotted at "
+"write time so the log entry is readable even after the originating record is"
+" archived."
+msgstr ""
+"मानव-पठनीय संदर्भ (जैसे सीमा शुल्क घोषणा संख्या) जिसे लिखते समय स्नैपशॉट "
+"किया जाता है ताकि मूल रिकॉर्ड के संग्रहीत होने के बाद भी लॉग प्रविष्टि पठनीय"
+" रहे।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__id
+msgid "ID"
+msgstr "आईडी"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_exception_icon
+msgid "Icon"
+msgstr "आइकॉन"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "एक छोटा निशान जो बताता है कि कुछ अलग या असामान्य हुआ है।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__idempotency_key
+msgid "Idempotency Key"
+msgstr "Idempotency कुंजी"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__identity
+msgid "Identity and KYC"
+msgstr "पहचान और KYC"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "अगर यह बॉक्स चेक है, तो नए मैसेज देखने ज़रूरी हैं।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_has_error
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "अगर बॉक्स पर टिक है, तो कुछ मैसेज भेजने में गलती हुई है।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__direction__import
+msgid "Import"
+msgstr "इंपोर्ट करना"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_vat
+msgid "Import VAT"
+msgstr "VAT आयात करें"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+msgid "Inactive"
+msgstr "निष्क्रि"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__direction__inbound
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Inbound"
+msgstr "इनबाउंड"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__severity__info
+msgid "Info"
+msgstr "जानकारी"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_haulage
+msgid "Inland Haulage"
+msgstr "अंतर्देशीय ढुलाई"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__inland
+msgid "Inland Transport"
+msgstr "अंतर्देशीय परिवहन"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__insurance
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__insurance
+msgid "Insurance"
+msgstr "बीमा"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_inscert
+msgid "Insurance Certificate"
+msgstr "बीमा प्रमाणपत्र"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_is_follower
+msgid "Is Follower"
+msgstr "फ़ॉलोवर है"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__jwt_signed
+msgid "JWT Signed (private key)"
+msgstr "JWT हस्ताक्षरित (निजी कुंजी)"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "KYC Expiry Warning"
+msgstr "KYC समाप्ति चेतावनी"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_kyc_warning_days
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_kyc_warning_days
+msgid "KYC Expiry Warning (days)"
+msgstr "KYC समाप्ति चेतावनी (दिन)"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Last 7 days"
+msgstr "पिछले 7 दिन"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__health_check_latency_ms
+msgid "Last Health Latency (ms)"
+msgstr "अंतिम हेल्थ लेटेंसी (ms)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__last_message_at
+msgid "Last Message"
+msgstr "अंतिम संदेश"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message____last_update
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile____last_update
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code____last_update
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type____last_update
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__write_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__write_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__write_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__write_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__write_uid
+msgid "Last Updated by"
+msgstr "इन्होंने आखिरी बार अपडेट किया"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__write_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__write_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__write_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__write_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__write_date
+msgid "Last Updated on"
+msgstr "आखिरी बार अपडेट हुआ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__latency_ms
+msgid "Latency (ms)"
+msgstr "विलंबता (ms)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__company_ids
+msgid ""
+"Leave empty to make this code available across all companies. Use to scope a"
+" code to specific companies."
+msgstr ""
+"इस कोड को सभी कंपनियों में उपलब्ध कराने के लिए खाली छोड़ें। किसी कोड को "
+"विशिष्ट कंपनियों तक सीमित करने के लिए उपयोग करें।"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Linkage"
+msgstr "संबंध"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__credential_status
+msgid ""
+"Live status of the credential as resolved by the helper. Read-only; "
+"recompute by clicking Test Credential."
+msgstr ""
+"हेल्पर द्वारा हल किए गए क्रेडेंशियल की लाइव स्थिति। केवल-पढ़ने योग्य; Test "
+"Credential पर क्लिक करके पुनर्गणना करें।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__credential_purpose
+msgid ""
+"Logical key passed to eh.log.credentials.get(). The helper resolves it via "
+"environment variables and ir.config_parameter without exposing the secret on"
+" this form."
+msgstr ""
+"eh.log.credentials.get() को पास की गई तार्किक कुंजी। सहायक इसे पर्यावरण चर "
+"और ir.config_parameter के माध्यम से हल करता है, इस फ़ॉर्म पर सीक्रेट को "
+"उजागर किए बिना।"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_root
+msgid "Logistics"
+msgstr "लॉजिटिक्स"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_adapter_message
+msgid "Logistics Adapter Message Log"
+msgstr "लॉजिस्टिक्स एडाप्टर संदेश लॉग"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_adapter_profile
+msgid "Logistics Adapter Profile"
+msgstr "लॉजिस्टिक्स एडाप्टर प्रोफ़ाइल"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_charge_code
+msgid "Logistics Charge Code"
+msgstr "लॉजिस्टिक्स शुल्क कोड"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_credentials
+msgid "Logistics Credentials Helper"
+msgstr "लॉजिस्टिक्स क्रेडेंशियल हेल्पर"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_document_type
+msgid "Logistics Document Type"
+msgstr "लॉजिस्टिक्स दस्तावेज़ प्रकार"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_event
+msgid "Logistics Operational Event"
+msgstr "लॉजिस्टिक्स परिचालन घटना"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: eh_log_base
+#: model:res.groups,comment:eh_log_base.group_eh_log_manager
+msgid ""
+"Manager access to ERP Heritage logistics modules: configuration, approval, "
+"override actions. Implies the Logistics User role."
+msgstr ""
+"ERP Heritage लॉजिस्टिक्स मॉड्यूल तक प्रबंधक पहुंच: कॉन्फ़िगरेशन, अनुमोदन, "
+"ओवरराइड क्रियाएं। लॉजिस्टिक्स उपयोगकर्ता भूमिका को शामिल करता है।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__override
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Manual Override"
+msgstr "मैनुअल ओवरराइड"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Margin Approval Threshold"
+msgstr "मार्जिन अनुमोदन सीमा"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_margin_floor_threshold
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_margin_floor_threshold
+msgid "Margin Approval Threshold (%)"
+msgstr "मार्जिन अनुमोदन सीमा (%)"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Margin Warning Threshold"
+msgstr "मार्जिन चेतावनी सीमा"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_margin_warning_threshold
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_margin_warning_threshold
+msgid "Margin Warning Threshold (%)"
+msgstr "मार्जिन चेतावनी सीमा (%)"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_mawb
+msgid "Master Air Waybill"
+msgstr "मास्टर एयर वेबिल"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_mbl
+msgid "Master Bill of Lading"
+msgstr "मास्टर बिल ऑफ लैडिंग"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_master_data
+msgid "Master Data"
+msgstr "मास्टर डेटा"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__retry_max_attempts
+msgid ""
+"Maximum retry attempts on transient errors. Backoff is exponential with "
+"jitter, base 1.5x."
+msgstr ""
+"अस्थायी त्रुटियों पर अधिकतम पुनः प्रयास। बैकऑफ़ जिटर के साथ एक्सपोनेंशियल "
+"है, आधार 1.5x।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_has_error
+msgid "Message Delivery error"
+msgstr "मैसेज डिलीवरी में गड़बड़ी"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__message_type
+msgid "Message Type"
+msgstr "संदेश प्रकार"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_count
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Messages"
+msgstr "संदेश"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Method"
+msgstr "मेथड"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__company_ids
+msgid ""
+"Mirrors company_id as an m2m so the global isolation rule can use a single "
+"'company_ids in company_ids' domain that holds whether the field is mono or "
+"multi-company in the future."
+msgstr ""
+"company_id को m2m के रूप में मिरर करता है ताकि वैश्विक आइसोलेशन नियम एक ही "
+"'company_ids in company_ids' डोमेन का उपयोग कर सके, जो भविष्य में फ़ील्ड के "
+"मोनो या मल्टी-कंपनी होने की स्थिति में भी मान्य रहता है।"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Mirsal 2 (UAE Sandbox)"
+msgstr "Mirsal 2 (UAE सैंडबॉक्स)"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__credential_status__missing
+msgid "Missing"
+msgstr "अनुपस्थित"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Mock"
+msgstr "मॉक"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__environment__mock
+msgid "Mock (offline fixtures)"
+msgstr "मॉक (ऑफ़लाइन फ़िक्स्चर)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__environment
+msgid ""
+"Mock plays back canned fixtures from tests/fixtures/. Sandbox calls the "
+"provider's published test environment. Production hits live. Profiles "
+"default to mock so a fresh install never accidentally calls a real "
+"regulator."
+msgstr ""
+"मॉक tests/fixtures/ से पूर्व-निर्धारित फ़िक्स्चर वापस चलाता है। सैंडबॉक्स "
+"प्रदाता के प्रकाशित परीक्षण परिवेश को कॉल करता है। उत्पादन लाइव से जुड़ता "
+"है। प्रोफ़ाइल डिफ़ॉल्ट रूप से मॉक पर होती हैं ताकि नया इंस्टॉल कभी गलती से "
+"किसी वास्तविक नियामक को कॉल न करे।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__mode
+msgid "Mode"
+msgstr "मोड"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__multimodal
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__multimodal
+msgid "Multimodal"
+msgstr "मल्टीमॉडल"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__mtls
+msgid "Mutual TLS"
+msgstr "पारस्परिक TLS"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "मेरी गतिविधि की डेडलाइन"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__name
+msgid "Name"
+msgstr "नाम"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "अगली गतिविधि की डेडलाइन"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_summary
+msgid "Next Activity Summary"
+msgstr "अगली गतिविधी की जानकारी"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_type_id
+msgid "Next Activity Type"
+msgstr "अगली गतिविधि का प्रकार"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_profile.py:0
+#, python-format
+msgid ""
+"No adapter class is registered for provider code '%(code)s'. Available "
+"providers: %(list)s. If this is a new integration, the country pack or "
+"vertical module that owns it has not been installed."
+msgstr ""
+"प्रदाता कोड '%(code)s' के लिए कोई अडैप्टर क्लास पंजीकृत नहीं है। उपलब्ध "
+"प्रदाता: %(list)s. यदि यह एक नया एकीकरण है, तो इसका स्वामी देश पैक या "
+"वर्टिकल मॉड्यूल स्थापित नहीं किया गया है।"
+
+#. module: eh_log_base
+#: model_terms:ir.actions.act_window,help:eh_log_base.action_eh_log_adapter_profile
+msgid "No adapter profiles configured yet"
+msgstr "अभी तक कोई अडैप्टर प्रोफ़ाइल कॉन्फ़िगर नहीं की गई है"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__none
+msgid "None"
+msgstr "कोई नहीं"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__health_check_status__unknown
+msgid "Not Yet Checked"
+msgstr "अभी तक जाँचा नहीं गया"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Notes"
+msgstr "नोट्स"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__severity__notice
+msgid "Notice"
+msgstr "सूचना"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_needaction_counter
+msgid "Number of Actions"
+msgstr "ऐक्शन की संख्या"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_has_error_counter
+msgid "Number of errors"
+msgstr "गड़बड़ी की संख्या"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "ऐसे मैसेज की संख्या जिनपर कार्रवाई की ज़रूरत है"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "डिलीवरी में गड़बड़ी वाले मैसेज की संख्या"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__oauth2_authorization_code
+msgid "OAuth2 Authorization Code"
+msgstr "OAuth2 प्राधिकरण कोड"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__oauth2_client_credentials
+msgid "OAuth2 Client Credentials"
+msgstr "OAuth2 क्लाइंट क्रेडेंशियल"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "OFR"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__occurred_at
+msgid "Occurred At"
+msgstr "घटित हुआ"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__carrier_ocean
+msgid "Ocean Carrier"
+msgstr "समुद्री वाहक"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_ofr
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Ocean Freight"
+msgstr "समुद्री माल भाड़ा"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__related_model
+msgid ""
+"Odoo model name that originated this call, e.g. "
+"'eh.log.customs.declaration'. Lets the UI link back from the message log to "
+"the operational record."
+msgstr ""
+"Odoo मॉडल का नाम जिसने यह कॉल आरंभ की, जैसे 'eh.log.customs.declaration'। यह"
+" UI को संदेश लॉग से परिचालन रिकॉर्ड पर वापस लिंक करने देता है।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_event__summary
+msgid ""
+"One-line human-readable description of the event. The structured payload "
+"sits in the context_json field."
+msgstr ""
+"ईवेंट का एकल-पंक्ति मानव-पठनीय विवरण। संरचित पेलोड context_json फ़ील्ड में "
+"स्थित है।"
+
+#. module: eh_log_base
+#: model:ir.model.constraint,message:eh_log_base.constraint_eh_log_adapter_profile_provider_company_environment_unique
+msgid ""
+"Only one profile per (provider, company, environment) is allowed. If you "
+"need a second sandbox configuration, use the secondary endpoint field on the"
+" existing profile."
+msgstr ""
+"प्रति (provider, company, environment) केवल एक प्रोफ़ाइल की अनुमति है। यदि "
+"आपको दूसरे sandbox कॉन्फ़िगरेशन की आवश्यकता है, तो मौजूदा प्रोफ़ाइल पर "
+"द्वितीयक एंडपॉइंट फ़ील्ड का उपयोग करें।"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Open Related Record"
+msgstr "संबंधित रिकॉर्ड खोलें"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_form
+msgid "Operational Event"
+msgstr "परिचालन घटना"
+
+#. module: eh_log_base
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_event
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_events
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_list
+msgid "Operational Events"
+msgstr "परिचालन घटनाएँ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__notes
+msgid "Operational Notes"
+msgstr "परिचालन नोट्स"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_operations
+msgid "Operations"
+msgstr "संचालन"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__name
+msgid ""
+"Operator-friendly label for this profile, e.g. 'Mirsal 2 (UAE Sandbox)'."
+msgstr ""
+"इस प्रोफ़ाइल के लिए ऑपरेटर-अनुकूल लेबल, उदा. 'Mirsal 2 (UAE Sandbox)'।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__idempotency_key
+msgid ""
+"Optional caller-supplied key the provider uses to deduplicate retried "
+"requests. Empty when the call is naturally idempotent (e.g. a status query)."
+msgstr ""
+"कॉलर द्वारा प्रदान की गई वैकल्पिक कुंजी जिसका उपयोग प्रदाता पुनः प्रयास किए "
+"गए अनुरोधों को डीडुप्लिकेट करने के लिए करता है। जब कॉल स्वाभाविक रूप से "
+"आइडेम्पोटेंट हो (उदा. एक स्थिति क्वेरी) तो यह खाली रहती है।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__default_currency_id
+msgid ""
+"Optional default for rate sheets. Quotation currency wins when the two "
+"differ; this is a hint for the rate-sheet editor only."
+msgstr ""
+"रेट शीट के लिए वैकल्पिक डिफ़ॉल्ट। जब दोनों भिन्न हों तो कोटेशन मुद्रा प्रबल "
+"होती है; यह केवल रेट-शीट संपादक के लिए एक संकेत है।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__secondary_endpoint_url
+msgid ""
+"Optional fallback URL used by adapters that publish a DR or read-replica "
+"endpoint."
+msgstr ""
+"वैकल्पिक फ़ॉलबैक URL, जिसका उपयोग उन एडेप्टर द्वारा किया जाता है जो DR या "
+"रीड-रेप्लिका एंडपॉइंट प्रकाशित करते हैं।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__origin
+msgid "Origin Charges"
+msgstr "मूल शुल्क"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_origin_doc
+msgid "Origin Documentation"
+msgstr "मूल दस्तावेज़"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_pickup
+msgid "Origin Pickup"
+msgstr "मूल स्थान पिकअप"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_othc
+msgid "Origin Terminal Handling"
+msgstr "मूल टर्मिनल हैंडलिंग"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_othc_air
+msgid "Origin Terminal Handling (Air)"
+msgstr "मूल टर्मिनल हैंडलिंग (वायु)"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_message.py:0
+msgid "Originating Record"
+msgstr "मूल रिकॉर्ड"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__other
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__other
+msgid "Other"
+msgstr "अन्य"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__direction__outbound
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Outbound"
+msgstr "आउटबाउंड"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Outcome"
+msgstr "परिणाम"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Override Retention"
+msgstr "प्रतिधारण अधिरोहण"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_pl
+msgid "Packing List"
+msgstr "पैकिंग सूची"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.eh_log_clean_layout
+msgid "Page <span class=\"page\"/> / <span class=\"topage\"/>"
+msgstr "पृष्ठ <span class=\"page\"/> / <span class=\"topage\"/>"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_passport
+msgid "Passport (Authorised Signatory)"
+msgstr "पासपोर्ट (अधिकृत हस्ताक्षरकर्ता)"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__payment
+msgid "Payment Provider"
+msgstr "पेमेंट प्रोवाइडर"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_peak
+msgid "Peak Season Surcharge"
+msgstr "पीक सीजन अधिभार"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__pending
+msgid "Pending"
+msgstr "पेडिंग"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__request_timeout_seconds
+msgid ""
+"Per-call timeout. Adapter raises AdapterTimeoutError on expiry and the "
+"circuit breaker increments its counter."
+msgstr ""
+"प्रति कॉल टाइमआउट। समाप्ति पर एडाप्टर AdapterTimeoutError उत्पन्न करता है और"
+" सर्किट ब्रेकर अपना काउंटर बढ़ाता है।"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_ppc
+msgid "Phytosanitary Certificate"
+msgstr "पादप स्वच्छता प्रमाणपत्र"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__default_revenue_account_id
+msgid ""
+"Posted on customer invoice lines billed against this charge code. Per-"
+"company because account hierarchies vary."
+msgstr ""
+"इस चार्ज कोड के विरुद्ध बिल किए गए ग्राहक चालान पंक्तियों पर पोस्ट किया गया।"
+" प्रति-कंपनी क्योंकि खाता पदानुक्रम भिन्न होते हैं।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__default_expense_account_id
+msgid ""
+"Posted on vendor bill lines costed against this charge code. Per-company "
+"because account hierarchies vary."
+msgstr ""
+"इस चार्ज कोड के विरुद्ध लागत लगाई गई विक्रेता बिल पंक्तियों पर पोस्ट किया "
+"गया। प्रति-कंपनी क्योंकि खाता पदानुक्रम भिन्न होते हैं।"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Pre-fills new logistics quotations."
+msgstr "नए लॉजिस्टिक्स कोटेशन को पहले से भर देता है।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_default_incoterm_id
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_default_incoterm_id
+msgid "Pre-fills new logistics quotations. Operators can change per quote."
+msgstr ""
+"नए लॉजिस्टिक्स कोटेशन को पहले से भर देता है। ऑपरेटर प्रति कोटेशन बदल सकते "
+"हैं।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__endpoint_url
+msgid "Primary Endpoint"
+msgstr "प्राथमिक Endpoint"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__environment__production
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Production"
+msgstr "उत्पादन"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__profile_id
+msgid "Profile"
+msgstr "प्रोफ़ाइल"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Provider"
+msgstr "प्रोवाइडर"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__api_version
+msgid ""
+"Provider API version this profile speaks (e.g. '2.4', '2026-01'). Adapters "
+"refuse to dispatch when this does not match the implementing class's "
+"declared version."
+msgstr ""
+"यह प्रोफ़ाइल जिस प्रदाता API संस्करण का उपयोग करती है (उदाहरण के लिए '2.4', "
+"'2026-01')। जब यह क्रियान्वयन करने वाली क्लास के घोषित संस्करण से मेल नहीं "
+"खाता, तो अडैप्टर डिस्पैच करने से इनकार कर देते हैं।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__provider_code
+msgid "Provider Code"
+msgstr "प्रदाता कोड"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__provider_kind
+msgid "Provider Kind"
+msgstr "प्रदाता प्रकार"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__error_code
+msgid ""
+"Provider-returned error code, surfaced verbatim. The human message is in the"
+" body; this field is for grep."
+msgstr ""
+"प्रदाता द्वारा लौटाया गया त्रुटि कोड, ज्यों का त्यों दिखाया गया। मानव-पठनीय "
+"संदेश बॉडी में है; यह फ़ील्ड grep के लिए है।"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_po
+msgid "Purchase Order"
+msgstr "खरीद आदेश"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_margin_warning_threshold
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_margin_warning_threshold
+msgid ""
+"Quotation margin below this percentage raises a warning in the form. "
+"Approval is still required only if the margin is below the company's hard "
+"floor."
+msgstr ""
+"इस प्रतिशत से कम कोटेशन मार्जिन फ़ॉर्म में चेतावनी उत्पन्न करता है। स्वीकृति"
+" तब भी केवल तभी आवश्यक है जब मार्जिन कंपनी की कठोर न्यूनतम सीमा से नीचे हो।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_margin_floor_threshold
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_margin_floor_threshold
+msgid ""
+"Quotation margin below this percentage requires explicit manager approval "
+"before confirmation."
+msgstr ""
+"इस प्रतिशत से कम कोटेशन मार्जिन के लिए पुष्टि से पहले प्रबंधक की स्पष्ट "
+"स्वीकृति आवश्यक है।"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Quotations below this margin raise a warning."
+msgstr "इस मार्जिन से कम कोटेशन चेतावनी उत्पन्न करते हैं।"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Quotations below this margin require manager approval."
+msgstr "इस मार्जिन से कम कोटेशन के लिए प्रबंधक की स्वीकृति आवश्यक है।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__rail
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__rail
+msgid "Rail"
+msgstr "रेल"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__carrier_rail
+msgid "Rail Carrier"
+msgstr "रेल वाहक"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_rlfr
+msgid "Rail Freight"
+msgstr "रेल माल ढुलाई"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_rwb
+msgid "Rail Waybill"
+msgstr "रेल वेबिल"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__rate_limit_per_minute
+msgid "Rate Limit (per minute)"
+msgstr "दर सीमा (प्रति मिनट)"
+
+#. module: eh_log_base
+#: model:res.groups,comment:eh_log_base.group_eh_log_user
+msgid ""
+"Read and operational access to ERP Heritage logistics modules. Implies the "
+"standard Salesperson role."
+msgstr ""
+"ERP Heritage लॉजिस्टिक्स मॉड्यूल तक पढ़ने और परिचालन पहुँच। मानक Salesperson"
+" भूमिका को अंतर्निहित करता है।"
+
+#. module: eh_log_base
+#: model:res.groups,comment:eh_log_base.group_eh_log_auditor
+msgid ""
+"Read-only auditor: visibility on every ERP Heritage logistics audit log "
+"without write access. Cannot edit operational data."
+msgstr ""
+"केवल-पठन ऑडिटर: बिना लेखन पहुंच के प्रत्येक ERP Heritage लॉजिस्टिक्स ऑडिट "
+"लॉग की दृश्यता। परिचालन डेटा को संपादित नहीं कर सकता।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__regulatory
+msgid "Regulatory Certificate"
+msgstr "नियामक प्रमाणपत्र"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Rejected"
+msgstr "अस्वीकार किया गया"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__rejected
+msgid "Rejected by Provider"
+msgstr "प्रदाता द्वारा अस्वीकृत"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__related_model
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__related_model
+msgid "Related Model"
+msgstr "इससे जुड़ा हुआ मॉडल"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__related_record_display
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__related_record_display
+msgid "Related Record"
+msgstr "संबंधित रिकॉर्ड"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__related_record_id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__related_record_id
+msgid "Related Record ID"
+msgstr "संबंधित रिकॉर्ड ID"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Replay"
+msgstr "पुनः चलाएँ"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_message.py:0
+msgid "Replayed Messages"
+msgstr "पुनः चलाए गए संदेश"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Request"
+msgstr "अनुरोध"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__request_headers
+msgid "Request Headers (sanitised)"
+msgstr "अनुरोध हेडर (सैनिटाइज़ किए गए)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__request_payload
+msgid "Request Payload"
+msgstr "अनुरोध पेलोड"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__request_timeout_seconds
+msgid "Request Timeout (s)"
+msgstr "अनुरोध टाइमआउट (s)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__is_required_default
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_search
+msgid "Required by Default"
+msgstr "डिफ़ॉल्ट रूप से आवश्यक"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Resilience"
+msgstr "लचीलापन"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__credential_status__ok
+msgid "Resolved"
+msgstr "हल किया गया"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Response"
+msgstr "प्रतिक्रिया"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__response_headers
+msgid "Response Headers"
+msgstr "प्रतिक्रिया हेडर"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__response_payload
+msgid "Response Payload"
+msgstr "प्रतिक्रिया पेलोड"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_user_id
+msgid "Responsible User"
+msgstr "जिम्मेदार उपयोगकर्ता"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__retry
+msgid "Retried"
+msgstr "पुनः प्रयास किया गया"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__retry_count
+msgid "Retry Count"
+msgstr "पुनः प्रयास गणना"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__retry_max_attempts
+msgid "Retry Max Attempts"
+msgstr "अधिकतम पुनः प्रयास"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__road
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__road
+msgid "Road"
+msgstr "सड़क"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_rfr
+msgid "Road Freight"
+msgstr "सड़क माल ढुलाई"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__routing
+msgid "Routing or Mapping"
+msgstr "रूटिंग या मैपिंग"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Run Health Check"
+msgstr "स्वास्थ्य जाँच चलाएँ"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__sftp_key
+msgid "SFTP Key"
+msgstr "SFTP कुंजी"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "एसएमएस डिलीवरी में गड़बड़ी"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_sanctions
+msgid "Sanctions and PEP Screening Result"
+msgstr "प्रतिबंध और PEP स्क्रीनिंग परिणाम"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__screening
+msgid "Sanctions or PEP Screening"
+msgstr "प्रतिबंध या PEP स्क्रीनिंग"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__environment__sandbox
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Sandbox"
+msgstr "सैंडबॉक्स"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__request_payload
+msgid ""
+"Sanitised request payload. Original PII redacted per the profile's redaction"
+" rules. Truncated above the size limit set by ir.config_parameter "
+"eh_log.base.adapter_message_payload_max_chars."
+msgstr ""
+"स्वच्छ किया गया अनुरोध पेलोड। प्रोफ़ाइल के रिडैक्शन नियमों के अनुसार मूल PII"
+" को हटा दिया गया है। ir.config_parameter "
+"eh_log.base.adapter_message_payload_max_chars द्वारा निर्धारित आकार सीमा से "
+"ऊपर काटा गया।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__response_payload
+msgid ""
+"Sanitised response payload. Same redaction and truncation rules as the "
+"request payload."
+msgstr ""
+"स्वच्छ किया गया प्रतिक्रिया पेलोड। अनुरोध पेलोड के समान रिडैक्शन और ट्रंकेशन"
+" नियम।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__sea
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__sea
+msgid "Sea"
+msgstr "समुद्र"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__secondary_endpoint_url
+msgid "Secondary Endpoint"
+msgstr "द्वितीयक एंडपॉइंट"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_isps
+msgid "Security Surcharge (ISPS)"
+msgstr "सुरक्षा अधिभार (ISPS)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__product_id
+msgid "Service Product"
+msgstr "सर्विस प्रॉडक्ट"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__product_id
+msgid ""
+"Service product carried by quotation and invoice lines billed against this "
+"charge code. Odoo requires every billable order line to reference a product "
+"before the order can be confirmed or invoiced; logistics charge lines reuse "
+"this one. Left empty, it is auto-provisioned the first time the code is sold"
+" so operators never have to maintain a parallel product catalogue."
+msgstr ""
+"इस शुल्क कोड पर बिल की गई कोटेशन और चालान लाइनों द्वारा उपयोग किया जाने वाला"
+" सेवा उत्पाद। Odoo को आवश्यकता है कि प्रत्येक बिल योग्य ऑर्डर लाइन ऑर्डर की "
+"पुष्टि या चालान होने से पहले किसी उत्पाद को संदर्भित करे; लॉजिस्टिक्स शुल्क "
+"लाइनें इसी का पुन: उपयोग करती हैं। खाली छोड़ने पर, कोड की पहली बिक्री के समय"
+" यह स्वतः प्रावधानित हो जाता है ताकि ऑपरेटरों को कभी भी समानांतर उत्पाद "
+"कैटलॉग बनाए रखना न पड़े।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__severity
+msgid "Severity"
+msgstr "गंभीरता"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__rate_limit_per_minute
+msgid ""
+"Soft per-minute rate limit honoured client-side. 0 means no client-side "
+"throttling; the adapter still respects server-side 429 responses."
+msgstr ""
+"क्लाइंट-साइड पर लागू की जाने वाली प्रति मिनट सॉफ्ट दर सीमा। 0 का अर्थ है कोई"
+" क्लाइंट-साइड थ्रॉटलिंग नहीं; अडैप्टर फिर भी सर्वर-साइड 429 प्रतिक्रियाओं का"
+" सम्मान करता है।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__code
+msgid ""
+"Stable identifier referenced from rate sheets and invoice lines. Convention:"
+" short uppercase alphanumeric, e.g. OFR for Ocean Freight, OTHC for Origin "
+"Terminal Handling."
+msgstr ""
+"दर पत्रकों और चालान पंक्तियों से संदर्भित स्थिर पहचानकर्ता। परंपरा: छोटा "
+"अपरकेस अल्फ़ान्यूमेरिक, उदा. समुद्री माल के लिए OFR, मूल टर्मिनल हैंडलिंग के"
+" लिए OTHC।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__provider_code
+msgid ""
+"Stable provider identifier referenced by adapter classes (e.g. 'mirsal2', "
+"'fasah', 'dcsa', 'iata_cargo_xml'). Adapter dispatch keys on this code; do "
+"not rename in place."
+msgstr ""
+"एडाप्टर क्लासों द्वारा संदर्भित स्थिर प्रदाता पहचानकर्ता (उदा. 'mirsal2', "
+"'fasah', 'dcsa', 'iata_cargo_xml')। एडाप्टर डिस्पैच इस कोड पर निर्भर करता "
+"है; इसे यथास्थान न बदलें।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__code
+msgid ""
+"Stable short identifier (HBL, HAWB, MBL, MAWB, COI, COO, PL, COMINV, ...). "
+"Referenced from checklists."
+msgstr ""
+"स्थिर लघु पहचानकर्ता (HBL, HAWB, MBL, MAWB, COI, COO, PL, COMINV, ...)। "
+"चेकलिस्ट से संदर्भित।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__state_transition
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "State Transition"
+msgstr "स्थिति परिवर्तन"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "State Transition Retention"
+msgstr "स्थिति परिवर्तन प्रतिधारण"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_ux_mixin.py:0
+#, python-format
+msgid "State changed: %(from)s -> %(to)s"
+msgstr "स्थिति बदली: %(from)s -> %(to)s"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__status
+msgid "Status"
+msgstr "स्टेटस"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"ऐक्टिविटी के हिसाब से स्टेटस\n"
+"ओवरड्यू: जिस काम की आखिरी तारीख निकल गई हो\n"
+"टुडे: जो काम आज करना है\n"
+"प्लान्ड: जो काम भविष्य में करने हैं।"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_storage
+msgid "Storage"
+msgstr "स्टोरेज"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_event__context_json
+msgid ""
+"Structured payload serialised as JSON. Audit reviewers search this field for"
+" specific keys and values."
+msgstr ""
+"JSON के रूप में क्रमबद्ध संरचित पेलोड। ऑडिट समीक्षक इस फ़ील्ड में विशिष्ट "
+"कुंजियों और मानों की खोज करते हैं।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__success
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Success"
+msgstr "सक्सेस"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__summary
+msgid "Summary"
+msgstr "पूरी जानकारी"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__surcharge
+msgid "Surcharge"
+msgstr "अधिभार"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__is_taxable_at_destination
+msgid "Taxable at Destination"
+msgstr "गंतव्य पर कर योग्य"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__telematics
+msgid "Telematics Provider"
+msgstr "टेलीमैटिक्स प्रदाता"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Test Credential"
+msgstr "परीक्षण क्रेडेंशियल"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "The actual secret is never displayed on this form."
+msgstr "वास्तविक गोपनीय कुंजी इस फ़ॉर्म पर कभी प्रदर्शित नहीं की जाती।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__circuit_breaker_cooldown_seconds
+msgid "Time to wait before the half-open probe runs."
+msgstr "हाफ-ओपन प्रोब चलने से पहले प्रतीक्षा का समय।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__timeout
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Timed Out"
+msgstr "समय समाप्त"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Timeouts and Retries"
+msgstr "टाइमआउट और पुनः प्रयास"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Today"
+msgstr "आज"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_count
+msgid "Total messages logged against this profile."
+msgstr "इस प्रोफ़ाइल के विरुद्ध लॉग किए गए कुल संदेश।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__expiry_aware
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_search
+msgid "Tracks Expiry"
+msgstr "समाप्ति ट्रैक करता है"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_tradelic
+msgid "Trade Licence"
+msgstr "व्यापार लाइसेंस"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__transport
+msgid "Transport Document"
+msgstr "परिवहन दस्तावेज़"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid ""
+"Truncate adapter payloads above this size before storage to keep the "
+"database lean."
+msgstr ""
+"डेटाबेस को हल्का रखने के लिए भंडारण से पहले इस आकार से बड़े एडाप्टर पेलोड को"
+" छोटा करें।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "रिकॉर्ड में जो अलग तरह की गतिविधि हुई है, वह किस तरह की है।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__correlation_id
+msgid ""
+"Unique per-call identifier propagated to the provider for traceability. "
+"Generated client-side as a UUID4."
+msgstr ""
+"पता लगाने की क्षमता के लिए प्रदाता को भेजा गया प्रति-कॉल अद्वितीय "
+"पहचानकर्ता। क्लाइंट-साइड पर UUID4 के रूप में उत्पन्न किया जाता है।"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__credential_status__unknown
+msgid "Unknown"
+msgstr "अज्ञात"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__user_id
+msgid "User"
+msgstr "उपयोगकर्ता"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_vatreg
+msgid "VAT Registration Certificate"
+msgstr "VAT पंजीकरण प्रमाणपत्र"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_war
+msgid "War Risk Surcharge"
+msgstr "युद्ध जोखिम अधिभार"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__warehousing
+msgid "Warehousing and Handling"
+msgstr "भंडारण और हैंडलिंग"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__severity__warning
+msgid "Warning"
+msgstr "चेतावनी"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__website_message_ids
+msgid "Website Messages"
+msgstr "वेबसाइट मैसेज"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__website_message_ids
+msgid "Website communication history"
+msgstr "वेबसाइट कम्यूनिकेशन हिस्ट्री"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__is_required_default
+msgid ""
+"When checked, the document is auto-added to the job checklist when "
+"applicable. Operators can still remove it for non-standard scenarios."
+msgstr ""
+"चेक किए जाने पर, लागू होने पर दस्तावेज़ स्वतः जॉब चेकलिस्ट में जुड़ जाता है।"
+" ऑपरेटर गैर-मानक परिदृश्यों के लिए इसे फिर भी हटा सकते हैं।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__expiry_aware
+msgid ""
+"When checked, the related upload captures an expiry date and the system "
+"raises a warning before expiry per the default warning days field."
+msgstr ""
+"चेक किए जाने पर, संबंधित अपलोड एक समाप्ति तिथि दर्ज करता है और सिस्टम "
+"डिफ़ॉल्ट चेतावनी दिन फ़ील्ड के अनुसार समाप्ति से पहले एक चेतावनी उठाता है।"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_credit_warning_pct
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_credit_warning_pct
+msgid ""
+"When customer exposure crosses this percentage of the approved limit, new "
+"quotations raise a warning. The hard stop is always 100% of the limit."
+msgstr ""
+"जब ग्राहक एक्सपोज़र अनुमोदित सीमा के इस प्रतिशत को पार करता है, तो नए कोटेशन"
+" एक चेतावनी उठाते हैं। हार्ड स्टॉप हमेशा सीमा का 100% होता है।"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_event.py:0
+#, python-format
+msgid ""
+"[EHL-EVENT-001] Operational events are append-only. Editing the following "
+"fields is not permitted: %(fields)s."
+msgstr ""
+"[EHL-EVENT-001] परिचालन घटनाएं केवल-जोड़ने योग्य हैं। निम्नलिखित फ़ील्ड "
+"संपादित करने की अनुमति नहीं है: %(fields)s।"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "characters"
+msgstr "वर्ण"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "days"
+msgstr "दिन"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "https://provider.example/v1"
+msgstr ""

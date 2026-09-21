@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_freight_job_list" model="ir.ui.view">
+            <field name="name">eh.log.freight.job.list</field>
+            <field name="model">eh.log.freight.job</field>
+            <field name="arch" type="xml">
+                <tree string="Freight Jobs" decoration-info="state == 'booked'" decoration-warning="state == 'in_transit'" decoration-success="state in ('delivered', 'closed')" decoration-muted="state == 'cancelled'" create="false">
+                    <field name="name"/>
+                    <field name="state"/>
+                    <field name="mode"/>
+                    <field name="direction"/>
+                    <field name="customer_id"/>
+                    <field name="origin_country_id" optional="show"/>
+                    <field name="destination_country_id" optional="show"/>
+                    <field name="etd_planned" optional="show"/>
+                    <field name="eta_planned" optional="show"/>
+                    <field name="gross_margin" optional="show"/>
+                    <field name="gross_margin_pct" widget="percentage" optional="show"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_eh_log_freight_job_form" model="ir.ui.view">
+            <field name="name">eh.log.freight.job.form</field>
+            <field name="model">eh.log.freight.job</field>
+            <field name="arch" type="xml">
+                <form string="Freight Job">
+                    <header>
+                        <button name="action_book" string="Confirm Booking" type="object" class="btn-primary" groups="eh_log_base.group_eh_log_user" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                        <button name="action_set_in_transit" string="Set In Transit" type="object" class="btn-primary" groups="eh_log_base.group_eh_log_user" attrs="{'invisible': [('state', '!=', 'booked')]}"/>
+                        <button name="action_set_at_destination" string="Set At Destination" type="object" class="btn-primary" groups="eh_log_base.group_eh_log_user" attrs="{'invisible': [('state', '!=', 'in_transit')]}"/>
+                        <button name="action_set_delivered" string="Mark Delivered" type="object" class="btn-primary" groups="eh_log_base.group_eh_log_user" attrs="{'invisible': [('state', '!=', 'at_destination')]}"/>
+                        <button name="action_close" string="Close Job" type="object" class="btn-primary" groups="eh_log_base.group_eh_log_manager" attrs="{'invisible': [('state', '!=', 'delivered')]}"/>
+                        <button name="action_cancel" string="Cancel" type="object" class="btn-secondary" groups="eh_log_base.group_eh_log_manager" attrs="{'invisible': [('state', 'in', ['closed', 'cancelled'])]}"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,booked,in_transit,at_destination,delivered,closed"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_open_sale_order" type="object" class="oe_stat_button" icon="fa-money">
+                                <div class="o_stat_info">
+                                    <span class="o_stat_text">Sale Order</span>
+                                </div>
+                            </button>
+                            <button name="action_view_milestones" type="object" class="oe_stat_button" icon="fa-flag-checkered">
+                                <field name="milestone_actual_count" widget="statinfo" string="Milestones"/>
+                            </button>
+                            <button name="action_view_bls" type="object" class="oe_stat_button" icon="fa-file-text-o">
+                                <field name="bl_count" widget="statinfo" string="Bills of Lading"/>
+                            </button>
+                            <button name="action_view_containers" type="object" class="oe_stat_button" icon="fa-cube">
+                                <field name="container_count" widget="statinfo" string="Containers"/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1><field name="name"/></h1>
+                        </div>
+
+                        <!-- Snapshot hero: lane, mode, parties, ETA, margin at a glance -->
+                        <div class="o_eh_log_snapshot mb-3" style="background:linear-gradient(135deg,#0E1E2B 0%,#1A2C3D 100%);color:#FBF8F2;border-radius:14px;padding:22px 26px;border:1px solid #A07A3F;box-shadow:0 6px 18px rgba(14,30,43,0.08);">
+                            <!-- Lane visualisation: origin > mode icon > destination -->
+                            <div class="d-flex align-items-center justify-content-between mb-3" style="gap:18px;">
+                                <div style="flex:1;min-width:0;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;margin-bottom:4px;">Origin</div>
+                                    <div style="font-size:1.05rem;font-weight:600;color:#FBF8F2;line-height:1.25;">
+                                        <field name="origin_country_id" readonly="1" options="{'no_open': True}" nolabel="1"/>
+                                    </div>
+                                    <div style="font-size:0.85rem;color:rgba(251,248,242,0.7);">
+                                        <field name="origin_location" readonly="1" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+
+                                <div style="text-align:center;flex-shrink:0;">
+                                    <div style="display:inline-block;padding:10px 20px;background:rgba(212,160,85,0.12);border:1px solid rgba(212,160,85,0.4);border-radius:999px;">
+                                        <i class="fa fa-ship" title="Sea" style="font-size:1.6rem;color:#D4A055;" attrs="{'invisible': [('mode', '!=', 'sea')]}"/>
+                                        <i class="fa fa-plane" title="Air" style="font-size:1.6rem;color:#D4A055;" attrs="{'invisible': [('mode', '!=', 'air')]}"/>
+                                        <i class="fa fa-truck" title="Road" style="font-size:1.6rem;color:#D4A055;" attrs="{'invisible': [('mode', '!=', 'road')]}"/>
+                                        <i class="fa fa-train" title="Rail" style="font-size:1.6rem;color:#D4A055;" attrs="{'invisible': [('mode', '!=', 'rail')]}"/>
+                                        <i class="fa fa-random" style="font-size:1.6rem;color:#D4A055;" attrs="{'invisible': [('mode', '!=', 'multimodal')]}"/>
+                                        <span class="ms-2" style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;font-weight:600;">
+                                            <field name="mode" readonly="1" nolabel="1"/>
+                                        </span>
+                                    </div>
+                                    <div style="margin-top:8px;font-family:'DM Mono',ui-monospace,monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(232,200,135,0.7);">
+                                        <field name="direction" readonly="1" nolabel="1"/>
+                                    </div>
+                                </div>
+
+                                <div style="flex:1;min-width:0;text-align:right;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;margin-bottom:4px;">Destination</div>
+                                    <div style="font-size:1.05rem;font-weight:600;color:#FBF8F2;line-height:1.25;">
+                                        <field name="destination_country_id" readonly="1" options="{'no_open': True}" nolabel="1"/>
+                                    </div>
+                                    <div style="font-size:0.85rem;color:rgba(251,248,242,0.7);">
+                                        <field name="destination_location" readonly="1" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- KPI tiles -->
+                            <div style="display:table;width:100%;border-collapse:separate;border-spacing:10px 0;border-top:1px solid rgba(212,160,85,0.18);padding-top:14px;">
+                                <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">Customer</div>
+                                    <div style="margin-top:4px;font-size:0.95rem;font-weight:600;color:#FBF8F2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+                                        <field name="customer_id" readonly="1" options="{'no_open': True}" nolabel="1"/>
+                                    </div>
+                                    <div style="font-size:0.78rem;color:rgba(251,248,242,0.6);">
+                                        <field name="customer_reference" readonly="1" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+                                <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">ETD planned</div>
+                                    <div style="margin-top:4px;font-size:0.95rem;font-weight:600;color:#FBF8F2;">
+                                        <field name="etd_planned" readonly="1" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+                                <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">ETA planned</div>
+                                    <div style="margin-top:4px;font-size:0.95rem;font-weight:600;color:#FBF8F2;">
+                                        <field name="eta_planned" readonly="1" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+                                <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">Gross margin</div>
+                                    <div style="margin-top:4px;font-size:1.1rem;font-weight:700;color:#FBF8F2;">
+                                        <field name="gross_margin_pct" widget="percentage" readonly="1" nolabel="1"/>
+                                    </div>
+                                    <div style="font-size:0.78rem;color:rgba(251,248,242,0.6);">
+                                        <field name="gross_margin" readonly="1" nolabel="1" widget="monetary"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /snapshot -->
+
+                        <group>
+                            <group string="Lane">
+                                <field name="mode" widget="radio" options="{'horizontal': true}"/>
+                                <field name="direction" widget="radio" options="{'horizontal': true}"/>
+                                <field name="origin_country_id" options="{'no_create': True}"/>
+                                <field name="origin_location"/>
+                                <field name="destination_country_id" options="{'no_create': True}"/>
+                                <field name="destination_location"/>
+                                <field name="incoterm_id"/>
+                            </group>
+                            <group string="Parties">
+                                <field name="customer_id" options="{'no_create': True}"/>
+                                <field name="shipper_id" options="{'no_create': True}"/>
+                                <field name="consignee_id" options="{'no_create': True}"/>
+                                <field name="notify_party_id" options="{'no_create': True}"/>
+                                <field name="customer_reference"/>
+                                <field name="shipper_reference"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Cargo">
+                                <field name="cargo_description" colspan="2"/>
+                                <field name="package_count"/>
+                                <field name="gross_weight_kg"/>
+                                <field name="volume_cbm"/>
+                                <field name="chargeable_weight_kg"/>
+                            </group>
+                            <group string="Dates">
+                                <field name="booking_date"/>
+                                <field name="cutoff_date"/>
+                                <field name="etd_planned"/>
+                                <field name="etd_actual"/>
+                                <field name="eta_planned"/>
+                                <field name="eta_actual"/>
+                                <field name="delivered_at" readonly="1"/>
+                                <field name="closed_at" readonly="1"/>
+                            </group>
+                        </group>
+                        <group string="Margin">
+                            <group string="Planned (from quotation)">
+                                <field name="total_revenue"/>
+                                <field name="total_planned_cost"/>
+                                <field name="gross_margin"/>
+                                <field name="gross_margin_pct" widget="percentage"/>
+                            </group>
+                            <group string="Actual (from cost and revenue ledger)">
+                                <field name="total_actual_revenue"/>
+                                <field name="total_actual_cost"/>
+                                <field name="actual_gross_margin"/>
+                                <field name="actual_gross_margin_pct" widget="percentage"/>
+                                <field name="margin_drift_pct" widget="percentage"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="sale_order_id" readonly="1"/>
+                                <field name="analytic_account_id" readonly="1"/>
+                                <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Milestones">
+                                <field name="milestone_ids">
+                                    <tree editable="bottom">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="type_id" options="{'no_create': True}"/>
+                                        <field name="planned_at"/>
+                                        <field name="actual_at"/>
+                                        <field name="variance_hours"/>
+                                        <field name="source"/>
+                                        <field name="notes"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Bills of Lading">
+                                <field name="bl_ids" context="{'default_job_id': id}">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="bl_type"/>
+                                        <field name="number"/>
+                                        <field name="state"/>
+                                        <field name="shipper_id"/>
+                                        <field name="consignee_id"/>
+                                        <field name="carrier_id"/>
+                                        <field name="issue_date"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Containers">
+                                <field name="container_ids" context="{'default_job_id': id}">
+                                    <tree editable="bottom">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="container_number"/>
+                                        <field name="iso_type_id" options="{'no_create': True}"/>
+                                        <field name="seal_number"/>
+                                        <field name="gross_weight_kg"/>
+                                        <field name="state"/>
+                                        <field name="gate_in_at"/>
+                                        <field name="gate_out_at"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Cost Ledger">
+                                <field name="cost_line_ids" context="{'default_job_id': id}">
+                                    <tree editable="bottom">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="description"/>
+                                        <field name="charge_code_id" options="{'no_create': True}"/>
+                                        <field name="vendor_id" options="{'no_create': True}"/>
+                                        <field name="quantity"/>
+                                        <field name="unit_cost"/>
+                                        <field name="amount"/>
+                                        <field name="currency_id" groups="base.group_multi_currency"/>
+                                        <field name="state"/>
+                                        <field name="accrual_date"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Revenue Ledger">
+                                <field name="revenue_line_ids" context="{'default_job_id': id}">
+                                    <tree editable="bottom">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="description"/>
+                                        <field name="charge_code_id" options="{'no_create': True}"/>
+                                        <field name="customer_id" options="{'no_create': True}"/>
+                                        <field name="quantity"/>
+                                        <field name="unit_price"/>
+                                        <field name="amount"/>
+                                        <field name="is_disbursement" widget="boolean_toggle"/>
+                                        <field name="currency_id" groups="base.group_multi_currency"/>
+                                        <field name="state"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Sale Order Lines">
+                                <field name="sale_order_line_ids" readonly="1">
+                                    <tree create="false" edit="false" delete="false">
+                                        <field name="name"/>
+                                        <field name="eh_log_charge_code_id"/>
+                                        <field name="eh_log_leg"/>
+                                        <field name="product_uom_qty"/>
+                                        <field name="price_unit"/>
+                                        <field name="purchase_price"/>
+                                        <field name="price_subtotal"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_eh_log_freight_job_search" model="ir.ui.view">
+            <field name="name">eh.log.freight.job.search</field>
+            <field name="model">eh.log.freight.job</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="customer_id"/>
+                    <field name="customer_reference"/>
+                    <field name="shipper_reference"/>
+                    <field name="sale_order_id"/>
+                    <separator/>
+                    <filter string="My Jobs" name="filter_my_jobs" domain="[('create_uid', '=', uid)]"/>
+                    <filter string="Open" name="filter_open" domain="[('state', 'in', ('draft', 'booked', 'in_transit', 'at_destination'))]"/>
+                    <filter string="Delivered" name="filter_delivered" domain="[('state', '=', 'delivered')]"/>
+                    <filter string="Closed" name="filter_closed" domain="[('state', '=', 'closed')]"/>
+                    <separator/>
+                    <filter string="Group by Stage" name="group_state" context="{'group_by': 'state'}"/>
+                    <filter string="Group by Mode" name="group_mode" context="{'group_by': 'mode'}"/>
+                    <filter string="Group by Customer" name="group_customer" context="{'group_by': 'customer_id'}"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_freight_job_activity" model="ir.ui.view">
+            <field name="name">eh.log.freight.job.activity</field>
+            <field name="model">eh.log.freight.job</field>
+            <field name="arch" type="xml">
+                <activity string="Activities">
+                    <templates>
+                        <div t-name="activity-box">
+                            <field name="name" display="full"/>
+                        </div>
+                    </templates>
+                </activity>
+            </field>
+        </record>
+
+        <record id="action_eh_log_freight_job" model="ir.actions.act_window">
+            <field name="name">Freight Jobs</field>
+            <field name="res_model">eh.log.freight.job</field>
+            <field name="view_mode">kanban,tree,activity,form</field>
+            <field name="search_view_id" ref="view_eh_log_freight_job_search"/>
+            <field name="context">{'search_default_filter_open': 1}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No freight jobs yet
+                </p>
+                <p>
+                    Confirm a logistics quotation to spawn a freight job here.
+                    Direct creation from this menu is restricted to managers.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,2506 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 10:15+0000\n"
+"PO-Revision-Date: 2026-07-01 10:15+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Italian\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == 0) ? 1 : 2);\n"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+msgid "(none configured)"
+msgstr "(nessuno configurato)"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "<strong>Credential resolution order</strong>"
+msgstr "<strong>Ordine di risoluzione delle credenziali</strong>"
+
+#. module: eh_log_base
+#: model_terms:ir.actions.act_window,help:eh_log_base.action_eh_log_charge_code
+msgid ""
+"A starter set of universally recognised codes is seeded\n"
+"                    on install. Add country or contract specific codes here."
+msgstr ""
+"Un set iniziale di codici riconosciuti universalmente viene creato\n"
+"                    all'installazione. Aggiungi qui codici specifici per paese o contratto."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__api_key
+msgid "API Key"
+msgstr "Chiave API"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__api_version
+msgid "API Version Implemented"
+msgstr "Versione API implementata"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__as2
+msgid "AS2 (EDI)"
+msgstr ""
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_ata
+msgid "ATA Carnet"
+msgstr "Carnet ATA"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Above this percentage of the credit limit the system raises a warning."
+msgstr ""
+"Oltre questa percentuale del limite di credito il sistema genera un avviso."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_needaction
+msgid "Action Needed"
+msgstr "Azione richiesta"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__active
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__active
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__active
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_search
+msgid "Active"
+msgstr "Attivo"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_ids
+msgid "Activities"
+msgstr "Attività"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decorazione eccezione attività"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_state
+msgid "Activity State"
+msgstr "Stato attività"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icona tipo di attività"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__adapter_call
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Adapter Call"
+msgstr "Chiamata adattatore"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Adapter Call Retention"
+msgstr "Conservazione delle chiamate adattatore"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Adapter Message"
+msgstr "Messaggio adattatore"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_adapter_payload_max_chars
+msgid "Adapter Message Payload Max Chars"
+msgstr "Caratteri massimi del payload del messaggio adattatore"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Adapter Message Payload Truncation"
+msgstr "Troncamento del payload del messaggio adattatore"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_profile.py:0
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_adapter_message
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_adapter_messages
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_list
+msgid "Adapter Messages"
+msgstr "Messaggi adattatore"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Adapter Profile"
+msgstr "Profilo adattatore"
+
+#. module: eh_log_base
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_adapter_profile
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_adapter_profiles
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_list
+msgid "Adapter Profiles"
+msgstr "Profili adattatore"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_adapter_payload_max_chars
+msgid ""
+"Adapter messages are truncated above this size before storage to keep the "
+"database lean. Truncation happens after redaction."
+msgstr ""
+"I messaggi adattatore che superano questa dimensione vengono troncati prima "
+"dell'archiviazione per mantenere snello il database. Il troncamento avviene "
+"dopo l'oscuramento."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__message_type
+msgid ""
+"Adapter-defined message label, e.g. 'declaration_submit', 'health_check', "
+"'status_query'."
+msgstr ""
+"Etichetta del messaggio definita dall'adattatore, ad es. "
+"'declaration_submit', 'health_check', 'status_query'."
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_adapters
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Adapters"
+msgstr "Adattatori"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__air
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__air
+msgid "Air"
+msgstr "Aria"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__carrier_air
+msgid "Air Carrier"
+msgstr "Vettore aereo"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_afr
+msgid "Air Freight"
+msgstr "Trasporto aereo merci"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_awb
+msgid "Air Waybill Fee"
+msgstr "Costo della lettera di vettura aerea"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+msgid ""
+"An encrypted credential could not be decrypted. The encryption salt or "
+"database UUID has changed. Re-set the credential under Settings > ERP "
+"Heritage Logistics > Adapters."
+msgstr ""
+"Non è stato possibile decifrare una credenziale crittografata. Il salt di "
+"crittografia o l'UUID del database è cambiato. Reimposta la credenziale in "
+"Impostazioni > ERP Heritage Logistics > Adapters."
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+msgid ""
+"An encrypted credential is stored but the Python 'cryptography' library is "
+"not installed on the server. Install it or replace the parameter with an "
+"environment variable."
+msgstr ""
+"È memorizzata una credenziale crittografata ma la libreria Python "
+"'cryptography' non è installata sul server. Installala o sostituisci il "
+"parametro con una variabile d'ambiente."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__ancillary
+msgid "Ancillary"
+msgstr "Accessorio"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__any
+msgid "Any Mode"
+msgstr "Qualsiasi modalità"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__applies_to_modes
+msgid "Applies To Modes"
+msgstr "Si applica alle modalità"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Approval"
+msgstr "Approvazione"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__approval
+msgid "Approval Decision"
+msgstr "Decisione di approvazione"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Approvals"
+msgstr "Approvazioni"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_attachment_count
+msgid "Attachment Count"
+msgstr "Numero allegati"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_audit
+msgid "Audit"
+msgstr "Verifica"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__audit_note
+msgid "Audit Note"
+msgstr "Nota di audit"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Authentication"
+msgstr "Autenticazione"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__auth_method
+msgid "Authentication Method"
+msgstr "Metodo di autenticazione"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__request_headers
+msgid ""
+"Authentication headers redacted before storage; Content-Type, Accept, and "
+"other operational headers retained."
+msgstr ""
+"Le intestazioni di autenticazione vengono oscurate prima dell'archiviazione;"
+" Content-Type, Accept e altre intestazioni operative vengono mantenute."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__endpoint_url
+msgid ""
+"Base URL for sandbox or production calls. Mock environment ignores this "
+"field. Reference data files supply the published default; operators override"
+" for private endpoints."
+msgstr ""
+"URL di base per le chiamate sandbox o di produzione. L'ambiente fittizio "
+"ignora questo campo. I file di dati di riferimento forniscono il valore "
+"predefinito pubblicato; gli operatori lo sovrascrivono per gli endpoint "
+"privati."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "Behaviour"
+msgstr "Comportamento"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_bl
+msgid "Bill of Lading Fee"
+msgstr "Costo polizza di carico"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__direction__both
+msgid "Both"
+msgstr "entrambi"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_baf
+msgid "Bunker Adjustment Factor"
+msgstr "Fattore di adeguamento del bunker"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_cmr
+msgid "CMR Road Consignment Note"
+msgstr "Lettera di vettura stradale CMR"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_insurance
+msgid "Cargo Insurance"
+msgstr "Assicurazione delle merci"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_manifest
+msgid "Cargo Manifest"
+msgstr "Manifesto di carico"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__category
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__category
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__category
+msgid "Category"
+msgstr "Categoria"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_coo
+msgid "Certificate of Origin"
+msgstr "Certificato di origine"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Charge Code"
+msgstr "Codice addebito"
+
+#. module: eh_log_base
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_charge_code
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_charge_codes
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_list
+msgid "Charge Codes"
+msgstr "Codici addebito"
+
+#. module: eh_log_base
+#: model:ir.model.constraint,message:eh_log_base.constraint_eh_log_charge_code_code_unique
+msgid ""
+"Charge code must be unique. Pick a different code or edit the existing one "
+"instead of duplicating."
+msgstr ""
+"Il codice addebito deve essere univoco. Scegli un codice diverso o modifica "
+"quello esistente invece di duplicarlo."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Circuit Breaker"
+msgstr "Interruttore automatico"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__circuit_breaker_cooldown_seconds
+msgid "Circuit Breaker Cooldown (s)"
+msgstr "Tempo di ripristino interruttore (s)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__circuit_breaker_threshold
+msgid "Circuit Breaker Threshold"
+msgstr "Soglia interruttore automatico"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Classification"
+msgstr "Classificazione"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__code
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__code
+msgid "Code"
+msgstr "Codice"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__applies_to_modes
+msgid ""
+"Comma-separated list of modes the document applies to "
+"(sea,air,road,rail,multimodal,courier) or 'any'. Used to filter the "
+"checklist when the job mode is set."
+msgstr ""
+"Elenco separato da virgole delle modalità a cui si applica il documento "
+"(sea,air,road,rail,multimodal,courier) o 'any'. Utilizzato per filtrare la "
+"lista di controllo quando è impostata la modalità del lavoro."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__commercial
+msgid "Commercial Document"
+msgstr "Documento commerciale"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_cominv
+msgid "Commercial Invoice"
+msgstr "Fattura commerciale"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_res_company
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__company_ids
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__company_ids
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__company_ids
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__company_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Companies"
+msgstr "Aziende"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__company_id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__company_id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__company_id
+msgid "Company"
+msgstr "Azienda"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__completed_at
+msgid "Completed"
+msgstr "Completato"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__compliance
+msgid "Compliance and Sanctions"
+msgstr "Conformità e sanzioni"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_res_config_settings
+msgid "Config Settings"
+msgstr "Impostazioni di configurazione"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_configuration
+msgid "Configuration"
+msgstr "Configurazione"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__config_change
+msgid "Configuration Change"
+msgstr "Modifica configurazione"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__circuit_breaker_threshold
+msgid ""
+"Consecutive failure count that trips the circuit breaker. While tripped, the"
+" adapter rejects calls immediately and schedules a half-open probe."
+msgstr ""
+"Numero di guasti consecutivi che fa scattare l'interruttore automatico. Una "
+"volta scattato, l'adattatore rifiuta immediatamente le chiamate e pianifica "
+"una sonda semi-aperta."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_form
+msgid "Context"
+msgstr "Contesto"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__context_json
+msgid "Context (JSON)"
+msgstr "Contesto (JSON)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__correlation_id
+msgid "Correlation ID"
+msgstr "ID di correlazione"
+
+#. module: eh_log_base
+#: model_terms:ir.actions.act_window,help:eh_log_base.action_eh_log_adapter_profile
+msgid ""
+"Country localisation modules ship default sandbox profiles\n"
+"                    on install. Profiles default to mock environment so a\n"
+"                    fresh install never accidentally calls a live regulator."
+msgstr ""
+"I moduli di localizzazione per paese includono profili sandbox predefiniti\n"
+"                    all'installazione. I profili impostano come predefinito l'ambiente fittizio, in modo che\n"
+"                    una nuova installazione non chiami mai accidentalmente un regolatore in produzione."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__courier
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__courier
+msgid "Courier or Express"
+msgstr "Corriere o espresso"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__created_at
+msgid "Created"
+msgstr "Creazione"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__create_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__create_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__create_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__create_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__create_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__create_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__create_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__create_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__create_date
+msgid "Created on"
+msgstr "Data creazione"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__credential_purpose
+msgid "Credential Purpose Key"
+msgstr "Chiave scopo credenziale"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__credential_status
+msgid "Credential Status"
+msgstr "Stato credenziale"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+#, python-format
+msgid ""
+"Credential for '%(purpose)s' is not configured. Tried environment variables:"
+" %(env)s. Tried ir.config_parameter key: %(param)s. Set one of these values "
+"in your deployment configuration or under Settings > ERP Heritage Logistics "
+"> Adapters."
+msgstr ""
+"La credenziale per '%(purpose)s' non è configurata. Variabili d'ambiente "
+"provate: %(env)s. Chiave ir.config_parameter provata: %(param)s. Imposta uno"
+" di questi valori nella configurazione della tua distribuzione o in Settings"
+" > ERP Heritage Logistics > Adapters."
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_profile.py:0
+#, python-format
+msgid ""
+"Credential for profile %(name)s is not resolvable. Underlying error: %(err)s"
+msgstr ""
+"La credenziale per il profilo %(name)s non è risolvibile. Errore "
+"sottostante: %(err)s"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Credit Exposure Warning"
+msgstr "Avviso esposizione creditizia"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_credit_warning_pct
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_credit_warning_pct
+msgid "Credit Exposure Warning (%)"
+msgstr "Avviso esposizione creditizia (%)"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_caf
+msgid "Currency Adjustment Factor"
+msgstr "Fattore di adeguamento valutario"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_clrnc
+msgid "Customs Clearance Fee"
+msgstr "Spese di sdoganamento"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_decl
+msgid "Customs Declaration"
+msgstr "Dichiarazione doganale"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__customs
+msgid "Customs Document"
+msgstr "Documento doganale"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_duty
+msgid "Customs Duty"
+msgstr "Dazio doganale"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__customs
+msgid "Customs and Duties"
+msgstr "Dogana e dazi"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Cycle"
+msgstr "Ciclo"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_dgd
+msgid "Dangerous Goods Declaration"
+msgstr "Dichiarazione merci pericolose"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__related_record_id
+msgid ""
+"Database id of the originating record. Pair with related_model for the back "
+"link."
+msgstr ""
+"ID database del record di origine. Abbinare a related_model per il "
+"collegamento a ritroso."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Days before expiry the system raises an activity to the account owner."
+msgstr ""
+"Numero di giorni prima della scadenza in cui il sistema crea un'attività per"
+" il titolare del conto."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Days to keep adapter call events."
+msgstr ""
+"Numero di giorni per cui conservare gli eventi di chiamata dell'adattatore."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid ""
+"Days to keep manual override events. Compliance evidence usually requires "
+"the longest window."
+msgstr ""
+"Numero di giorni per cui conservare gli eventi di override manuale. Le prove"
+" di conformità richiedono di solito la finestra più lunga."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Days to keep state transition events."
+msgstr ""
+"Numero di giorni per cui conservare gli eventi di transizione di stato."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__dead_letter
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Dead Letter"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__default_currency_id
+msgid "Default Currency"
+msgstr "Valuta predefinita"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__default_expense_account_id
+msgid "Default Expense Account"
+msgstr "Conto di costo predefinito"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__expiry_warning_days
+msgid "Default Expiry Warning (days)"
+msgstr "Avviso di scadenza predefinito (giorni)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_default_incoterm_id
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_default_incoterm_id
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Default Incoterm"
+msgstr "Termine di resa predefinito"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_default_mode
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_default_mode
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Default Logistics Mode"
+msgstr "Modalità logistica predefinita"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__default_revenue_account_id
+msgid "Default Revenue Account"
+msgstr "Conto ricavi predefinito"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Defaults"
+msgstr "Valori predefiniti"
+
+#. module: eh_log_base
+#: model_terms:ir.actions.act_window,help:eh_log_base.action_eh_log_charge_code
+msgid "Define your charge code catalogue"
+msgstr "Definire il catalogo dei codici di addebito"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__health_check_status__degraded
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Degraded"
+msgstr "Degradato"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_dlvord
+msgid "Delivery Order"
+msgstr "Ordine di consegna"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__description
+msgid "Description"
+msgstr "Descrizione"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__destination
+msgid "Destination Charges"
+msgstr "Spese di destinazione"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_delivery
+msgid "Destination Delivery"
+msgstr "Consegna a destinazione"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_destination_doc
+msgid "Destination Documentation"
+msgstr "Documentazione di destinazione"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_dthc
+msgid "Destination Terminal Handling"
+msgstr "Movimentazione al terminal di destinazione"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_dthc_air
+msgid "Destination Terminal Handling (Air)"
+msgstr "Movimentazione al terminal di destinazione (aereo)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__description
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "Detail"
+msgstr "Dettaglio"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__direction
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__direction
+msgid "Direction"
+msgstr "Direzione"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__is_disbursement
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+msgid "Disbursement"
+msgstr "Erogazione"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__is_disbursement
+msgid ""
+"Disbursement charges are passed through at cost; the margin guard ignores "
+"them when checking gross margin."
+msgstr ""
+"Le spese di erogazione vengono riaddebitate al costo; il controllo del "
+"margine le ignora durante la verifica del margine lordo."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__display_name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__display_name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__display_name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__display_name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "Document Type"
+msgstr "Tipo documento"
+
+#. module: eh_log_base
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_document_type
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_document_types
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_list
+msgid "Document Types"
+msgstr "Tipi di documento"
+
+#. module: eh_log_base
+#: model:ir.model.constraint,message:eh_log_base.constraint_eh_log_document_type_code_unique
+msgid "Document type code must be unique."
+msgstr "Il codice del tipo di documento deve essere univoco."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__documentation
+msgid "Documentation"
+msgstr "Documentazione"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__health_check_status__down
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Down"
+msgstr "Difetto"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__edi_partner
+msgid "EDI Partner"
+msgstr "Partner EDI"
+
+#. module: eh_log_base
+#: model:res.groups,name:eh_log_base.group_eh_log_auditor
+msgid "EH Logistics Auditor (read-only)"
+msgstr "Revisore logistica EH (sola lettura)"
+
+#. module: eh_log_base
+#: model:res.groups,name:eh_log_base.group_eh_log_manager
+msgid "EH Logistics Manager"
+msgstr "Responsabile logistica EH"
+
+#. module: eh_log_base
+#: model:res.groups,name:eh_log_base.group_eh_log_user
+msgid "EH Logistics User"
+msgstr "Utente logistica EH"
+
+#. module: eh_log_base
+#: model:ir.actions.server,name:eh_log_base.ir_cron_eh_log_event_gc_ir_actions_server
+#: model:ir.cron,cron_name:eh_log_base.ir_cron_eh_log_event_gc
+msgid "EH Logistics: prune old operational events"
+msgstr "EH Logistica: elimina i vecchi eventi operativi"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_brand
+msgid "ERP Heritage Brand Attribution"
+msgstr "Attribuzione del marchio ERP Heritage"
+
+#. module: eh_log_base
+#: model:ir.module.category,name:eh_log_base.privilege_eh_logistics
+#: model_terms:ir.ui.view,arch_db:eh_log_base.eh_log_report_footer
+#: model_terms:ir.ui.view,arch_db:eh_log_base.eh_log_report_header
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "ERP Heritage Logistics"
+msgstr "Logistica ERP Heritage"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_ux_mixin
+msgid "ERP Heritage UX Mixin"
+msgstr ""
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+msgid ""
+"Encrypted credential storage requires the Python 'cryptography' library. "
+"Install it on the server or store credentials via environment variables "
+"instead."
+msgstr ""
+"L'archiviazione crittografata delle credenziali richiede la libreria Python "
+"'cryptography'. Installala sul server oppure archivia le credenziali tramite"
+" variabili d'ambiente."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid ""
+"Encrypted ir.config_parameter under the <code>eh_log.credentials.</code> "
+"namespace."
+msgstr ""
+"ir.config_parameter crittografato nello spazio dei nomi "
+"<code>eh_log.credentials.</code>."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Endpoint"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__environment
+msgid "Environment"
+msgstr "Ambiente"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid ""
+"Environment variable (e.g. "
+"<code>EH_LOG_&lt;PROVIDER&gt;_&lt;PURPOSE&gt;</code>)."
+msgstr ""
+"Variabile d'ambiente (es. "
+"<code>EH_LOG_&lt;PROVIDER&gt;_&lt;PURPOSE&gt;</code>)."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__severity__error
+msgid "Error"
+msgstr "Errore"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__error_code
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__error_code
+msgid "Error Code"
+msgstr "Codice errore"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__error_message
+msgid "Error Message"
+msgstr "Messaggio di errore"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Errors only"
+msgstr "Solo errori"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_event_retention_adapter_days
+msgid "Event Retention: Adapter Calls (days)"
+msgstr "Conservazione eventi: chiamate adattatore (giorni)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_event_retention_override_days
+msgid "Event Retention: Manual Overrides (days)"
+msgstr "Conservazione eventi: override manuali (giorni)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_event_retention_state_days
+msgid "Event Retention: State Transitions (days)"
+msgstr "Conservazione eventi: transizioni di stato (giorni)"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "Expiry Tracking"
+msgstr "Monitoraggio delle scadenze"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Explicit caller default (avoid in production)."
+msgstr ""
+"Valore predefinito esplicito del chiamante (da evitare in produzione)."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__direction__export
+msgid "Export"
+msgstr "Esporta"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__carrier_express
+msgid "Express Carrier"
+msgstr "Corriere espresso"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__failure
+msgid "Failure"
+msgstr "Errore"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__mode
+msgid ""
+"Filters rate-sheet selection so an air-only charge does not surface on a "
+"sea-freight quotation."
+msgstr ""
+"Filtra la selezione del listino tariffe in modo che una tariffa valida solo "
+"per il trasporto aereo non compaia in un preventivo di trasporto marittimo."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__financial
+msgid "Financial Document"
+msgstr "Documento finanziario"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_follower_ids
+msgid "Followers"
+msgstr "Seguito da"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguito da (partner)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icona Font Awesome es. fa-tasks"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__description
+msgid ""
+"Free-form notes for the operator. Surfaced on the rate sheet editor and on "
+"charge-line tooltips in quotations."
+msgstr ""
+"Note in formato libero per l'operatore. Visualizzate nell'editor del listino"
+" tariffe e nei tooltip delle righe di addebito nei preventivi."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__freight
+msgid "Freight"
+msgstr "Trasporto merci"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_fsc
+msgid "Fuel Surcharge"
+msgstr "Sovrapprezzo carburante"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "General"
+msgstr "Generale"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__regulator
+msgid "Government Regulator"
+msgstr "Ente regolatore governativo"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_search
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Group by Category"
+msgstr "Raggruppa per categoria"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Group by Environment"
+msgstr "Raggruppa per ambiente"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Group by Message Type"
+msgstr "Raggruppa per tipo di messaggio"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+msgid "Group by Mode"
+msgstr "Raggruppa per modalità"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Group by Profile"
+msgstr "Raggruppa per profilo"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Group by Provider Kind"
+msgstr "Raggruppa per tipo di fornitore"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Group by Status"
+msgstr "Raggruppa per stato"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Group by User"
+msgstr "Raggruppa per utente"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "HBL"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__basic
+msgid "HTTP Basic"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__http_status
+msgid "HTTP Status"
+msgstr "Stato HTTP"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_handling
+msgid "Handling"
+msgstr "Movimentazione"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__has_message
+msgid "Has Message"
+msgstr "Contiene messaggio"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Health"
+msgstr "Salute"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_health
+msgid "Health Certificate"
+msgstr "Certificato sanitario"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__health_check_message
+msgid "Health Check Message"
+msgstr "Messaggio del controllo dello stato"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__health_check_at
+msgid "Health Checked At"
+msgstr "Controllo salute effettuato il"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__health_check_status
+msgid "Health Status"
+msgstr "Stato di salute"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__health_check_status__ok
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Healthy"
+msgstr "Sano"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__is_taxable_at_destination
+msgid ""
+"Hint for the tax engine in the customs broker module. When False, the charge"
+" is exempt at destination clearance."
+msgstr ""
+"Suggerimento per il motore fiscale nel modulo del broker doganale. Quando è "
+"False, l'onere è esente allo sdoganamento a destinazione."
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_hawb
+msgid "House Air Waybill"
+msgstr ""
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_hbl
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "House Bill of Lading"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_kyc_warning_days
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_kyc_warning_days
+msgid ""
+"How many days before a KYC document expires the system creates an activity "
+"for the partner's account owner."
+msgstr ""
+"Quanti giorni prima della scadenza di un documento KYC il sistema crea "
+"un'attività per il titolare dell'account del partner."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__expiry_warning_days
+msgid ""
+"How many days before expiry the system raises an activity to the document "
+"owner. 0 disables the warning."
+msgstr ""
+"Quanti giorni prima della scadenza il sistema crea un'attività per il "
+"proprietario del documento. 0 disabilita l'avviso."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__related_record_display
+msgid ""
+"Human-readable reference (e.g. customs declaration number) snapshotted at "
+"write time so the log entry is readable even after the originating record is"
+" archived."
+msgstr ""
+"Riferimento leggibile (ad es. numero di dichiarazione doganale) acquisito "
+"come snapshot al momento della scrittura affinché la voce di registro resti "
+"leggibile anche dopo l'archiviazione del record di origine."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__id
+msgid "ID"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_exception_icon
+msgid "Icon"
+msgstr "Icona"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icona per indicare un'attività eccezione."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__idempotency_key
+msgid "Idempotency Key"
+msgstr "Chiave di idempotenza"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__identity
+msgid "Identity and KYC"
+msgstr "Identità e KYC"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Se selezionata, nuovi messaggi richiedono attenzione."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_has_error
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Se selezionata, alcuni messaggi presentano un errore di consegna."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__direction__import
+msgid "Import"
+msgstr "Importa"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_vat
+msgid "Import VAT"
+msgstr "Importa VAT"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+msgid "Inactive"
+msgstr "Non attivo"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__direction__inbound
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Inbound"
+msgstr "In entrata"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__severity__info
+msgid "Info"
+msgstr "Informazioni"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_haulage
+msgid "Inland Haulage"
+msgstr "Trasporto interno"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__inland
+msgid "Inland Transport"
+msgstr "Trasporto interno"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__insurance
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__insurance
+msgid "Insurance"
+msgstr "Assicurazione"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_inscert
+msgid "Insurance Certificate"
+msgstr "Certificato di assicurazione"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_is_follower
+msgid "Is Follower"
+msgstr "Sta seguendo"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__jwt_signed
+msgid "JWT Signed (private key)"
+msgstr "JWT firmato (chiave privata)"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "KYC Expiry Warning"
+msgstr "Avviso di scadenza KYC"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_kyc_warning_days
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_kyc_warning_days
+msgid "KYC Expiry Warning (days)"
+msgstr "Avviso di scadenza KYC (giorni)"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Last 7 days"
+msgstr "Ultimi 7 giorni"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__health_check_latency_ms
+msgid "Last Health Latency (ms)"
+msgstr "Ultima latenza di integrità (ms)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__last_message_at
+msgid "Last Message"
+msgstr "Ultimo messaggio"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message____last_update
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile____last_update
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code____last_update
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type____last_update
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__write_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__write_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__write_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__write_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__write_uid
+msgid "Last Updated by"
+msgstr "Ultimo aggiornamento di"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__write_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__write_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__write_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__write_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__write_date
+msgid "Last Updated on"
+msgstr "Ultimo aggiornamento il"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__latency_ms
+msgid "Latency (ms)"
+msgstr "Latenza (ms)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__company_ids
+msgid ""
+"Leave empty to make this code available across all companies. Use to scope a"
+" code to specific companies."
+msgstr ""
+"Lasciare vuoto per rendere questo codice disponibile per tutte le aziende. "
+"Utilizzare per limitare un codice ad aziende specifiche."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Linkage"
+msgstr "Collegamento"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__credential_status
+msgid ""
+"Live status of the credential as resolved by the helper. Read-only; "
+"recompute by clicking Test Credential."
+msgstr ""
+"Stato in tempo reale della credenziale come risolto dall'helper. Di sola "
+"lettura; ricalcola facendo clic su Test Credential."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__credential_purpose
+msgid ""
+"Logical key passed to eh.log.credentials.get(). The helper resolves it via "
+"environment variables and ir.config_parameter without exposing the secret on"
+" this form."
+msgstr ""
+"Chiave logica passata a eh.log.credentials.get(). L'helper la risolve "
+"tramite variabili d'ambiente e ir.config_parameter senza esporre il segreto "
+"su questo modulo."
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_root
+msgid "Logistics"
+msgstr "Logistica"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_adapter_message
+msgid "Logistics Adapter Message Log"
+msgstr "Registro messaggi adattatore logistica"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_adapter_profile
+msgid "Logistics Adapter Profile"
+msgstr "Profilo adattatore logistica"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_charge_code
+msgid "Logistics Charge Code"
+msgstr "Codice addebito logistica"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_credentials
+msgid "Logistics Credentials Helper"
+msgstr "Helper credenziali logistica"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_document_type
+msgid "Logistics Document Type"
+msgstr "Tipo documento logistica"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_event
+msgid "Logistics Operational Event"
+msgstr "Evento operativo logistica"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: eh_log_base
+#: model:res.groups,comment:eh_log_base.group_eh_log_manager
+msgid ""
+"Manager access to ERP Heritage logistics modules: configuration, approval, "
+"override actions. Implies the Logistics User role."
+msgstr ""
+"Accesso responsabile ai moduli logistici di ERP Heritage: configurazione, "
+"approvazione, azioni di override. Implica il ruolo Utente logistica."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__override
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Manual Override"
+msgstr "Override manuale"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Margin Approval Threshold"
+msgstr "Soglia di approvazione del margine"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_margin_floor_threshold
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_margin_floor_threshold
+msgid "Margin Approval Threshold (%)"
+msgstr "Soglia di approvazione del margine (%)"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Margin Warning Threshold"
+msgstr "Soglia di avviso del margine"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_margin_warning_threshold
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_margin_warning_threshold
+msgid "Margin Warning Threshold (%)"
+msgstr "Soglia di avviso del margine (%)"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_mawb
+msgid "Master Air Waybill"
+msgstr "Lettera di vettura aerea master"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_mbl
+msgid "Master Bill of Lading"
+msgstr "Polizza di carico master"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_master_data
+msgid "Master Data"
+msgstr "Anagrafiche"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__retry_max_attempts
+msgid ""
+"Maximum retry attempts on transient errors. Backoff is exponential with "
+"jitter, base 1.5x."
+msgstr ""
+"Numero massimo di nuovi tentativi in caso di errori transitori. Il backoff è"
+" esponenziale con jitter, base 1.5x."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_has_error
+msgid "Message Delivery error"
+msgstr "Errore di consegna messaggio"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__message_type
+msgid "Message Type"
+msgstr "Tipo di messaggio"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_count
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Messages"
+msgstr "Messaggi"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Method"
+msgstr "Metodo"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__company_ids
+msgid ""
+"Mirrors company_id as an m2m so the global isolation rule can use a single "
+"'company_ids in company_ids' domain that holds whether the field is mono or "
+"multi-company in the future."
+msgstr ""
+"Rispecchia company_id come m2m in modo che la regola di isolamento globale "
+"possa usare un unico dominio 'company_ids in company_ids' valido sia che il "
+"campo sia mono o multi-azienda in futuro."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Mirsal 2 (UAE Sandbox)"
+msgstr "Mirsal 2 (Sandbox UAE)"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__credential_status__missing
+msgid "Missing"
+msgstr "Mancante"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Mock"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__environment__mock
+msgid "Mock (offline fixtures)"
+msgstr "Mock (fixture offline)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__environment
+msgid ""
+"Mock plays back canned fixtures from tests/fixtures/. Sandbox calls the "
+"provider's published test environment. Production hits live. Profiles "
+"default to mock so a fresh install never accidentally calls a real "
+"regulator."
+msgstr ""
+"La simulazione riproduce fixture predefiniti da tests/fixtures/. La sandbox "
+"chiama l'ambiente di test pubblicato dal provider. La produzione opera in "
+"tempo reale. I profili sono impostati su simulazione per impostazione "
+"predefinita, così un'installazione nuova non chiama mai accidentalmente un "
+"ente regolatore reale."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__mode
+msgid "Mode"
+msgstr "Modalità"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__multimodal
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__multimodal
+msgid "Multimodal"
+msgstr "Multimodale"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__mtls
+msgid "Mutual TLS"
+msgstr "TLS reciproco"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Scadenza mie attività"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Scadenza prossima attività"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_summary
+msgid "Next Activity Summary"
+msgstr "Riepilogo prossima attività"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_type_id
+msgid "Next Activity Type"
+msgstr "Tipologia prossima attività"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_profile.py:0
+#, python-format
+msgid ""
+"No adapter class is registered for provider code '%(code)s'. Available "
+"providers: %(list)s. If this is a new integration, the country pack or "
+"vertical module that owns it has not been installed."
+msgstr ""
+"Nessuna classe adattatore è registrata per il codice provider '%(code)s'. "
+"Provider disponibili: %(list)s. Se si tratta di una nuova integrazione, il "
+"pacchetto paese o il modulo verticale che la possiede non è stato "
+"installato."
+
+#. module: eh_log_base
+#: model_terms:ir.actions.act_window,help:eh_log_base.action_eh_log_adapter_profile
+msgid "No adapter profiles configured yet"
+msgstr "Nessun profilo adattatore ancora configurato"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__none
+msgid "None"
+msgstr "Nessuno"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__health_check_status__unknown
+msgid "Not Yet Checked"
+msgstr "Non ancora verificato"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Notes"
+msgstr "Note"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__severity__notice
+msgid "Notice"
+msgstr "Avviso"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Numero di azioni"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_has_error_counter
+msgid "Number of errors"
+msgstr "Numero di errori"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Numero di messaggi che richiedono un'azione"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Numero di messaggi con errore di consegna"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__oauth2_authorization_code
+msgid "OAuth2 Authorization Code"
+msgstr "Codice di autorizzazione OAuth2"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__oauth2_client_credentials
+msgid "OAuth2 Client Credentials"
+msgstr "Credenziali client OAuth2"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "OFR"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__occurred_at
+msgid "Occurred At"
+msgstr "Verificatosi il"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__carrier_ocean
+msgid "Ocean Carrier"
+msgstr "Vettore marittimo"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_ofr
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Ocean Freight"
+msgstr "Trasporto marittimo"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__related_model
+msgid ""
+"Odoo model name that originated this call, e.g. "
+"'eh.log.customs.declaration'. Lets the UI link back from the message log to "
+"the operational record."
+msgstr ""
+"Nome del modello Odoo che ha originato questa chiamata, ad es. "
+"'eh.log.customs.declaration'. Consente all'interfaccia di ricollegare dal "
+"registro dei messaggi al record operativo."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_event__summary
+msgid ""
+"One-line human-readable description of the event. The structured payload "
+"sits in the context_json field."
+msgstr ""
+"Descrizione dell'evento su una riga leggibile dall'uomo. Il payload "
+"strutturato si trova nel campo context_json."
+
+#. module: eh_log_base
+#: model:ir.model.constraint,message:eh_log_base.constraint_eh_log_adapter_profile_provider_company_environment_unique
+msgid ""
+"Only one profile per (provider, company, environment) is allowed. If you "
+"need a second sandbox configuration, use the secondary endpoint field on the"
+" existing profile."
+msgstr ""
+"È consentito un solo profilo per (provider, company, environment). Se hai "
+"bisogno di una seconda configurazione sandbox, utilizza il campo endpoint "
+"secondario sul profilo esistente."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Open Related Record"
+msgstr "Apri record correlato"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_form
+msgid "Operational Event"
+msgstr "Evento operativo"
+
+#. module: eh_log_base
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_event
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_events
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_list
+msgid "Operational Events"
+msgstr "Eventi operativi"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__notes
+msgid "Operational Notes"
+msgstr "Note operative"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_operations
+msgid "Operations"
+msgstr "Operazioni"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__name
+msgid ""
+"Operator-friendly label for this profile, e.g. 'Mirsal 2 (UAE Sandbox)'."
+msgstr ""
+"Etichetta comprensibile per l'operatore per questo profilo, es. 'Mirsal 2 "
+"(UAE Sandbox)'."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__idempotency_key
+msgid ""
+"Optional caller-supplied key the provider uses to deduplicate retried "
+"requests. Empty when the call is naturally idempotent (e.g. a status query)."
+msgstr ""
+"Chiave facoltativa fornita dal chiamante che il provider utilizza per "
+"deduplicare le richieste ritentate. Vuota quando la chiamata è naturalmente "
+"idempotente (es. una query di stato)."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__default_currency_id
+msgid ""
+"Optional default for rate sheets. Quotation currency wins when the two "
+"differ; this is a hint for the rate-sheet editor only."
+msgstr ""
+"Valore predefinito facoltativo per i listini tariffari. La valuta del "
+"preventivo prevale in caso di differenza; questa è solo un'indicazione per "
+"l'editor del listino tariffario."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__secondary_endpoint_url
+msgid ""
+"Optional fallback URL used by adapters that publish a DR or read-replica "
+"endpoint."
+msgstr ""
+"URL di riserva facoltativo utilizzato dagli adattatori che pubblicano un "
+"endpoint DR o read-replica."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__origin
+msgid "Origin Charges"
+msgstr "Costi di origine"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_origin_doc
+msgid "Origin Documentation"
+msgstr "Documentazione di origine"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_pickup
+msgid "Origin Pickup"
+msgstr "Ritiro all'origine"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_othc
+msgid "Origin Terminal Handling"
+msgstr "Movimentazione al terminal di origine"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_othc_air
+msgid "Origin Terminal Handling (Air)"
+msgstr "Movimentazione al terminal di origine (aereo)"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_message.py:0
+msgid "Originating Record"
+msgstr "Record di origine"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__other
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__other
+msgid "Other"
+msgstr "Altro"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__direction__outbound
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Outbound"
+msgstr "In uscita"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Outcome"
+msgstr "Risultato"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Override Retention"
+msgstr "Sovrascrivi ritenuta"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_pl
+msgid "Packing List"
+msgstr "Distinta di imballaggio"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.eh_log_clean_layout
+msgid "Page <span class=\"page\"/> / <span class=\"topage\"/>"
+msgstr "Pagina <span class=\"page\"/>/<span class=\"topage\"/>"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_passport
+msgid "Passport (Authorised Signatory)"
+msgstr "Passaporto (firmatario autorizzato)"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__payment
+msgid "Payment Provider"
+msgstr "Fornitore di pagamenti"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_peak
+msgid "Peak Season Surcharge"
+msgstr "Supplemento alta stagione"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__pending
+msgid "Pending"
+msgstr "In sospeso"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__request_timeout_seconds
+msgid ""
+"Per-call timeout. Adapter raises AdapterTimeoutError on expiry and the "
+"circuit breaker increments its counter."
+msgstr ""
+"Timeout per chiamata. All'scadenza l'adattatore genera AdapterTimeoutError e"
+" l'interruttore automatico incrementa il proprio contatore."
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_ppc
+msgid "Phytosanitary Certificate"
+msgstr "Certificato fitosanitario"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__default_revenue_account_id
+msgid ""
+"Posted on customer invoice lines billed against this charge code. Per-"
+"company because account hierarchies vary."
+msgstr ""
+"Registrato sulle righe di fattura cliente fatturate a fronte di questo "
+"codice di addebito. Per azienda perché le gerarchie dei conti variano."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__default_expense_account_id
+msgid ""
+"Posted on vendor bill lines costed against this charge code. Per-company "
+"because account hierarchies vary."
+msgstr ""
+"Registrato sulle righe di fattura fornitore imputate a fronte di questo "
+"codice di addebito. Per azienda perché le gerarchie dei conti variano."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Pre-fills new logistics quotations."
+msgstr "Precompila i nuovi preventivi logistici."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_default_incoterm_id
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_default_incoterm_id
+msgid "Pre-fills new logistics quotations. Operators can change per quote."
+msgstr ""
+"Precompila i nuovi preventivi logistici. Gli operatori possono modificarli "
+"per ogni preventivo."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__endpoint_url
+msgid "Primary Endpoint"
+msgstr "Endpoint principale"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__environment__production
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Production"
+msgstr "Produzione"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__profile_id
+msgid "Profile"
+msgstr "Profilo"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Provider"
+msgstr "Corriere"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__api_version
+msgid ""
+"Provider API version this profile speaks (e.g. '2.4', '2026-01'). Adapters "
+"refuse to dispatch when this does not match the implementing class's "
+"declared version."
+msgstr ""
+"Versione dell'API del fornitore utilizzata da questo profilo (ad es. '2.4', "
+"'2026-01'). Gli adattatori rifiutano l'invio quando questa non corrisponde "
+"alla versione dichiarata dalla classe di implementazione."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__provider_code
+msgid "Provider Code"
+msgstr "Codice fornitore"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__provider_kind
+msgid "Provider Kind"
+msgstr "Tipo di fornitore"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__error_code
+msgid ""
+"Provider-returned error code, surfaced verbatim. The human message is in the"
+" body; this field is for grep."
+msgstr ""
+"Codice di errore restituito dal fornitore, mostrato testualmente. Il "
+"messaggio leggibile è nel corpo; questo campo è per grep."
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_po
+msgid "Purchase Order"
+msgstr "Ordine di acquisto"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_margin_warning_threshold
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_margin_warning_threshold
+msgid ""
+"Quotation margin below this percentage raises a warning in the form. "
+"Approval is still required only if the margin is below the company's hard "
+"floor."
+msgstr ""
+"Un margine di preventivo inferiore a questa percentuale genera un avviso nel"
+" modulo. L'approvazione è comunque richiesta solo se il margine è inferiore "
+"al limite minimo rigido dell'azienda."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_margin_floor_threshold
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_margin_floor_threshold
+msgid ""
+"Quotation margin below this percentage requires explicit manager approval "
+"before confirmation."
+msgstr ""
+"Un margine di preventivo inferiore a questa percentuale richiede "
+"l'approvazione esplicita del responsabile prima della conferma."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Quotations below this margin raise a warning."
+msgstr "I preventivi al di sotto di questo margine generano un avviso."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Quotations below this margin require manager approval."
+msgstr ""
+"I preventivi al di sotto di questo margine richiedono l'approvazione del "
+"responsabile."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__rail
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__rail
+msgid "Rail"
+msgstr "Ferrovia"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__carrier_rail
+msgid "Rail Carrier"
+msgstr "Vettore ferroviario"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_rlfr
+msgid "Rail Freight"
+msgstr "Trasporto merci ferroviario"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_rwb
+msgid "Rail Waybill"
+msgstr "Lettera di vettura ferroviaria"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__rate_limit_per_minute
+msgid "Rate Limit (per minute)"
+msgstr "Limite di frequenza (al minuto)"
+
+#. module: eh_log_base
+#: model:res.groups,comment:eh_log_base.group_eh_log_user
+msgid ""
+"Read and operational access to ERP Heritage logistics modules. Implies the "
+"standard Salesperson role."
+msgstr ""
+"Accesso in lettura e operativo ai moduli logistici di ERP Heritage. Implica "
+"il ruolo standard Venditore."
+
+#. module: eh_log_base
+#: model:res.groups,comment:eh_log_base.group_eh_log_auditor
+msgid ""
+"Read-only auditor: visibility on every ERP Heritage logistics audit log "
+"without write access. Cannot edit operational data."
+msgstr ""
+"Revisore in sola lettura: visibilità su ogni registro di audit logistico ERP"
+" Heritage senza accesso in scrittura. Non può modificare i dati operativi."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__regulatory
+msgid "Regulatory Certificate"
+msgstr "Certificato normativo"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Rejected"
+msgstr "Rifiutato"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__rejected
+msgid "Rejected by Provider"
+msgstr "Rifiutato dal fornitore"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__related_model
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__related_model
+msgid "Related Model"
+msgstr "Modello correlato"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__related_record_display
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__related_record_display
+msgid "Related Record"
+msgstr "Record correlato"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__related_record_id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__related_record_id
+msgid "Related Record ID"
+msgstr "ID del record correlato"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Replay"
+msgstr "Riproduci"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_message.py:0
+msgid "Replayed Messages"
+msgstr "Messaggi riprodotti"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Request"
+msgstr "Richiesta"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__request_headers
+msgid "Request Headers (sanitised)"
+msgstr "Intestazioni della richiesta (sanificate)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__request_payload
+msgid "Request Payload"
+msgstr "Payload della richiesta"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__request_timeout_seconds
+msgid "Request Timeout (s)"
+msgstr "Timeout della richiesta (s)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__is_required_default
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_search
+msgid "Required by Default"
+msgstr "Richiesto per impostazione predefinita"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Resilience"
+msgstr "Resilienza"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__credential_status__ok
+msgid "Resolved"
+msgstr "Risolto"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Response"
+msgstr "Risposta"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__response_headers
+msgid "Response Headers"
+msgstr "Intestazioni risposta"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__response_payload
+msgid "Response Payload"
+msgstr "Payload risposta"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_user_id
+msgid "Responsible User"
+msgstr "Utente responsabile"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__retry
+msgid "Retried"
+msgstr "Ritentato"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__retry_count
+msgid "Retry Count"
+msgstr "Numero di tentativi"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__retry_max_attempts
+msgid "Retry Max Attempts"
+msgstr "Numero max. di tentativi"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__road
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__road
+msgid "Road"
+msgstr "Strada"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_rfr
+msgid "Road Freight"
+msgstr "Trasporto merci su strada"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__routing
+msgid "Routing or Mapping"
+msgstr "Instradamento o mappatura"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Run Health Check"
+msgstr "Esegui controllo di integrità"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__sftp_key
+msgid "SFTP Key"
+msgstr "Chiave SFTP"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Errore di consegna SMS"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_sanctions
+msgid "Sanctions and PEP Screening Result"
+msgstr "Risultato dello screening sanzioni e PEP"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__screening
+msgid "Sanctions or PEP Screening"
+msgstr "Screening sanzioni o PEP"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__environment__sandbox
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Sandbox"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__request_payload
+msgid ""
+"Sanitised request payload. Original PII redacted per the profile's redaction"
+" rules. Truncated above the size limit set by ir.config_parameter "
+"eh_log.base.adapter_message_payload_max_chars."
+msgstr ""
+"Payload della richiesta sanificato. Le PII originali sono oscurate secondo "
+"le regole di redazione del profilo. Troncato oltre il limite di dimensione "
+"impostato da ir.config_parameter "
+"eh_log.base.adapter_message_payload_max_chars."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__response_payload
+msgid ""
+"Sanitised response payload. Same redaction and truncation rules as the "
+"request payload."
+msgstr ""
+"Payload della risposta sanificato. Stesse regole di redazione e troncamento "
+"del payload della richiesta."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__sea
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__sea
+msgid "Sea"
+msgstr "Mare"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__secondary_endpoint_url
+msgid "Secondary Endpoint"
+msgstr "Endpoint secondario"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_isps
+msgid "Security Surcharge (ISPS)"
+msgstr "Sovrapprezzo di sicurezza (ISPS)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__product_id
+msgid "Service Product"
+msgstr "Prodotto servizio"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__product_id
+msgid ""
+"Service product carried by quotation and invoice lines billed against this "
+"charge code. Odoo requires every billable order line to reference a product "
+"before the order can be confirmed or invoiced; logistics charge lines reuse "
+"this one. Left empty, it is auto-provisioned the first time the code is sold"
+" so operators never have to maintain a parallel product catalogue."
+msgstr ""
+"Prodotto di servizio utilizzato dalle righe di preventivo e fattura "
+"addebitate su questo codice di addebito. Odoo richiede che ogni riga "
+"d'ordine fatturabile faccia riferimento a un prodotto prima che l'ordine "
+"possa essere confermato o fatturato; le righe di addebito logistiche "
+"riutilizzano questo prodotto. Se lasciato vuoto, viene creato "
+"automaticamente alla prima vendita del codice, così gli operatori non devono"
+" mai gestire un catalogo prodotti parallelo."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__severity
+msgid "Severity"
+msgstr "Gravità"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__rate_limit_per_minute
+msgid ""
+"Soft per-minute rate limit honoured client-side. 0 means no client-side "
+"throttling; the adapter still respects server-side 429 responses."
+msgstr ""
+"Limite di frequenza flessibile al minuto applicato lato client. 0 significa "
+"nessuna limitazione lato client; l'adattatore rispetta comunque le risposte "
+"429 lato server."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__code
+msgid ""
+"Stable identifier referenced from rate sheets and invoice lines. Convention:"
+" short uppercase alphanumeric, e.g. OFR for Ocean Freight, OTHC for Origin "
+"Terminal Handling."
+msgstr ""
+"Identificatore stabile a cui si fa riferimento dai listini tariffari e dalle"
+" righe di fattura. Convenzione: alfanumerico breve in maiuscolo, ad es. OFR "
+"per il nolo marittimo, OTHC per la movimentazione al terminal di origine."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__provider_code
+msgid ""
+"Stable provider identifier referenced by adapter classes (e.g. 'mirsal2', "
+"'fasah', 'dcsa', 'iata_cargo_xml'). Adapter dispatch keys on this code; do "
+"not rename in place."
+msgstr ""
+"Identificatore di provider stabile a cui fanno riferimento le classi adapter"
+" (ad es. 'mirsal2', 'fasah', 'dcsa', 'iata_cargo_xml'). L'instradamento "
+"dell'adapter si basa su questo codice; non rinominarlo in loco."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__code
+msgid ""
+"Stable short identifier (HBL, HAWB, MBL, MAWB, COI, COO, PL, COMINV, ...). "
+"Referenced from checklists."
+msgstr ""
+"Identificatore breve stabile (HBL, HAWB, MBL, MAWB, COI, COO, PL, COMINV, "
+"...). Referenziato dalle liste di controllo."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__state_transition
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "State Transition"
+msgstr "Transizione di stato"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "State Transition Retention"
+msgstr "Conservazione delle transizioni di stato"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_ux_mixin.py:0
+#, python-format
+msgid "State changed: %(from)s -> %(to)s"
+msgstr "Stato cambiato: %(from)s -> %(to)s"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__status
+msgid "Status"
+msgstr "Stato"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Stato basato sulle attività\n"
+"In ritardo: scadenza già superata\n"
+"Oggi: attività in data odierna\n"
+"Pianificato: attività future."
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_storage
+msgid "Storage"
+msgstr "Stoccaggio"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_event__context_json
+msgid ""
+"Structured payload serialised as JSON. Audit reviewers search this field for"
+" specific keys and values."
+msgstr ""
+"Payload strutturato serializzato come JSON. I revisori dell'audit cercano in"
+" questo campo chiavi e valori specifici."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__success
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Success"
+msgstr "Successo"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__summary
+msgid "Summary"
+msgstr "Riepilogo"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__surcharge
+msgid "Surcharge"
+msgstr "Sovrapprezzo"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__is_taxable_at_destination
+msgid "Taxable at Destination"
+msgstr "Imponibile a destinazione"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__telematics
+msgid "Telematics Provider"
+msgstr "Fornitore di telematica"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Test Credential"
+msgstr "Credenziale di test"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "The actual secret is never displayed on this form."
+msgstr "Il segreto effettivo non viene mai visualizzato in questo modulo."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__circuit_breaker_cooldown_seconds
+msgid "Time to wait before the half-open probe runs."
+msgstr "Tempo di attesa prima dell'esecuzione della sonda half-open."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__timeout
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Timed Out"
+msgstr "Timeout scaduto"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Timeouts and Retries"
+msgstr "Timeout e nuovi tentativi"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Today"
+msgstr "Oggi"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_count
+msgid "Total messages logged against this profile."
+msgstr "Totale dei messaggi registrati per questo profilo."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__expiry_aware
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_search
+msgid "Tracks Expiry"
+msgstr "Traccia la scadenza"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_tradelic
+msgid "Trade Licence"
+msgstr "Licenza commerciale"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__transport
+msgid "Transport Document"
+msgstr "Documento di trasporto"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid ""
+"Truncate adapter payloads above this size before storage to keep the "
+"database lean."
+msgstr ""
+"Tronca i payload dell'adattatore oltre questa dimensione prima "
+"dell'archiviazione per mantenere il database snello."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo di attività eccezione sul record."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__correlation_id
+msgid ""
+"Unique per-call identifier propagated to the provider for traceability. "
+"Generated client-side as a UUID4."
+msgstr ""
+"Identificatore univoco per chiamata propagato al fornitore per la "
+"tracciabilità. Generato lato client come UUID4."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__credential_status__unknown
+msgid "Unknown"
+msgstr "Sconosciuto"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__user_id
+msgid "User"
+msgstr "Utente"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_vatreg
+msgid "VAT Registration Certificate"
+msgstr "Certificato di registrazione VAT"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_war
+msgid "War Risk Surcharge"
+msgstr "Sovrapprezzo per rischio di guerra"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__warehousing
+msgid "Warehousing and Handling"
+msgstr "Stoccaggio e movimentazione"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__severity__warning
+msgid "Warning"
+msgstr "Avviso"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__website_message_ids
+msgid "Website Messages"
+msgstr "Messaggi sito web"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__website_message_ids
+msgid "Website communication history"
+msgstr "Cronologia comunicazioni sito web"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__is_required_default
+msgid ""
+"When checked, the document is auto-added to the job checklist when "
+"applicable. Operators can still remove it for non-standard scenarios."
+msgstr ""
+"Se selezionato, il documento viene aggiunto automaticamente alla checklist "
+"del lavoro quando applicabile. Gli operatori possono comunque rimuoverlo per"
+" scenari non standard."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__expiry_aware
+msgid ""
+"When checked, the related upload captures an expiry date and the system "
+"raises a warning before expiry per the default warning days field."
+msgstr ""
+"Se selezionato, il caricamento correlato acquisisce una data di scadenza e "
+"il sistema genera un avviso prima della scadenza in base al campo dei giorni"
+" di avviso predefiniti."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_credit_warning_pct
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_credit_warning_pct
+msgid ""
+"When customer exposure crosses this percentage of the approved limit, new "
+"quotations raise a warning. The hard stop is always 100% of the limit."
+msgstr ""
+"Quando l'esposizione del cliente supera questa percentuale del limite "
+"approvato, le nuove quotazioni generano un avviso. Il blocco rigido è sempre"
+" pari al 100% del limite."
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_event.py:0
+#, python-format
+msgid ""
+"[EHL-EVENT-001] Operational events are append-only. Editing the following "
+"fields is not permitted: %(fields)s."
+msgstr ""
+"[EHL-EVENT-001] Gli eventi operativi sono solo in aggiunta. La modifica dei "
+"seguenti campi non è consentita: %(fields)s."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "characters"
+msgstr "caratteri"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "days"
+msgstr "giorni"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "https://provider.example/v1"
+msgstr ""

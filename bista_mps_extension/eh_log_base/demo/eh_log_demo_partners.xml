@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Customers (shippers, consignees, importers) -->
+
+        <record id="demo_partner_alpha_trading" model="res.partner">
+            <field name="name">Alpha Trading LLC</field>
+            <field name="is_company" eval="True"/>
+            <field name="customer_rank">1</field>
+            <field name="email">ops@alpha-trading.example</field>
+            <field name="phone">+971 4 555 0101</field>
+            <field name="city">Dubai</field>
+            <field name="country_id" ref="base.ae"/>
+            <field name="street">Dubai Investment Park 1</field>
+        </record>
+
+        <record id="demo_partner_falcon_industries" model="res.partner">
+            <field name="name">Falcon Industries FZE</field>
+            <field name="is_company" eval="True"/>
+            <field name="customer_rank">1</field>
+            <field name="email">logistics@falcon-fze.example</field>
+            <field name="phone">+971 4 555 0202</field>
+            <field name="city">Jebel Ali</field>
+            <field name="country_id" ref="base.ae"/>
+        </record>
+
+        <record id="demo_partner_najd_petrochem" model="res.partner">
+            <field name="name">Najd Petrochemicals SJSC</field>
+            <field name="is_company" eval="True"/>
+            <field name="customer_rank">1</field>
+            <field name="email">supply.chain@najd-petro.example</field>
+            <field name="phone">+966 13 555 0301</field>
+            <field name="city">Jubail</field>
+            <field name="country_id" ref="base.sa"/>
+        </record>
+
+        <record id="demo_partner_palm_retail" model="res.partner">
+            <field name="name">Palm Retail Group</field>
+            <field name="is_company" eval="True"/>
+            <field name="customer_rank">1</field>
+            <field name="email">imports@palmretail.example</field>
+            <field name="phone">+974 4 555 0404</field>
+            <field name="city">Doha</field>
+            <field name="country_id" ref="base.qa"/>
+        </record>
+
+        <record id="demo_partner_oasis_consumer" model="res.partner">
+            <field name="name">Oasis Consumer Goods WLL</field>
+            <field name="is_company" eval="True"/>
+            <field name="customer_rank">1</field>
+            <field name="email">scm@oasis-cg.example</field>
+            <field name="phone">+965 2 555 0505</field>
+            <field name="city">Kuwait City</field>
+            <field name="country_id" ref="base.kw"/>
+        </record>
+
+        <record id="demo_partner_pearl_pharma" model="res.partner">
+            <field name="name">Pearl Pharma BSC</field>
+            <field name="is_company" eval="True"/>
+            <field name="customer_rank">1</field>
+            <field name="email">imports@pearl-pharma.example</field>
+            <field name="phone">+973 17 555 0606</field>
+            <field name="city">Manama</field>
+            <field name="country_id" ref="base.bh"/>
+        </record>
+
+        <record id="demo_partner_muscat_marine" model="res.partner">
+            <field name="name">Muscat Marine Supply LLC</field>
+            <field name="is_company" eval="True"/>
+            <field name="customer_rank">1</field>
+            <field name="email">ops@muscat-marine.example</field>
+            <field name="phone">+968 24 555 0707</field>
+            <field name="city">Muscat</field>
+            <field name="country_id" ref="base.om"/>
+        </record>
+
+        <record id="demo_partner_arabian_food" model="res.partner">
+            <field name="name">Arabian Food Distribution</field>
+            <field name="is_company" eval="True"/>
+            <field name="customer_rank">1</field>
+            <field name="email">cold.chain@afd.example</field>
+            <field name="phone">+971 6 555 0808</field>
+            <field name="city">Sharjah</field>
+            <field name="country_id" ref="base.ae"/>
+        </record>
+
+        <record id="demo_partner_riyadh_proj" model="res.partner">
+            <field name="name">Riyadh Project Logistics</field>
+            <field name="is_company" eval="True"/>
+            <field name="customer_rank">1</field>
+            <field name="email">heavy@riyadh-proj.example</field>
+            <field name="phone">+966 11 555 0909</field>
+            <field name="city">Riyadh</field>
+            <field name="country_id" ref="base.sa"/>
+        </record>
+
+        <record id="demo_partner_jeddah_apparel" model="res.partner">
+            <field name="name">Jeddah Apparel House</field>
+            <field name="is_company" eval="True"/>
+            <field name="customer_rank">1</field>
+            <field name="email">imports@jeddah-apparel.example</field>
+            <field name="phone">+966 12 555 1010</field>
+            <field name="city">Jeddah</field>
+            <field name="country_id" ref="base.sa"/>
+        </record>
+
+        <!-- Shippers / overseas exporters -->
+
+        <record id="demo_partner_china_exports" model="res.partner">
+            <field name="name">Shanghai Yangshan Exports Co.</field>
+            <field name="is_company" eval="True"/>
+            <field name="supplier_rank">1</field>
+            <field name="email">export@yangshan-co.example</field>
+            <field name="city">Shanghai</field>
+            <field name="country_id" ref="base.cn"/>
+        </record>
+
+        <record id="demo_partner_germany_machinery" model="res.partner">
+            <field name="name">Hamburg Heavy Machinery GmbH</field>
+            <field name="is_company" eval="True"/>
+            <field name="supplier_rank">1</field>
+            <field name="email">export@hhm.example</field>
+            <field name="city">Hamburg</field>
+            <field name="country_id" ref="base.de"/>
+        </record>
+
+        <record id="demo_partner_india_textiles" model="res.partner">
+            <field name="name">Mumbai Textile Mills Pvt Ltd</field>
+            <field name="is_company" eval="True"/>
+            <field name="supplier_rank">1</field>
+            <field name="email">export@mtm.example</field>
+            <field name="city">Mumbai</field>
+            <field name="country_id" ref="base.in"/>
+        </record>
+
+        <record id="demo_partner_us_electronics" model="res.partner">
+            <field name="name">Pacific Electronics Corp</field>
+            <field name="is_company" eval="True"/>
+            <field name="supplier_rank">1</field>
+            <field name="email">export@pacific-elec.example</field>
+            <field name="city">Long Beach</field>
+            <field name="country_id" ref="base.us"/>
+        </record>
+
+        <!-- Carriers / shipping lines / vendors -->
+
+        <record id="demo_partner_carrier_msc" model="res.partner">
+            <field name="name">Mediterranean Shipping (Demo)</field>
+            <field name="is_company" eval="True"/>
+            <field name="supplier_rank">1</field>
+            <field name="email">booking@msc-demo.example</field>
+        </record>
+
+        <record id="demo_partner_carrier_maersk" model="res.partner">
+            <field name="name">Maersk Line (Demo)</field>
+            <field name="is_company" eval="True"/>
+            <field name="supplier_rank">1</field>
+            <field name="email">booking@maersk-demo.example</field>
+        </record>
+
+        <record id="demo_partner_carrier_emirates" model="res.partner">
+            <field name="name">Emirates SkyCargo (Demo)</field>
+            <field name="is_company" eval="True"/>
+            <field name="supplier_rank">1</field>
+            <field name="email">booking@ek-demo.example</field>
+        </record>
+
+        <record id="demo_partner_carrier_qatar" model="res.partner">
+            <field name="name">Qatar Airways Cargo (Demo)</field>
+            <field name="is_company" eval="True"/>
+            <field name="supplier_rank">1</field>
+            <field name="email">booking@qrcargo-demo.example</field>
+        </record>
+
+        <record id="demo_partner_trucker_alkhaleej" model="res.partner">
+            <field name="name">Al Khaleej Transport LLC</field>
+            <field name="is_company" eval="True"/>
+            <field name="supplier_rank">1</field>
+            <field name="email">dispatch@alkhaleej.example</field>
+            <field name="city">Dubai</field>
+            <field name="country_id" ref="base.ae"/>
+        </record>
+
+        <record id="demo_partner_trucker_safwa" model="res.partner">
+            <field name="name">Safwa Heavy Haulage</field>
+            <field name="is_company" eval="True"/>
+            <field name="supplier_rank">1</field>
+            <field name="email">dispatch@safwa.example</field>
+            <field name="city">Dammam</field>
+            <field name="country_id" ref="base.sa"/>
+        </record>
+
+        <!-- Drivers -->
+
+        <record id="demo_driver_ahmed" model="res.partner">
+            <field name="name">Ahmed Al Mansouri</field>
+            <field name="is_company" eval="False"/>
+            <field name="phone">+971 50 100 0001</field>
+            <field name="parent_id" ref="demo_partner_trucker_alkhaleej"/>
+        </record>
+
+        <record id="demo_driver_omar" model="res.partner">
+            <field name="name">Omar Hassan</field>
+            <field name="is_company" eval="False"/>
+            <field name="phone">+971 50 100 0002</field>
+            <field name="parent_id" ref="demo_partner_trucker_alkhaleej"/>
+        </record>
+
+        <record id="demo_driver_yousef" model="res.partner">
+            <field name="name">Yousef Khalid</field>
+            <field name="is_company" eval="False"/>
+            <field name="phone">+971 50 100 0003</field>
+            <field name="parent_id" ref="demo_partner_trucker_alkhaleej"/>
+        </record>
+
+        <record id="demo_driver_rashid" model="res.partner">
+            <field name="name">Rashid Al Suwaidi</field>
+            <field name="is_company" eval="False"/>
+            <field name="phone">+966 55 100 0004</field>
+            <field name="parent_id" ref="demo_partner_trucker_safwa"/>
+        </record>
+
+        <record id="demo_driver_fahad" model="res.partner">
+            <field name="name">Fahad Al Otaibi</field>
+            <field name="is_company" eval="False"/>
+            <field name="phone">+966 55 100 0005</field>
+            <field name="parent_id" ref="demo_partner_trucker_safwa"/>
+        </record>
+
+        <record id="demo_driver_saif" model="res.partner">
+            <field name="name">Saif Al Marri</field>
+            <field name="is_company" eval="False"/>
+            <field name="phone">+974 55 100 0006</field>
+        </record>
+
+        <!-- Vessels (simple partner records for demo) -->
+
+        <record id="demo_partner_vessel_msc_isabella" model="res.partner">
+            <field name="name">MV MSC Isabella</field>
+            <field name="is_company" eval="True"/>
+            <field name="comment">Container vessel, 23,000 TEU. Demo record only.</field>
+        </record>
+
+        <record id="demo_partner_vessel_ever_giant" model="res.partner">
+            <field name="name">MV Ever Giant</field>
+            <field name="is_company" eval="True"/>
+            <field name="comment">Container vessel, 24,000 TEU. Demo record only.</field>
+        </record>
+
+        <record id="demo_partner_vessel_maersk_horizon" model="res.partner">
+            <field name="name">MV Maersk Horizon</field>
+            <field name="is_company" eval="True"/>
+            <field name="comment">Container vessel, 18,000 TEU. Demo record only.</field>
+        </record>
+
+        <!-- Ports / terminals (as partners) -->
+
+        <record id="demo_partner_port_jebelali" model="res.partner">
+            <field name="name">DP World Jebel Ali Terminal</field>
+            <field name="is_company" eval="True"/>
+            <field name="city">Jebel Ali</field>
+            <field name="country_id" ref="base.ae"/>
+        </record>
+
+        <record id="demo_partner_port_kingabdullah" model="res.partner">
+            <field name="name">King Abdullah Port</field>
+            <field name="is_company" eval="True"/>
+            <field name="city">Rabigh</field>
+            <field name="country_id" ref="base.sa"/>
+        </record>
+
+        <record id="demo_partner_port_hamad" model="res.partner">
+            <field name="name">Hamad Port (Doha)</field>
+            <field name="is_company" eval="True"/>
+            <field name="city">Doha</field>
+            <field name="country_id" ref="base.qa"/>
+        </record>
+
+        <!-- Vendors for warehouse / deferment -->
+
+        <record id="demo_partner_landlord_dwc" model="res.partner">
+            <field name="name">Dubai South Logistics City</field>
+            <field name="is_company" eval="True"/>
+            <field name="supplier_rank">1</field>
+            <field name="city">Dubai</field>
+            <field name="country_id" ref="base.ae"/>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_quotation_mass_approve_form" model="ir.ui.view">
+        <field name="name">eh.log.quotation.mass.approve.form</field>
+        <field name="model">eh.log.quotation.mass.approve</field>
+        <field name="arch" type="xml">
+            <form string="Mass-approve Quotations">
+                <group>
+                    <field name="order_ids" widget="many2many_tags" readonly="1"/>
+                    <field name="note" colspan="2"/>
+                </group>
+                <footer>
+                    <button name="action_apply" type="object"
+                            string="Approve All" class="btn-primary"/>
+                    <button special="cancel" string="Cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_quotation_mass_approve" model="ir.actions.act_window">
+        <field name="name">Mass-approve</field>
+        <field name="res_model">eh.log.quotation.mass.approve</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="binding_view_types">list</field>
+    </record>
+
+    <record id="view_eh_log_quotation_mass_cancel_form" model="ir.ui.view">
+        <field name="name">eh.log.quotation.mass.cancel.form</field>
+        <field name="model">eh.log.quotation.mass.cancel</field>
+        <field name="arch" type="xml">
+            <form string="Mass-cancel Quotations">
+                <group>
+                    <field name="order_ids" widget="many2many_tags" readonly="1"/>
+                    <field name="reason" colspan="2"/>
+                </group>
+                <footer>
+                    <button name="action_apply" type="object"
+                            string="Cancel All" class="btn-danger"/>
+                    <button special="cancel" string="Back" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_quotation_mass_cancel" model="ir.actions.act_window">
+        <field name="name">Mass-cancel</field>
+        <field name="res_model">eh.log.quotation.mass.cancel</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="binding_view_types">list</field>
+    </record>
+
+    <record id="view_eh_log_quotation_mass_send_review_form" model="ir.ui.view">
+        <field name="name">eh.log.quotation.mass.send.review.form</field>
+        <field name="model">eh.log.quotation.mass.send.review</field>
+        <field name="arch" type="xml">
+            <form string="Send for Review">
+                <group>
+                    <field name="order_ids" widget="many2many_tags" readonly="1"/>
+                    <field name="reviewer_id"/>
+                    <field name="deadline"/>
+                </group>
+                <footer>
+                    <button name="action_apply" type="object"
+                            string="Send for Review" class="btn-primary"/>
+                    <button special="cancel" string="Cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_quotation_mass_send_review" model="ir.actions.act_window">
+        <field name="name">Send for Review</field>
+        <field name="res_model">eh.log.quotation.mass.send.review</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="binding_view_types">list</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,2564 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_freight
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 10:16+0000\n"
+"PO-Revision-Date: 2026-07-01 10:16+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#, python-format
+msgid "%(count)d job(s) closed."
+msgstr "ปิดงาน %(count)d รายการ"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#, python-format
+msgid "%(count)d job(s) marked delivered."
+msgstr "ทำเครื่องหมายงาน %(count)d รายการเป็นจัดส่งแล้ว"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#, python-format
+msgid "%(count)d job(s) marked in transit."
+msgstr "ทำเครื่องหมายงาน %(count)d รายการเป็นอยู่ระหว่างขนส่ง"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#, python-format
+msgid "%(count)d job(s) moved to Booked."
+msgstr "ย้ายงาน %(count)d รายการไปยัง จองแล้ว"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_kanban
+msgid "&gt;"
+msgstr ""
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+msgid "(none)"
+msgstr "(ไม่มี)"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.container.iso.type,name:eh_log_freight.iso_22r1
+msgid "20-foot Reefer"
+msgstr "ตู้คอนเทนเนอร์ห้องเย็น 20 ฟุต"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.container.iso.type,name:eh_log_freight.iso_22g1
+msgid "20-foot Standard Dry"
+msgstr "ตู้คอนเทนเนอร์แห้งมาตรฐาน 20 ฟุต"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_iso_type_form
+msgid "40' High Cube Standard Container"
+msgstr "ตู้คอนเทนเนอร์มาตรฐาน High Cube 40'"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.container.iso.type,name:eh_log_freight.iso_45g1
+msgid "40-foot High Cube Dry"
+msgstr "ตู้แห้ง High Cube 40 ฟุต"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.container.iso.type,name:eh_log_freight.iso_45r1
+msgid "40-foot Reefer High Cube"
+msgstr "ตู้ทำความเย็น High Cube 40 ฟุต"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.container.iso.type,name:eh_log_freight.iso_42g1
+msgid "40-foot Standard Dry"
+msgstr "ตู้แห้งมาตรฐาน 40 ฟุต"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_iso_type_form
+msgid "40HC"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:eh.log.freight.container.iso.type,name:eh_log_freight.iso_l5g1
+msgid "45-foot High Cube Dry"
+msgstr "ตู้แห้ง High Cube 45 ฟุต"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid ""
+"<i class=\"fa fa-ship\" title=\"Sea\" style=\"font-size:1.6rem;color:#D4A055;\" attrs=\"{'invisible': [('mode', '!=', 'sea')]}\"/>\n"
+"                                        <i class=\"fa fa-plane\" title=\"Air\" style=\"font-size:1.6rem;color:#D4A055;\" attrs=\"{'invisible': [('mode', '!=', 'air')]}\"/>\n"
+"                                        <i class=\"fa fa-truck\" title=\"Road\" style=\"font-size:1.6rem;color:#D4A055;\" attrs=\"{'invisible': [('mode', '!=', 'road')]}\"/>\n"
+"                                        <i class=\"fa fa-train\" title=\"Rail\" style=\"font-size:1.6rem;color:#D4A055;\" attrs=\"{'invisible': [('mode', '!=', 'rail')]}\"/>\n"
+"                                        <i class=\"fa fa-random\" style=\"font-size:1.6rem;color:#D4A055;\" attrs=\"{'invisible': [('mode', '!=', 'multimodal')]}\"/>"
+msgstr ""
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "<span class=\"o_stat_text\">Sale Order</span>"
+msgstr "<span class=\"o_stat_text\">คำสั่งขาย</span>"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "<strong>Direction:</strong>"
+msgstr "<strong>ทิศทาง:</strong>"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "<strong>Job:</strong>"
+msgstr "<strong>ตำแหน่งงาน:</strong>"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "<strong>Mode:</strong>"
+msgstr "<strong>โหมด:</strong>"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "<strong>State:</strong>"
+msgstr "<strong>สถานะ:</strong>"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone__source__api
+msgid "API"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__accrual_date
+msgid "Accrual Date"
+msgstr "วันที่ตั้งค้าง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_cost_line__state__accrued
+msgid "Accrued"
+msgstr "ตั้งค้างแล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_needaction
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_needaction
+msgid "Action Needed"
+msgstr "จำเป็นต้องดำเนินการ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__active
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__active
+msgid "Active"
+msgstr "เปิดใช้งาน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_freight_job_activity
+msgid "Activities"
+msgstr "กิจกรรม"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "การตกแต่งข้อยกเว้นกิจกรรม"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_state
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_state
+msgid "Activity State"
+msgstr "สถานะกิจกรรม"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "ไอคอนประเภทกิจกรรม"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__actual_at
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Actual"
+msgstr "แท้จริง"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Actual (from cost and revenue ledger)"
+msgstr "จริง (จากบัญชีแยกประเภทต้นทุนและรายได้)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__total_actual_cost
+msgid "Actual Cost"
+msgstr "ต้นทุนจริง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__eta_actual
+msgid "Actual ETA"
+msgstr "ETA จริง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__etd_actual
+msgid "Actual ETD"
+msgstr "ETD จริง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__actual_gross_margin
+msgid "Actual Gross Margin"
+msgstr "อัตรากำไรขั้นต้นจริง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__actual_gross_margin_pct
+msgid "Actual Gross Margin (%)"
+msgstr "อัตรากำไรขั้นต้นจริง (%)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__milestone_actual_count
+msgid "Actual Milestones"
+msgstr "หมุดหมายจริง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__total_actual_revenue
+msgid "Actual Revenue"
+msgstr "รายได้จริง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__margin_drift_pct
+msgid ""
+"Actual margin percentage minus planned margin percentage expressed in "
+"percentage points. Negative drift means the job is performing worse than the"
+" original quotation; positive means better."
+msgstr ""
+"เปอร์เซ็นต์อัตรากำไรจริงลบด้วยเปอร์เซ็นต์อัตรากำไรที่วางแผนไว้ "
+"แสดงเป็นจุดเปอร์เซ็นต์ ค่าเบี่ยงเบนติดลบหมายถึงงานทำได้แย่กว่าใบเสนอราคาเดิม"
+" ส่วนค่าบวกหมายถึงดีกว่า"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_milestone__variance_hours
+msgid ""
+"Actual minus planned in hours. Positive means late, negative means early. "
+"Empty when either side is missing."
+msgstr ""
+"จริงลบด้วยที่วางแผนไว้เป็นชั่วโมง ค่าบวกหมายถึงช้า ค่าลบหมายถึงเร็ว "
+"ว่างเมื่อขาดด้านใดด้านหนึ่ง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone__source__adapter
+msgid "Adapter"
+msgstr "อะแดปเตอร์"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_mass_advance_form
+msgid "Advance"
+msgstr "เงินทดรอง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__mode__air
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__air
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Air"
+msgstr "ทางอากาศ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__flight_number
+msgid "Air only."
+msgstr "ทางอากาศเท่านั้น"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__chargeable_weight_kg
+msgid "Air: max(actual, volumetric)."
+msgstr "ทางอากาศ: max(actual, volumetric)."
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_air_arrived
+msgid "Aircraft Arrived at Destination Airport"
+msgstr "เครื่องบินมาถึงสนามบินปลายทางแล้ว"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_air_departed
+msgid "Aircraft Departed"
+msgstr "เครื่องบินออกเดินทางแล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__amount
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__amount
+msgid "Amount"
+msgstr "จำนวน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__amount_company_currency
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__amount_company_currency
+msgid "Amount (Company Currency)"
+msgstr "จำนวนเงิน (สกุลเงินของบริษัท)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__analytic_account_id
+msgid "Analytic Account"
+msgstr "บัญชีวิเคราะห์"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__any
+msgid "Any Mode"
+msgstr "โหมดใดก็ได้"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__at_destination
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__at_destination
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_mass_advance__target_state__at_destination
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "At Destination"
+msgstr "ที่ปลายทาง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__at_terminal
+msgid "At Terminal"
+msgstr "ที่เทอร์มินัล"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_sale_order__eh_log_attach_freight_job_id
+msgid "Attach to existing job"
+msgstr "แนบกับงานที่มีอยู่"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_attachment_count
+msgid "Attachment Count"
+msgstr "จำนวนสิ่งที่แนบมา"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__analytic_account_id
+msgid ""
+"Auto-created on demand. Cost lines and revenue lines tagged with this "
+"account roll up into the job's P and L."
+msgstr ""
+"สร้างอัตโนมัติเมื่อต้องการ "
+"บรรทัดต้นทุนและบรรทัดรายได้ที่ติดแท็กด้วยบัญชีนี้จะถูกรวมเข้าในงบกำไรขาดทุนของงาน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__number
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "BL Number"
+msgstr "หมายเลข BL"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__bl_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Bill of Lading"
+msgstr "ใบตราส่งสินค้า"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#, python-format
+msgid ""
+"Bill of lading %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"ใบตราส่งสินค้า %(name)s ไม่สามารถเปลี่ยนจาก %(current)s เป็น %(target)s ได้ "
+"การเปลี่ยนสถานะที่อนุญาตจาก %(current)s: %(allowed)s"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#, python-format
+msgid "Bill of lading %(name)s moved to %(state)s."
+msgstr "ใบตราส่งสินค้า %(name)s ถูกย้ายไปยัง %(state)s แล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.constraint,message:eh_log_freight.constraint_eh_log_freight_bl_number_unique_per_company
+msgid ""
+"Bill of lading number must be unique per (company, type). If you are "
+"receiving a duplicate from a carrier, contact the carrier for clarification "
+"before recording it."
+msgstr ""
+"หมายเลขใบตราส่งสินค้าต้องไม่ซ้ำกันในแต่ละ (บริษัท ประเภท) "
+"หากคุณได้รับใบซ้ำจากผู้ขนส่ง โปรดติดต่อผู้ขนส่งเพื่อขอความชัดเจนก่อนบันทึก"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#: model:ir.actions.act_window,name:eh_log_freight.action_eh_log_freight_bl
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__bl_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__bl_ids
+#: model:ir.ui.menu,name:eh_log_freight.menu_eh_log_freight_bls
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_list
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Bills of Lading"
+msgstr "ใบตราส่งสินค้า"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__booked
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_mass_advance__target_state__booked
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Booked"
+msgstr "จอง"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_booked
+msgid "Booking Confirmed"
+msgstr "ยืนยันการจองแล้ว"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_air_booked
+msgid "Booking Confirmed (Air)"
+msgstr "ยืนยันการจองแล้ว (ทางอากาศ)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__booking_date
+msgid "Booking Date"
+msgstr "วันที่จอง"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_road_border
+msgid "Border Crossing"
+msgstr "จุดผ่านแดน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__bulk
+msgid "Bulk"
+msgstr "จำนวนมาก"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_mass_advance_form
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_cost_line__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_revenue_line__state__cancelled
+msgid "Cancelled"
+msgstr "ยกเลิก"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid "Cancelled freight job(s): <strong>%(names)s</strong>."
+msgstr "งานขนส่งสินค้าที่ถูกยกเลิก: <strong>%(names)s</strong>."
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid ""
+"Cannot attach to freight job %(name)s because it is %(state)s. Only open "
+"jobs accept new attached orders; for closed jobs raise a Variation."
+msgstr ""
+"ไม่สามารถแนบเข้ากับงานขนส่งสินค้า %(name)s ได้เนื่องจากอยู่ในสถานะ %(state)s"
+" เฉพาะงานที่เปิดอยู่เท่านั้นที่รับคำสั่งแนบใหม่ได้ "
+"สำหรับงานที่ปิดแล้วให้เปิด Variation"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Cargo"
+msgstr "สินค้า"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__cargo_description
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__cargo_description
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__cargo_description
+msgid "Cargo Description"
+msgstr "รายละเอียดสินค้า"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_road_loaded
+msgid "Cargo Loaded"
+msgstr "โหลดสินค้าแล้ว"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_air_received
+msgid "Cargo Received at Origin Airport"
+msgstr "รับสินค้าที่สนามบินต้นทางแล้ว"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_air_released
+msgid "Cargo Released at Destination"
+msgstr "ปล่อยสินค้าที่ปลายทางแล้ว"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Cargo Summary"
+msgstr "สรุปสินค้า"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__carrier_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Carrier"
+msgstr "ผู้ให้บริการ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__number
+msgid ""
+"Carrier-issued bill of lading number (e.g. MAEU1234567 for sea, 020-12345678"
+" for air). Captured on issue."
+msgstr ""
+"หมายเลขใบตราส่งสินค้าที่ออกโดยผู้ขนส่ง (เช่น MAEU1234567 สำหรับทางทะเล, "
+"020-12345678 สำหรับทางอากาศ) บันทึกเมื่อออกเอกสาร"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__charge_code_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__charge_code_id
+msgid "Charge Code"
+msgstr "รหัสค่าใช้จ่าย"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Chargeable (kg)"
+msgstr "ที่คิดค่าใช้จ่าย (กก.)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__chargeable_weight_kg
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__chargeable_weight_kg
+msgid "Chargeable Weight (kg)"
+msgstr "น้ำหนักที่คิดค่าใช้จ่าย (กก.)"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Close"
+msgstr "ปิด"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Close Job"
+msgstr "ปิดงาน"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__state__closed
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__closed
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_mass_advance__target_state__closed
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Closed"
+msgstr "ปิดแล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__closed_at
+msgid "Closed At"
+msgstr "ปิดเมื่อ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__is_terminal
+msgid "Closes the Job"
+msgstr "ปิดงาน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__code
+msgid "Code"
+msgstr "โค้ด"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__freight_payment_terms__collect
+msgid "Collect"
+msgstr "เก็บเงิน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_cost_line__state__committed
+msgid "Committed (PO)"
+msgstr "ผูกพันแล้ว (PO)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container_iso_type__alias_code
+msgid ""
+"Common operator alias (20GP, 40GP, 40HC, 20RF, 40RF, 20OT, 40FR, ...). "
+"Operators search by alias more than by the formal ISO code."
+msgstr ""
+"ชื่อแทนทั่วไปของผู้ดำเนินการ (20GP, 40GP, 40HC, 20RF, 40RF, 20OT, 40FR, ...)"
+" ผู้ดำเนินการค้นหาด้วยชื่อแทนมากกว่ารหัส ISO อย่างเป็นทางการ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__company_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__company_ids
+msgid "Companies"
+msgstr "บริษัท"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__company_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__company_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__company_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__company_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__company_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__company_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Company"
+msgstr "บริษัท"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Confirm Booking"
+msgstr "ยืนยันการจอง"
+
+#. module: eh_log_freight
+#: model_terms:ir.actions.act_window,help:eh_log_freight.action_eh_log_freight_job
+msgid ""
+"Confirm a logistics quotation to spawn a freight job here.\n"
+"                    Direct creation from this menu is restricted to managers."
+msgstr ""
+"ยืนยันใบเสนอราคาโลจิสติกส์เพื่อสร้างงานขนส่งสินค้าที่นี่\n"
+"                    การสร้างโดยตรงจากเมนูนี้จำกัดเฉพาะผู้จัดการ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__consignee_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__consignee_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Consignee"
+msgstr "ผู้รับตราส่ง"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Consolidation"
+msgstr "การรวบรวม"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_form
+msgid "Container"
+msgstr "ตู้คอนเทนเนอร์"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_discharged
+msgid "Container Discharged"
+msgstr "ขนถ่ายตู้คอนเทนเนอร์แล้ว"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_gate_in
+msgid "Container Gate-In at Origin Terminal"
+msgstr "การนำตู้คอนเทนเนอร์เข้าที่ท่าต้นทาง"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_gate_out
+msgid "Container Gate-Out at Destination Terminal"
+msgstr "การนำตู้คอนเทนเนอร์ออกที่ท่าปลายทาง"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_iso_type_form
+msgid "Container ISO Type"
+msgstr "ประเภท ISO ของตู้คอนเทนเนอร์"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_container_iso_type
+msgid "Container ISO Type (ISO 6346)"
+msgstr "ประเภท ISO ของตู้คอนเทนเนอร์ (ISO 6346)"
+
+#. module: eh_log_freight
+#: model:ir.actions.act_window,name:eh_log_freight.action_eh_log_freight_container_iso_type
+#: model:ir.ui.menu,name:eh_log_freight.menu_eh_log_freight_container_iso_types
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_iso_type_list
+msgid "Container ISO Types"
+msgstr "ประเภท ISO ของตู้คอนเทนเนอร์"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_loaded
+msgid "Container Loaded On Vessel"
+msgstr "ขนตู้คอนเทนเนอร์ขึ้นเรือแล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__container_number
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Container No."
+msgstr "หมายเลขตู้คอนเทนเนอร์"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_container.py:0
+#, python-format
+msgid ""
+"Container number %(num)s does not match the ISO 6346 format (4 letters + 7 "
+"digits, e.g. MSCU1234567). Either fix the number, set Manual Number "
+"Override, or untick the check."
+msgstr ""
+"หมายเลขตู้คอนเทนเนอร์ %(num)s ไม่ตรงกับรูปแบบ ISO 6346 (ตัวอักษร 4 ตัว + "
+"ตัวเลข 7 หลัก เช่น MSCU1234567) โปรดแก้ไขหมายเลข "
+"ตั้งค่าการแทนที่หมายเลขด้วยตนเอง หรือยกเลิกการเลือกการตรวจสอบ"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_container.py:0
+#, python-format
+msgid ""
+"Container number %(num)s fails the ISO 6346 check digit. Expected check "
+"digit %(expected)d, got %(actual)d. Either correct the number or set Manual "
+"Number Override if you have verified the discrepancy is intentional."
+msgstr ""
+"หมายเลขตู้คอนเทนเนอร์ %(num)s ไม่ผ่านเลขตรวจสอบ ISO 6346 "
+"เลขตรวจสอบที่คาดไว้คือ %(expected)d แต่ได้ %(actual)d โปรดแก้ไขหมายเลข "
+"หรือตั้งค่าการแทนที่หมายเลขด้วยตนเองหากคุณได้ยืนยันแล้วว่าความคลาดเคลื่อนนี้เป็นไปโดยตั้งใจ"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#: model:ir.actions.act_window,name:eh_log_freight.action_eh_log_freight_container
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__container_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__container_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__container_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__container_ids
+#: model:ir.ui.menu,name:eh_log_freight.menu_eh_log_freight_containers
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_list
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Containers"
+msgstr "คอนเทนเนอร์"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Cost"
+msgstr "ต้นทุน"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Cost Ledger"
+msgstr "บัญชีแยกประเภทต้นทุน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__cost_line_ids
+msgid "Cost Lines"
+msgstr "รายการต้นทุนแฝง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__mode__courier
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__courier
+msgid "Courier or Express"
+msgstr "พัสดุด่วนหรือเอ็กซ์เพรส"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Created Month"
+msgstr "เดือนที่สร้าง"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Created Quarter"
+msgstr "ไตรมาสที่สร้าง"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Created Today"
+msgstr "สร้างวันนี้"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Created Year"
+msgstr "ปีที่สร้าง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__create_uid
+msgid "Created by"
+msgstr "สร้างโดย"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__create_date
+msgid "Created on"
+msgstr "สร้างเมื่อ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__direction__cross_trade
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Cross Trade"
+msgstr "การค้าข้าม"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__company_currency_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__currency_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__currency_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__company_currency_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__currency_id
+msgid "Currency"
+msgstr "สกุลเงิน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__customer_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__customer_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Customer"
+msgstr "ลูกค้า"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__customer_invoice_line_id
+msgid "Customer Invoice Line"
+msgstr "บรรทัดใบแจ้งหนี้ลูกค้า"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone__source__portal
+msgid "Customer Portal"
+msgstr "พอร์ทัลลูกค้า"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__customer_reference
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Customer Reference"
+msgstr "อ้างอิงลูกค้า"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_any_customs_cleared
+msgid "Customs Cleared"
+msgstr "ผ่านพิธีการศุลกากรแล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__cutoff_date
+msgid "Cutoff Date"
+msgstr "วันตัดยอด"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Dates"
+msgstr "วันที่"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__delivered
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__delivered
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_mass_advance__target_state__delivered
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Delivered"
+msgstr "จัดส่งแล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__delivered_at
+msgid "Delivered At"
+msgstr "จัดส่งเมื่อ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__description
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__description
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__description
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__description
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Description"
+msgstr "คำอธิบาย"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Destination"
+msgstr "ปลายทาง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__destination_country_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Destination Country"
+msgstr "ประเทศปลายทาง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__destination_location
+msgid "Destination Location"
+msgstr "ตำแหน่งปลายทาง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__direction
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Direction"
+msgstr "ทิศทาง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__is_disbursement
+msgid "Disbursement"
+msgstr "การเบิกจ่าย"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__discharged_at
+msgid "Discharged"
+msgstr "ปลดเปลื้องแล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__display_name
+msgid "Display Name"
+msgstr "แสดงชื่อ"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Document"
+msgstr "เอกสาร"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__bl_type
+msgid "Document Type"
+msgstr "ประเภทเอกสาร"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__state__draft
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Draft"
+msgstr "ร่าง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__dry
+msgid "Dry"
+msgstr "แห้ง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone__source__edi
+msgid "EDI"
+msgstr ""
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+msgid "ERP Heritage Logistics"
+msgstr "โลจิสติกส์ ERP Heritage"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_kanban
+msgid "ETA"
+msgstr "เวลาที่คาดว่าจะถึง"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "ETA planned"
+msgstr "ETA ตามแผน"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "ETD planned"
+msgstr "ETD ตามแผน"
+
+#. module: eh_log_freight
+#: model:ir.model.constraint,message:eh_log_freight.constraint_eh_log_freight_milestone_job_type_unique
+msgid ""
+"Each milestone type may appear only once per job. Edit the existing row "
+"instead of creating a duplicate."
+msgstr ""
+"แต่ละประเภทหมุดหมายสามารถปรากฏได้เพียงครั้งเดียวต่องาน "
+"แก้ไขแถวที่มีอยู่แทนการสร้างรายการซ้ำ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__direction__export
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Export"
+msgstr "ส่งออก"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__release_type__express
+msgid "Express Release"
+msgstr "การปล่อยสินค้าแบบด่วน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__family
+msgid "Family"
+msgstr "ครอบครัว"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Field"
+msgstr "ฟิลด์"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__flat_rack
+msgid "Flat Rack"
+msgstr "แฟลตแร็ค"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__flight_number
+msgid "Flight"
+msgstr "เที่ยวบิน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_follower_ids
+msgid "Followers"
+msgstr "ผู้ติดตาม"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ผู้ติดตาม (พาร์ทเนอร์)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__activity_type_icon
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "ไอคอนแบบฟอนต์ที่ยอดเยี่ยมเช่น fa-tasks"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__parent_bl_id
+msgid ""
+"For HBL or HAWB, points to the consolidating MBL or MAWB. Drives the "
+"consolidation report."
+msgstr ""
+"สำหรับ HBL หรือ HAWB จะชี้ไปยัง MBL หรือ MAWB ที่ทำการรวมพัสดุ "
+"ใช้ขับเคลื่อนรายงานการรวมพัสดุ"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_bl
+msgid "Freight Bill of Lading"
+msgstr "ใบตราส่งสินค้า"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_container
+msgid "Freight Container or ULD"
+msgstr "ตู้คอนเทนเนอร์สินค้าหรือ ULD"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_job
+msgid "Freight Forwarding Job"
+msgstr "งานรับจัดการขนส่งสินค้า"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Freight Job"
+msgstr "งานขนส่งสินค้า"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid "Freight Job %s"
+msgstr "งานขนส่งสินค้า %s"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_cost_line
+msgid "Freight Job Cost Line"
+msgstr "รายการต้นทุนงานขนส่งสินค้า"
+
+#. module: eh_log_freight
+#: model:ir.actions.report,name:eh_log_freight.action_report_eh_log_freight_job
+msgid "Freight Job File"
+msgstr "แฟ้มงานขนส่งสินค้า"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_revenue_line
+msgid "Freight Job Revenue Line"
+msgstr "รายการรายได้งานขนส่งสินค้า"
+
+#. module: eh_log_freight
+#: model:ir.actions.act_window,name:eh_log_freight.action_eh_log_freight_job
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__job_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_sale_order__eh_log_freight_job_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_sale_order__eh_log_freight_job_ids
+#: model:ir.ui.menu,name:eh_log_freight.menu_eh_log_freight_jobs
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_list
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_sale_order_form_eh_log_freight
+msgid "Freight Jobs"
+msgstr "งานขนส่งสินค้า"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_pivot
+msgid "Freight Jobs Analysis"
+msgstr "การวิเคราะห์งานขนส่งสินค้า"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_calendar
+msgid "Freight Jobs by Created Date"
+msgstr "งานขนส่งสินค้าตามวันที่สร้าง"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_graph
+msgid "Freight Jobs by State"
+msgstr "งานขนส่งสินค้าตามสถานะ"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid "Freight Jobs from %s"
+msgstr "งานขนส่งสินค้าจาก %s"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_milestone
+msgid "Freight Milestone"
+msgstr "หมุดหมายการขนส่งสินค้า"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_milestone_type
+msgid "Freight Milestone Type"
+msgstr "ประเภทหมุดหมายการขนส่งสินค้า"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__freight_payment_terms
+msgid "Freight Terms"
+msgstr "เงื่อนไขการขนส่งสินค้า"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+msgid "Freight booked"
+msgstr "จองการขนส่งสินค้าแล้ว"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#, python-format
+msgid "Freight job %(name)s moved to %(state)s."
+msgstr "งานขนส่งสินค้า %(name)s ถูกย้ายไปยัง %(state)s"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid ""
+"Freight job <strong>%(name)s</strong> already exists for this order; "
+"skipping duplicate spawn."
+msgstr ""
+"งานขนส่งสินค้า <strong>%(name)s</strong> มีอยู่แล้วสำหรับคำสั่งนี้ "
+"กำลังข้ามการสร้างที่ซ้ำกัน"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid "Freight job <strong>%(name)s</strong> reactivated on re-confirmation."
+msgstr ""
+"งานขนส่งสินค้า <strong>%(name)s</strong> ถูกเปิดใช้งานอีกครั้งเมื่อยืนยันซ้ำ"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid "Freight job <strong>%(name)s</strong> spawned from this confirmation."
+msgstr "งานขนส่งสินค้า <strong>%(name)s</strong> ถูกสร้างจากการยืนยันนี้"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__gate_in_at
+msgid "Gate-In"
+msgstr "เข้าประตู"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__gate_out_at
+msgid "Gate-Out"
+msgstr "ออกประตู"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Gross (kg)"
+msgstr "น้ำหนักรวม (kg)"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Gross Margin"
+msgstr "อัตรากำไรขั้นต้น"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__gross_margin_pct
+msgid "Gross Margin (%)"
+msgstr "อัตรากำไรขั้นต้น (%)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__gross_margin
+msgid "Gross Margin (Planned)"
+msgstr "กำไรขั้นต้น (ตามแผน)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__gross_weight_kg
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__gross_weight_kg
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__gross_weight_kg
+msgid "Gross Weight (kg)"
+msgstr "น้ำหนักรวม (kg)"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Gross margin"
+msgstr "อัตรากำไรขั้นต้น"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+msgid "Group by Customer"
+msgstr "จัดกลุ่มตามลูกค้า"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+msgid "Group by Mode"
+msgstr "จัดกลุ่มตามโหมด"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+msgid "Group by Stage"
+msgstr "จัดกลุ่มตามขั้นตอน"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "Group by State"
+msgstr "จัดกลุ่มตามสถานะ"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "Group by Type"
+msgstr "จัดกลุ่มตามประเภท"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "HAWB"
+msgstr ""
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "HBL"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__has_message
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__has_message
+msgid "Has Message"
+msgstr "มีข้อความ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__height_high_cube
+msgid "High Cube"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__bl_type__hawb
+msgid "House Air Waybill"
+msgstr "ใบตราส่งสินค้าทางอากาศย่อย"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__child_bl_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "House BLs"
+msgstr "ใบตราส่งสินค้าแบบ House"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__bl_type__hbl
+msgid "House Bill of Lading"
+msgstr "ใบตราส่งสินค้าทางทะเลย่อย"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__id
+msgid "ID"
+msgstr "ไอดี"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "ISO"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container__container_number
+msgid ""
+"ISO 6346 container number: 4 letters (owner code + category) + 6 digits "
+"(serial) + 1 check digit. Validated on save unless 'Manual Override' is set."
+msgstr ""
+"หมายเลขตู้คอนเทนเนอร์ ISO 6346: ตัวอักษร 4 ตัว (รหัสเจ้าของ + หมวดหมู่) + "
+"ตัวเลข 6 หลัก (ซีเรียล) + เลขตรวจสอบ 1 หลัก ตรวจสอบเมื่อบันทึก "
+"เว้นแต่ตั้งค่า 'การแทนที่ด้วยตนเอง'"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container_iso_type__code
+msgid ""
+"ISO 6346 size and type code (e.g. 22G1 for 20' Standard, 42G1 for 40' "
+"Standard, 45G1 for 40' High Cube). The human-friendly short alias goes in "
+"alias_code."
+msgstr ""
+"รหัสขนาดและประเภท ISO 6346 (เช่น 22G1 สำหรับ 20' มาตรฐาน, 42G1 สำหรับ 40' "
+"มาตรฐาน, 45G1 สำหรับ 40' High Cube) นามแฝงสั้นที่อ่านง่ายจะอยู่ใน alias_code"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container__iso_type_id
+msgid ""
+"ISO 6346 size/type code (e.g. 22G1 = 20ft general purpose, 42G1 = 40ft "
+"general, 45R1 = 40ft HC reefer). Drives capacity defaults and reefer / DG "
+"flags."
+msgstr ""
+"รหัสขนาด/ประเภท ISO 6346 (เช่น 22G1 = 20 ฟุตใช้งานทั่วไป, 42G1 = 40 "
+"ฟุตทั่วไป, 45R1 = 40 ฟุต HC ตู้เย็น) "
+"กำหนดค่าเริ่มต้นของความจุและแฟล็กตู้เย็น / DG"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__code
+msgid "ISO Code"
+msgstr "รหัส ISO"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__iso_type_id
+msgid "ISO Type"
+msgstr "ประเภท ISO"
+
+#. module: eh_log_freight
+#: model:ir.model.constraint,message:eh_log_freight.constraint_eh_log_freight_container_iso_type_code_unique
+msgid "ISO container code must be unique."
+msgstr "รหัสตู้คอนเทนเนอร์ ISO ต้องไม่ซ้ำกัน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_exception_icon
+msgid "Icon"
+msgstr "ไอคอน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ไอคอนเพื่อระบุการยกเว้นกิจกรรม"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__message_needaction
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "ถ้าเลือก ข้อความใหม่จะต้องการความสนใจจากคุณ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__message_has_error
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__message_has_error
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ถ้าเลือก ข้อความบางข้อความมีข้อผิดพลาดในการส่ง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__direction__import
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Import"
+msgstr "นำเข้า"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__in_transit
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_mass_advance__target_state__in_transit
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "In Transit"
+msgstr "อยู่ระหว่างการขนส่ง"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+msgid "In transit"
+msgstr "อยู่ระหว่างขนส่ง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__incoterm_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__incoterm_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Incoterm"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__incoterm_id
+msgid ""
+"Incoterm 2020 governing the cargo handover. Drives whose insurance covers "
+"the trip, who pays freight, and where the risk transfer occurs."
+msgstr ""
+"Incoterm 2020 ที่กำกับการส่งมอบสินค้า "
+"กำหนดว่าประกันของฝ่ายใดคุ้มครองการขนส่ง ใครเป็นผู้จ่ายค่าระวาง "
+"และการโอนความเสี่ยงเกิดขึ้นที่ใด"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__alias_code
+msgid "Industry Alias"
+msgstr "ชื่อแทนอุตสาหกรรม"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__inner_volume_cbm
+msgid "Inner Volume (m3)"
+msgstr "ปริมาตรภายใน (m3)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__invoice_date
+msgid "Invoice Date"
+msgstr "วันที่ใบแจ้งหนี้"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_revenue_line__state__invoiced
+msgid "Invoiced"
+msgstr "ออกใบแจ้งหนี้แล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_cost_line__state__invoiced
+msgid "Invoiced (Vendor Bill)"
+msgstr "ออกใบแจ้งหนี้แล้ว (ใบแจ้งหนี้ผู้ขาย)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_is_follower
+msgid "Is Follower"
+msgstr "เป็นผู้ติดตาม"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Issue"
+msgstr "ปัญหา"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__issue_date
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Issue Date"
+msgstr "วันที่ออก"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__state__issued
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "Issued"
+msgstr "เผยแพร่แล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__carrier_id
+msgid "Issuing carrier (shipping line for sea, airline for air)."
+msgstr "ผู้ขนส่งผู้ออก (สายการเดินเรือสำหรับทางทะเล สายการบินสำหรับทางอากาศ)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__job_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__job_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__job_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__job_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__job_id
+msgid "Job"
+msgstr "งาน"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#, python-format
+msgid ""
+"Job %(name)s cannot move from %(current)s to %(target)s. Allowed transitions"
+" from %(current)s: %(allowed)s."
+msgstr ""
+"งาน %(name)s ไม่สามารถย้ายจาก %(current)s ไปยัง %(target)s ได้ "
+"การเปลี่ยนสถานะที่อนุญาตจาก %(current)s: %(allowed)s"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__name
+msgid "Job Reference"
+msgstr "การอ้างอิงงาน"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Lane"
+msgstr "เส้นทาง"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Lane and Parties"
+msgstr "เส้นทางและคู่สัญญา"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Last 30 Days"
+msgstr "30 วันที่ผ่านมา"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Last 7 Days"
+msgstr "7 วันล่าสุด"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__write_uid
+msgid "Last Updated by"
+msgstr "อัปเดตครั้งล่าสุดโดย"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__write_date
+msgid "Last Updated on"
+msgstr "อัปเดตครั้งล่าสุดเมื่อ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__length_ft
+msgid "Length (ft)"
+msgstr "ความยาว (ft)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__state
+msgid ""
+"Lifecycle: Draft (created from quote) > Booked (carrier confirmed) > In "
+"Transit (departed) > At Destination (arrived) > Delivered (POD signed) > "
+"Closed (file finalised). State changes only via the action buttons; direct "
+"writes to this field are blocked."
+msgstr ""
+"วงจรชีวิต: Draft (สร้างจากใบเสนอราคา) > Booked (ผู้ขนส่งยืนยันแล้ว) > In "
+"Transit (ออกเดินทางแล้ว) > At Destination (มาถึงแล้ว) > Delivered (ลงนาม POD"
+" แล้ว) > Closed (ปิดแฟ้มแล้ว) "
+"การเปลี่ยนสถานะทำได้ผ่านปุ่มการดำเนินการเท่านั้น "
+"การเขียนลงในฟิลด์นี้โดยตรงถูกบล็อก"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__loaded_at
+msgid "Loaded On Board"
+msgstr "บรรทุกขึ้นเรือแล้ว"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "MAWB"
+msgstr ""
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "MBL"
+msgstr ""
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_form
+msgid "MSCU1234567"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_main_attachment_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone__source__manual
+msgid "Manual"
+msgstr "ด้วยตัวเอง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__manual_number_override
+msgid "Manual Number Override"
+msgstr "การแทนที่หมายเลขด้วยตนเอง"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_kanban
+msgid "Margin"
+msgstr "กำไร"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__margin_drift_pct
+msgid "Margin Drift (pp)"
+msgstr "การเปลี่ยนแปลงอัตรากำไร (pp)"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Margin Summary"
+msgstr "สรุปอัตรากำไร"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Mark Delivered"
+msgstr "ทำเครื่องหมายว่าจัดส่งแล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_mass_advance
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_mass_advance_form
+msgid "Mass-advance Freight Jobs"
+msgstr "เลื่อนงานขนส่งสินค้าจำนวนมาก"
+
+#. module: eh_log_freight
+#: model:ir.actions.act_window,name:eh_log_freight.action_eh_log_freight_mass_advance
+msgid "Mass-advance State"
+msgstr "เลื่อนสถานะจำนวนมาก"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/wizards/eh_log_freight_mass_action.py:0
+msgid "Mass-advance complete"
+msgstr "การเลื่อนจำนวนมากเสร็จสมบูรณ์"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__bl_type__mawb
+msgid "Master Air Waybill"
+msgstr "ใบตราส่งสินค้าทางอากาศหลัก"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__bl_type__mbl
+msgid "Master Bill of Lading"
+msgstr "ใบตราส่งสินค้าหลัก"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__max_gross_kg
+msgid "Max Gross Weight (kg)"
+msgstr "น้ำหนักรวมสูงสุด (kg)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__max_payload_kg
+msgid "Max Payload (kg)"
+msgstr "น้ำหนักบรรทุกสูงสุด (kg)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_has_error
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_has_error
+msgid "Message Delivery error"
+msgstr "เกิดข้อผิดพลาดในการส่งข้อความ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_ids
+msgid "Messages"
+msgstr "ข้อความ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__type_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Milestone"
+msgstr "ไมล์สโตน"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Milestone Timeline"
+msgstr "ไทม์ไลน์หลักไมล์"
+
+#. module: eh_log_freight
+#: model:ir.model.constraint,message:eh_log_freight.constraint_eh_log_freight_milestone_type_code_unique
+msgid "Milestone type code must be unique."
+msgstr "รหัสประเภทหลักไมล์ต้องไม่ซ้ำกัน"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__milestone_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Milestones"
+msgstr "ไมล์สโตน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_revenue_line__is_disbursement
+msgid ""
+"Mirrors the charge code's disbursement flag. Disbursement lines are excluded"
+" from gross-margin computation."
+msgstr ""
+"สะท้อนแฟล็กการเบิกจ่ายของรหัสค่าธรรมเนียม "
+"รายการเบิกจ่ายจะถูกยกเว้นจากการคำนวณอัตรากำไรขั้นต้น"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__mode
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__mode
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Mode"
+msgstr "โหมด"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/wizards/eh_log_freight_mass_action.py:0
+#, python-format
+msgid ""
+"Moved %(moved)d job(s) to %(state)s. Skipped %(skipped)d job(s) that were "
+"not in a compatible state."
+msgstr ""
+"ย้าย %(moved)d งานไปยัง %(state)s ข้ามไป %(skipped)d "
+"งานที่ไม่ได้อยู่ในสถานะที่เข้ากันได้"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__mode__multimodal
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__multimodal
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Multimodal"
+msgstr "มัลติโมดัล"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "วันครบกำหนดกิจกรรมของฉัน"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "My Company"
+msgstr "บริษัทของฉัน"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "My Jobs"
+msgstr "งานของฉัน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__name
+msgid "Name"
+msgstr "ชื่อ"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+msgid "New"
+msgstr "ใหม่"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "วันครบกำหนดกิจกรรมถัดไป"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_summary
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_summary
+msgid "Next Activity Summary"
+msgstr "สรุปกิจกรรมถัดไป"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_type_id
+msgid "Next Activity Type"
+msgstr "ประเภทกิจกรรมถัดไป"
+
+#. module: eh_log_freight
+#: model_terms:ir.actions.act_window,help:eh_log_freight.action_eh_log_freight_job
+msgid "No freight jobs yet"
+msgstr "ยังไม่มีงานขนส่งสินค้า"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__notes
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__notes
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__notes
+msgid "Notes"
+msgstr "โน้ต"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__notify_party_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__notify_party_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Notify Party"
+msgstr "ฝ่ายที่ต้องแจ้ง"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Number"
+msgstr "จำนวน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_needaction_counter
+msgid "Number of Actions"
+msgstr "จํานวนการดําเนินการ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_has_error_counter
+msgid "Number of errors"
+msgstr "จํานวนข้อผิดพลาด"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "จำนวนข้อความที่ต้องดำเนินการ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "จํานวนข้อความที่มีข้อผิดพลาดในการส่ง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__on_board
+msgid "On Board"
+msgstr "อยู่บนเรือ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__onboard_date
+msgid "On Board Date"
+msgstr "วันที่ขึ้นเรือ"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+msgid "Open"
+msgstr "เปิด"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Open (not closed/cancelled)"
+msgstr "เปิด (ยังไม่ปิด/ยกเลิก)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__open_top
+msgid "Open Top"
+msgstr "เปิดด้านบน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container__bl_id
+msgid ""
+"Optional link to the bill of lading carrying this container. Set "
+"automatically when a BL line references the container."
+msgstr ""
+"ลิงก์ที่ไม่บังคับไปยังใบตราส่งสินค้าที่บรรทุกตู้คอนเทนเนอร์นี้ "
+"ตั้งค่าโดยอัตโนมัติเมื่อบรรทัด BL อ้างอิงถึงตู้คอนเทนเนอร์"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__notify_party_id
+msgid ""
+"Optional. Third party to notify on arrival, typically the customs broker or "
+"warehouse operator. Goes onto the BL."
+msgstr ""
+"ไม่บังคับ บุคคลที่สามที่ต้องแจ้งเมื่อสินค้ามาถึง "
+"โดยทั่วไปคือตัวแทนออกของศุลกากรหรือผู้ดำเนินการคลังสินค้า จะปรากฏบน BL"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_sale_order__eh_log_attach_freight_job_id
+msgid ""
+"Optional. When set, confirming this quotation does NOT spawn a new freight "
+"job; the lines on this order are treated as additional revenue / cost lines "
+"for the selected existing job. Use this when you raise an extra charge "
+"(additional THC, demurrage, customs query fee, etc.) against a freight job "
+"that's already in flight."
+msgstr ""
+"ไม่บังคับ เมื่อกำหนดค่าไว้ การยืนยันใบเสนอราคานี้จะไม่สร้างงานขนส่งใหม่ "
+"บรรทัดในคำสั่งนี้จะถูกถือเป็นบรรทัดรายได้/ต้นทุนเพิ่มเติมสำหรับงานที่มีอยู่ซึ่งเลือกไว้"
+" ใช้ตัวเลือกนี้เมื่อคุณเรียกเก็บค่าใช้จ่ายเพิ่มเติม (THC เพิ่มเติม "
+"ค่าเดมัวร์เรจ ค่าธรรมเนียมการสอบถามศุลกากร ฯลฯ) "
+"กับงานขนส่งที่กำลังดำเนินอยู่แล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__sale_order_line_ids
+msgid "Order Lines"
+msgstr "รายการคำสั่งซื้อ"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Origin"
+msgstr "จุดเริ่ม"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__origin_country_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Origin Country"
+msgstr "ประเทศต้นทาง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__origin_location
+msgid "Origin Location"
+msgstr "สถานที่ต้นทาง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__release_type__original
+msgid "Original BL"
+msgstr "BL ต้นฉบับ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__other
+msgid "Other"
+msgstr "อื่น ๆ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__purchase_order_line_id
+msgid "PO Line"
+msgstr "รายการใบสั่งซื้อ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__package_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__package_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__package_count
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Packages"
+msgstr "แพ็คเกจ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_revenue_line__state__paid
+msgid "Paid"
+msgstr "ชำระแล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__parent_bl_id
+msgid "Parent BL"
+msgstr "BL หลัก"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Parties"
+msgstr "คู่สัญญา"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__pickup_at
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__picked_up
+msgid "Picked Up"
+msgstr "รับของแล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__place_of_delivery
+msgid "Place of Delivery"
+msgstr "สถานที่ส่งมอบ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__place_of_receipt
+msgid "Place of Receipt"
+msgstr "สถานที่รับมอบ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__planned_at
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__planned
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_cost_line__state__planned
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_revenue_line__state__planned
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Planned"
+msgstr "วางแผน"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Planned (from quotation)"
+msgstr "วางแผนแล้ว (จากใบเสนอราคา)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__total_planned_cost
+msgid "Planned Cost"
+msgstr "ต้นทุนที่วางแผนไว้"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__eta_planned
+msgid "Planned ETA"
+msgstr "ETA ที่วางแผน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__etd_planned
+msgid "Planned ETD"
+msgstr "ETD ที่วางแผน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__milestone_planned_count
+msgid "Planned Milestones"
+msgstr "หมุดหมายที่วางแผน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__pod_name
+msgid "Port or Airport of Discharge"
+msgstr "ท่าเรือหรือสนามบินขนถ่ายสินค้า"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__pol_name
+msgid "Port or Airport of Loading"
+msgstr "ท่าเรือหรือสนามบินขนขึ้นสินค้า"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__freight_payment_terms__prepaid
+msgid "Prepaid"
+msgstr "ชำระเงินล่วงหน้า"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_any_pod_received
+msgid "Proof of Delivery Received"
+msgstr "ได้รับหลักฐานการจัดส่งแล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__quantity
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__quantity
+msgid "Quantity"
+msgstr "ปริมาณ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__sale_order_id
+msgid ""
+"Quotation the job was spawned from. Optional: operators also open jobs "
+"directly for shipments booked outside a quotation (agent nominations, inter-"
+"branch moves, ad-hoc bookings), so a job may legitimately have no sale "
+"order."
+msgstr ""
+"ใบเสนอราคาที่งานนี้ถูกสร้างขึ้นมา ไม่บังคับ: "
+"ผู้ปฏิบัติงานยังเปิดงานโดยตรงสำหรับการจัดส่งที่จองนอกใบเสนอราคา "
+"(การเสนอชื่อตัวแทน การย้ายระหว่างสาขา การจองเฉพาะกิจ) "
+"ดังนั้นงานหนึ่งอาจไม่มีคำสั่งขายได้อย่างถูกต้อง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__mode__rail
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__rail
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Rail"
+msgstr "ทางราง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__reefer
+msgid "Reefer"
+msgstr "ตู้คอนเทนเนอร์ห้องเย็น"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__name
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Reference"
+msgstr "การอ้างอิง"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Release"
+msgstr "ปล่อย"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__release_type
+msgid "Release Type"
+msgstr "ประเภทการปล่อย"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__state__released
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "Released"
+msgstr "ปล่อยแล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__is_required
+msgid "Required"
+msgstr "จำเป็น"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_user_id
+msgid "Responsible User"
+msgstr "ผู้ใช้ที่รับผิดชอบ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__returned
+msgid "Returned"
+msgstr "ส่งคืนแล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__returned_at
+msgid "Returned to Depot"
+msgstr "ส่งคืนคลังแล้ว"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Revenue"
+msgstr "รายได้"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__total_revenue
+msgid "Revenue (Planned)"
+msgstr "รายได้ (ที่วางแผนไว้)"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Revenue Ledger"
+msgstr "บัญชีแยกประเภทรายได้"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__revenue_line_ids
+msgid "Revenue Lines"
+msgstr "บรรทัดรายได้"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__mode__road
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__road
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Road"
+msgstr "ถนน"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "ข้อผิดพลาดในการส่ง SMS"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__sale_order_line_id
+msgid "SO Line"
+msgstr "รายการ SO"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__sale_order_id
+msgid "Sale Order"
+msgstr "คำสั่งขาย"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Sale Order Lines"
+msgstr "บรรทัดคำสั่งขาย"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid ""
+"Sale order <strong>%(so)s</strong> attached as an additional charge / "
+"variation source."
+msgstr ""
+"แนบใบสั่งขาย <strong>%(so)s</strong> เป็นแหล่งค่าใช้จ่ายเพิ่มเติม / "
+"การเปลี่ยนแปลง"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_sale_order
+msgid "Sales Order"
+msgstr "คำสั่งขาย"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__mode__sea
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__sea
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Sea"
+msgstr "ทางทะเล"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__vessel_name
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__voyage_number
+msgid "Sea only."
+msgstr "ทางทะเลเท่านั้น"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__onboard_date
+msgid "Sea: shipped-on-board endorsement date. Air: cargo received date."
+msgstr "ทางทะเล: วันที่สลักหลังการบรรทุกขึ้นเรือ ทางอากาศ: วันที่รับสินค้า"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Seal"
+msgstr "ซีล"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__seal_number
+msgid "Seal No."
+msgstr "หมายเลขซีล"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Search Freight Jobs"
+msgstr "ค้นหางานขนส่งสินค้า"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__release_type__seaway
+msgid "Seaway"
+msgstr "เส้นทางเดินเรือ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__sequence
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__sequence
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__sequence
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__sequence
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__sequence
+msgid "Sequence"
+msgstr "ลำดับ"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Set At Destination"
+msgstr "ตั้งค่าที่ปลายทาง"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Set In Transit"
+msgstr "ตั้งค่ากำลังขนส่ง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_cost_line__vendor_bill_line_id
+msgid "Set when the cost has been billed by the vendor."
+msgstr "ตั้งค่าเมื่อผู้ขายได้เรียกเก็บค่าใช้จ่ายแล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_cost_line__purchase_order_line_id
+msgid ""
+"Set when the cost was raised through procurement. Empty for manual accruals."
+msgstr ""
+"ตั้งค่าเมื่อค่าใช้จ่ายเกิดขึ้นผ่านการจัดซื้อ "
+"ว่างสำหรับรายการค้างจ่ายที่ทำด้วยตนเอง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__shipper_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__shipper_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Shipper"
+msgstr "ผู้ส่งสินค้า"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__shipper_reference
+msgid "Shipper Reference"
+msgstr "หมายเลขอ้างอิงผู้ส่ง"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+msgid "Shipper country mismatch"
+msgstr "ประเทศของผู้ส่งไม่ตรงกัน"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#, python-format
+msgid ""
+"Shipper is in %(shipper_country)s but the declared origin is %(origin)s. "
+"Verify before creating the customs declaration."
+msgstr ""
+"ผู้ส่งอยู่ใน %(shipper_country)s แต่แหล่งกำเนิดที่แจ้งไว้คือ %(origin)s "
+"โปรดตรวจสอบก่อนสร้างใบขนสินค้า"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container__manual_number_override
+msgid ""
+"Skip ISO 6346 check digit validation. Use only for known-bad numbers from "
+"upstream documents that must flow through unchanged for traceability."
+msgstr ""
+"ข้ามการตรวจสอบเลขหลักตรวจสอบ ISO 6346 "
+"ใช้เฉพาะกับหมายเลขที่ทราบว่าไม่ถูกต้องจากเอกสารต้นทางซึ่งต้องส่งผ่านโดยไม่เปลี่ยนแปลงเพื่อการติดตาม"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__source
+msgid "Source"
+msgstr "แหล่งที่มา"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_milestone_type__code
+msgid ""
+"Stable identifier (BOOKED, GATE_IN, VESSEL_SAILED, VESSEL_ARRIVED, GATE_OUT,"
+" DELIVERED, CUSTOMS_CLEARED, POD_RECEIVED, ...)."
+msgstr ""
+"ตัวระบุที่คงที่ (BOOKED, GATE_IN, VESSEL_SAILED, VESSEL_ARRIVED, GATE_OUT, "
+"DELIVERED, CUSTOMS_CLEARED, POD_RECEIVED, ...)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_cost_line__charge_code_id
+msgid ""
+"Standardised charge code so cost analytics group consistently with the "
+"corresponding revenue line."
+msgstr ""
+"รหัสค่าใช้จ่ายมาตรฐานเพื่อให้การวิเคราะห์ต้นทุนจัดกลุ่มอย่างสอดคล้องกับบรรทัดรายได้ที่เกี่ยวข้อง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__state
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__state
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__state
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__state
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__state
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "State"
+msgstr "รัฐ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__activity_state
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"สถานะตามกิจกรรม\n"
+"เกินกำหนด: วันที่ครบกำหนดผ่านไปแล้ว\n"
+"วันนี้: วันที่จัดกิจกรรมคือวันนี้\n"
+"วางแผน: กิจกรรมในอนาคต"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__total_actual_cost
+msgid ""
+"Sum of cost ledger lines (in company currency) excluding cancelled lines. "
+"Reflects committed and accrued and invoiced costs against the job."
+msgstr ""
+"ผลรวมของบรรทัดบัญชีแยกประเภทต้นทุน (ในสกุลเงินของบริษัท) "
+"ไม่รวมบรรทัดที่ยกเลิก สะท้อนต้นทุนที่ผูกพัน ค้างรับค้างจ่าย "
+"และออกใบแจ้งหนี้แล้วสำหรับงานนี้"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__total_actual_revenue
+msgid ""
+"Sum of non-disbursement revenue ledger lines in company currency, excluding "
+"cancelled lines."
+msgstr ""
+"ผลรวมของบรรทัดบัญชีแยกประเภทรายได้ที่ไม่ใช่การเบิกจ่ายในสกุลเงินของบริษัท "
+"ไม่รวมบรรทัดที่ยกเลิก"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__tank
+msgid "Tank"
+msgstr "ถัง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__target_state
+msgid "Target State"
+msgstr "สถานะเป้าหมาย"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone__source__telematics
+msgid "Telematics"
+msgstr "เทเลเมติกส์"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__release_type__telex
+msgid "Telex Release"
+msgstr "การปล่อยสินค้าแบบเทเล็กซ์"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__consignee_id
+msgid "The party taking delivery at destination."
+msgstr "ฝ่ายที่รับมอบสินค้าที่ปลายทาง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__shipper_id
+msgid "The party tendering the cargo at origin."
+msgstr "ฝ่ายที่ส่งมอบสินค้าที่ต้นทาง"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__customer_id
+msgid ""
+"The party who placed the booking and is invoiced. Defaults from the sale "
+"order partner."
+msgstr ""
+"ฝ่ายที่ทำการจองและถูกออกใบแจ้งหนี้ ค่าเริ่มต้นมาจากพาร์ทเนอร์ของใบสั่งขาย"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "This Month"
+msgstr "เดือนนี้"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "This Year"
+msgstr "ปีนี้"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid ""
+"This order's lines are attached to existing freight job "
+"<strong>%(name)s</strong>. No new job spawned."
+msgstr ""
+"บรรทัดของคำสั่งซื้อนี้ผูกกับงานขนส่งที่มีอยู่ <strong>%(name)s</strong> "
+"ไม่มีการสร้างงานใหม่"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_form
+msgid "Timeline"
+msgstr "ไทม์ไลน์"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_road_booked
+msgid "Trip Confirmed"
+msgstr "ยืนยันเที่ยวแล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container_iso_type__height_high_cube
+msgid "True for 9'6\" containers; False for standard 8'6\"."
+msgstr "True สำหรับตู้คอนเทนเนอร์ 9'6\"; False สำหรับมาตรฐาน 8'6\""
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Type"
+msgstr "ประเภท"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "ประเภทกิจกรรมข้อยกเว้นบนบันทึก"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__unit_cost
+msgid "Unit Cost"
+msgstr "ต้นทุนต่อหน่วย"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__unit_price
+msgid "Unit Price"
+msgstr "ราคาต่อหน่วย"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Value"
+msgstr "ค่า"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Variance (h)"
+msgstr "ผลต่าง (ชม.)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__variance_hours
+msgid "Variance (hours)"
+msgstr "ผลต่าง (ชั่วโมง)"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_road_arrived
+msgid "Vehicle Arrived Destination"
+msgstr "ยานพาหนะถึงจุดหมายปลายทางแล้ว"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_road_departed
+msgid "Vehicle Departed Origin"
+msgstr "ยานพาหนะออกจากต้นทางแล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__vendor_id
+msgid "Vendor"
+msgstr "ผู้ขาย"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__vendor_bill_line_id
+msgid "Vendor Bill Line"
+msgstr "รายการใบเรียกเก็บเงินจากผู้ขาย"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__ventilated
+msgid "Ventilated"
+msgstr "มีการระบายอากาศ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__vessel_name
+msgid "Vessel"
+msgstr "เรือ"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_arrived
+msgid "Vessel Arrived at Destination Port"
+msgstr "เรือมาถึงท่าเรือปลายทางแล้ว"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_sailed
+msgid "Vessel Sailed"
+msgstr "เรือออกเดินทางแล้ว"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__volume_cbm
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__volume_cbm
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__volume_cbm
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Volume (m3)"
+msgstr "ปริมาตร (m3)"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#, python-format
+msgid ""
+"Volumetric chargeable weight (%(vol).1f kg) is significantly higher than "
+"gross weight (%(gross).1f kg). Confirm the chargeable basis with the carrier"
+" and the customer."
+msgstr ""
+"น้ำหนักที่คิดค่าบริการตามปริมาตร (%(vol).1f kg) สูงกว่าน้ำหนักรวม "
+"(%(gross).1f kg) อย่างมีนัยสำคัญ "
+"โปรดยืนยันเกณฑ์การคิดค่าบริการกับผู้ขนส่งและลูกค้า"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+msgid "Volumetric weight dominates"
+msgstr "น้ำหนักตามปริมาตรมีค่าสูงกว่า"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__voyage_number
+msgid "Voyage"
+msgstr "การเดินเรือ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__website_message_ids
+msgid "Website Messages"
+msgstr "ข้อความเว็บไซต์"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__website_message_ids
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__website_message_ids
+msgid "Website communication history"
+msgstr "ประวัติการสื่อสารของเว็บไซต์"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_milestone_type__is_terminal
+msgid ""
+"When checked, recording an actual datetime for this milestone advances the "
+"job into its terminal closed state."
+msgstr ""
+"เมื่อทำเครื่องหมาย "
+"การบันทึกวันที่และเวลาจริงสำหรับหมุดหมายนี้จะทำให้งานเข้าสู่สถานะปิดขั้นสุดท้าย"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_milestone_type__is_required
+msgid ""
+"When checked, the milestone is auto-added to every job timeline matching the"
+" mode."
+msgstr ""
+"เมื่อทำเครื่องหมาย "
+"หมุดหมายจะถูกเพิ่มลงในไทม์ไลน์งานทุกรายการที่ตรงกับโหมดโดยอัตโนมัติ"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#, python-format
+msgid ""
+"[EHL-BL-001] %(name)s cannot be issued without a BL number. Capture the "
+"carrier-issued number first."
+msgstr ""
+"[EHL-BL-001] ไม่สามารถออก %(name)s ได้หากไม่มีหมายเลข BL "
+"กรุณาบันทึกหมายเลขที่ผู้ขนส่งออกให้ก่อน"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+msgid ""
+"[EHL-BL-002] State changes on a bill of lading must go through the action "
+"buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-BL-002] "
+"การเปลี่ยนสถานะบนใบตราส่งสินค้าต้องดำเนินการผ่านปุ่มการดำเนินการ "
+"การเขียนโดยตรงจะถูกปฏิเสธ"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+msgid ""
+"[EHL-JOB-STATE-002] State changes on a freight job must go through the "
+"action buttons (Book, Set In Transit, Deliver, Close, Cancel). Direct writes"
+" are rejected."
+msgstr ""
+"[EHL-JOB-STATE-002] "
+"การเปลี่ยนสถานะของงานขนส่งสินค้าต้องดำเนินการผ่านปุ่มการทำงาน (Book, Set In "
+"Transit, Deliver, Close, Cancel) การเขียนโดยตรงจะถูกปฏิเสธ"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_kanban
+msgid "cbm"
+msgstr ""
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_kanban
+msgid "kg /"
+msgstr ""

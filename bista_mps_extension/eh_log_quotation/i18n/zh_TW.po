@@ -1,0 +1,1651 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_quotation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 10:16+0000\n"
+"PO-Revision-Date: 2026-07-01 10:16+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Chinese (Traditional)\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+#, python-format
+msgid "%(count)d quotation(s) approved."
+msgstr "已核准 %(count)d 份報價單。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+#, python-format
+msgid "%(count)d quotation(s) assigned to %(user)s."
+msgstr "已將 %(count)d 份報價單指派給 %(user)s。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+#, python-format
+msgid "%(count)d quotation(s) cancelled."
+msgstr "已取消 %(count)d 份報價單。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid "%(name)s approved. You can now confirm the quotation."
+msgstr "%(name)s 已核准。您現在可以確認報價單。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "%d billable line(s) without a cost."
+msgstr "%d 個可計費行沒有成本。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "%d line(s) missing a charge code."
+msgstr "%d 個行缺少收費代碼。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/eh_log_charge_template_line.py:0
+msgid "(no charge code)"
+msgstr "(無收費代碼)"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "(none)"
+msgstr "(無)"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid ""
+"<span class=\"badge text-bg-info\" style=\"font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;\">\n"
+"                                <i class=\"fa fa-ship me-1\"/> Logistics\n"
+"                            </span>\n"
+"                            <span class=\"badge text-bg-warning\" style=\"font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;\" attrs=\"{'invisible': ['|', ('eh_log_requires_approval', '=', False), ('eh_log_approved_by_id', '!=', False)]}\">\n"
+"                                <i class=\"fa fa-exclamation-circle me-1\"/> Approval required\n"
+"                            </span>\n"
+"                            <span class=\"badge text-bg-danger\" style=\"font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;\" attrs=\"{'invisible': [('eh_log_credit_status', '!=', 'blocked')]}\">\n"
+"                                <i class=\"fa fa-ban me-1\"/> Credit blocked\n"
+"                            </span>\n"
+"                            <span class=\"badge text-bg-danger\" style=\"font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;\" attrs=\"{'invisible': [('eh_log_kyc_status', '!=', 'expired')]}\">\n"
+"                                <i class=\"fa fa-id-card-o me-1\"/> KYC expired\n"
+"                            </span>\n"
+"                            <span class=\"badge text-bg-danger\" style=\"font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;\" attrs=\"{'invisible': [('eh_log_margin_status', '!=', 'below_floor')]}\">\n"
+"                                <i class=\"fa fa-arrow-down me-1\"/> Margin below floor\n"
+"                            </span>"
+msgstr ""
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+msgid "<strong>Apply behaviour</strong>"
+msgstr "<strong>套用行為</strong>"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "A manager must use the Approve action."
+msgstr "經理必須使用核准操作。"
+
+#. module: eh_log_quotation
+#: model_terms:ir.actions.act_window,help:eh_log_quotation.action_eh_log_charge_template
+msgid ""
+"A template carries the charge code, leg classification,\n"
+"                    default quantity, and default unit price. Apply it to a\n"
+"                    quotation in one click and the lines drop in."
+msgstr ""
+"範本攜帶收費代碼、航段分類、\n"
+"                    預設數量和預設單價。一鍵將其套用到\n"
+"                    報價單，明細列即會自動填入。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__active
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_search
+msgid "Active"
+msgstr "啟用"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__air
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_mode__air
+msgid "Air"
+msgstr "空運"
+
+#. module: eh_log_quotation
+#: model:eh.log.charge.template,name:eh_log_quotation.charge_template_air_default
+msgid "Air Freight: standard charge bundle"
+msgstr "空運貨物：標準費用組合"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "All preflight checks passed. The order is ready to confirm."
+msgstr "所有預檢檢查均已通過。訂單已準備好確認。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__direction__any
+msgid "Any"
+msgstr "任何"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__any
+msgid "Any Mode"
+msgstr "任何模式"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+msgid "Apply"
+msgstr "套用"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Apply Charge Template"
+msgstr "套用收費範本"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_charge_template_apply
+msgid "Apply Charge Template Wizard"
+msgstr "套用收費範本精靈"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Approval"
+msgstr "核准方式"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__note
+msgid "Approval Note"
+msgstr "審批備註"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_approval_reasons
+msgid "Approval Reasons"
+msgstr "審批原因"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_kanban
+msgid "Approval Required"
+msgstr "需要審批"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Approval not currently required."
+msgstr "目前無需審批。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Approval required and not yet stamped."
+msgstr "需要審批且尚未蓋章。"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Approve"
+msgstr "審批"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_approve_form
+msgid "Approve All"
+msgstr "全部核准"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_approved_at
+msgid "Approved At"
+msgstr "核准時間"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_approved_by_id
+msgid "Approved By"
+msgstr "審批人"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Approved by %s."
+msgstr "由 %s 核准。"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_search_logistics
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Awaiting Approval"
+msgstr "等待核准"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_cancel_form
+msgid "Back"
+msgstr "返回"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_margin_status__below_floor
+msgid "Below Floor"
+msgstr "低於下限"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid ""
+"Below the warning threshold but above the approval floor. Consider raising "
+"selected charges or trimming costs."
+msgstr "低於警告閾值但高於核准下限。請考慮提高選定的費用或削減成本。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_total_revenue_billable
+msgid "Billable Revenue"
+msgstr "可開立帳單收入"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight__overall_status__blocked
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight_line__status__blocked
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_credit_status__blocked
+msgid "Blocked"
+msgstr "已封鎖"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_approve_form
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_send_review_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_cancel_form
+msgid "Cancel All"
+msgstr "全部取消"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__reason
+msgid "Cancellation Reason"
+msgstr "取消原因"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+#, python-format
+msgid "Cancelled (mass action). Reason: %(reason)s"
+msgstr "已取消（批次操作）。原因：%(reason)s"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid ""
+"Cannot confirm %(name)s for %(partner)s. Outstanding exposure of "
+"%(exposure)s exceeds the approved credit limit. Reduce the quotation, "
+"request credit limit review, or take a security deposit."
+msgstr ""
+"無法為 %(partner)s 確認 %(name)s。未結風險敞口 %(exposure)s "
+"超過已核准的信用額度。請降低報價、申請信用額度覆核，或收取保證金。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid ""
+"Cannot confirm %(name)s. Customer KYC for %(partner)s has expired documents."
+" Refresh the KYC documents or override with manager approval first."
+msgstr "無法確認 %(name)s。%(partner)s 的客戶 KYC 有已過期的文件。請更新 KYC 文件，或先經主管核准後覆寫。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__charge_code_id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order_line__eh_log_charge_code_id
+msgid "Charge Code"
+msgstr "費用代碼"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "Charge Template"
+msgstr "費用範本"
+
+#. module: eh_log_quotation
+#: model:ir.actions.act_window,name:eh_log_quotation.action_eh_log_charge_template
+#: model:ir.ui.menu,name:eh_log_quotation.menu_eh_log_charge_templates
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_list
+msgid "Charge Templates"
+msgstr "費用範本"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_charge_template_apply.py:0
+#, python-format
+msgid ""
+"Charge template <strong>%(name)s</strong> applied: %(count)s line(s) added."
+msgstr "已套用費用範本 <strong>%(name)s</strong>：已新增 %(count)s 行。"
+
+#. module: eh_log_quotation
+#: model:ir.model.constraint,message:eh_log_quotation.constraint_eh_log_charge_template_code_unique
+msgid "Charge template code must be unique."
+msgstr "費用範本代碼必須唯一。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__check
+msgid "Check"
+msgstr "檢查"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__line_ids
+msgid "Checks"
+msgstr "支票"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_preflight_form
+msgid "Close"
+msgstr "關閉"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__code
+msgid "Code"
+msgstr "程式碼"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__company_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "Companies"
+msgstr "公司"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__allowed_company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_requires_approval
+msgid ""
+"Computed from margin status and any other configured trigger. When True, "
+"confirmation is gated until a manager approves."
+msgstr "根據毛利狀態及任何其他已設定的觸發條件計算。當為 True 時，確認將被鎖定，直到經理核准。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Confirm with the credit controller before promising delivery."
+msgstr "在承諾交付前，請與信用控管員確認。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__courier
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_mode__courier
+msgid "Courier or Express"
+msgstr "快遞或速遞"
+
+#. module: eh_log_quotation
+#: model_terms:ir.actions.act_window,help:eh_log_quotation.action_eh_log_sale_order_logistics
+msgid "Create your first logistics quotation"
+msgstr "建立您的第一個物流報價單"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__create_uid
+msgid "Created by"
+msgstr "建立人員"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__create_date
+msgid "Created on"
+msgstr "建立於"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_kanban
+msgid "Credit Blocked"
+msgstr "信用已凍結"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_credit_message
+msgid "Credit Message"
+msgstr "信用訊息"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_credit_status
+msgid "Credit Status"
+msgstr "信用狀態"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Credit and KYC"
+msgstr "信用與 KYC"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Credit healthy."
+msgstr "信用狀況良好。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__direction__cross_trade
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_direction__cross_trade
+msgid "Cross Trade"
+msgstr "交叉盤交易"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Cross-trade air"
+msgstr "第三國貿易空運"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid ""
+"Cross-trade air bookings require a forwarder presence in both origin and "
+"destination countries; verify before quoting."
+msgstr "第三國貿易航空訂艙要求貨運代理在始發國和目的國均有存在；報價前請核實。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_credit_exposure
+msgid "Customer Exposure"
+msgstr "客戶風險敞口"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Customer KYC documents have expired; refresh before confirming."
+msgstr "客戶 KYC 文件已過期；請在確認前更新。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Customer KYC expired"
+msgstr "客戶 KYC 已過期"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Customer KYC is expired."
+msgstr "客戶 KYC 已過期。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_kyc_status
+msgid ""
+"Customer KYC status: green (current), amber (renewal due), red (expired or "
+"missing). Red blocks confirmation."
+msgstr "客戶 KYC 狀態：綠色（有效）、琥珀色（到期需續期）、紅色（已過期或缺失）。紅色會阻止確認。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Customer credit blocked"
+msgstr "客戶信用已凍結"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Customer credit exposure is in the warning band."
+msgstr "客戶信用風險敞口處於警告區間。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__customs
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__customs
+msgid "Customs"
+msgstr "海關"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__deadline
+msgid "Deadline"
+msgstr "截止日期"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__default_currency_id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__currency_id
+msgid "Default Currency"
+msgstr "預設貨幣"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__default_planned_cost
+msgid "Default Planned Cost"
+msgstr "預設計劃成本"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__default_quantity
+msgid "Default Quantity"
+msgstr "預設數量"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__default_unit_price
+msgid "Default Unit Price"
+msgstr "預設單價"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "Defaults"
+msgstr "預設值"
+
+#. module: eh_log_quotation
+#: model_terms:ir.actions.act_window,help:eh_log_quotation.action_eh_log_charge_template
+msgid "Define re-usable charge bundles for your common lanes"
+msgstr "為常用航線定義可重複使用的費用組合"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__description
+msgid "Description"
+msgstr "說明"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__description
+msgid "Description Override"
+msgstr "描述覆寫"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__destination
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__destination
+msgid "Destination"
+msgstr "目的地"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__destination_country_id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_destination_country_id
+msgid "Destination Country"
+msgstr "目的地國家"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_destination_location
+msgid "Destination Location"
+msgstr "目標位置"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Destination country is not set."
+msgstr "未設定目的地國家/地區。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Destination: %s"
+msgstr "目的地：%s"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "Detail"
+msgstr "詳情"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__direction
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_direction
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_search_logistics
+msgid "Direction"
+msgstr "方向"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Direction is not set."
+msgstr "未設定方向。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Direction: %s"
+msgstr "方向：%s"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order_line__eh_log_is_disbursement
+msgid "Disbursement"
+msgstr "撥付"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__display_name
+msgid "Display Name"
+msgstr "顯示名稱"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Domestic lane detected"
+msgstr "偵測到國內航線"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+msgid ""
+"Each template line becomes a sale order line carrying its charge code and "
+"leg."
+msgstr "每條範本行都會成為一條攜帶其收費代碼和航段的銷售訂單行。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid ""
+"Enter the cost (Cost field) so the margin guard works against realistic "
+"data."
+msgstr "請輸入成本（Cost 欄位），以便利潤保護基於真實資料運作。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Every line carries a charge code."
+msgstr "每一行都帶有一個收費代碼。"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+msgid ""
+"Existing logistics charge lines are removed first only when \"Replace "
+"Existing\" is checked."
+msgstr "僅當勾選「替換現有」時，才會先移除現有的物流費用明細。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_kyc_status__expired
+msgid "Expired"
+msgstr "到期"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__direction__export
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_direction__export
+msgid "Export"
+msgstr "匯出"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid "Exposure %(ratio).1f%% of approved limit (warning at %(warn).1f%%)."
+msgstr "曝險為已核准額度的 %(ratio).1f%%（在 %(warn).1f%% 時發出警告）。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid "Exposure %(ratio).1f%% of approved limit."
+msgstr "曝險為已核准額度的 %(ratio).1f%%。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_gross_margin
+msgid "Gross Margin"
+msgstr "毛利"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_gross_margin_pct
+msgid "Gross Margin (%)"
+msgstr "毛利率 (%)"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Gross margin %(pct).1f%% on revenue %(rev)s."
+msgstr "營收 %(rev)s 上的毛利率 %(pct).1f%%。"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_search
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Group by Direction"
+msgstr "按方向分組"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Group by Margin Status"
+msgstr "依利潤狀態分組"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_search
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Group by Mode"
+msgstr "依模式分組"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_credit_status__ok
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_kyc_status__ok
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_margin_status__above_warning
+msgid "Healthy"
+msgstr "健康"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__id
+msgid "ID"
+msgstr "識別號"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__direction__import
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_direction__import
+msgid "Import"
+msgstr "匯入"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Incoterm is not set."
+msgstr "未設定 Incoterm。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Incoterm: %s"
+msgstr "國際貿易條規：%s"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__inland
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__inland
+msgid "Inland"
+msgstr "內陸"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Install the Logistics KYC module to enable structured KYC tracking."
+msgstr "安裝物流 KYC 模組以啟用結構化的 KYC 追蹤。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__insurance
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__insurance
+msgid "Insurance"
+msgstr "保險"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_kanban
+msgid "KYC Expired"
+msgstr "KYC 已過期"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_kyc_message
+msgid "KYC Message"
+msgstr "KYC 訊息"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_kyc_status
+msgid "KYC Status"
+msgstr "KYC 狀態"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "KYC current."
+msgstr "KYC 為最新。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "KYC not assessed."
+msgstr "KYC 未評估。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid ""
+"KYC not assessed. Install the Logistics KYC module to track document expiry "
+"against this customer."
+msgstr "KYC 未評估。安裝 Logistics KYC 模組以追蹤此客戶的文件到期情況。"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Lane"
+msgstr "運輸路線"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_charge_template_id
+msgid ""
+"Lane template to apply. Selecting one populates the order lines with the "
+"template's charge codes, default quantities, and unit prices."
+msgstr "要套用的運輸路線範本。選擇其中一個後，將使用該範本的費用代碼、預設數量和單價填入訂單行。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_charge_template_id
+msgid "Last Applied Template"
+msgstr "上次套用的範本"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__write_uid
+msgid "Last Updated by"
+msgstr "最後更新者"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__write_date
+msgid "Last Updated on"
+msgstr "最後更新於"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template__company_ids
+msgid "Leave empty to share across all companies."
+msgstr "留空以在所有公司之間共享。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__leg
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order_line__eh_log_leg
+msgid "Leg"
+msgstr "航段"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__line_count
+msgid "Line Count"
+msgstr "行數"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__line_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "Lines"
+msgstr "資料行"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__line_count
+msgid "Lines in Template"
+msgstr "範本中的行"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_credit_status
+msgid ""
+"Live customer credit status: green (OK), amber (within tolerance), red (over"
+" limit). Confirming a red order requires manager approval."
+msgstr "客戶即時信用狀態：綠色（正常）、琥珀色（在容差範圍內）、紅色（超出限額）。確認紅色訂單需要經理核准。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_margin_status
+msgid ""
+"Live margin status: above target (green), within tolerance (amber), below "
+"threshold (red). Red orders require manager approval to confirm."
+msgstr "即時毛利率狀態：高於目標（綠色）、在容差範圍內（琥珀色）、低於閾值（紅色）。紅色訂單需要經理核准才能確認。"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_search_logistics
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Logistics"
+msgstr "物流"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_charge_template
+msgid "Logistics Charge Template"
+msgstr "物流費用範本"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_charge_template_line
+msgid "Logistics Charge Template Line"
+msgstr "物流費用範本明細"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_is_logistics
+msgid "Logistics Quotation"
+msgstr "物流報價"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_pivot
+msgid "Logistics Quotation Analysis"
+msgstr "物流報價分析"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_quotation_preflight_line
+msgid "Logistics Quotation Preflight Line"
+msgstr "物流報價預檢明細"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_quotation_preflight
+msgid "Logistics Quotation Preflight Wizard"
+msgstr "物流報價預檢精靈"
+
+#. module: eh_log_quotation
+#: model:ir.actions.act_window,name:eh_log_quotation.action_eh_log_sale_order_logistics
+msgid "Logistics Quotations"
+msgstr "物流報價"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Logistics lines present"
+msgstr "存在物流明細"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid "Logistics quotation %s approved."
+msgstr "物流報價 %s 已核准。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__main
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__main
+msgid "Main Carriage"
+msgstr "主運輸"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_kanban
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Margin"
+msgstr "毛利"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid "Margin %(pct).1f%% is below the company floor of %(floor).1f%%."
+msgstr "利潤率 %(pct).1f%% 低於公司下限 %(floor).1f%%。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_gross_margin_pct
+msgid ""
+"Margin / billable revenue, expressed as a percentage. Zero when there is no "
+"billable revenue."
+msgstr "利潤率 / 可開票收入，以百分比表示。無可開票收入時為零。"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_search_logistics
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Margin Below Floor"
+msgstr "利潤率低於下限"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_margin_status
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_search_logistics
+msgid "Margin Status"
+msgstr "利潤率狀態"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Margin Warning"
+msgstr "利潤率警告"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid ""
+"Margin below the approval floor. Manager approval required before "
+"confirmation."
+msgstr "利潤率低於核准下限。確認前需要經理核准。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_is_logistics
+msgid ""
+"Marks this sale order as a logistics quotation. The logistics tab, guards, "
+"and downstream job creation hooks only fire when this is set. Auto-set when "
+"a charge template is applied or a logistics charge code is used on any line."
+msgstr ""
+"將此銷售訂單標記為物流報價單。僅當設定此項時，物流分頁、防護和後續作業建立掛鉤才會觸發。當套用費用範本或在任何行上使用物流費用代碼時自動設定。"
+
+#. module: eh_log_quotation
+#: model:ir.actions.act_window,name:eh_log_quotation.action_eh_log_quotation_mass_approve
+msgid "Mass-approve"
+msgstr "批量核准"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_quotation_mass_approve
+msgid "Mass-approve Logistics Quotations"
+msgstr "批量核准物流報價單"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_approve_form
+msgid "Mass-approve Quotations"
+msgstr "批量核准報價單"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+msgid "Mass-approve complete"
+msgstr "批量核准完成"
+
+#. module: eh_log_quotation
+#: model:ir.actions.act_window,name:eh_log_quotation.action_eh_log_quotation_mass_cancel
+msgid "Mass-cancel"
+msgstr "批次取消"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_quotation_mass_cancel
+msgid "Mass-cancel Logistics Quotations"
+msgstr "批次取消物流報價單"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_cancel_form
+msgid "Mass-cancel Quotations"
+msgstr "批次取消報價單"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+msgid "Mass-cancel complete"
+msgstr "批次取消完成"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_quotation_mass_send_review
+msgid "Mass-send Logistics Quotations for Review"
+msgstr "批次傳送物流報價單以供審核"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__message
+msgid "Message"
+msgstr "消息"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__mode
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_mode
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_search_logistics
+msgid "Mode"
+msgstr "模式"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Mode is not set."
+msgstr "尚未設定模式。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Mode: %s"
+msgstr "模式：%s"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__multimodal
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_mode__multimodal
+msgid "Multimodal"
+msgstr "多模態"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__name
+msgid "Name"
+msgstr "名稱"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "No action needed."
+msgstr "無需操作。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "No credit limit set on this customer."
+msgstr "此客戶未設定信用額度。"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+msgid "Non-logistics product lines are always preserved."
+msgstr "非物流產品列始終會被保留。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight__overall_status__not_applicable
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight_line__status__not_applicable
+msgid "Not Applicable"
+msgstr "不適用"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_kyc_status__not_assessed
+msgid "Not Assessed"
+msgstr "未評估"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight__overall_status__ok
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight_line__status__ok
+msgid "OK"
+msgstr "確定"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid ""
+"One or more checks are blocking. Resolve every blocker before attempting to "
+"confirm."
+msgstr "有一項或多項檢查正在阻擋。請在嘗試確認前解決每個阻礙項。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_approval_reasons
+msgid ""
+"One reason per line, surfaced on the form so the manager sees what they are "
+"approving."
+msgstr "每行一個原因，顯示在表單上，以便主管看到自己正在核准的內容。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid ""
+"Open each line and pick a charge code. Apply Charge Template fills them in "
+"bulk."
+msgstr "開啟每一行並選擇一個費用代碼。套用費用範本可批次填入。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template__destination_country_id
+msgid ""
+"Optional destination filter. When set, the template is only suggested for "
+"quotations whose destination country matches."
+msgstr "選用的目的地篩選器。設定後，僅對目的地國家/地區相符的報價單建議此範本。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_quotation_mass_approve__note
+msgid "Optional note posted to the chatter of every approved quotation."
+msgstr "發布到每個已核准報價單聊天視窗的選填備註。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template__origin_country_id
+msgid ""
+"Optional origin filter. When set, the template is only suggested for "
+"quotations whose origin country matches."
+msgstr "選填的原產地篩選。設定後，僅為原產國相符的報價單建議此範本。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template_line__description
+msgid ""
+"Optional override for the sale order line description. When empty, the "
+"charge code's name is used."
+msgstr "銷售訂單行描述的選填覆寫值。為空時，使用費用代碼的名稱。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__origin
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__origin
+msgid "Origin"
+msgstr "原始"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__origin_country_id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_origin_country_id
+msgid "Origin Country"
+msgstr "原產國/原產地"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_origin_location
+msgid "Origin Location"
+msgstr "起運地點"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid ""
+"Origin and destination countries match. Switch direction to Cross Trade if "
+"this is intentional, otherwise re-check the lane."
+msgstr "起運國和目的國相同。如果這是有意為之，請將方向切換為 Cross Trade，否則請重新核查航線。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Origin country is not set."
+msgstr "未設定起運國。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Origin: %s"
+msgstr "起運地：%s"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__other
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__other
+msgid "Other"
+msgstr "其他"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Outstanding exposure exceeds the approved limit."
+msgstr "未償風險敞口超過已核准限額。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__overall_status
+msgid "Overall"
+msgstr "整體"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template_line__default_planned_cost
+msgid ""
+"Per-unit planned procurement cost. Carried into the sale order line so the "
+"margin guard works the moment the template is applied. Operators refine when"
+" they have actual vendor quotes."
+msgstr "每單位計劃採購成本。會帶入銷售訂單列，以便套用範本的那一刻毛利保護即生效。操作員在取得實際供應商報價時進行細化。"
+
+#. module: eh_log_quotation
+#: model_terms:ir.actions.act_window,help:eh_log_quotation.action_eh_log_sale_order_logistics
+msgid ""
+"Pick a customer, set the mode and the lane, apply a\n"
+"                charge template, and the system will surface margin,\n"
+"                credit, and KYC posture before you confirm."
+msgstr ""
+"選擇客戶，設定模式和航線，套用\n"
+"                收費範本，系統將在你確認前呈現利潤率、\n"
+"                信用和 KYC 狀態。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Pick an Incoterm under Other Information."
+msgstr "在「其他資訊」下選擇一個 Incoterm。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Pick import, export, or cross-trade."
+msgstr "選擇進口、出口或第三國貿易。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template_apply__template_id
+msgid ""
+"Pick the template to apply. Templates that scope to specific companies are "
+"filtered to the current company."
+msgstr "選擇要套用的範本。範圍限定為特定公司的範本將按目前公司進行篩選。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Pick the transport mode on the Logistics tab."
+msgstr "在「物流」分頁上選擇運輸方式。"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_graph
+msgid "Pipeline by State"
+msgstr "按狀態劃分的銷售管道"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Planned cost present on every billable line."
+msgstr "每個可開立發票行都存在計劃成本。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_preflight_form
+msgid "Preflight Checklist"
+msgstr "啟動前檢查清單"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_preflight_form
+msgid "Preflight:"
+msgstr "預檢:"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__order_id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__order_id
+msgid "Quotation"
+msgstr "報價"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+#, python-format
+msgid "Quotation %s pending review"
+msgstr "報價單 %s 待審核"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid "Quotation %s requires manager approval"
+msgstr "報價單 %s 需要主管核准"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Quotation approved"
+msgstr "報價單已核准"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid ""
+"Quotation approved by %(user)s. Reasons recorded at approval time:\n"
+"%(reasons)s"
+msgstr ""
+"報價單已由 %(user)s 核准。核准時記錄的原因：\n"
+"%(reasons)s"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__order_ids
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__order_ids
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__order_ids
+#: model:ir.ui.menu,name:eh_log_quotation.menu_eh_log_quotations
+msgid "Quotations"
+msgstr "報價單"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_calendar
+msgid "Quotations by Validity"
+msgstr "依有效期分類的報價單"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__rail
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_mode__rail
+msgid "Rail"
+msgstr "鐵路"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Reduce the quote, request a credit review, or take a security deposit."
+msgstr "降低報價、申請信用審查或收取保證金。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Refresh expiring documents."
+msgstr "重新整理即將到期的文件。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__replace_existing
+msgid "Replace Existing Charge Lines"
+msgstr "替換現有費用行"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_requires_approval
+msgid "Requires Approval"
+msgstr "需要核准"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+msgid "Review nudges sent"
+msgstr "已發送審閱提醒"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__reviewer_id
+msgid "Reviewer"
+msgstr "審閱人"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__road
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_mode__road
+msgid "Road"
+msgstr "路況（預設）"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Run Preflight"
+msgstr "執行預檢"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "SEA-FCL-AE-SA-20"
+msgstr ""
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_sale_order
+msgid "Sales Order"
+msgstr "銷售訂單"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "銷售訂單資料行"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__sea
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_mode__sea
+msgid "Sea"
+msgstr "海運"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "Sea FCL Jebel Ali to Dammam, FCL 20'"
+msgstr "海運 FCL 傑貝阿里至達曼，FCL 20'"
+
+#. module: eh_log_quotation
+#: model:eh.log.charge.template,name:eh_log_quotation.charge_template_sea_fcl_default
+msgid "Sea FCL: standard charge bundle"
+msgstr "海運 FCL：標準費用組合"
+
+#. module: eh_log_quotation
+#: model:ir.actions.act_window,name:eh_log_quotation.action_eh_log_quotation_mass_send_review
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_send_review_form
+msgid "Send for Review"
+msgstr "傳送以供審核"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__sequence
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__sequence
+msgid "Sequence"
+msgstr "序列號"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Set the destination country on the Logistics tab."
+msgstr "在 Logistics 分頁上設定目的地國家/地區。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Set the origin country on the Logistics tab."
+msgstr "在 Logistics 分頁上設定原產國。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid ""
+"Some checks raised warnings. The order can be confirmed but review the "
+"warnings first."
+msgstr "部分檢查觸發了警告。訂單可以確認，但請先檢視警告。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_destination_location
+msgid "Specific port, airport, or delivery point."
+msgstr "特定的港口、機場或交貨點。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_origin_location
+msgid ""
+"Specific port, airport, or pickup point. Free text at this layer; the "
+"freight forwarding module replaces with structured port and airport master "
+"data."
+msgstr "特定的港口、機場或提貨點。此層級為自由文字；貨運代理模組會以結構化的港口和機場主資料替換。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template__code
+msgid ""
+"Stable short identifier (e.g. SEA-FCL-AE-SA-20). Used to recall the template"
+" by typed search rather than by scrolling the dropdown."
+msgstr "穩定的短識別碼（例如 SEA-FCL-AE-SA-20）。用於透過輸入搜尋來調出範本，而非捲動下拉選單。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order_line__eh_log_charge_code_id
+msgid ""
+"Standardised charge code for this line. Drives the leg classification, the "
+"tax tag default, and whether the line is included in the margin computation."
+msgstr "此行的標準化收費代碼。決定航段分類、預設稅務標籤，以及該行是否納入毛利計算。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template_line__charge_code_id
+msgid ""
+"Standardised charge code from the ERP Heritage catalogue. The Apply Template"
+" wizard creates a sale order line carrying this code so reports and the "
+"margin guard work."
+msgstr "來自 ERP Heritage 目錄的標準化收費代碼。套用範本精靈會建立攜帶此代碼的銷售訂單行，以便報表和毛利保護機制正常運作。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__status
+msgid "Status"
+msgstr "狀態"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__hint
+msgid "Suggested Action"
+msgstr "建議的操作"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_total_planned_cost
+msgid "Sum of planned cost across non-disbursement lines."
+msgstr "非墊付行的計劃成本之和。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_total_revenue_billable
+msgid ""
+"Sum of revenue across non-disbursement lines. Disbursements are excluded "
+"from margin computation."
+msgstr "非墊付行的收入之和。墊付款不計入利潤率計算。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_credit_exposure
+msgid ""
+"Sum of the partner's currently outstanding receivables in the company "
+"currency. Recomputed on every read."
+msgstr "該合作夥伴目前未結應收款之和（以公司貨幣計）。每次讀取時重新計算。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__summary
+msgid "Summary"
+msgstr "摘要"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__template_id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__template_id
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Template"
+msgstr "範本"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "This is a logistics order"
+msgstr "這是一個物流訂單"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid ""
+"This quotation has logistics charge codes on its lines. Disabling the "
+"logistics flag will skip the credit / KYC / margin guards on confirmation."
+msgstr "此報價單的行中包含物流費用代碼。停用物流標記將在確認時跳過信用 / KYC / 利潤率保護。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_total_planned_cost
+msgid "Total Planned Cost"
+msgstr "計劃成本總額"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Upload current KYC documents before confirming."
+msgstr "確認前請先上傳目前的 KYC 文件。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight__overall_status__warning
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight_line__status__warning
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_credit_status__warning
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_kyc_status__warning
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_margin_status__warning
+msgid "Warning"
+msgstr "警告"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order_line__eh_log_is_disbursement
+msgid ""
+"When True, the line is treated as pass-through and excluded from gross "
+"margin computation."
+msgstr "為 True 時，該行被視為轉嫁項並從毛利率計算中排除。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template_apply__replace_existing
+msgid ""
+"When checked, existing logistics charge lines (lines carrying a charge code)"
+" are removed before the template lines are appended. Non-logistics product "
+"lines are always preserved."
+msgstr "勾選後，在附加範本行之前會先移除現有的物流費用行（帶有費用代碼的行）。非物流產品行始終予以保留。"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__wizard_id
+msgid "Wizard"
+msgstr "精靈"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid ""
+"[EHL-APPROVAL-001] Only logistics managers can approve this quotation. Ask "
+"your manager to take action."
+msgstr "[EHL-APPROVAL-001] 只有物流經理才能核准此報價。請讓您的經理採取行動。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid ""
+"[EHL-APPROVAL-002] This quotation does not currently require approval. The "
+"Approve action is only available when the margin, credit, or KYC guard "
+"surfaces a blocking reason."
+msgstr "[EHL-APPROVAL-002] 此報價目前不需要核准。僅當利潤率、信用或 KYC 防護提示存在阻擋原因時,才可使用「核准」動作。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid ""
+"[EHL-APPROVAL-003] Quotation %(name)s requires manager approval before confirmation. Reasons:\n"
+"%(reasons)s\n"
+"\n"
+"Use the Approve action to record the decision, then confirm again."
+msgstr ""
+"[EHL-APPROVAL-003] 報價 %(name)s 在確認前需要經理核准。原因:\n"
+"%(reasons)s\n"
+"\n"
+"請使用「核准」動作記錄決定,然後再次確認。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+msgid "[EHL-APPROVAL-010] Only logistics managers may run mass-approve."
+msgstr "[EHL-APPROVAL-010] 只有物流經理才能執行大量核准。"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_charge_template_apply.py:0
+#, python-format
+msgid ""
+"[EHL-TEMPLATE-001] Template %(name)s has no lines. Add lines to the template"
+" first."
+msgstr "[EHL-TEMPLATE-001] 範本 %(name)s 沒有行。請先向範本新增行。"

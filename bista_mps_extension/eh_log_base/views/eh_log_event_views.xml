@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_event_list" model="ir.ui.view">
+            <field name="name">eh.log.event.list</field>
+            <field name="model">eh.log.event</field>
+            <field name="arch" type="xml">
+                <tree string="Operational Events" decoration-info="severity == 'info'" decoration-muted="severity == 'notice'" decoration-warning="severity == 'warning'" decoration-danger="severity == 'error'" create="false" edit="false">
+                    <field name="occurred_at"/>
+                    <field name="category"/>
+                    <field name="severity"/>
+                    <field name="summary"/>
+                    <field name="user_id"/>
+                    <field name="related_record_display"/>
+                    <field name="error_code" optional="show"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_eh_log_event_form" model="ir.ui.view">
+            <field name="name">eh.log.event.form</field>
+            <field name="model">eh.log.event</field>
+            <field name="arch" type="xml">
+                <form string="Operational Event" create="false" edit="false">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1><field name="summary"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="occurred_at"/>
+                                <field name="category"/>
+                                <field name="severity"/>
+                                <field name="user_id"/>
+                            </group>
+                            <group>
+                                <field name="related_model"/>
+                                <field name="related_record_id"/>
+                                <field name="related_record_display"/>
+                                <field name="error_code"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Context">
+                                <field name="context_json" widget="text" readonly="1"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_eh_log_event_search" model="ir.ui.view">
+            <field name="name">eh.log.event.search</field>
+            <field name="model">eh.log.event</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="summary"/>
+                    <field name="related_record_display"/>
+                    <field name="error_code"/>
+                    <field name="user_id"/>
+                    <separator/>
+                    <filter string="State Transition" name="filter_state" domain="[('category', '=', 'state_transition')]"/>
+                    <filter string="Manual Override" name="filter_override" domain="[('category', '=', 'override')]"/>
+                    <filter string="Adapter Call" name="filter_adapter" domain="[('category', '=', 'adapter_call')]"/>
+                    <filter string="Approval" name="filter_approval" domain="[('category', '=', 'approval')]"/>
+                    <separator/>
+                    <filter string="Errors only" name="filter_errors" domain="[('severity', '=', 'error')]"/>
+                    <filter string="Today" name="filter_today" domain="[('occurred_at', '&gt;=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <filter string="Group by Category" name="group_category" context="{'group_by': 'category'}"/>
+                    <filter string="Group by User" name="group_user" context="{'group_by': 'user_id'}"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_eh_log_event" model="ir.actions.act_window">
+            <field name="name">Operational Events</field>
+            <field name="res_model">eh.log.event</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_eh_log_event_search"/>
+        </record>
+
+    </data>
+</odoo>

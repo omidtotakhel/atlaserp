@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_charge_template_apply_form" model="ir.ui.view">
+            <field name="name">eh.log.charge.template.apply.form</field>
+            <field name="model">eh.log.charge.template.apply</field>
+            <field name="arch" type="xml">
+                <form string="Apply Charge Template">
+                    <sheet>
+                        <group>
+                            <field name="allowed_company_id" invisible="1"/>
+                            <field name="order_id" readonly="1"/>
+                            <field name="template_id" options="{'no_create': True}"/>
+                            <field name="line_count" readonly="1"/>
+                            <field name="replace_existing"/>
+                        </group>
+                        <div class="alert alert-info" role="status" attrs="{'invisible': [('template_id', '=', False)]}">
+                            <strong>Apply behaviour</strong>
+                            <ul>
+                                <li>Each template line becomes a sale order line carrying its charge code and leg.</li>
+                                <li>Existing logistics charge lines are removed first only when "Replace Existing" is checked.</li>
+                                <li>Non-logistics product lines are always preserved.</li>
+                            </ul>
+                        </div>
+                    </sheet>
+                    <footer>
+                        <button string="Apply" name="action_apply" type="object" class="btn-primary"/>
+                        <button string="Cancel" special="cancel" class="btn-secondary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

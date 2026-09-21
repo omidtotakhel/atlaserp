@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!--
+        Job file PDF: a single-page cover plus optional milestone,
+        BL, and container detail pages. Inherits the shared logistics
+        report shell (eh_log_base.eh_log_report_styles, header, footer).
+    -->
+
+    <record id="paperformat_eh_log_freight_job" model="report.paperformat">
+        <field name="name">A4 Portrait (EH Logistics Freight Job)</field>
+        <field name="default" eval="False"/>
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">35</field>
+        <field name="margin_bottom">15</field>
+        <field name="margin_left">10</field>
+        <field name="margin_right">10</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">8</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <record id="action_report_eh_log_freight_job" model="ir.actions.report">
+        <field name="name">Freight Job File</field>
+        <field name="model">eh.log.freight.job</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">eh_log_freight.report_freight_job_document</field>
+        <field name="report_file">eh_log_freight.report_freight_job_document</field>
+        <field name="binding_model_id" ref="model_eh_log_freight_job"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="paperformat_eh_log_freight_job"/>
+    </record>
+
+    <template id="report_freight_job_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="job">
+                <t t-call="eh_log_base.eh_log_clean_layout">
+                    <t t-set="company" t-value="job.company_id"/>
+                    <t t-set="report_type" t-value="'pdf'"/>
+                    <t t-call="eh_log_base.eh_log_report_styles"/>
+                    <div class="page eh_pdf_page">
+                        <t t-call="eh_log_base.eh_log_report_header">
+                            <t t-set="title" t-value="'Freight Job File'"/>
+                            <t t-set="company" t-value="job.company_id"/>
+                        </t>
+
+                        <div class="eh_pdf_meta">
+                            <span><strong>Job:</strong> <t t-out="job.name"/></span>
+                            <span><strong>State:</strong> <t t-out="dict(job._fields['state'].selection).get(job.state)"/></span>
+                            <span><strong>Mode:</strong> <t t-out="dict(job._fields['mode'].selection).get(job.mode) or '—'"/></span>
+                            <span><strong>Direction:</strong> <t t-out="dict(job._fields['direction'].selection).get(job.direction) or ''"/></span>
+                        </div>
+
+                        <h2 class="eh_pdf_subtitle">Lane and Parties</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Field</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Customer</td>
+                                    <td><t t-out="job.customer_id.display_name"/></td>
+                                </tr>
+                                <tr t-if="job.customer_reference">
+                                    <td>Customer Reference</td>
+                                    <td><t t-out="job.customer_reference"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Shipper</td>
+                                    <td><t t-out="job.shipper_id.display_name or ''"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Consignee</td>
+                                    <td><t t-out="job.consignee_id.display_name or ''"/></td>
+                                </tr>
+                                <tr t-if="job.notify_party_id">
+                                    <td>Notify Party</td>
+                                    <td><t t-out="job.notify_party_id.display_name"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Origin</td>
+                                    <td>
+                                        <t t-out="job.origin_country_id.name or ''"/>
+                                        <span t-if="job.origin_location"> / <t t-out="job.origin_location"/></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Destination</td>
+                                    <td>
+                                        <t t-out="job.destination_country_id.name or ''"/>
+                                        <span t-if="job.destination_location"> / <t t-out="job.destination_location"/></span>
+                                    </td>
+                                </tr>
+                                <tr t-if="job.incoterm_id">
+                                    <td>Incoterm</td>
+                                    <td><t t-out="job.incoterm_id.code"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 class="eh_pdf_subtitle">Cargo Summary</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Description</th>
+                                    <th class="text-end">Packages</th>
+                                    <th class="text-end">Gross (kg)</th>
+                                    <th class="text-end">Volume (m3)</th>
+                                    <th class="text-end">Chargeable (kg)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><t t-out="job.cargo_description or ''"/></td>
+                                    <td class="text-end"><t t-out="job.package_count or 0"/></td>
+                                    <td class="text-end"><t t-out="'{:,.2f}'.format(job.gross_weight_kg or 0.0)"/></td>
+                                    <td class="text-end"><t t-out="'{:,.3f}'.format(job.volume_cbm or 0.0)"/></td>
+                                    <td class="text-end"><t t-out="'{:,.2f}'.format(job.chargeable_weight_kg or 0.0)"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 class="eh_pdf_subtitle">Milestone Timeline</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Milestone</th>
+                                    <th>Planned</th>
+                                    <th>Actual</th>
+                                    <th class="text-end">Variance (h)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="job.milestone_ids" t-as="ms">
+                                    <td><t t-out="ms.type_id.name"/></td>
+                                    <td><t t-out="ms.planned_at and ms.planned_at.strftime('%Y-%m-%d %H:%M') or ''"/></td>
+                                    <td><t t-out="ms.actual_at and ms.actual_at.strftime('%Y-%m-%d %H:%M') or ''"/></td>
+                                    <td class="text-end">
+                                        <t t-if="ms.planned_at and ms.actual_at">
+                                            <t t-out="'{:.1f}'.format(ms.variance_hours)"/>
+                                        </t>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <t t-if="job.bl_ids">
+                            <h2 class="eh_pdf_subtitle">Bills of Lading</h2>
+                            <table class="eh_pdf_table">
+                                <thead>
+                                    <tr>
+                                        <th>Reference</th>
+                                        <th>Type</th>
+                                        <th>Number</th>
+                                        <th>State</th>
+                                        <th>Issue Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr t-foreach="job.bl_ids" t-as="bl">
+                                        <td><t t-out="bl.name"/></td>
+                                        <td><t t-out="dict(bl._fields['bl_type'].selection).get(bl.bl_type)"/></td>
+                                        <td><t t-out="bl.number or ''"/></td>
+                                        <td><t t-out="dict(bl._fields['state'].selection).get(bl.state)"/></td>
+                                        <td><t t-out="bl.issue_date and bl.issue_date.strftime('%Y-%m-%d') or ''"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </t>
+
+                        <t t-if="job.container_ids">
+                            <h2 class="eh_pdf_subtitle">Containers</h2>
+                            <table class="eh_pdf_table">
+                                <thead>
+                                    <tr>
+                                        <th>Container No.</th>
+                                        <th>ISO</th>
+                                        <th>Seal</th>
+                                        <th class="text-end">Gross (kg)</th>
+                                        <th>State</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr t-foreach="job.container_ids" t-as="container">
+                                        <td><t t-out="container.container_number or ''"/></td>
+                                        <td><t t-out="container.iso_type_id.alias_code or container.iso_type_id.code"/></td>
+                                        <td><t t-out="container.seal_number or ''"/></td>
+                                        <td class="text-end"><t t-out="'{:,.0f}'.format(container.gross_weight_kg or 0)"/></td>
+                                        <td><t t-out="dict(container._fields['state'].selection).get(container.state)"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </t>
+
+                        <h2 class="eh_pdf_subtitle">Margin Summary</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="text-end">Planned</th>
+                                    <th class="text-end">Actual</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Revenue</td>
+                                    <td class="text-end"><t t-out="'{:,.2f}'.format(job.total_revenue)"/></td>
+                                    <td class="text-end"><t t-out="'{:,.2f}'.format(job.total_actual_revenue)"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Cost</td>
+                                    <td class="text-end"><t t-out="'{:,.2f}'.format(job.total_planned_cost)"/></td>
+                                    <td class="text-end"><t t-out="'{:,.2f}'.format(job.total_actual_cost)"/></td>
+                                </tr>
+                                <tr class="eh_pdf_grand_total">
+                                    <td>Gross Margin</td>
+                                    <td class="text-end"><t t-out="'{:,.2f}'.format(job.gross_margin)"/> (<t t-out="'{:.1f}'.format(job.gross_margin_pct)"/>%)</td>
+                                    <td class="text-end"><t t-out="'{:,.2f}'.format(job.actual_gross_margin)"/> (<t t-out="'{:.1f}'.format(job.actual_gross_margin_pct)"/>%)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <t t-call="eh_log_base.eh_log_report_footer"/>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

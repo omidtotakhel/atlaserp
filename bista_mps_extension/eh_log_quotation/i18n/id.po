@@ -1,0 +1,1750 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_quotation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 10:16+0000\n"
+"PO-Revision-Date: 2026-07-01 10:16+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Indonesian\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+#, python-format
+msgid "%(count)d quotation(s) approved."
+msgstr "%(count)d penawaran disetujui."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+#, python-format
+msgid "%(count)d quotation(s) assigned to %(user)s."
+msgstr "%(count)d penawaran ditugaskan ke %(user)s."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+#, python-format
+msgid "%(count)d quotation(s) cancelled."
+msgstr "%(count)d penawaran dibatalkan."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid "%(name)s approved. You can now confirm the quotation."
+msgstr "%(name)s disetujui. Anda sekarang dapat mengonfirmasi penawaran."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "%d billable line(s) without a cost."
+msgstr "%d baris yang dapat ditagih tanpa biaya."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "%d line(s) missing a charge code."
+msgstr "%d baris tidak memiliki kode biaya."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/eh_log_charge_template_line.py:0
+msgid "(no charge code)"
+msgstr "(tidak ada kode biaya)"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "(none)"
+msgstr "(tidak ada)"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid ""
+"<span class=\"badge text-bg-info\" style=\"font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;\">\n"
+"                                <i class=\"fa fa-ship me-1\"/> Logistics\n"
+"                            </span>\n"
+"                            <span class=\"badge text-bg-warning\" style=\"font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;\" attrs=\"{'invisible': ['|', ('eh_log_requires_approval', '=', False), ('eh_log_approved_by_id', '!=', False)]}\">\n"
+"                                <i class=\"fa fa-exclamation-circle me-1\"/> Approval required\n"
+"                            </span>\n"
+"                            <span class=\"badge text-bg-danger\" style=\"font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;\" attrs=\"{'invisible': [('eh_log_credit_status', '!=', 'blocked')]}\">\n"
+"                                <i class=\"fa fa-ban me-1\"/> Credit blocked\n"
+"                            </span>\n"
+"                            <span class=\"badge text-bg-danger\" style=\"font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;\" attrs=\"{'invisible': [('eh_log_kyc_status', '!=', 'expired')]}\">\n"
+"                                <i class=\"fa fa-id-card-o me-1\"/> KYC expired\n"
+"                            </span>\n"
+"                            <span class=\"badge text-bg-danger\" style=\"font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;\" attrs=\"{'invisible': [('eh_log_margin_status', '!=', 'below_floor')]}\">\n"
+"                                <i class=\"fa fa-arrow-down me-1\"/> Margin below floor\n"
+"                            </span>"
+msgstr ""
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+msgid "<strong>Apply behaviour</strong>"
+msgstr "<strong>Perilaku penerapan</strong>"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "A manager must use the Approve action."
+msgstr "Seorang manajer harus menggunakan tindakan Setujui."
+
+#. module: eh_log_quotation
+#: model_terms:ir.actions.act_window,help:eh_log_quotation.action_eh_log_charge_template
+msgid ""
+"A template carries the charge code, leg classification,\n"
+"                    default quantity, and default unit price. Apply it to a\n"
+"                    quotation in one click and the lines drop in."
+msgstr ""
+"Sebuah templat membawa kode biaya, klasifikasi leg,\n"
+"                    kuantitas default, dan harga satuan default. Terapkan ke\n"
+"                    penawaran dengan satu klik dan baris-baris akan otomatis dimasukkan."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__active
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_search
+msgid "Active"
+msgstr "Aktif"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__air
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_mode__air
+msgid "Air"
+msgstr "Udara"
+
+#. module: eh_log_quotation
+#: model:eh.log.charge.template,name:eh_log_quotation.charge_template_air_default
+msgid "Air Freight: standard charge bundle"
+msgstr "Angkutan Udara: paket biaya standar"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "All preflight checks passed. The order is ready to confirm."
+msgstr "Semua pemeriksaan awal lolos. Pesanan siap dikonfirmasi."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__direction__any
+msgid "Any"
+msgstr "Banyak"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__any
+msgid "Any Mode"
+msgstr "Mode apa pun"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+msgid "Apply"
+msgstr "Terapkan"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Apply Charge Template"
+msgstr "Terapkan Templat Biaya"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_charge_template_apply
+msgid "Apply Charge Template Wizard"
+msgstr "Wizard Terapkan Templat Biaya"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Approval"
+msgstr "Persetujuan"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__note
+msgid "Approval Note"
+msgstr "Catatan Persetujuan"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_approval_reasons
+msgid "Approval Reasons"
+msgstr "Alasan Persetujuan"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_kanban
+msgid "Approval Required"
+msgstr "Persetujuan Diperlukan"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Approval not currently required."
+msgstr "Persetujuan saat ini tidak diperlukan."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Approval required and not yet stamped."
+msgstr "Persetujuan diperlukan dan belum distempel."
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Approve"
+msgstr "Setujui"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_approve_form
+msgid "Approve All"
+msgstr "Setujui Semua"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_approved_at
+msgid "Approved At"
+msgstr "Disetujui Pada"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_approved_by_id
+msgid "Approved By"
+msgstr "Disetujui Oleh"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Approved by %s."
+msgstr "Disetujui oleh %s."
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_search_logistics
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Awaiting Approval"
+msgstr "Menunggu persetujuan"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_cancel_form
+msgid "Back"
+msgstr "Kembali"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_margin_status__below_floor
+msgid "Below Floor"
+msgstr "Di bawah batas dasar"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid ""
+"Below the warning threshold but above the approval floor. Consider raising "
+"selected charges or trimming costs."
+msgstr ""
+"Di bawah ambang peringatan tetapi di atas batas dasar persetujuan. "
+"Pertimbangkan untuk menaikkan biaya yang dipilih atau memangkas biaya."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_total_revenue_billable
+msgid "Billable Revenue"
+msgstr "Pendapatan yang Dapat Ditagih"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight__overall_status__blocked
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight_line__status__blocked
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_credit_status__blocked
+msgid "Blocked"
+msgstr "Diblokir"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_approve_form
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_send_review_form
+msgid "Cancel"
+msgstr "Batal"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_cancel_form
+msgid "Cancel All"
+msgstr "Batalkan Semua"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__reason
+msgid "Cancellation Reason"
+msgstr "Alasan Pembatalan"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+#, python-format
+msgid "Cancelled (mass action). Reason: %(reason)s"
+msgstr "Dibatalkan (aksi massal). Alasan: %(reason)s"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid ""
+"Cannot confirm %(name)s for %(partner)s. Outstanding exposure of "
+"%(exposure)s exceeds the approved credit limit. Reduce the quotation, "
+"request credit limit review, or take a security deposit."
+msgstr ""
+"Tidak dapat mengonfirmasi %(name)s untuk %(partner)s. Eksposur terutang "
+"sebesar %(exposure)s melebihi batas kredit yang disetujui. Kurangi "
+"penawaran, minta peninjauan batas kredit, atau ambil deposit jaminan."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid ""
+"Cannot confirm %(name)s. Customer KYC for %(partner)s has expired documents."
+" Refresh the KYC documents or override with manager approval first."
+msgstr ""
+"Tidak dapat mengonfirmasi %(name)s. KYC pelanggan untuk %(partner)s memiliki"
+" dokumen yang kedaluwarsa. Perbarui dokumen KYC atau timpa dengan "
+"persetujuan manajer terlebih dahulu."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__charge_code_id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order_line__eh_log_charge_code_id
+msgid "Charge Code"
+msgstr "Kode biaya"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "Charge Template"
+msgstr "Templat biaya"
+
+#. module: eh_log_quotation
+#: model:ir.actions.act_window,name:eh_log_quotation.action_eh_log_charge_template
+#: model:ir.ui.menu,name:eh_log_quotation.menu_eh_log_charge_templates
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_list
+msgid "Charge Templates"
+msgstr "Templat biaya"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_charge_template_apply.py:0
+#, python-format
+msgid ""
+"Charge template <strong>%(name)s</strong> applied: %(count)s line(s) added."
+msgstr ""
+"Templat biaya <strong>%(name)s</strong> diterapkan: %(count)s baris "
+"ditambahkan."
+
+#. module: eh_log_quotation
+#: model:ir.model.constraint,message:eh_log_quotation.constraint_eh_log_charge_template_code_unique
+msgid "Charge template code must be unique."
+msgstr "Kode templat biaya harus unik."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__check
+msgid "Check"
+msgstr "Cek"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__line_ids
+msgid "Checks"
+msgstr "Cek"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_preflight_form
+msgid "Close"
+msgstr "Tutup"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__code
+msgid "Code"
+msgstr "Kode"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__company_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "Companies"
+msgstr "Perusahaan"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__allowed_company_id
+msgid "Company"
+msgstr "Perusahaan"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_requires_approval
+msgid ""
+"Computed from margin status and any other configured trigger. When True, "
+"confirmation is gated until a manager approves."
+msgstr ""
+"Dihitung dari status margin dan pemicu lain yang dikonfigurasi. Jika True, "
+"konfirmasi ditahan hingga manajer menyetujui."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Confirm with the credit controller before promising delivery."
+msgstr ""
+"Konfirmasikan dengan pengontrol kredit sebelum menjanjikan pengiriman."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__courier
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_mode__courier
+msgid "Courier or Express"
+msgstr "Kurir atau Ekspres"
+
+#. module: eh_log_quotation
+#: model_terms:ir.actions.act_window,help:eh_log_quotation.action_eh_log_sale_order_logistics
+msgid "Create your first logistics quotation"
+msgstr "Buat penawaran logistik pertama Anda"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__create_uid
+msgid "Created by"
+msgstr "Dibuat oleh"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__create_date
+msgid "Created on"
+msgstr "Dibuat pada"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_kanban
+msgid "Credit Blocked"
+msgstr "Kredit Diblokir"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_credit_message
+msgid "Credit Message"
+msgstr "Pesan Kredit"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_credit_status
+msgid "Credit Status"
+msgstr "Status Kredit"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Credit and KYC"
+msgstr "Kredit dan KYC"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Credit healthy."
+msgstr "Kredit sehat."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__direction__cross_trade
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_direction__cross_trade
+msgid "Cross Trade"
+msgstr "Cross trade"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Cross-trade air"
+msgstr "Udara cross-trade"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid ""
+"Cross-trade air bookings require a forwarder presence in both origin and "
+"destination countries; verify before quoting."
+msgstr ""
+"Pemesanan udara cross-trade memerlukan keberadaan forwarder di negara asal "
+"maupun negara tujuan; verifikasi sebelum memberikan penawaran."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_credit_exposure
+msgid "Customer Exposure"
+msgstr "Eksposur pelanggan"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Customer KYC documents have expired; refresh before confirming."
+msgstr ""
+"Dokumen KYC pelanggan telah kedaluwarsa; perbarui sebelum mengonfirmasi."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Customer KYC expired"
+msgstr "KYC pelanggan kedaluwarsa"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Customer KYC is expired."
+msgstr "KYC pelanggan telah kedaluwarsa."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_kyc_status
+msgid ""
+"Customer KYC status: green (current), amber (renewal due), red (expired or "
+"missing). Red blocks confirmation."
+msgstr ""
+"Status KYC pelanggan: hijau (berlaku), kuning (perlu diperbarui), merah "
+"(kedaluwarsa atau tidak ada). Merah memblokir konfirmasi."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Customer credit blocked"
+msgstr "Kredit pelanggan diblokir"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Customer credit exposure is in the warning band."
+msgstr "Eksposur kredit pelanggan berada di rentang peringatan."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__customs
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__customs
+msgid "Customs"
+msgstr "Bea Cukai"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__deadline
+msgid "Deadline"
+msgstr "Batas waktu"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__default_currency_id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__currency_id
+msgid "Default Currency"
+msgstr "Mata Uang Standar"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__default_planned_cost
+msgid "Default Planned Cost"
+msgstr "Biaya Terencana Bawaan"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__default_quantity
+msgid "Default Quantity"
+msgstr "Kuantitas Bawaan"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__default_unit_price
+msgid "Default Unit Price"
+msgstr "Harga Satuan Bawaan"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "Defaults"
+msgstr "Default"
+
+#. module: eh_log_quotation
+#: model_terms:ir.actions.act_window,help:eh_log_quotation.action_eh_log_charge_template
+msgid "Define re-usable charge bundles for your common lanes"
+msgstr ""
+"Tetapkan paket biaya yang dapat digunakan kembali untuk jalur umum Anda"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__description
+msgid "Description"
+msgstr "Deskripsi"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__description
+msgid "Description Override"
+msgstr "Penggantian Deskripsi"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__destination
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__destination
+msgid "Destination"
+msgstr "Tujuan"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__destination_country_id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_destination_country_id
+msgid "Destination Country"
+msgstr "Negara Tujuan"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_destination_location
+msgid "Destination Location"
+msgstr "Lokasi Tujuan"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Destination country is not set."
+msgstr "Negara tujuan belum ditetapkan."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Destination: %s"
+msgstr "Tujuan: %s"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "Detail"
+msgstr ""
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__direction
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_direction
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_search_logistics
+msgid "Direction"
+msgstr "Arahan"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Direction is not set."
+msgstr "Arah belum diatur."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Direction: %s"
+msgstr "Arah: %s"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order_line__eh_log_is_disbursement
+msgid "Disbursement"
+msgstr "Pencairan"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__display_name
+msgid "Display Name"
+msgstr "Nama Tampilan"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Domestic lane detected"
+msgstr "Jalur domestik terdeteksi"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+msgid ""
+"Each template line becomes a sale order line carrying its charge code and "
+"leg."
+msgstr ""
+"Setiap baris templat menjadi baris pesanan penjualan yang membawa kode biaya"
+" dan segmennya."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid ""
+"Enter the cost (Cost field) so the margin guard works against realistic "
+"data."
+msgstr ""
+"Masukkan biaya (bidang Cost) agar penjaga margin bekerja terhadap data yang "
+"realistis."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Every line carries a charge code."
+msgstr "Setiap baris membawa kode biaya."
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+msgid ""
+"Existing logistics charge lines are removed first only when \"Replace "
+"Existing\" is checked."
+msgstr ""
+"Baris biaya logistik yang ada hanya dihapus terlebih dahulu ketika \"Ganti "
+"yang Ada\" dicentang."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_kyc_status__expired
+msgid "Expired"
+msgstr "Berakhir"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__direction__export
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_direction__export
+msgid "Export"
+msgstr "Ekspor"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid "Exposure %(ratio).1f%% of approved limit (warning at %(warn).1f%%)."
+msgstr ""
+"Eksposur %(ratio).1f%% dari batas yang disetujui (peringatan pada "
+"%(warn).1f%%)."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid "Exposure %(ratio).1f%% of approved limit."
+msgstr "Eksposur %(ratio).1f%% dari batas yang disetujui."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_gross_margin
+msgid "Gross Margin"
+msgstr "Margin Kotor"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_gross_margin_pct
+msgid "Gross Margin (%)"
+msgstr "Margin Bruto (%)"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Gross margin %(pct).1f%% on revenue %(rev)s."
+msgstr "Margin bruto %(pct).1f%% atas pendapatan %(rev)s."
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_search
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Group by Direction"
+msgstr "Kelompokkan berdasarkan Arah"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Group by Margin Status"
+msgstr "Kelompokkan berdasarkan Status Margin"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_search
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Group by Mode"
+msgstr "Kelompokkan berdasarkan Mode"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_credit_status__ok
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_kyc_status__ok
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_margin_status__above_warning
+msgid "Healthy"
+msgstr "Sehat"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__id
+msgid "ID"
+msgstr ""
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__direction__import
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_direction__import
+msgid "Import"
+msgstr "Impor"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Incoterm is not set."
+msgstr "Incoterm belum diatur."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Incoterm: %s"
+msgstr ""
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__inland
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__inland
+msgid "Inland"
+msgstr "Pedalaman"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Install the Logistics KYC module to enable structured KYC tracking."
+msgstr ""
+"Instal modul KYC Logistik untuk mengaktifkan pelacakan KYC terstruktur."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__insurance
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__insurance
+msgid "Insurance"
+msgstr "Asuransi"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_kanban
+msgid "KYC Expired"
+msgstr "KYC Kedaluwarsa"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_kyc_message
+msgid "KYC Message"
+msgstr "Pesan KYC"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_kyc_status
+msgid "KYC Status"
+msgstr "Status KYC"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "KYC current."
+msgstr "KYC terkini."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "KYC not assessed."
+msgstr "KYC belum dinilai."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid ""
+"KYC not assessed. Install the Logistics KYC module to track document expiry "
+"against this customer."
+msgstr ""
+"KYC belum dinilai. Instal modul Logistics KYC untuk melacak kedaluwarsa "
+"dokumen pelanggan ini."
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Lane"
+msgstr "Rute"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_charge_template_id
+msgid ""
+"Lane template to apply. Selecting one populates the order lines with the "
+"template's charge codes, default quantities, and unit prices."
+msgstr ""
+"Templat rute yang akan diterapkan. Memilih salah satu akan mengisi baris "
+"pesanan dengan kode biaya, kuantitas default, dan harga satuan dari templat."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_charge_template_id
+msgid "Last Applied Template"
+msgstr "Templat Terakhir Diterapkan"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__write_uid
+msgid "Last Updated by"
+msgstr "Terakhir Diperbarui oleh"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__write_date
+msgid "Last Updated on"
+msgstr "Terakhir Diperbarui pada"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template__company_ids
+msgid "Leave empty to share across all companies."
+msgstr "Kosongkan untuk membagikan ke semua perusahaan."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__leg
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order_line__eh_log_leg
+msgid "Leg"
+msgstr "Segmen"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__line_count
+msgid "Line Count"
+msgstr "Jumlah Baris"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__line_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "Lines"
+msgstr "Baris"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__line_count
+msgid "Lines in Template"
+msgstr "Baris dalam Template"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_credit_status
+msgid ""
+"Live customer credit status: green (OK), amber (within tolerance), red (over"
+" limit). Confirming a red order requires manager approval."
+msgstr ""
+"Status kredit pelanggan langsung: hijau (OK), kuning (dalam toleransi), "
+"merah (melebihi batas). Mengonfirmasi pesanan merah memerlukan persetujuan "
+"manajer."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_margin_status
+msgid ""
+"Live margin status: above target (green), within tolerance (amber), below "
+"threshold (red). Red orders require manager approval to confirm."
+msgstr ""
+"Status margin langsung: di atas target (hijau), dalam toleransi (kuning), di"
+" bawah ambang batas (merah). Pesanan merah memerlukan persetujuan manajer "
+"untuk dikonfirmasi."
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_search_logistics
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Logistics"
+msgstr "Logistik"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_charge_template
+msgid "Logistics Charge Template"
+msgstr "Templat Biaya Logistik"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_charge_template_line
+msgid "Logistics Charge Template Line"
+msgstr "Baris Templat Biaya Logistik"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_is_logistics
+msgid "Logistics Quotation"
+msgstr "Penawaran Logistik"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_pivot
+msgid "Logistics Quotation Analysis"
+msgstr "Analisis Penawaran Logistik"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_quotation_preflight_line
+msgid "Logistics Quotation Preflight Line"
+msgstr "Baris Prapemeriksaan Penawaran Logistik"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_quotation_preflight
+msgid "Logistics Quotation Preflight Wizard"
+msgstr "Wizard Prapemeriksaan Penawaran Logistik"
+
+#. module: eh_log_quotation
+#: model:ir.actions.act_window,name:eh_log_quotation.action_eh_log_sale_order_logistics
+msgid "Logistics Quotations"
+msgstr "Penawaran Logistik"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Logistics lines present"
+msgstr "Baris logistik ada"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid "Logistics quotation %s approved."
+msgstr "Penawaran logistik %s disetujui."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__main
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__main
+msgid "Main Carriage"
+msgstr "Pengangkutan Utama"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_kanban
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Margin"
+msgstr ""
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid "Margin %(pct).1f%% is below the company floor of %(floor).1f%%."
+msgstr ""
+"Margin %(pct).1f%% berada di bawah batas minimum perusahaan sebesar "
+"%(floor).1f%%."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_gross_margin_pct
+msgid ""
+"Margin / billable revenue, expressed as a percentage. Zero when there is no "
+"billable revenue."
+msgstr ""
+"Margin / pendapatan yang dapat ditagih, dinyatakan sebagai persentase. Nol "
+"jika tidak ada pendapatan yang dapat ditagih."
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_search_logistics
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Margin Below Floor"
+msgstr "Margin di Bawah Batas Minimum"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_margin_status
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_search_logistics
+msgid "Margin Status"
+msgstr "Status Margin"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Margin Warning"
+msgstr "Peringatan Margin"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid ""
+"Margin below the approval floor. Manager approval required before "
+"confirmation."
+msgstr ""
+"Margin di bawah batas minimum persetujuan. Persetujuan manajer diperlukan "
+"sebelum konfirmasi."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_is_logistics
+msgid ""
+"Marks this sale order as a logistics quotation. The logistics tab, guards, "
+"and downstream job creation hooks only fire when this is set. Auto-set when "
+"a charge template is applied or a logistics charge code is used on any line."
+msgstr ""
+"Menandai pesanan penjualan ini sebagai penawaran logistik. Tab logistik, "
+"penjaga, dan hook pembuatan pekerjaan lanjutan hanya aktif ketika ini "
+"disetel. Disetel otomatis ketika templat biaya diterapkan atau kode biaya "
+"logistik digunakan pada baris mana pun."
+
+#. module: eh_log_quotation
+#: model:ir.actions.act_window,name:eh_log_quotation.action_eh_log_quotation_mass_approve
+msgid "Mass-approve"
+msgstr "Setujui Massal"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_quotation_mass_approve
+msgid "Mass-approve Logistics Quotations"
+msgstr "Setujui Penawaran Logistik secara Massal"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_approve_form
+msgid "Mass-approve Quotations"
+msgstr "Setujui Penawaran secara Massal"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+msgid "Mass-approve complete"
+msgstr "Persetujuan massal selesai"
+
+#. module: eh_log_quotation
+#: model:ir.actions.act_window,name:eh_log_quotation.action_eh_log_quotation_mass_cancel
+msgid "Mass-cancel"
+msgstr "Batalkan massal"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_quotation_mass_cancel
+msgid "Mass-cancel Logistics Quotations"
+msgstr "Batalkan massal Penawaran Logistik"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_cancel_form
+msgid "Mass-cancel Quotations"
+msgstr "Batalkan massal Penawaran"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+msgid "Mass-cancel complete"
+msgstr "Pembatalan massal selesai"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_quotation_mass_send_review
+msgid "Mass-send Logistics Quotations for Review"
+msgstr "Kirim massal Penawaran Logistik untuk Ditinjau"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__message
+msgid "Message"
+msgstr "Pesan"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__mode
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_mode
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_search_logistics
+msgid "Mode"
+msgstr "Mod"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Mode is not set."
+msgstr "Mode belum diatur."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Mode: %s"
+msgstr ""
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__multimodal
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_mode__multimodal
+msgid "Multimodal"
+msgstr ""
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__name
+msgid "Name"
+msgstr "Nama"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "No action needed."
+msgstr "Tidak perlu tindakan."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "No credit limit set on this customer."
+msgstr "Tidak ada batas kredit yang diatur pada pelanggan ini."
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+msgid "Non-logistics product lines are always preserved."
+msgstr "Baris produk non-logistik selalu dipertahankan."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight__overall_status__not_applicable
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight_line__status__not_applicable
+msgid "Not Applicable"
+msgstr "Tidak berlaku"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_kyc_status__not_assessed
+msgid "Not Assessed"
+msgstr "Belum dinilai"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight__overall_status__ok
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight_line__status__ok
+msgid "OK"
+msgstr ""
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid ""
+"One or more checks are blocking. Resolve every blocker before attempting to "
+"confirm."
+msgstr ""
+"Satu atau beberapa pemeriksaan menghambat. Selesaikan setiap penghambat "
+"sebelum mencoba mengonfirmasi."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_approval_reasons
+msgid ""
+"One reason per line, surfaced on the form so the manager sees what they are "
+"approving."
+msgstr ""
+"Satu alasan per baris, ditampilkan pada formulir sehingga manajer melihat "
+"apa yang mereka setujui."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid ""
+"Open each line and pick a charge code. Apply Charge Template fills them in "
+"bulk."
+msgstr ""
+"Buka setiap baris dan pilih kode biaya. Terapkan Template Biaya mengisinya "
+"secara massal."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template__destination_country_id
+msgid ""
+"Optional destination filter. When set, the template is only suggested for "
+"quotations whose destination country matches."
+msgstr ""
+"Filter tujuan opsional. Bila diatur, templat hanya disarankan untuk "
+"penawaran yang negara tujuannya cocok."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_quotation_mass_approve__note
+msgid "Optional note posted to the chatter of every approved quotation."
+msgstr ""
+"Catatan opsional yang diposting ke chatter setiap penawaran yang disetujui."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template__origin_country_id
+msgid ""
+"Optional origin filter. When set, the template is only suggested for "
+"quotations whose origin country matches."
+msgstr ""
+"Filter asal opsional. Jika diatur, templat hanya disarankan untuk penawaran "
+"yang negara asalnya cocok."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template_line__description
+msgid ""
+"Optional override for the sale order line description. When empty, the "
+"charge code's name is used."
+msgstr ""
+"Penggantian opsional untuk deskripsi baris pesanan penjualan. Jika kosong, "
+"nama kode biaya digunakan."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__origin
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__origin
+msgid "Origin"
+msgstr "Asal"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__origin_country_id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_origin_country_id
+msgid "Origin Country"
+msgstr "Negara Asal"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_origin_location
+msgid "Origin Location"
+msgstr "Lokasi Tujuan"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid ""
+"Origin and destination countries match. Switch direction to Cross Trade if "
+"this is intentional, otherwise re-check the lane."
+msgstr ""
+"Negara asal dan tujuan sama. Ubah arah ke Cross Trade jika ini disengaja, "
+"jika tidak periksa kembali jalurnya."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Origin country is not set."
+msgstr "Negara asal belum diatur."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Origin: %s"
+msgstr "Asal: %s"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__other
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__other
+msgid "Other"
+msgstr "Lainnya"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Outstanding exposure exceeds the approved limit."
+msgstr "Eksposur yang belum diselesaikan melebihi batas yang disetujui."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__overall_status
+msgid "Overall"
+msgstr "Keseluruhan"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template_line__default_planned_cost
+msgid ""
+"Per-unit planned procurement cost. Carried into the sale order line so the "
+"margin guard works the moment the template is applied. Operators refine when"
+" they have actual vendor quotes."
+msgstr ""
+"Biaya pengadaan terencana per unit. Dibawa ke baris order penjualan sehingga"
+" penjaga margin bekerja saat template diterapkan. Operator menyempurnakan "
+"ketika sudah ada penawaran vendor aktual."
+
+#. module: eh_log_quotation
+#: model_terms:ir.actions.act_window,help:eh_log_quotation.action_eh_log_sale_order_logistics
+msgid ""
+"Pick a customer, set the mode and the lane, apply a\n"
+"                charge template, and the system will surface margin,\n"
+"                credit, and KYC posture before you confirm."
+msgstr ""
+"Pilih pelanggan, atur mode dan jalur, terapkan\n"
+"                templat biaya, dan sistem akan menampilkan margin,\n"
+"                kredit, dan postur KYC sebelum Anda mengonfirmasi."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Pick an Incoterm under Other Information."
+msgstr "Pilih Incoterm di bawah Informasi Lainnya."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Pick import, export, or cross-trade."
+msgstr "Pilih impor, ekspor, atau cross-trade."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template_apply__template_id
+msgid ""
+"Pick the template to apply. Templates that scope to specific companies are "
+"filtered to the current company."
+msgstr ""
+"Pilih templat yang akan diterapkan. Templat yang dibatasi untuk perusahaan "
+"tertentu difilter ke perusahaan saat ini."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Pick the transport mode on the Logistics tab."
+msgstr "Pilih mode transportasi pada tab Logistik."
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_graph
+msgid "Pipeline by State"
+msgstr "Pipeline berdasarkan Status"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Planned cost present on every billable line."
+msgstr "Biaya terencana ada pada setiap baris yang dapat ditagih."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_preflight_form
+msgid "Preflight Checklist"
+msgstr "Daftar Periksa Prapenerbangan"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_preflight_form
+msgid "Preflight:"
+msgstr ""
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__order_id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__order_id
+msgid "Quotation"
+msgstr "Penawaran"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+#, python-format
+msgid "Quotation %s pending review"
+msgstr "Penawaran %s menunggu peninjauan"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid "Quotation %s requires manager approval"
+msgstr "Penawaran %s memerlukan persetujuan manajer"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Quotation approved"
+msgstr "Penawaran disetujui"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid ""
+"Quotation approved by %(user)s. Reasons recorded at approval time:\n"
+"%(reasons)s"
+msgstr ""
+"Penawaran disetujui oleh %(user)s. Alasan yang dicatat saat persetujuan:\n"
+"%(reasons)s"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__order_ids
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__order_ids
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__order_ids
+#: model:ir.ui.menu,name:eh_log_quotation.menu_eh_log_quotations
+msgid "Quotations"
+msgstr "Penawaran"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_calendar
+msgid "Quotations by Validity"
+msgstr "Penawaran menurut Validitas"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__rail
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_mode__rail
+msgid "Rail"
+msgstr "Kereta api"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Reduce the quote, request a credit review, or take a security deposit."
+msgstr ""
+"Kurangi penawaran, minta tinjauan kredit, atau ambil deposit keamanan."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Refresh expiring documents."
+msgstr "Segarkan dokumen yang akan kedaluwarsa."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__replace_existing
+msgid "Replace Existing Charge Lines"
+msgstr "Ganti Baris Biaya yang Ada"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_requires_approval
+msgid "Requires Approval"
+msgstr "Memerlukan persetujuan"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+msgid "Review nudges sent"
+msgstr "Pengingat tinjauan terkirim"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__reviewer_id
+msgid "Reviewer"
+msgstr "Peninjau"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__road
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_mode__road
+msgid "Road"
+msgstr "Jalan darat"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Run Preflight"
+msgstr "Jalankan Preflight"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "SEA-FCL-AE-SA-20"
+msgstr ""
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_sale_order
+msgid "Sales Order"
+msgstr "Order Penjualan"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Baris Pesanan Penjualan"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__sea
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_mode__sea
+msgid "Sea"
+msgstr "Laut"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "Sea FCL Jebel Ali to Dammam, FCL 20'"
+msgstr "Laut FCL Jebel Ali ke Dammam, FCL 20'"
+
+#. module: eh_log_quotation
+#: model:eh.log.charge.template,name:eh_log_quotation.charge_template_sea_fcl_default
+msgid "Sea FCL: standard charge bundle"
+msgstr "Laut FCL: paket biaya standar"
+
+#. module: eh_log_quotation
+#: model:ir.actions.act_window,name:eh_log_quotation.action_eh_log_quotation_mass_send_review
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_send_review_form
+msgid "Send for Review"
+msgstr "Kirim untuk ditinjau"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__sequence
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__sequence
+msgid "Sequence"
+msgstr "Urutan"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Set the destination country on the Logistics tab."
+msgstr "Tetapkan negara tujuan pada tab Logistics."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Set the origin country on the Logistics tab."
+msgstr "Tetapkan negara asal pada tab Logistics."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid ""
+"Some checks raised warnings. The order can be confirmed but review the "
+"warnings first."
+msgstr ""
+"Beberapa pemeriksaan memunculkan peringatan. Pesanan dapat dikonfirmasi "
+"tetapi tinjau peringatan terlebih dahulu."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_destination_location
+msgid "Specific port, airport, or delivery point."
+msgstr "Pelabuhan, bandara, atau titik pengiriman tertentu."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_origin_location
+msgid ""
+"Specific port, airport, or pickup point. Free text at this layer; the "
+"freight forwarding module replaces with structured port and airport master "
+"data."
+msgstr ""
+"Pelabuhan, bandara, atau titik penjemputan tertentu. Teks bebas pada lapisan"
+" ini; modul freight forwarding menggantinya dengan data master pelabuhan dan"
+" bandara yang terstruktur."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template__code
+msgid ""
+"Stable short identifier (e.g. SEA-FCL-AE-SA-20). Used to recall the template"
+" by typed search rather than by scrolling the dropdown."
+msgstr ""
+"Pengidentifikasi pendek yang stabil (mis. SEA-FCL-AE-SA-20). Digunakan untuk"
+" memanggil templat melalui pencarian yang diketik daripada menggulir "
+"dropdown."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order_line__eh_log_charge_code_id
+msgid ""
+"Standardised charge code for this line. Drives the leg classification, the "
+"tax tag default, and whether the line is included in the margin computation."
+msgstr ""
+"Kode biaya terstandarisasi untuk baris ini. Menentukan klasifikasi kaki, "
+"default tag pajak, dan apakah baris disertakan dalam perhitungan margin."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template_line__charge_code_id
+msgid ""
+"Standardised charge code from the ERP Heritage catalogue. The Apply Template"
+" wizard creates a sale order line carrying this code so reports and the "
+"margin guard work."
+msgstr ""
+"Kode biaya terstandarisasi dari katalog ERP Heritage. Wizard Terapkan "
+"Templat membuat baris pesanan penjualan yang membawa kode ini agar laporan "
+"dan penjaga margin berfungsi."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__status
+msgid "Status"
+msgstr "Statu"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__hint
+msgid "Suggested Action"
+msgstr "Tindakan yang Disarankan"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_total_planned_cost
+msgid "Sum of planned cost across non-disbursement lines."
+msgstr "Jumlah biaya terencana pada baris nonpencairan."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_total_revenue_billable
+msgid ""
+"Sum of revenue across non-disbursement lines. Disbursements are excluded "
+"from margin computation."
+msgstr ""
+"Jumlah pendapatan pada baris nonpencairan. Pencairan dikecualikan dari "
+"perhitungan margin."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_credit_exposure
+msgid ""
+"Sum of the partner's currently outstanding receivables in the company "
+"currency. Recomputed on every read."
+msgstr ""
+"Jumlah piutang mitra yang saat ini belum lunas dalam mata uang perusahaan. "
+"Dihitung ulang pada setiap pembacaan."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__summary
+msgid "Summary"
+msgstr "Ringkasan"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__template_id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__template_id
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Template"
+msgstr "Templat"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "This is a logistics order"
+msgstr "Ini adalah pesanan logistik"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid ""
+"This quotation has logistics charge codes on its lines. Disabling the "
+"logistics flag will skip the credit / KYC / margin guards on confirmation."
+msgstr ""
+"Penawaran ini memiliki kode biaya logistik pada barisnya. Menonaktifkan flag"
+" logistik akan melewati penjaga kredit / KYC / margin saat konfirmasi."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_total_planned_cost
+msgid "Total Planned Cost"
+msgstr "Total Biaya Rencana"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Upload current KYC documents before confirming."
+msgstr "Unggah dokumen KYC terkini sebelum mengonfirmasi."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight__overall_status__warning
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight_line__status__warning
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_credit_status__warning
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_kyc_status__warning
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_margin_status__warning
+msgid "Warning"
+msgstr "Peringatan"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order_line__eh_log_is_disbursement
+msgid ""
+"When True, the line is treated as pass-through and excluded from gross "
+"margin computation."
+msgstr ""
+"Jika True, baris diperlakukan sebagai pass-through dan dikecualikan dari "
+"perhitungan margin kotor."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template_apply__replace_existing
+msgid ""
+"When checked, existing logistics charge lines (lines carrying a charge code)"
+" are removed before the template lines are appended. Non-logistics product "
+"lines are always preserved."
+msgstr ""
+"Jika dicentang, baris biaya logistik yang ada (baris yang membawa kode "
+"biaya) dihapus sebelum baris templat ditambahkan. Baris produk non-logistik "
+"selalu dipertahankan."
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__wizard_id
+msgid "Wizard"
+msgstr "Wisaya"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid ""
+"[EHL-APPROVAL-001] Only logistics managers can approve this quotation. Ask "
+"your manager to take action."
+msgstr ""
+"[EHL-APPROVAL-001] Hanya manajer logistik yang dapat menyetujui penawaran "
+"ini. Minta manajer Anda untuk mengambil tindakan."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid ""
+"[EHL-APPROVAL-002] This quotation does not currently require approval. The "
+"Approve action is only available when the margin, credit, or KYC guard "
+"surfaces a blocking reason."
+msgstr ""
+"[EHL-APPROVAL-002] Penawaran ini saat ini tidak memerlukan persetujuan. "
+"Tindakan Setujui hanya tersedia ketika pengaman margin, kredit, atau KYC "
+"menampilkan alasan pemblokiran."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid ""
+"[EHL-APPROVAL-003] Quotation %(name)s requires manager approval before confirmation. Reasons:\n"
+"%(reasons)s\n"
+"\n"
+"Use the Approve action to record the decision, then confirm again."
+msgstr ""
+"[EHL-APPROVAL-003] Penawaran %(name)s memerlukan persetujuan manajer sebelum konfirmasi. Alasan:\n"
+"%(reasons)s\n"
+"\n"
+"Gunakan tindakan Setujui untuk mencatat keputusan, lalu konfirmasi lagi."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+msgid "[EHL-APPROVAL-010] Only logistics managers may run mass-approve."
+msgstr ""
+"[EHL-APPROVAL-010] Hanya manajer logistik yang dapat menjalankan persetujuan"
+" massal."
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_charge_template_apply.py:0
+#, python-format
+msgid ""
+"[EHL-TEMPLATE-001] Template %(name)s has no lines. Add lines to the template"
+" first."
+msgstr ""
+"[EHL-TEMPLATE-001] Templat %(name)s tidak memiliki baris. Tambahkan baris ke"
+" templat terlebih dahulu."

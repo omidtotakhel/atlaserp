@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_eh_log_charge_template_user,eh.log.charge.template.user,model_eh_log_charge_template,eh_log_base.group_eh_log_user,1,0,0,0
+access_eh_log_charge_template_manager,eh.log.charge.template.manager,model_eh_log_charge_template,eh_log_base.group_eh_log_manager,1,1,1,1
+access_eh_log_charge_template_line_user,eh.log.charge.template.line.user,model_eh_log_charge_template_line,eh_log_base.group_eh_log_user,1,0,0,0
+access_eh_log_charge_template_line_manager,eh.log.charge.template.line.manager,model_eh_log_charge_template_line,eh_log_base.group_eh_log_manager,1,1,1,1
+access_eh_log_quotation_preflight_user,eh.log.quotation.preflight.user,model_eh_log_quotation_preflight,eh_log_base.group_eh_log_user,1,1,1,1
+access_eh_log_quotation_preflight_line_user,eh.log.quotation.preflight.line.user,model_eh_log_quotation_preflight_line,eh_log_base.group_eh_log_user,1,1,1,1
+access_eh_log_charge_template_apply_user,eh.log.charge.template.apply.user,model_eh_log_charge_template_apply,eh_log_base.group_eh_log_user,1,1,1,1
+access_eh_log_quotation_mass_approve,eh.log.quotation.mass.approve,model_eh_log_quotation_mass_approve,eh_log_base.group_eh_log_manager,1,1,1,1
+access_eh_log_quotation_mass_cancel,eh.log.quotation.mass.cancel,model_eh_log_quotation_mass_cancel,eh_log_base.group_eh_log_manager,1,1,1,1
+access_eh_log_quotation_mass_send_review,eh.log.quotation.mass.send.review,model_eh_log_quotation_mass_send_review,eh_log_base.group_eh_log_user,1,1,1,1

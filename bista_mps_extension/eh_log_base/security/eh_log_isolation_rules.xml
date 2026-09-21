@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Multi-company isolation rules for eh_log_base.
+
+    Every concrete model gets a global ir.rule scoping by company. The
+    rules use 'company_ids in company_ids' so a multi-company user
+    sees rows for any of their currently-selected companies.
+-->
+<odoo noupdate="0">
+    <data>
+
+        <record id="rule_eh_log_adapter_profile_company" model="ir.rule">
+            <field name="name">eh.log.adapter.profile: company isolation</field>
+            <field name="model_id" ref="model_eh_log_adapter_profile"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_adapter_message_company" model="ir.rule">
+            <field name="name">eh.log.adapter.message: company isolation</field>
+            <field name="model_id" ref="model_eh_log_adapter_message"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_event_company" model="ir.rule">
+            <field name="name">eh.log.event: company isolation</field>
+            <field name="model_id" ref="model_eh_log_event"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <!--
+            Master data (charge codes, document types) is shared
+            across companies by default. The rule allows a row with
+            no company assigned to be visible to all, and a row with
+            companies assigned to be visible only to those companies.
+        -->
+
+        <record id="rule_eh_log_charge_code_company" model="ir.rule">
+            <field name="name">eh.log.charge.code: company isolation</field>
+            <field name="model_id" ref="model_eh_log_charge_code"/>
+            <field name="domain_force">['|', ('company_ids', '=', False), ('company_ids', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

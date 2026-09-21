@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="0">
+    <data>
+
+        <!--
+            Charge templates: shared across companies when
+            company_ids is empty, scoped when set.
+        -->
+
+        <record id="rule_eh_log_charge_template_company" model="ir.rule">
+            <field name="name">eh.log.charge.template: company isolation</field>
+            <field name="model_id" ref="model_eh_log_charge_template"/>
+            <field name="domain_force">['|', ('company_ids', '=', False), ('company_ids', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

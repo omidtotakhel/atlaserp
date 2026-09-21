@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <!--
+            Logistics-flavoured paper formats. Same shape as the
+            accounting-suite paperformat in eh_account_base; ships
+            independently so a logistics-only install (no eh_account_*
+            modules) still has a branded report layout.
+
+            Two variants:
+            * Portrait for forms-style reports (job file cover, customs
+              declaration summary, transport order, disbursement
+              account).
+            * Landscape for tabular registers (cost sheet, milestone
+              ledger, profitability report, KPI register).
+
+            DPI 90 matches the accounting-suite format so the brand
+            line height and font metrics render identically across both
+            product lines on the same printer.
+        -->
+
+        <!--
+            Margins are dimensioned for the integrity-checked
+            footer (which spans roughly 12mm) plus breathing room
+            against the binding edge. The top margin leaves room
+            for the suite header band, header_spacing offsets the
+            body so headings do not touch the band.
+        -->
+
+        <record id="paperformat_eh_log_portrait" model="report.paperformat">
+            <field name="name">A4 Portrait (EH Logistics)</field>
+            <field name="default" eval="False"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">42</field>
+            <field name="margin_bottom">26</field>
+            <field name="margin_left">14</field>
+            <field name="margin_right">14</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">12</field>
+            <field name="disable_shrinking" eval="False"/>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="paperformat_eh_log_landscape" model="report.paperformat">
+            <field name="name">A4 Landscape (EH Logistics)</field>
+            <field name="default" eval="False"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">36</field>
+            <field name="margin_bottom">24</field>
+            <field name="margin_left">12</field>
+            <field name="margin_right">12</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">10</field>
+            <field name="disable_shrinking" eval="False"/>
+            <field name="dpi">90</field>
+        </record>
+
+    </data>
+</odoo>
