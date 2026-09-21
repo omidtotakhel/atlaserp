@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <!--
+            Two starter charge templates so a fresh install has a
+            visible example of the pattern. Operators duplicate and
+            edit for their lanes; the seeds stay as a reference.
+
+            Mode is left as 'any' on the seeds to avoid implying
+            country-specific defaults at the engine layer; country
+            localisation packs ship lane-specific seeds.
+        -->
+
+        <record id="charge_template_sea_fcl_default" model="eh.log.charge.template">
+            <field name="code">SEA-FCL-DEFAULT</field>
+            <field name="name">Sea FCL: standard charge bundle</field>
+            <field name="mode">sea</field>
+            <field name="direction">any</field>
+        </record>
+
+        <record id="charge_template_sea_fcl_default_l1" model="eh.log.charge.template.line">
+            <field name="template_id" ref="charge_template_sea_fcl_default"/>
+            <field name="sequence">10</field>
+            <field name="charge_code_id" ref="eh_log_base.charge_code_othc"/>
+            <field name="leg">origin</field>
+            <field name="default_quantity">1</field>
+        </record>
+
+        <record id="charge_template_sea_fcl_default_l2" model="eh.log.charge.template.line">
+            <field name="template_id" ref="charge_template_sea_fcl_default"/>
+            <field name="sequence">20</field>
+            <field name="charge_code_id" ref="eh_log_base.charge_code_ofr"/>
+            <field name="leg">main</field>
+            <field name="default_quantity">1</field>
+        </record>
+
+        <record id="charge_template_sea_fcl_default_l3" model="eh.log.charge.template.line">
+            <field name="template_id" ref="charge_template_sea_fcl_default"/>
+            <field name="sequence">30</field>
+            <field name="charge_code_id" ref="eh_log_base.charge_code_baf"/>
+            <field name="leg">main</field>
+            <field name="default_quantity">1</field>
+        </record>
+
+        <record id="charge_template_sea_fcl_default_l4" model="eh.log.charge.template.line">
+            <field name="template_id" ref="charge_template_sea_fcl_default"/>
+            <field name="sequence">40</field>
+            <field name="charge_code_id" ref="eh_log_base.charge_code_isps"/>
+            <field name="leg">main</field>
+            <field name="default_quantity">1</field>
+        </record>
+
+        <record id="charge_template_sea_fcl_default_l5" model="eh.log.charge.template.line">
+            <field name="template_id" ref="charge_template_sea_fcl_default"/>
+            <field name="sequence">50</field>
+            <field name="charge_code_id" ref="eh_log_base.charge_code_dthc"/>
+            <field name="leg">destination</field>
+            <field name="default_quantity">1</field>
+        </record>
+
+        <record id="charge_template_sea_fcl_default_l6" model="eh.log.charge.template.line">
+            <field name="template_id" ref="charge_template_sea_fcl_default"/>
+            <field name="sequence">60</field>
+            <field name="charge_code_id" ref="eh_log_base.charge_code_delivery"/>
+            <field name="leg">destination</field>
+            <field name="default_quantity">1</field>
+        </record>
+
+        <record id="charge_template_air_default" model="eh.log.charge.template">
+            <field name="code">AIR-DEFAULT</field>
+            <field name="name">Air Freight: standard charge bundle</field>
+            <field name="mode">air</field>
+            <field name="direction">any</field>
+        </record>
+
+        <record id="charge_template_air_default_l1" model="eh.log.charge.template.line">
+            <field name="template_id" ref="charge_template_air_default"/>
+            <field name="sequence">10</field>
+            <field name="charge_code_id" ref="eh_log_base.charge_code_othc_air"/>
+            <field name="leg">origin</field>
+            <field name="default_quantity">1</field>
+        </record>
+
+        <record id="charge_template_air_default_l2" model="eh.log.charge.template.line">
+            <field name="template_id" ref="charge_template_air_default"/>
+            <field name="sequence">20</field>
+            <field name="charge_code_id" ref="eh_log_base.charge_code_afr"/>
+            <field name="leg">main</field>
+            <field name="default_quantity">1</field>
+        </record>
+
+        <record id="charge_template_air_default_l3" model="eh.log.charge.template.line">
+            <field name="template_id" ref="charge_template_air_default"/>
+            <field name="sequence">30</field>
+            <field name="charge_code_id" ref="eh_log_base.charge_code_fsc"/>
+            <field name="leg">main</field>
+            <field name="default_quantity">1</field>
+        </record>
+
+        <record id="charge_template_air_default_l4" model="eh.log.charge.template.line">
+            <field name="template_id" ref="charge_template_air_default"/>
+            <field name="sequence">40</field>
+            <field name="charge_code_id" ref="eh_log_base.charge_code_dthc_air"/>
+            <field name="leg">destination</field>
+            <field name="default_quantity">1</field>
+        </record>
+
+        <record id="charge_template_air_default_l5" model="eh.log.charge.template.line">
+            <field name="template_id" ref="charge_template_air_default"/>
+            <field name="sequence">50</field>
+            <field name="charge_code_id" ref="eh_log_base.charge_code_delivery"/>
+            <field name="leg">destination</field>
+            <field name="default_quantity">1</field>
+        </record>
+
+    </data>
+</odoo>

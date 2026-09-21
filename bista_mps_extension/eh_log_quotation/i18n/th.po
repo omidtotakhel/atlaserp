@@ -1,0 +1,1734 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_quotation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 10:16+0000\n"
+"PO-Revision-Date: 2026-07-01 10:16+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+#, python-format
+msgid "%(count)d quotation(s) approved."
+msgstr "อนุมัติใบเสนอราคา %(count)d รายการ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+#, python-format
+msgid "%(count)d quotation(s) assigned to %(user)s."
+msgstr "มอบหมายใบเสนอราคา %(count)d รายการให้ %(user)s"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+#, python-format
+msgid "%(count)d quotation(s) cancelled."
+msgstr "ยกเลิกใบเสนอราคา %(count)d รายการ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid "%(name)s approved. You can now confirm the quotation."
+msgstr "%(name)s ได้รับการอนุมัติแล้ว ตอนนี้คุณสามารถยืนยันใบเสนอราคาได้"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "%d billable line(s) without a cost."
+msgstr "%d รายการที่เรียกเก็บเงินได้โดยไม่มีต้นทุน"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "%d line(s) missing a charge code."
+msgstr "%d รายการไม่มีรหัสค่าบริการ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/eh_log_charge_template_line.py:0
+msgid "(no charge code)"
+msgstr "(ไม่มีรหัสค่าบริการ)"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "(none)"
+msgstr "(ไม่มี)"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid ""
+"<span class=\"badge text-bg-info\" style=\"font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;\">\n"
+"                                <i class=\"fa fa-ship me-1\"/> Logistics\n"
+"                            </span>\n"
+"                            <span class=\"badge text-bg-warning\" style=\"font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;\" attrs=\"{'invisible': ['|', ('eh_log_requires_approval', '=', False), ('eh_log_approved_by_id', '!=', False)]}\">\n"
+"                                <i class=\"fa fa-exclamation-circle me-1\"/> Approval required\n"
+"                            </span>\n"
+"                            <span class=\"badge text-bg-danger\" style=\"font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;\" attrs=\"{'invisible': [('eh_log_credit_status', '!=', 'blocked')]}\">\n"
+"                                <i class=\"fa fa-ban me-1\"/> Credit blocked\n"
+"                            </span>\n"
+"                            <span class=\"badge text-bg-danger\" style=\"font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;\" attrs=\"{'invisible': [('eh_log_kyc_status', '!=', 'expired')]}\">\n"
+"                                <i class=\"fa fa-id-card-o me-1\"/> KYC expired\n"
+"                            </span>\n"
+"                            <span class=\"badge text-bg-danger\" style=\"font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;\" attrs=\"{'invisible': [('eh_log_margin_status', '!=', 'below_floor')]}\">\n"
+"                                <i class=\"fa fa-arrow-down me-1\"/> Margin below floor\n"
+"                            </span>"
+msgstr ""
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+msgid "<strong>Apply behaviour</strong>"
+msgstr "<strong>พฤติกรรมการนำไปใช้</strong>"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "A manager must use the Approve action."
+msgstr "ผู้จัดการต้องใช้การดำเนินการอนุมัติ"
+
+#. module: eh_log_quotation
+#: model_terms:ir.actions.act_window,help:eh_log_quotation.action_eh_log_charge_template
+msgid ""
+"A template carries the charge code, leg classification,\n"
+"                    default quantity, and default unit price. Apply it to a\n"
+"                    quotation in one click and the lines drop in."
+msgstr ""
+"เทมเพลตจะมีรหัสค่าใช้จ่าย การจำแนกช่วงการเดินทาง\n"
+"                    จำนวนเริ่มต้น และราคาต่อหน่วยเริ่มต้น นำไปใช้กับ\n"
+"                    ใบเสนอราคาด้วยคลิกเดียว แล้วบรรทัดต่างๆ จะถูกเพิ่มเข้าไป"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__active
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_search
+msgid "Active"
+msgstr "เปิดใช้งาน"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__air
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_mode__air
+msgid "Air"
+msgstr "ทางอากาศ"
+
+#. module: eh_log_quotation
+#: model:eh.log.charge.template,name:eh_log_quotation.charge_template_air_default
+msgid "Air Freight: standard charge bundle"
+msgstr "การขนส่งสินค้าทางอากาศ: ชุดค่าธรรมเนียมมาตรฐาน"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "All preflight checks passed. The order is ready to confirm."
+msgstr "การตรวจสอบเบื้องต้นทั้งหมดผ่านแล้ว คำสั่งพร้อมสำหรับการยืนยัน"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__direction__any
+msgid "Any"
+msgstr "ใด ๆ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__any
+msgid "Any Mode"
+msgstr "โหมดใดก็ได้"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+msgid "Apply"
+msgstr "นำไปใช้"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Apply Charge Template"
+msgstr "ใช้เทมเพลตค่าธรรมเนียม"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_charge_template_apply
+msgid "Apply Charge Template Wizard"
+msgstr "ตัวช่วยใช้เทมเพลตค่าธรรมเนียม"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Approval"
+msgstr "การอนุมัติ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__note
+msgid "Approval Note"
+msgstr "หมายเหตุการอนุมัติ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_approval_reasons
+msgid "Approval Reasons"
+msgstr "เหตุผลการอนุมัติ"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_kanban
+msgid "Approval Required"
+msgstr "ต้องมีการอนุมัติ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Approval not currently required."
+msgstr "ปัจจุบันยังไม่จำเป็นต้องมีการอนุมัติ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Approval required and not yet stamped."
+msgstr "ต้องมีการอนุมัติและยังไม่ได้ประทับตรา"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Approve"
+msgstr "อนุมัติ"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_approve_form
+msgid "Approve All"
+msgstr "อนุมัติทั้งหมด"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_approved_at
+msgid "Approved At"
+msgstr "อนุมัติเมื่อ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_approved_by_id
+msgid "Approved By"
+msgstr "อนุมัติโดย"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Approved by %s."
+msgstr "อนุมัติโดย %s"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_search_logistics
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Awaiting Approval"
+msgstr "รอการอนุมัติ"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_cancel_form
+msgid "Back"
+msgstr "กลับ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_margin_status__below_floor
+msgid "Below Floor"
+msgstr "ต่ำกว่าขั้นต่ำ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid ""
+"Below the warning threshold but above the approval floor. Consider raising "
+"selected charges or trimming costs."
+msgstr ""
+"ต่ำกว่าเกณฑ์เตือนแต่สูงกว่าขั้นต่ำในการอนุมัติ "
+"พิจารณาเพิ่มค่าธรรมเนียมที่เลือกไว้หรือลดต้นทุน"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_total_revenue_billable
+msgid "Billable Revenue"
+msgstr "รายได้ที่เรียกเก็บเงินได้"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight__overall_status__blocked
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight_line__status__blocked
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_credit_status__blocked
+msgid "Blocked"
+msgstr "บล็อก"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_approve_form
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_send_review_form
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_cancel_form
+msgid "Cancel All"
+msgstr "ยกเลิกทั้งหมด"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__reason
+msgid "Cancellation Reason"
+msgstr "เหตุผลในการยกเลิก"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+#, python-format
+msgid "Cancelled (mass action). Reason: %(reason)s"
+msgstr "ยกเลิกแล้ว (การดำเนินการจำนวนมาก) เหตุผล: %(reason)s"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid ""
+"Cannot confirm %(name)s for %(partner)s. Outstanding exposure of "
+"%(exposure)s exceeds the approved credit limit. Reduce the quotation, "
+"request credit limit review, or take a security deposit."
+msgstr ""
+"ไม่สามารถยืนยัน %(name)s สำหรับ %(partner)s ได้ ยอดความเสี่ยงคงค้าง "
+"%(exposure)s เกินวงเงินเครดิตที่อนุมัติ กรุณาลดใบเสนอราคา "
+"ขอทบทวนวงเงินเครดิต หรือรับเงินมัดจำประกัน"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid ""
+"Cannot confirm %(name)s. Customer KYC for %(partner)s has expired documents."
+" Refresh the KYC documents or override with manager approval first."
+msgstr ""
+"ไม่สามารถยืนยัน %(name)s ได้ KYC ของลูกค้า %(partner)s มีเอกสารที่หมดอายุ "
+"กรุณาอัปเดตเอกสาร KYC หรือข้ามด้วยการอนุมัติจากผู้จัดการก่อน"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__charge_code_id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order_line__eh_log_charge_code_id
+msgid "Charge Code"
+msgstr "รหัสค่าใช้จ่าย"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "Charge Template"
+msgstr "เทมเพลตค่าใช้จ่าย"
+
+#. module: eh_log_quotation
+#: model:ir.actions.act_window,name:eh_log_quotation.action_eh_log_charge_template
+#: model:ir.ui.menu,name:eh_log_quotation.menu_eh_log_charge_templates
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_list
+msgid "Charge Templates"
+msgstr "เทมเพลตค่าใช้จ่าย"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_charge_template_apply.py:0
+#, python-format
+msgid ""
+"Charge template <strong>%(name)s</strong> applied: %(count)s line(s) added."
+msgstr ""
+"ใช้เทมเพลตค่าใช้จ่าย <strong>%(name)s</strong> แล้ว: เพิ่ม %(count)s บรรทัด"
+
+#. module: eh_log_quotation
+#: model:ir.model.constraint,message:eh_log_quotation.constraint_eh_log_charge_template_code_unique
+msgid "Charge template code must be unique."
+msgstr "รหัสเทมเพลตค่าใช้จ่ายต้องไม่ซ้ำกัน"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__check
+msgid "Check"
+msgstr "ตรวจสอบ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__line_ids
+msgid "Checks"
+msgstr "ตรวจสอบ"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_preflight_form
+msgid "Close"
+msgstr "ปิด"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__code
+msgid "Code"
+msgstr "โค้ด"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__company_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "Companies"
+msgstr "บริษัท"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__allowed_company_id
+msgid "Company"
+msgstr "บริษัท"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_requires_approval
+msgid ""
+"Computed from margin status and any other configured trigger. When True, "
+"confirmation is gated until a manager approves."
+msgstr ""
+"คำนวณจากสถานะกำไรขั้นต้นและทริกเกอร์อื่นที่กำหนดค่าไว้ เมื่อเป็น True "
+"การยืนยันจะถูกระงับจนกว่าผู้จัดการจะอนุมัติ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Confirm with the credit controller before promising delivery."
+msgstr "ยืนยันกับผู้ควบคุมสินเชื่อก่อนที่จะรับปากเรื่องการจัดส่ง"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__courier
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_mode__courier
+msgid "Courier or Express"
+msgstr "พัสดุด่วนหรือเอ็กซ์เพรส"
+
+#. module: eh_log_quotation
+#: model_terms:ir.actions.act_window,help:eh_log_quotation.action_eh_log_sale_order_logistics
+msgid "Create your first logistics quotation"
+msgstr "สร้างใบเสนอราคาโลจิสติกส์แรกของคุณ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__create_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__create_uid
+msgid "Created by"
+msgstr "สร้างโดย"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__create_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__create_date
+msgid "Created on"
+msgstr "สร้างเมื่อ"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_kanban
+msgid "Credit Blocked"
+msgstr "เครดิตถูกบล็อก"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_credit_message
+msgid "Credit Message"
+msgstr "ข้อความเครดิต"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_credit_status
+msgid "Credit Status"
+msgstr "สถานะเครดิต"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Credit and KYC"
+msgstr "เครดิตและ KYC"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Credit healthy."
+msgstr "เครดิตอยู่ในเกณฑ์ดี"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__direction__cross_trade
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_direction__cross_trade
+msgid "Cross Trade"
+msgstr "การค้าข้าม"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Cross-trade air"
+msgstr "การขนส่งทางอากาศแบบข้ามประเทศ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid ""
+"Cross-trade air bookings require a forwarder presence in both origin and "
+"destination countries; verify before quoting."
+msgstr ""
+"การจองขนส่งทางอากาศแบบ cross-trade "
+"ต้องมีตัวแทนขนส่งอยู่ทั้งในประเทศต้นทางและปลายทาง โปรดตรวจสอบก่อนเสนอราคา"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_credit_exposure
+msgid "Customer Exposure"
+msgstr "ความเสี่ยงต่อลูกค้า"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Customer KYC documents have expired; refresh before confirming."
+msgstr "เอกสาร KYC ของลูกค้าหมดอายุแล้ว โปรดอัปเดตก่อนยืนยัน"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Customer KYC expired"
+msgstr "KYC ของลูกค้าหมดอายุ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Customer KYC is expired."
+msgstr "KYC ของลูกค้าหมดอายุแล้ว"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_kyc_status
+msgid ""
+"Customer KYC status: green (current), amber (renewal due), red (expired or "
+"missing). Red blocks confirmation."
+msgstr ""
+"สถานะ KYC ของลูกค้า: เขียว (ปัจจุบัน), เหลืองอำพัน (ถึงกำหนดต่ออายุ), แดง "
+"(หมดอายุหรือขาดหาย) สีแดงจะบล็อกการยืนยัน"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Customer credit blocked"
+msgstr "เครดิตลูกค้าถูกบล็อก"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Customer credit exposure is in the warning band."
+msgstr "ความเสี่ยงด้านเครดิตของลูกค้าอยู่ในช่วงเตือน"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__customs
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__customs
+msgid "Customs"
+msgstr "ศุลกากร"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__deadline
+msgid "Deadline"
+msgstr "วันครบกำหนด"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__default_currency_id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__currency_id
+msgid "Default Currency"
+msgstr "สกุลเงินเริ่มต้น"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__default_planned_cost
+msgid "Default Planned Cost"
+msgstr "ต้นทุนที่วางแผนไว้เริ่มต้น"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__default_quantity
+msgid "Default Quantity"
+msgstr "จำนวนเริ่มต้น"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__default_unit_price
+msgid "Default Unit Price"
+msgstr "ราคาต่อหน่วยเริ่มต้น"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "Defaults"
+msgstr "ค่าเริ่มต้น"
+
+#. module: eh_log_quotation
+#: model_terms:ir.actions.act_window,help:eh_log_quotation.action_eh_log_charge_template
+msgid "Define re-usable charge bundles for your common lanes"
+msgstr "กำหนดชุดค่าธรรมเนียมที่นำกลับมาใช้ใหม่ได้สำหรับเส้นทางทั่วไปของคุณ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__description
+msgid "Description"
+msgstr "คำอธิบาย"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__description
+msgid "Description Override"
+msgstr "การแทนที่คำอธิบาย"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__destination
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__destination
+msgid "Destination"
+msgstr "ปลายทาง"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__destination_country_id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_destination_country_id
+msgid "Destination Country"
+msgstr "ประเทศปลายทาง"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_destination_location
+msgid "Destination Location"
+msgstr "ตำแหน่งปลายทาง"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Destination country is not set."
+msgstr "ยังไม่ได้ตั้งค่าประเทศปลายทาง"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Destination: %s"
+msgstr "ปลายทาง: %s"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "Detail"
+msgstr "รายละเอียด"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__direction
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_direction
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_search_logistics
+msgid "Direction"
+msgstr "ทิศทาง"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Direction is not set."
+msgstr "ยังไม่ได้ตั้งค่าทิศทาง"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Direction: %s"
+msgstr "ทิศทาง: %s"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order_line__eh_log_is_disbursement
+msgid "Disbursement"
+msgstr "การเบิกจ่าย"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__display_name
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__display_name
+msgid "Display Name"
+msgstr "แสดงชื่อ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Domestic lane detected"
+msgstr "ตรวจพบเส้นทางภายในประเทศ"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+msgid ""
+"Each template line becomes a sale order line carrying its charge code and "
+"leg."
+msgstr ""
+"แต่ละบรรทัดของเทมเพลตจะกลายเป็นบรรทัดใบสั่งขายที่มีรหัสค่าใช้จ่ายและช่วงการขนส่งของตน"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid ""
+"Enter the cost (Cost field) so the margin guard works against realistic "
+"data."
+msgstr ""
+"กรอกต้นทุน (ฟิลด์ Cost) "
+"เพื่อให้การป้องกันส่วนต่างกำไรทำงานกับข้อมูลที่สมจริง"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Every line carries a charge code."
+msgstr "แต่ละบรรทัดมีรหัสค่าธรรมเนียม"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+msgid ""
+"Existing logistics charge lines are removed first only when \"Replace "
+"Existing\" is checked."
+msgstr ""
+"รายการค่าใช้จ่ายด้านโลจิสติกส์ที่มีอยู่จะถูกลบออกก่อนเฉพาะเมื่อเลือก "
+"\"แทนที่รายการที่มีอยู่\" เท่านั้น"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_kyc_status__expired
+msgid "Expired"
+msgstr "หมดอายุ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__direction__export
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_direction__export
+msgid "Export"
+msgstr "ส่งออก"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid "Exposure %(ratio).1f%% of approved limit (warning at %(warn).1f%%)."
+msgstr "ความเสี่ยง %(ratio).1f%% ของวงเงินที่อนุมัติ (เตือนที่ %(warn).1f%%)"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid "Exposure %(ratio).1f%% of approved limit."
+msgstr "ความเสี่ยง %(ratio).1f%% ของวงเงินที่อนุมัติ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_gross_margin
+msgid "Gross Margin"
+msgstr "อัตรากำไรขั้นต้น"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_gross_margin_pct
+msgid "Gross Margin (%)"
+msgstr "อัตรากำไรขั้นต้น (%)"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Gross margin %(pct).1f%% on revenue %(rev)s."
+msgstr "อัตรากำไรขั้นต้น %(pct).1f%% จากรายได้ %(rev)s"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_search
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Group by Direction"
+msgstr "จัดกลุ่มตามทิศทาง"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Group by Margin Status"
+msgstr "จัดกลุ่มตามสถานะมาร์จิน"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_search
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Group by Mode"
+msgstr "จัดกลุ่มตามโหมด"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_credit_status__ok
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_kyc_status__ok
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_margin_status__above_warning
+msgid "Healthy"
+msgstr "สุขภาพดี"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__id
+msgid "ID"
+msgstr "ไอดี"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__direction__import
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_direction__import
+msgid "Import"
+msgstr "นำเข้า"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Incoterm is not set."
+msgstr "ยังไม่ได้ตั้งค่า Incoterm"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Incoterm: %s"
+msgstr ""
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__inland
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__inland
+msgid "Inland"
+msgstr "ภายในประเทศ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Install the Logistics KYC module to enable structured KYC tracking."
+msgstr ""
+"ติดตั้งโมดูล KYC ด้านโลจิสติกส์เพื่อเปิดใช้งานการติดตาม KYC แบบมีโครงสร้าง"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__insurance
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__insurance
+msgid "Insurance"
+msgstr "ประกันภัย"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_kanban
+msgid "KYC Expired"
+msgstr "KYC หมดอายุ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_kyc_message
+msgid "KYC Message"
+msgstr "ข้อความ KYC"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_kyc_status
+msgid "KYC Status"
+msgstr "สถานะ KYC"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "KYC current."
+msgstr "KYC เป็นปัจจุบัน"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "KYC not assessed."
+msgstr "ยังไม่ได้ประเมิน KYC"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid ""
+"KYC not assessed. Install the Logistics KYC module to track document expiry "
+"against this customer."
+msgstr ""
+"ยังไม่ได้ประเมิน KYC ติดตั้งโมดูล Logistics KYC "
+"เพื่อติดตามการหมดอายุของเอกสารสำหรับลูกค้ารายนี้"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Lane"
+msgstr "เส้นทาง"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_charge_template_id
+msgid ""
+"Lane template to apply. Selecting one populates the order lines with the "
+"template's charge codes, default quantities, and unit prices."
+msgstr ""
+"เทมเพลตเส้นทางที่จะนำไปใช้ "
+"การเลือกหนึ่งรายการจะเติมรายการคำสั่งซื้อด้วยรหัสค่าธรรมเนียม จำนวนเริ่มต้น "
+"และราคาต่อหน่วยของเทมเพลต"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_charge_template_id
+msgid "Last Applied Template"
+msgstr "เทมเพลตที่ใช้ล่าสุด"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight____last_update
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__write_uid
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__write_uid
+msgid "Last Updated by"
+msgstr "อัปเดตครั้งล่าสุดโดย"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__write_date
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__write_date
+msgid "Last Updated on"
+msgstr "อัปเดตครั้งล่าสุดเมื่อ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template__company_ids
+msgid "Leave empty to share across all companies."
+msgstr "เว้นว่างไว้เพื่อแชร์กับทุกบริษัท"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__leg
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order_line__eh_log_leg
+msgid "Leg"
+msgstr "ช่วงการเดินทาง"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__line_count
+msgid "Line Count"
+msgstr "รายการเคลื่อนย้าย"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__line_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "Lines"
+msgstr "รายการ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__line_count
+msgid "Lines in Template"
+msgstr "บรรทัดในเทมเพลต"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_credit_status
+msgid ""
+"Live customer credit status: green (OK), amber (within tolerance), red (over"
+" limit). Confirming a red order requires manager approval."
+msgstr ""
+"สถานะเครดิตลูกค้าแบบเรียลไทม์: เขียว (ปกติ), เหลือง "
+"(อยู่ในเกณฑ์ที่ยอมรับได้), แดง (เกินวงเงิน) "
+"การยืนยันคำสั่งซื้อสีแดงต้องได้รับอนุมัติจากผู้จัดการ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_margin_status
+msgid ""
+"Live margin status: above target (green), within tolerance (amber), below "
+"threshold (red). Red orders require manager approval to confirm."
+msgstr ""
+"สถานะมาร์จินแบบเรียลไทม์: สูงกว่าเป้าหมาย (เขียว), อยู่ในเกณฑ์ที่ยอมรับได้ "
+"(เหลือง), ต่ำกว่าเกณฑ์ (แดง) "
+"คำสั่งซื้อสีแดงต้องได้รับอนุมัติจากผู้จัดการจึงจะยืนยันได้"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_search_logistics
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Logistics"
+msgstr "โลจิสติกส์"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_charge_template
+msgid "Logistics Charge Template"
+msgstr "เทมเพลตค่าธรรมเนียมโลจิสติกส์"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_charge_template_line
+msgid "Logistics Charge Template Line"
+msgstr "บรรทัดเทมเพลตค่าธรรมเนียมโลจิสติกส์"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_is_logistics
+msgid "Logistics Quotation"
+msgstr "ใบเสนอราคาโลจิสติกส์"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_pivot
+msgid "Logistics Quotation Analysis"
+msgstr "การวิเคราะห์ใบเสนอราคาโลจิสติกส์"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_quotation_preflight_line
+msgid "Logistics Quotation Preflight Line"
+msgstr "บรรทัดตรวจสอบก่อนใบเสนอราคาโลจิสติกส์"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_quotation_preflight
+msgid "Logistics Quotation Preflight Wizard"
+msgstr "ตัวช่วยตรวจสอบก่อนใบเสนอราคาโลจิสติกส์"
+
+#. module: eh_log_quotation
+#: model:ir.actions.act_window,name:eh_log_quotation.action_eh_log_sale_order_logistics
+msgid "Logistics Quotations"
+msgstr "ใบเสนอราคาโลจิสติกส์"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Logistics lines present"
+msgstr "มีบรรทัดโลจิสติกส์"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid "Logistics quotation %s approved."
+msgstr "อนุมัติใบเสนอราคาโลจิสติกส์ %s แล้ว"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__main
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__main
+msgid "Main Carriage"
+msgstr "การขนส่งหลัก"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_kanban
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Margin"
+msgstr "กำไร"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid "Margin %(pct).1f%% is below the company floor of %(floor).1f%%."
+msgstr "อัตรากำไร %(pct).1f%% ต่ำกว่าเกณฑ์ขั้นต่ำของบริษัทที่ %(floor).1f%%"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_gross_margin_pct
+msgid ""
+"Margin / billable revenue, expressed as a percentage. Zero when there is no "
+"billable revenue."
+msgstr ""
+"อัตรากำไร / รายได้ที่เรียกเก็บได้ แสดงเป็นเปอร์เซ็นต์ "
+"เป็นศูนย์เมื่อไม่มีรายได้ที่เรียกเก็บได้"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_search_logistics
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Margin Below Floor"
+msgstr "อัตรากำไรต่ำกว่าเกณฑ์ขั้นต่ำ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_margin_status
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_search_logistics
+msgid "Margin Status"
+msgstr "สถานะอัตรากำไร"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_search_eh_log
+msgid "Margin Warning"
+msgstr "คำเตือนอัตรากำไร"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid ""
+"Margin below the approval floor. Manager approval required before "
+"confirmation."
+msgstr ""
+"อัตรากำไรต่ำกว่าเกณฑ์ขั้นต่ำสำหรับการอนุมัติ "
+"ต้องได้รับการอนุมัติจากผู้จัดการก่อนยืนยัน"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_is_logistics
+msgid ""
+"Marks this sale order as a logistics quotation. The logistics tab, guards, "
+"and downstream job creation hooks only fire when this is set. Auto-set when "
+"a charge template is applied or a logistics charge code is used on any line."
+msgstr ""
+"ทำเครื่องหมายใบสั่งขายนี้ว่าเป็นใบเสนอราคาโลจิสติกส์ แท็บโลจิสติกส์ "
+"การป้องกัน และฮุกการสร้างงานในขั้นถัดไปจะทำงานเฉพาะเมื่อตั้งค่านี้เท่านั้น "
+"ตั้งค่าอัตโนมัติเมื่อมีการใช้เทมเพลตค่าบริการหรือใช้รหัสค่าบริการโลจิสติกส์ในบรรทัดใดก็ตาม"
+
+#. module: eh_log_quotation
+#: model:ir.actions.act_window,name:eh_log_quotation.action_eh_log_quotation_mass_approve
+msgid "Mass-approve"
+msgstr "อนุมัติจำนวนมาก"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_quotation_mass_approve
+msgid "Mass-approve Logistics Quotations"
+msgstr "อนุมัติใบเสนอราคาโลจิสติกส์จำนวนมาก"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_approve_form
+msgid "Mass-approve Quotations"
+msgstr "อนุมัติใบเสนอราคาจำนวนมาก"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+msgid "Mass-approve complete"
+msgstr "การอนุมัติจำนวนมากเสร็จสมบูรณ์"
+
+#. module: eh_log_quotation
+#: model:ir.actions.act_window,name:eh_log_quotation.action_eh_log_quotation_mass_cancel
+msgid "Mass-cancel"
+msgstr "ยกเลิกจำนวนมาก"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_quotation_mass_cancel
+msgid "Mass-cancel Logistics Quotations"
+msgstr "ยกเลิกใบเสนอราคาโลจิสติกส์จำนวนมาก"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_cancel_form
+msgid "Mass-cancel Quotations"
+msgstr "ยกเลิกใบเสนอราคาจำนวนมาก"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+msgid "Mass-cancel complete"
+msgstr "ยกเลิกจำนวนมากเสร็จสมบูรณ์"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_eh_log_quotation_mass_send_review
+msgid "Mass-send Logistics Quotations for Review"
+msgstr "ส่งใบเสนอราคาโลจิสติกส์เพื่อตรวจสอบจำนวนมาก"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__message
+msgid "Message"
+msgstr "ข้อความ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__mode
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_mode
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_search_logistics
+msgid "Mode"
+msgstr "โหมด"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Mode is not set."
+msgstr "ยังไม่ได้ตั้งค่าโหมด"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Mode: %s"
+msgstr "โหมด: %s"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__multimodal
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_mode__multimodal
+msgid "Multimodal"
+msgstr "มัลติโมดัล"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__name
+msgid "Name"
+msgstr "ชื่อ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "No action needed."
+msgstr "ไม่ต้องดำเนินการใด ๆ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "No credit limit set on this customer."
+msgstr "ยังไม่ได้ตั้งวงเงินเครดิตสำหรับลูกค้ารายนี้"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_apply_form
+msgid "Non-logistics product lines are always preserved."
+msgstr "รายการสินค้าที่ไม่ใช่โลจิสติกส์จะถูกเก็บรักษาไว้เสมอ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight__overall_status__not_applicable
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight_line__status__not_applicable
+msgid "Not Applicable"
+msgstr "ไม่เกี่ยวข้อง"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_kyc_status__not_assessed
+msgid "Not Assessed"
+msgstr "ยังไม่ได้ประเมิน"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight__overall_status__ok
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight_line__status__ok
+msgid "OK"
+msgstr "โอเค"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid ""
+"One or more checks are blocking. Resolve every blocker before attempting to "
+"confirm."
+msgstr ""
+"มีการตรวจสอบหนึ่งรายการหรือมากกว่ากำลังขวางอยู่ "
+"แก้ไขทุกตัวขวางก่อนพยายามยืนยัน"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_approval_reasons
+msgid ""
+"One reason per line, surfaced on the form so the manager sees what they are "
+"approving."
+msgstr ""
+"หนึ่งเหตุผลต่อบรรทัด แสดงบนฟอร์มเพื่อให้ผู้จัดการเห็นสิ่งที่กำลังอนุมัติ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid ""
+"Open each line and pick a charge code. Apply Charge Template fills them in "
+"bulk."
+msgstr ""
+"เปิดแต่ละรายการและเลือกรหัสค่าธรรมเนียม "
+"ใช้เทมเพลตค่าธรรมเนียมจะกรอกให้ทั้งหมดในคราวเดียว"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template__destination_country_id
+msgid ""
+"Optional destination filter. When set, the template is only suggested for "
+"quotations whose destination country matches."
+msgstr ""
+"ตัวกรองปลายทางเพิ่มเติม (ไม่บังคับ) เมื่อกำหนดแล้ว "
+"เทมเพลตจะถูกแนะนำเฉพาะสำหรับใบเสนอราคาที่ประเทศปลายทางตรงกันเท่านั้น"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_quotation_mass_approve__note
+msgid "Optional note posted to the chatter of every approved quotation."
+msgstr ""
+"บันทึกที่ไม่บังคับซึ่งโพสต์ไปยังแชตเตอร์ของใบเสนอราคาที่อนุมัติแล้วทุกรายการ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template__origin_country_id
+msgid ""
+"Optional origin filter. When set, the template is only suggested for "
+"quotations whose origin country matches."
+msgstr ""
+"ตัวกรองแหล่งกำเนิดที่ไม่บังคับ เมื่อตั้งค่าแล้ว "
+"เทมเพลตจะถูกแนะนำเฉพาะสำหรับใบเสนอราคาที่ประเทศต้นทางตรงกันเท่านั้น"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template_line__description
+msgid ""
+"Optional override for the sale order line description. When empty, the "
+"charge code's name is used."
+msgstr ""
+"การแทนที่แบบไม่บังคับสำหรับคำอธิบายบรรทัดใบสั่งขาย เมื่อว่างเปล่า "
+"จะใช้ชื่อของรหัสค่าใช้จ่าย"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__origin
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__origin
+msgid "Origin"
+msgstr "จุดเริ่ม"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template__origin_country_id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_origin_country_id
+msgid "Origin Country"
+msgstr "ประเทศต้นทาง"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_origin_location
+msgid "Origin Location"
+msgstr "สถานที่ต้นทาง"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid ""
+"Origin and destination countries match. Switch direction to Cross Trade if "
+"this is intentional, otherwise re-check the lane."
+msgstr ""
+"ประเทศต้นทางและปลายทางตรงกัน หากตั้งใจให้เป็นเช่นนี้ ให้เปลี่ยนทิศทางเป็น "
+"Cross Trade มิฉะนั้นให้ตรวจสอบเส้นทางอีกครั้ง"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Origin country is not set."
+msgstr "ยังไม่ได้ตั้งค่าประเทศต้นทาง"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+#, python-format
+msgid "Origin: %s"
+msgstr "ต้นทาง: %s"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template_line__leg__other
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order_line__eh_log_leg__other
+msgid "Other"
+msgstr "อื่น ๆ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Outstanding exposure exceeds the approved limit."
+msgstr "ยอดความเสี่ยงคงค้างเกินวงเงินที่อนุมัติ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__overall_status
+msgid "Overall"
+msgstr "โดยรวม"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template_line__default_planned_cost
+msgid ""
+"Per-unit planned procurement cost. Carried into the sale order line so the "
+"margin guard works the moment the template is applied. Operators refine when"
+" they have actual vendor quotes."
+msgstr ""
+"ต้นทุนการจัดหาที่วางแผนไว้ต่อหน่วย "
+"ถูกส่งต่อไปยังบรรทัดใบสั่งขายเพื่อให้ตัวป้องกันมาร์จินทำงานทันทีที่ใช้เทมเพลต"
+" ผู้ปฏิบัติงานจะปรับให้ละเอียดเมื่อมีใบเสนอราคาจริงจากผู้ขาย"
+
+#. module: eh_log_quotation
+#: model_terms:ir.actions.act_window,help:eh_log_quotation.action_eh_log_sale_order_logistics
+msgid ""
+"Pick a customer, set the mode and the lane, apply a\n"
+"                charge template, and the system will surface margin,\n"
+"                credit, and KYC posture before you confirm."
+msgstr ""
+"เลือกลูกค้า ตั้งค่าโหมดและเส้นทาง ใช้\n"
+"                เทมเพลตค่าธรรมเนียม และระบบจะแสดงมาร์จิน\n"
+"                เครดิต และสถานะ KYC ก่อนที่คุณจะยืนยัน"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Pick an Incoterm under Other Information."
+msgstr "เลือก Incoterm ภายใต้ข้อมูลอื่นๆ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Pick import, export, or cross-trade."
+msgstr "เลือกนำเข้า ส่งออก หรือ cross-trade"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template_apply__template_id
+msgid ""
+"Pick the template to apply. Templates that scope to specific companies are "
+"filtered to the current company."
+msgstr ""
+"เลือกเทมเพลตที่จะใช้ เทมเพลตที่จำกัดเฉพาะบางบริษัทจะถูกกรองตามบริษัทปัจจุบัน"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Pick the transport mode on the Logistics tab."
+msgstr "เลือกโหมดการขนส่งในแท็บโลจิสติกส์"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_graph
+msgid "Pipeline by State"
+msgstr "ไปป์ไลน์ตามสถานะ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Planned cost present on every billable line."
+msgstr "มีต้นทุนที่วางแผนอยู่ในทุกบรรทัดที่เรียกเก็บเงินได้"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_preflight_form
+msgid "Preflight Checklist"
+msgstr "รายการตรวจสอบก่อนเริ่ม"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_preflight_form
+msgid "Preflight:"
+msgstr "การตรวจสอบก่อนเริ่ม:"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__order_id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__order_id
+msgid "Quotation"
+msgstr "ใบเสนอราคา"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+#, python-format
+msgid "Quotation %s pending review"
+msgstr "ใบเสนอราคา %s รอการตรวจสอบ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid "Quotation %s requires manager approval"
+msgstr "ใบเสนอราคา %s ต้องได้รับการอนุมัติจากผู้จัดการ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid "Quotation approved"
+msgstr "อนุมัติใบเสนอราคาแล้ว"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid ""
+"Quotation approved by %(user)s. Reasons recorded at approval time:\n"
+"%(reasons)s"
+msgstr ""
+"ใบเสนอราคาได้รับการอนุมัติโดย %(user)s เหตุผลที่บันทึกไว้ ณ เวลาอนุมัติ:\n"
+"%(reasons)s"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_approve__order_ids
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_cancel__order_ids
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__order_ids
+#: model:ir.ui.menu,name:eh_log_quotation.menu_eh_log_quotations
+msgid "Quotations"
+msgstr "ใบเสนอราคา"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_sale_order_calendar
+msgid "Quotations by Validity"
+msgstr "ใบเสนอราคาตามความถูกต้อง"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__rail
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_mode__rail
+msgid "Rail"
+msgstr "ทางราง"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Reduce the quote, request a credit review, or take a security deposit."
+msgstr "ลดใบเสนอราคา ขอการตรวจสอบเครดิต หรือเรียกเก็บเงินมัดจำหลักประกัน"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Refresh expiring documents."
+msgstr "รีเฟรชเอกสารที่กำลังจะหมดอายุ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__replace_existing
+msgid "Replace Existing Charge Lines"
+msgstr "แทนที่รายการค่าใช้จ่ายที่มีอยู่"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_requires_approval
+msgid "Requires Approval"
+msgstr "ต้องได้รับการอนุมัติ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+msgid "Review nudges sent"
+msgstr "การเตือนตรวจสอบที่ส่งแล้ว"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_mass_send_review__reviewer_id
+msgid "Reviewer"
+msgstr "ผู้ตรวจสอบ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__road
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_mode__road
+msgid "Road"
+msgstr "ถนน"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Run Preflight"
+msgstr "เรียกใช้การตรวจสอบเบื้องต้น"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "SEA-FCL-AE-SA-20"
+msgstr ""
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_sale_order
+msgid "Sales Order"
+msgstr "คำสั่งขาย"
+
+#. module: eh_log_quotation
+#: model:ir.model,name:eh_log_quotation.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "รายการคำสั่งขาย"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_charge_template__mode__sea
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_mode__sea
+msgid "Sea"
+msgstr "ทางทะเล"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_charge_template_form
+msgid "Sea FCL Jebel Ali to Dammam, FCL 20'"
+msgstr "ทางทะเล FCL เจเบลอาลีถึงดัมมาม, FCL 20'"
+
+#. module: eh_log_quotation
+#: model:eh.log.charge.template,name:eh_log_quotation.charge_template_sea_fcl_default
+msgid "Sea FCL: standard charge bundle"
+msgstr "ทางทะเล FCL: ชุดค่าธรรมเนียมมาตรฐาน"
+
+#. module: eh_log_quotation
+#: model:ir.actions.act_window,name:eh_log_quotation.action_eh_log_quotation_mass_send_review
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_eh_log_quotation_mass_send_review_form
+msgid "Send for Review"
+msgstr "ส่งเพื่อตรวจสอบ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__sequence
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__sequence
+msgid "Sequence"
+msgstr "ลำดับ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Set the destination country on the Logistics tab."
+msgstr "ตั้งค่าประเทศปลายทางในแท็บ Logistics"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Set the origin country on the Logistics tab."
+msgstr "ตั้งค่าประเทศต้นทางในแท็บ Logistics"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid ""
+"Some checks raised warnings. The order can be confirmed but review the "
+"warnings first."
+msgstr ""
+"การตรวจสอบบางรายการมีคำเตือน สามารถยืนยันคำสั่งได้ แต่โปรดตรวจสอบคำเตือนก่อน"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_destination_location
+msgid "Specific port, airport, or delivery point."
+msgstr "ท่าเรือ สนามบิน หรือจุดส่งมอบเฉพาะ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_origin_location
+msgid ""
+"Specific port, airport, or pickup point. Free text at this layer; the "
+"freight forwarding module replaces with structured port and airport master "
+"data."
+msgstr ""
+"ท่าเรือ สนามบิน หรือจุดรับสินค้าเฉพาะ เป็นข้อความอิสระในเลเยอร์นี้ "
+"โมดูลการรับส่งสินค้าจะแทนที่ด้วยข้อมูลหลักท่าเรือและสนามบินที่มีโครงสร้าง"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template__code
+msgid ""
+"Stable short identifier (e.g. SEA-FCL-AE-SA-20). Used to recall the template"
+" by typed search rather than by scrolling the dropdown."
+msgstr ""
+"ตัวระบุแบบสั้นที่เสถียร (เช่น SEA-FCL-AE-SA-20) "
+"ใช้เพื่อเรียกเทมเพลตด้วยการค้นหาที่พิมพ์แทนการเลื่อนดรอปดาวน์"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order_line__eh_log_charge_code_id
+msgid ""
+"Standardised charge code for this line. Drives the leg classification, the "
+"tax tag default, and whether the line is included in the margin computation."
+msgstr ""
+"รหัสค่าใช้จ่ายมาตรฐานสำหรับบรรทัดนี้ กำหนดการจำแนกช่วงการขนส่ง "
+"ค่าเริ่มต้นของแท็กภาษี และว่าบรรทัดนี้ถูกรวมในการคำนวณมาร์จินหรือไม่"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template_line__charge_code_id
+msgid ""
+"Standardised charge code from the ERP Heritage catalogue. The Apply Template"
+" wizard creates a sale order line carrying this code so reports and the "
+"margin guard work."
+msgstr ""
+"รหัสค่าใช้จ่ายมาตรฐานจากแคตตาล็อก ERP Heritage "
+"วิซาร์ดใช้เทมเพลตจะสร้างบรรทัดใบสั่งขายที่มีรหัสนี้เพื่อให้รายงานและตัวป้องกันมาร์จินทำงาน"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__status
+msgid "Status"
+msgstr "สถานะ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__hint
+msgid "Suggested Action"
+msgstr "การดำเนินการที่แนะนำ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_total_planned_cost
+msgid "Sum of planned cost across non-disbursement lines."
+msgstr "ผลรวมของต้นทุนที่วางแผนไว้ในบรรทัดที่ไม่ใช่การเบิกจ่าย"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_total_revenue_billable
+msgid ""
+"Sum of revenue across non-disbursement lines. Disbursements are excluded "
+"from margin computation."
+msgstr ""
+"ผลรวมของรายได้ในบรรทัดที่ไม่ใช่การเบิกจ่าย "
+"การเบิกจ่ายจะไม่รวมในการคำนวณส่วนต่างกำไร"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order__eh_log_credit_exposure
+msgid ""
+"Sum of the partner's currently outstanding receivables in the company "
+"currency. Recomputed on every read."
+msgstr ""
+"ผลรวมของลูกหนี้คงค้างในปัจจุบันของพาร์ทเนอร์ในสกุลเงินของบริษัท "
+"คำนวณใหม่ทุกครั้งที่อ่าน"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight__summary
+msgid "Summary"
+msgstr "สรุป"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_apply__template_id
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_charge_template_line__template_id
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "Template"
+msgstr "เทมเพลต"
+
+#. module: eh_log_quotation
+#: model_terms:ir.ui.view,arch_db:eh_log_quotation.view_sale_order_form_eh_log
+msgid "This is a logistics order"
+msgstr "นี่คือคำสั่งซื้อด้านโลจิสติกส์"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid ""
+"This quotation has logistics charge codes on its lines. Disabling the "
+"logistics flag will skip the credit / KYC / margin guards on confirmation."
+msgstr ""
+"ใบเสนอราคานี้มีรหัสค่าบริการโลจิสติกส์อยู่ในบรรทัด "
+"การปิดใช้แฟล็กโลจิสติกส์จะข้ามการตรวจสอบเครดิต / KYC / มาร์จินเมื่อยืนยัน"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_sale_order__eh_log_total_planned_cost
+msgid "Total Planned Cost"
+msgstr "ต้นทุนตามแผนรวม"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_quotation_preflight.py:0
+msgid "Upload current KYC documents before confirming."
+msgstr "อัปโหลดเอกสาร KYC ปัจจุบันก่อนยืนยัน"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight__overall_status__warning
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__eh_log_quotation_preflight_line__status__warning
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_credit_status__warning
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_kyc_status__warning
+#: model:ir.model.fields.selection,name:eh_log_quotation.selection__sale_order__eh_log_margin_status__warning
+msgid "Warning"
+msgstr "คำเตือน"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_sale_order_line__eh_log_is_disbursement
+msgid ""
+"When True, the line is treated as pass-through and excluded from gross "
+"margin computation."
+msgstr ""
+"เมื่อเป็น True "
+"บรรทัดจะถือเป็นรายการส่งผ่านและไม่รวมในการคำนวณอัตรากำไรขั้นต้น"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,help:eh_log_quotation.field_eh_log_charge_template_apply__replace_existing
+msgid ""
+"When checked, existing logistics charge lines (lines carrying a charge code)"
+" are removed before the template lines are appended. Non-logistics product "
+"lines are always preserved."
+msgstr ""
+"เมื่อทำเครื่องหมาย บรรทัดค่าใช้จ่ายโลจิสติกส์ที่มีอยู่ "
+"(บรรทัดที่มีรหัสค่าใช้จ่าย) จะถูกลบออกก่อนที่จะเพิ่มบรรทัดเทมเพลต "
+"บรรทัดผลิตภัณฑ์ที่ไม่ใช่โลจิสติกส์จะถูกเก็บรักษาไว้เสมอ"
+
+#. module: eh_log_quotation
+#: model:ir.model.fields,field_description:eh_log_quotation.field_eh_log_quotation_preflight_line__wizard_id
+msgid "Wizard"
+msgstr "ตัวช่วย"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid ""
+"[EHL-APPROVAL-001] Only logistics managers can approve this quotation. Ask "
+"your manager to take action."
+msgstr ""
+"[EHL-APPROVAL-001] "
+"เฉพาะผู้จัดการฝ่ายโลจิสติกส์เท่านั้นที่สามารถอนุมัติใบเสนอราคานี้ได้ "
+"กรุณาขอให้ผู้จัดการของคุณดำเนินการ"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+msgid ""
+"[EHL-APPROVAL-002] This quotation does not currently require approval. The "
+"Approve action is only available when the margin, credit, or KYC guard "
+"surfaces a blocking reason."
+msgstr ""
+"[EHL-APPROVAL-002] ใบเสนอราคานี้ปัจจุบันไม่จำเป็นต้องได้รับการอนุมัติ "
+"การดำเนินการอนุมัติจะพร้อมใช้งานเฉพาะเมื่อการป้องกันด้านมาร์จิน เครดิต หรือ "
+"KYC แสดงเหตุผลในการปิดกั้นเท่านั้น"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/models/sale_order.py:0
+#, python-format
+msgid ""
+"[EHL-APPROVAL-003] Quotation %(name)s requires manager approval before confirmation. Reasons:\n"
+"%(reasons)s\n"
+"\n"
+"Use the Approve action to record the decision, then confirm again."
+msgstr ""
+"[EHL-APPROVAL-003] ใบเสนอราคา %(name)s ต้องได้รับการอนุมัติจากผู้จัดการก่อนการยืนยัน เหตุผล:\n"
+"%(reasons)s\n"
+"\n"
+"ใช้การดำเนินการอนุมัติเพื่อบันทึกการตัดสินใจ จากนั้นยืนยันอีกครั้ง"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_mass_action_wizards.py:0
+msgid "[EHL-APPROVAL-010] Only logistics managers may run mass-approve."
+msgstr ""
+"[EHL-APPROVAL-010] "
+"เฉพาะผู้จัดการฝ่ายโลจิสติกส์เท่านั้นที่สามารถเรียกใช้การอนุมัติจำนวนมากได้"
+
+#. module: eh_log_quotation
+#. odoo-python
+#: code:addons/eh_log_quotation/wizards/eh_log_charge_template_apply.py:0
+#, python-format
+msgid ""
+"[EHL-TEMPLATE-001] Template %(name)s has no lines. Add lines to the template"
+" first."
+msgstr ""
+"[EHL-TEMPLATE-001] เทมเพลต %(name)s ไม่มีบรรทัด "
+"กรุณาเพิ่มบรรทัดในเทมเพลตก่อน"

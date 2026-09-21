@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!--
+            MPS Vendor Demand – menu entries under Logistics > Operations.
+
+            menu_mps_vendor_demand_wizard  – opens the wizard dialog so the
+            user can configure filters, generate, and print in one pass.
+
+            menu_mps_vendor_demand_lines   – opens the persistent list of all
+            generated lines (useful for review / re-filtering after generation).
+        -->
+
+        <menuitem id="menu_mps_vendor_demand_wizard"
+                  name="MPS Vendor Demand"
+                  parent="eh_log_base.menu_eh_log_operations"
+                  sequence="60"
+                  action="bista_mps_vendor_demand.action_mps_vendor_demand_wizard"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+        <menuitem id="menu_mps_vendor_demand_lines"
+                  name="Vendor Demand Lines"
+                  parent="eh_log_base.menu_eh_log_operations"
+                  sequence="61"
+                  action="bista_mps_vendor_demand.action_mps_vendor_demand_line_list"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+    </data>
+</odoo>

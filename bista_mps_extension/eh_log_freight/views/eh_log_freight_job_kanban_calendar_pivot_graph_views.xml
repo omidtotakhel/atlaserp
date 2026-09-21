@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_freight_job_kanban" model="ir.ui.view">
+        <field name="name">eh.log.freight.job.kanban</field>
+        <field name="model">eh.log.freight.job</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state" class="o_kanban_small_column">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="d-flex justify-content-between">
+                                <strong><field name="name"/></strong>
+                                <span class="badge text-bg-info"><field name="mode"/></span>
+                            </div>
+                            <div class="text-muted small mt-1"><field name="customer_id"/></div>
+                            <div class="mt-1">
+                                <span class="badge text-bg-secondary me-1"><field name="direction"/></span>
+                                <field name="origin_country_id"/> &gt;
+                                <field name="destination_country_id"/>
+                            </div>
+                            <div class="text-muted small mt-2">
+                                <field name="gross_weight_kg"/> kg /
+                                <field name="volume_cbm"/> cbm
+                            </div>
+                            <div class="d-flex justify-content-between text-muted small mt-1">
+                                <span>ETA <field name="eta_planned"/></span>
+                                <span>Margin <field name="gross_margin_pct" widget="percentage"/></span>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_eh_log_freight_job_calendar" model="ir.ui.view">
+        <field name="name">eh.log.freight.job.calendar</field>
+        <field name="model">eh.log.freight.job</field>
+        <field name="arch" type="xml">
+            <calendar string="Freight Jobs by Created Date"
+                      date_start="create_date"
+                      color="state"
+                      mode="month">
+                <field name="name"/>
+                <field name="customer_id"/>
+                <field name="mode"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="view_eh_log_freight_job_pivot" model="ir.ui.view">
+        <field name="name">eh.log.freight.job.pivot</field>
+        <field name="model">eh.log.freight.job</field>
+        <field name="arch" type="xml">
+            <pivot string="Freight Jobs Analysis" sample="1">
+                <field name="customer_id" type="row"/>
+                <field name="mode" type="col"/>
+                <field name="gross_weight_kg" type="measure"/>
+                <field name="volume_cbm" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_eh_log_freight_job_graph" model="ir.ui.view">
+        <field name="name">eh.log.freight.job.graph</field>
+        <field name="model">eh.log.freight.job</field>
+        <field name="arch" type="xml">
+            <graph string="Freight Jobs by State"
+                   sample="1"
+                   type="bar">
+                <field name="state"/>
+                <field name="gross_weight_kg" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+</odoo>

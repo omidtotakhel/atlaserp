@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <!--
+            Common container ISO types. Specialised codes (open-top,
+            flat-rack, tank, ventilated, bulk) are added via data
+            records in dedicated modules so the engine remains lean.
+        -->
+
+        <record id="iso_22g1" model="eh.log.freight.container.iso.type">
+            <field name="code">22G1</field>
+            <field name="alias_code">20GP</field>
+            <field name="name">20-foot Standard Dry</field>
+            <field name="family">dry</field>
+            <field name="length_ft">20</field>
+            <field name="height_high_cube" eval="False"/>
+            <field name="inner_volume_cbm">33.2</field>
+            <field name="max_payload_kg">28230</field>
+            <field name="max_gross_kg">30480</field>
+        </record>
+
+        <record id="iso_42g1" model="eh.log.freight.container.iso.type">
+            <field name="code">42G1</field>
+            <field name="alias_code">40GP</field>
+            <field name="name">40-foot Standard Dry</field>
+            <field name="family">dry</field>
+            <field name="length_ft">40</field>
+            <field name="height_high_cube" eval="False"/>
+            <field name="inner_volume_cbm">67.7</field>
+            <field name="max_payload_kg">28800</field>
+            <field name="max_gross_kg">32500</field>
+        </record>
+
+        <record id="iso_45g1" model="eh.log.freight.container.iso.type">
+            <field name="code">45G1</field>
+            <field name="alias_code">40HC</field>
+            <field name="name">40-foot High Cube Dry</field>
+            <field name="family">dry</field>
+            <field name="length_ft">40</field>
+            <field name="height_high_cube" eval="True"/>
+            <field name="inner_volume_cbm">76.4</field>
+            <field name="max_payload_kg">28720</field>
+            <field name="max_gross_kg">32500</field>
+        </record>
+
+        <record id="iso_l5g1" model="eh.log.freight.container.iso.type">
+            <field name="code">L5G1</field>
+            <field name="alias_code">45HC</field>
+            <field name="name">45-foot High Cube Dry</field>
+            <field name="family">dry</field>
+            <field name="length_ft">45</field>
+            <field name="height_high_cube" eval="True"/>
+            <field name="inner_volume_cbm">86</field>
+            <field name="max_payload_kg">27600</field>
+            <field name="max_gross_kg">32500</field>
+        </record>
+
+        <record id="iso_22r1" model="eh.log.freight.container.iso.type">
+            <field name="code">22R1</field>
+            <field name="alias_code">20RF</field>
+            <field name="name">20-foot Reefer</field>
+            <field name="family">reefer</field>
+            <field name="length_ft">20</field>
+            <field name="height_high_cube" eval="False"/>
+            <field name="inner_volume_cbm">28</field>
+            <field name="max_payload_kg">27700</field>
+            <field name="max_gross_kg">30480</field>
+        </record>
+
+        <record id="iso_45r1" model="eh.log.freight.container.iso.type">
+            <field name="code">45R1</field>
+            <field name="alias_code">40RH</field>
+            <field name="name">40-foot Reefer High Cube</field>
+            <field name="family">reefer</field>
+            <field name="length_ft">40</field>
+            <field name="height_high_cube" eval="True"/>
+            <field name="inner_volume_cbm">67.3</field>
+            <field name="max_payload_kg">29100</field>
+            <field name="max_gross_kg">34000</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <menuitem id="menu_eh_log_freight_jobs"
+                  name="Freight Jobs"
+                  parent="eh_log_base.menu_eh_log_operations"
+                  sequence="20"
+                  action="action_eh_log_freight_job"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+        <menuitem id="menu_eh_log_freight_bls"
+                  name="Bills of Lading"
+                  parent="eh_log_base.menu_eh_log_operations"
+                  sequence="30"
+                  action="action_eh_log_freight_bl"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+        <menuitem id="menu_eh_log_freight_containers"
+                  name="Containers"
+                  parent="eh_log_base.menu_eh_log_operations"
+                  sequence="40"
+                  action="action_eh_log_freight_container"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+        <menuitem id="menu_eh_log_freight_container_iso_types"
+                  name="Container ISO Types"
+                  parent="eh_log_base.menu_eh_log_master_data"
+                  sequence="50"
+                  action="action_eh_log_freight_container_iso_type"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+    </data>
+</odoo>
