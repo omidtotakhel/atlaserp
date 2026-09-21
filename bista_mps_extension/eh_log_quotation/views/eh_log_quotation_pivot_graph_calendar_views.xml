@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_sale_order_pivot" model="ir.ui.view">
+        <field name="name">sale.order.pivot.eh_log_quotation</field>
+        <field name="model">sale.order</field>
+        <field name="arch" type="xml">
+            <pivot string="Logistics Quotation Analysis"
+                   sample="1">
+                <field name="partner_id" type="row"/>
+                <field name="eh_log_mode" type="col"/>
+                <field name="amount_total" type="measure"/>
+                <field name="eh_log_total_planned_cost" type="measure"/>
+                <field name="eh_log_gross_margin" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_eh_log_sale_order_graph" model="ir.ui.view">
+        <field name="name">sale.order.graph.eh_log_quotation</field>
+        <field name="model">sale.order</field>
+        <field name="arch" type="xml">
+            <graph string="Pipeline by State"
+                   sample="1"
+                   type="bar">
+                <field name="state"/>
+                <field name="amount_total" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_eh_log_sale_order_calendar" model="ir.ui.view">
+        <field name="name">sale.order.calendar.eh_log_quotation</field>
+        <field name="model">sale.order</field>
+        <field name="arch" type="xml">
+            <calendar string="Quotations by Validity"
+                      date_start="validity_date"
+                      color="state"
+                      mode="month">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="amount_total"/>
+                <field name="eh_log_mode"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="view_eh_log_sale_order_search_logistics" model="ir.ui.view">
+        <field name="name">sale.order.search.eh_log_quotation</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <separator/>
+                <filter name="filter_eh_log_logistics"
+                        string="Logistics"
+                        domain="[('eh_log_is_logistics', '=', True)]"/>
+                <filter name="filter_eh_log_requires_approval"
+                        string="Awaiting Approval"
+                        domain="[('eh_log_requires_approval', '=', True), ('eh_log_approved_by_id', '=', False)]"/>
+                <filter name="filter_eh_log_margin_below_floor"
+                        string="Margin Below Floor"
+                        domain="[('eh_log_margin_status', '=', 'below_floor')]"/>
+                <separator/>
+                <filter name="group_by_eh_log_mode"
+                        string="Mode"
+                        context="{'group_by': 'eh_log_mode'}"/>
+                <filter name="group_by_eh_log_direction"
+                        string="Direction"
+                        context="{'group_by': 'eh_log_direction'}"/>
+                <filter name="group_by_eh_log_margin_status"
+                        string="Margin Status"
+                        context="{'group_by': 'eh_log_margin_status'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_eh_log_sale_order_logistics" model="ir.actions.act_window">
+        <field name="name">Logistics Quotations</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">kanban,tree,form,calendar,pivot,graph</field>
+        <field name="domain">[('eh_log_is_logistics', '=', True)]</field>
+        <field name="context">{'search_default_filter_eh_log_logistics': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first logistics quotation
+            </p>
+            <p>
+                Pick a customer, set the mode and the lane, apply a
+                charge template, and the system will surface margin,
+                credit, and KYC posture before you confirm.
+            </p>
+        </field>
+    </record>
+
+</odoo>

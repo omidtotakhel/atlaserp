@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="0">
+    <data>
+
+        <!--
+            No new privilege groups; reuses
+            eh_log_base.group_eh_log_user / _manager / _auditor.
+
+            Direct creation of a freight job from the menu is
+            controlled at the action level: the menu hides the
+            create button for non-managers. Users can only create
+            jobs via the sale-order confirmation hook.
+        -->
+
+    </data>
+</odoo>

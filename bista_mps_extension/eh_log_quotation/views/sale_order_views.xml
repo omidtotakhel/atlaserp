@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!--
+            sale.order form: add the Logistics tab plus header
+            buttons (Run Preflight, Apply Template, Approve) and
+            the live guard chips in the page header.
+        -->
+
+        <record id="view_sale_order_form_eh_log" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit.eh.log</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//header" position="inside">
+                    <button name="action_eh_log_apply_template"
+                            string="Apply Charge Template"
+                            type="object"
+                            class="btn-secondary"
+                            groups="eh_log_base.group_eh_log_user" attrs="{'invisible': [('state', 'not in', ['draft', 'sent'])]}"/>
+                    <button name="action_eh_log_run_preflight"
+                            string="Run Preflight"
+                            type="object"
+                            class="btn-secondary"
+                            groups="eh_log_base.group_eh_log_user" attrs="{'invisible': ['|', ('eh_log_is_logistics', '=', False), ('state', 'not in', ['draft', 'sent'])]}"/>
+                    <button name="action_eh_log_approve"
+                            string="Approve"
+                            type="object"
+                            class="btn-primary"
+                            groups="eh_log_base.group_eh_log_manager" attrs="{'invisible': ['|', '|', ('eh_log_requires_approval', '=', False), ('eh_log_approved_by_id', '!=', False), ('state', 'not in', ['draft', 'sent'])]}"/>
+                </xpath>
+
+                <xpath expr="//div[hasclass('oe_title')]" position="before">
+                    <!-- Always-visible logistics toggle. Operators tick this
+                         to flag the quote as a logistics order; the Logistics
+                         tab and freight-job spawn behaviour both key off it. -->
+                    <div class="d-flex align-items-center justify-content-between mb-2" style="gap:8px;flex-wrap:wrap;">
+                        <div class="d-flex align-items-center" style="gap:6px;">
+                            <field name="eh_log_is_logistics"
+                                   widget="boolean_toggle"
+                                   options="{'autosave': false}"/>
+                            <label for="eh_log_is_logistics"
+                                   string="This is a logistics order"
+                                   class="mb-0"
+                                   style="font-weight:500;"/>
+                        </div>
+                        <div class="d-flex align-items-center" style="gap:8px;flex-wrap:wrap;" attrs="{'invisible': [('eh_log_is_logistics', '=', False)]}">
+                            <span class="badge text-bg-info" style="font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;">
+                                <i class="fa fa-ship me-1"/> Logistics
+                            </span>
+                            <span
+                                  class="badge text-bg-warning"
+                                  style="font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;" attrs="{'invisible': ['|', ('eh_log_requires_approval', '=', False), ('eh_log_approved_by_id', '!=', False)]}">
+                                <i class="fa fa-exclamation-circle me-1"/> Approval required
+                            </span>
+                            <span
+                                  class="badge text-bg-danger"
+                                  style="font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;" attrs="{'invisible': [('eh_log_credit_status', '!=', 'blocked')]}">
+                                <i class="fa fa-ban me-1"/> Credit blocked
+                            </span>
+                            <span
+                                  class="badge text-bg-danger"
+                                  style="font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;" attrs="{'invisible': [('eh_log_kyc_status', '!=', 'expired')]}">
+                                <i class="fa fa-id-card-o me-1"/> KYC expired
+                            </span>
+                            <span
+                                  class="badge text-bg-danger"
+                                  style="font-size:0.78rem;letter-spacing:0.06em;padding:5px 10px;" attrs="{'invisible': [('eh_log_margin_status', '!=', 'below_floor')]}">
+                                <i class="fa fa-arrow-down me-1"/> Margin below floor
+                            </span>
+                        </div>
+                    </div>
+                </xpath>
+
+                <xpath expr="//notebook" position="inside">
+                    <page string="Logistics" name="eh_log_logistics" attrs="{'invisible': [('eh_log_is_logistics', '=', False)]}">
+                        <group>
+                            <group string="Lane">
+                                <field name="eh_log_mode" widget="radio" options="{'horizontal': true}"/>
+                                <field name="eh_log_direction" widget="radio" options="{'horizontal': true}"/>
+                                <field name="eh_log_origin_country_id" options="{'no_create': True}"/>
+                                <field name="eh_log_origin_location"/>
+                                <field name="eh_log_destination_country_id" options="{'no_create': True}"/>
+                                <field name="eh_log_destination_location"/>
+                            </group>
+                            <group string="Template">
+                                <field name="eh_log_charge_template_id" readonly="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Margin">
+                                <field name="eh_log_total_revenue_billable"/>
+                                <field name="eh_log_total_planned_cost"/>
+                                <field name="eh_log_gross_margin"/>
+                                <field name="eh_log_gross_margin_pct" widget="percentage"/>
+                                <field name="eh_log_margin_status" widget="badge"
+                                       decoration-success="eh_log_margin_status == 'above_warning'"
+                                       decoration-warning="eh_log_margin_status == 'warning'"
+                                       decoration-danger="eh_log_margin_status == 'below_floor'"/>
+                            </group>
+                            <group string="Credit and KYC">
+                                <field name="eh_log_credit_exposure"/>
+                                <field name="eh_log_credit_status" widget="badge"
+                                       decoration-success="eh_log_credit_status == 'ok'"
+                                       decoration-warning="eh_log_credit_status == 'warning'"
+                                       decoration-danger="eh_log_credit_status == 'blocked'"/>
+                                <field name="eh_log_credit_message" readonly="1"/>
+                                <field name="eh_log_kyc_status" widget="badge"
+                                       decoration-success="eh_log_kyc_status == 'ok'"
+                                       decoration-warning="eh_log_kyc_status == 'warning'"
+                                       decoration-danger="eh_log_kyc_status == 'expired'"
+                                       decoration-muted="eh_log_kyc_status == 'not_assessed'"/>
+                                <field name="eh_log_kyc_message" readonly="1"/>
+                            </group>
+                        </group>
+                        <group string="Approval" attrs="{'invisible': [('eh_log_requires_approval', '=', False)]}">
+                            <field name="eh_log_requires_approval"/>
+                            <field name="eh_log_approval_reasons" readonly="1" widget="text"/>
+                            <field name="eh_log_approved_by_id" readonly="1"/>
+                            <field name="eh_log_approved_at" readonly="1"/>
+                        </group>
+                    </page>
+                </xpath>
+
+                <!-- Per-line charge code and leg.
+                     column_invisible hides them on non-logistics orders so
+                     a plain product order is not cluttered with logistics
+                     columns. The order's Logistics tab still drives the
+                     true "is this a logistics order" decision. -->
+                <xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="before">
+                    <field name="eh_log_charge_code_id"
+                           options="{'no_create': True}"
+                           optional="show"
+                           column_attrs="{'invisible': [('parent.eh_log_is_logistics','=',False)]}"/>
+                    <field name="eh_log_leg"
+                           optional="hide"
+                           column_attrs="{'invisible': [('parent.eh_log_is_logistics','=',False)]}"/>
+                </xpath>
+
+                <xpath expr="//field[@name='order_line']/tree/field[@name='price_subtotal']" position="before">
+                    <field name="purchase_price" optional="show"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <!-- Search view extension -->
+        <record id="view_sale_order_search_eh_log" model="ir.ui.view">
+            <field name="name">sale.order.search.inherit.eh.log</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//search" position="inside">
+                    <separator/>
+                    <filter string="Logistics" name="filter_logistics" domain="[('eh_log_is_logistics', '=', True)]"/>
+                    <filter string="Margin Below Floor" name="filter_margin_floor" domain="[('eh_log_margin_status', '=', 'below_floor')]"/>
+                    <filter string="Margin Warning" name="filter_margin_warning" domain="[('eh_log_margin_status', '=', 'warning')]"/>
+                    <filter string="Awaiting Approval" name="filter_awaiting_approval" domain="[('eh_log_requires_approval', '=', True), ('eh_log_approved_by_id', '=', False)]"/>
+                    <filter string="Group by Mode" name="group_eh_log_mode" context="{'group_by': 'eh_log_mode'}"/>
+                    <filter string="Group by Direction" name="group_eh_log_direction" context="{'group_by': 'eh_log_direction'}"/>
+                    <filter string="Group by Margin Status" name="group_eh_log_margin_status" context="{'group_by': 'eh_log_margin_status'}"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

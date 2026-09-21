@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!--
+            Charge Templates menu under the Master Data branch
+            already created by eh_log_base.
+        -->
+        <menuitem id="menu_eh_log_charge_templates"
+                  name="Charge Templates"
+                  parent="eh_log_base.menu_eh_log_master_data"
+                  sequence="30"
+                  action="action_eh_log_charge_template"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+        <!--
+            Quotations operational menu: a saved-search alias to
+            sale.order filtered to logistics quotations. Reuses the
+            stock sale.order action so users land on the standard
+            view they already know.
+        -->
+        <menuitem id="menu_eh_log_quotations"
+                  name="Quotations"
+                  parent="eh_log_base.menu_eh_log_operations"
+                  sequence="10"
+                  action="sale.action_quotations_with_onboarding"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+    </data>
+</odoo>

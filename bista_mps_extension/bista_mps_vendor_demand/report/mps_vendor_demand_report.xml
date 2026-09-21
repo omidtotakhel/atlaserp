@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!--
+        MPS Vendor Demand – A4 Landscape PDF
+        =====================================
+        Uses the ERP Heritage Logistics shared design system:
+          eh_log_report_styles  – CSS variables and table rules
+          eh_log_report_header  – branded title block
+          eh_log_report_footer  – integrity-verified brand credit line
+          eh_log_clean_layout   – footer + body shell
+
+        The document is driven from mps.vendor.demand.wizard (docs = [wizard]).
+        Lines are iterated from wizard.line_ids, grouped by vendor in QWeb.
+    -->
+
+    <record id="action_report_mps_vendor_demand" model="ir.actions.report">
+        <field name="name">MPS Vendor Demand Report</field>
+        <field name="model">mps.vendor.demand.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">bista_mps_vendor_demand.report_mps_vendor_demand_document</field>
+        <field name="report_file">bista_mps_vendor_demand.report_mps_vendor_demand_document</field>
+        <field name="paperformat_id" ref="eh_log_base.paperformat_eh_log_landscape"/>
+        <field name="binding_model_id" ref="model_mps_vendor_demand_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_mps_vendor_demand_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="wizard">
+                <t t-call="eh_log_base.eh_log_clean_layout">
+                    <t t-set="company"     t-value="wizard.company_id"/>
+                    <t t-set="report_type" t-value="'pdf'"/>
+                    <t t-call="eh_log_base.eh_log_report_styles"/>
+
+                    <div class="page eh_pdf_page">
+
+                        <!-- ── Branded header ─────────────────────── -->
+                        <t t-call="eh_log_base.eh_log_report_header">
+                            <t t-set="title"   t-value="'MPS Vendor Demand Report'"/>
+                            <t t-set="company" t-value="wizard.company_id"/>
+                        </t>
+
+                        <!-- ── Report meta strip ──────────────────── -->
+                        <div class="eh_pdf_meta">
+                            <span>
+                                <strong>Generated:</strong>
+                                <t t-out="context_timestamp(datetime.datetime.now()).strftime('%d %b %Y %H:%M')"/>
+                            </span>
+                            <span>
+                                <strong>Company:</strong>
+                                <t t-out="wizard.company_id.display_name"/>
+                            </span>
+                            <span>
+                                <strong>Warehouses:</strong>
+                                <t t-if="wizard.warehouse_ids">
+                                    <t t-out="', '.join(wizard.warehouse_ids.mapped('name'))"/>
+                                </t>
+                                <t t-if="not wizard.warehouse_ids">All</t>
+                            </span>
+                            <span>
+                                <strong>Horizon:</strong>
+                                <t t-out="wizard.date_horizon"/> days
+                            </span>
+                            <span>
+                                <strong>Total Lines:</strong>
+                                <t t-out="len(wizard.line_ids)"/>
+                            </span>
+                        </div>
+
+                        <!-- ── Executive summary tiles ────────────── -->
+                        <t t-set="all_lines"      t-value="wizard.line_ids"/>
+                        <t t-set="uncovered_lines" t-value="all_lines.filtered(lambda l: l.uncovered_qty &gt; 0)"/>
+                        <t t-set="covered_lines"   t-value="all_lines.filtered(lambda l: l.uncovered_qty &lt;= 0 and (l.demand_qty or 0) &gt; 0)"/>
+                        <t t-set="no_vendor_lines" t-value="all_lines.filtered(lambda l: not l.vendor_id)"/>
+                        <t t-set="total_demand"    t-value="sum(all_lines.mapped('demand_qty'))"/>
+                        <t t-set="total_draft_po"  t-value="sum(all_lines.mapped('po_qty_draft'))"/>
+                        <t t-set="total_confirmed" t-value="sum(all_lines.mapped('po_qty_confirmed'))"/>
+                        <t t-set="total_uncovered" t-value="sum(all_lines.mapped('uncovered_qty'))"/>
+
+                        <table style="width:100%; border-collapse:collapse; margin-bottom:14pt;">
+                            <tr>
+                                <td style="width:20%; padding:6pt 8pt; border:0.5pt solid #adb5bd; background:#fafbfc; vertical-align:top;">
+                                    <div style="font-size:7.5pt; color:#6c757d; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:2pt;">Total Demand Qty</div>
+                                    <div style="font-size:12pt; font-weight:700; color:#2c3e50;">
+                                        <t t-out="'{:,.2f}'.format(total_demand)"/>
+                                    </div>
+                                </td>
+                                <td style="width:20%; padding:6pt 8pt; border:0.5pt solid #adb5bd; background:#fafbfc; vertical-align:top;">
+                                    <div style="font-size:7.5pt; color:#6c757d; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:2pt;">Draft PO Qty</div>
+                                    <div style="font-size:12pt; font-weight:700; color:#2c3e50;">
+                                        <t t-out="'{:,.2f}'.format(total_draft_po)"/>
+                                    </div>
+                                </td>
+                                <td style="width:20%; padding:6pt 8pt; border:0.5pt solid #adb5bd; background:#d4edda; vertical-align:top;">
+                                    <div style="font-size:7.5pt; color:#155724; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:2pt;">Covered Lines</div>
+                                    <div style="font-size:12pt; font-weight:700; color:#155724;">
+                                        <t t-out="len(covered_lines)"/>
+                                    </div>
+                                </td>
+                                <td style="width:20%; padding:6pt 8pt; border:0.5pt solid #adb5bd; background:#f8d7da; vertical-align:top;">
+                                    <div style="font-size:7.5pt; color:#721c24; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:2pt;">Uncovered Lines</div>
+                                    <div style="font-size:12pt; font-weight:700; color:#721c24;">
+                                        <t t-out="len(uncovered_lines)"/>
+                                    </div>
+                                </td>
+                                <td style="width:20%; padding:6pt 8pt; border:0.5pt solid #adb5bd; background:#fff3cd; vertical-align:top;">
+                                    <div style="font-size:7.5pt; color:#856404; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:2pt;">No Vendor</div>
+                                    <div style="font-size:12pt; font-weight:700; color:#856404;">
+                                        <t t-out="len(no_vendor_lines)"/>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- ── No-vendor warning block ────────────── -->
+                        <t t-if="no_vendor_lines">
+                            <h2 class="eh_pdf_subtitle" style="color:#856404; margin-top:10pt;">
+                                &#9888; Products Without Vendor Assignment
+                            </h2>
+                            <table class="eh_pdf_table" style="margin-bottom:14pt;">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Warehouse</th>
+                                        <th>Reorder Rule</th>
+                                        <th class="text-end">On Hand</th>
+                                        <th class="text-end">Forecast</th>
+                                        <th class="text-end">MPS To Order</th>
+                                        <th class="text-end">Demand Qty</th>
+                                        <th class="text-center">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="no_vendor_lines.sorted(key=lambda l: l.product_id.display_name)" t-as="line">
+                                        <tr>
+                                            <td>
+                                                <strong>
+                                                    <t t-out="line.product_id.display_name"/>
+                                                </strong>
+                                                <br/>
+                                                <span class="text-muted" style="font-size:8pt;">
+                                                    <t t-out="line.product_uom_id.name or ''"/>
+                                                </span>
+                                            </td>
+                                            <td><t t-out="line.warehouse_id.name or '—'"/></td>
+                                            <td><t t-out="line.orderpoint_id.name or '—'"/></td>
+                                            <td class="text-end">
+                                                <t t-out="'{:,.2f}'.format(line.qty_on_hand or 0)"/>
+                                            </td>
+                                            <td class="text-end">
+                                                <t t-out="'{:,.2f}'.format(line.qty_forecast or 0)"/>
+                                            </td>
+                                            <td class="text-end">
+                                                <t t-out="'{:,.2f}'.format(line.orderpoint_qty_to_order or 0)"/>
+                                            </td>
+                                            <td class="text-end">
+                                                <strong>
+                                                    <t t-out="'{:,.2f}'.format(line.demand_qty or 0)"/>
+                                                </strong>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-attf-class="eh_pdf_status_badge #{line.get_coverage_css()}">
+                                                    <t t-out="line.get_coverage_label()"/>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </t>
+
+                        <!-- ── Vendor-grouped detail tables ──────── -->
+
+                        <!--
+                            Build an ordered list of unique vendor ids preserving
+                            sort-by-vendor-name order.  QWeb has no set/dedup
+                            primitive so we use an accumulator pattern.
+                        -->
+                        <t t-set="_seen_vids"    t-value="[]"/>
+                        <t t-set="_ordered_vids" t-value="[]"/>
+                        <t t-foreach="all_lines.filtered(lambda l: l.vendor_id).sorted(key=lambda l: (l.vendor_id.name or '', l.product_id.display_name))" t-as="_vl">
+                            <t t-if="_vl.vendor_id.id not in _seen_vids">
+                                <t t-set="_ordered_vids" t-value="_ordered_vids + [_vl.vendor_id.id]"/>
+                                <t t-set="_seen_vids"    t-value="_seen_vids    + [_vl.vendor_id.id]"/>
+                            </t>
+                        </t>
+
+                        <t t-foreach="_ordered_vids" t-as="vid">
+                            <t t-set="vlines"     t-value="all_lines.filtered(lambda l: l.vendor_id.id == vid)"/>
+                            <t t-set="vendor_rec" t-value="vlines[0].vendor_id"/>
+                            <t t-set="grp_demand" t-value="sum(vlines.mapped('demand_qty'))"/>
+                            <t t-set="grp_draft"  t-value="sum(vlines.mapped('po_qty_draft'))"/>
+                            <t t-set="grp_uncov"  t-value="sum(vlines.mapped('uncovered_qty'))"/>
+
+                            <!-- Vendor section heading -->
+                            <h2 class="eh_pdf_subtitle" style="margin-top:12pt;">
+                                <t t-out="vendor_rec.display_name"/>
+                                <span style="font-size:8.5pt; font-weight:400; color:#6c757d; margin-left:8pt;">
+                                    <t t-out="len(vlines)"/> product(s) ·
+                                    Demand: <t t-out="'{:,.2f}'.format(grp_demand)"/> ·
+                                    Draft PO: <t t-out="'{:,.2f}'.format(grp_draft)"/> ·
+                                    Uncovered: <t t-out="'{:,.2f}'.format(grp_uncov)"/>
+                                </span>
+                            </h2>
+
+                            <table class="eh_pdf_table" style="margin-bottom:14pt;">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Vendor SKU</th>
+                                        <th>Warehouse</th>
+                                        <th>Reorder Rule</th>
+                                        <th class="text-end">Lead (d)</th>
+                                        <th class="text-end">Horizon</th>
+                                        <th class="text-end">On Hand</th>
+                                        <th class="text-end">Forecast</th>
+                                        <th class="text-end">MPS To Order</th>
+                                        <th class="text-end">Min Qty</th>
+                                        <th class="text-end">Demand Qty</th>
+                                        <th class="text-end">Draft PO Qty</th>
+                                        <th class="text-end">Conf. PO Qty</th>
+                                        <th class="text-end">Uncovered</th>
+                                        <th class="text-center">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="vlines.sorted(key=lambda l: l.product_id.display_name)" t-as="line">
+                                        <tr>
+                                            <td>
+                                                <strong>
+                                                    <t t-out="line.product_id.display_name"/>
+                                                </strong>
+                                                <t t-if="
+
+===FILE: bista_mps_extension/bista_mps_vendor_demand/report/mps_vendor_demand_report.xml===
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!--
+        MPS Vendor Demand – A4 Landscape PDF
+        =====================================
+        Uses the ERP Heritage Logistics shared design system:
+          eh_log_report_styles  – CSS variables and table rules
+          eh_log_report_header  – branded title block
+          eh_log_report_footer  – integrity-verified brand credit line
+          eh_log_clean_layout   – footer + body shell
+
+        The document is driven from mps.vendor.demand.wizard (docs = [wizard]).
+        Lines are iterated from wizard.line_ids, grouped by vendor in QWeb.
+    -->
+
+    <record id="action_report_mps_vendor_demand" model="ir.actions.report">
+        <field name="name">MPS Vendor Demand Report</field>
+        <field name="model">mps.vendor.demand.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">bista_mps_vendor_demand.report_mps_vendor_demand_document</field>
+        <field name="report_file">bista_mps_vendor_demand.report_mps_vendor_demand_document</field>
+        <field name="paperformat_id" ref="eh_log_base.paperformat_eh_log_landscape"/>
+        <field name="binding_model_id" ref="model_mps_vendor_demand_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_mps_vendor_demand_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="wizard">
+                <t t-call="eh_log_base.eh_log_clean_layout">
+                    <t t-set="company"     t-value="wizard.company_id"/>
+                    <t t-set="report_type" t-value="'pdf'"/>
+                    <t t-call="eh_log_base.eh_log_report_styles"/>
+
+                    <div class="page eh_pdf_page">
+
+                        <!-- ── Branded header ─────────────────────── -->
+                        <t t-call="eh_log_base.eh_log_report_header">
+                            <t t-set="title"   t-value="'MPS Vendor Demand Report'"/>
+                            <t t-set="company" t-value="wizard.company_id"/>
+                        </t>
+
+                        <!-- ── Report meta strip ──────────────────── -->
+                        <div class="eh_pdf_meta">
+                            <span>
+                                <strong>Generated:</strong>
+                                <t t-out="context_timestamp(datetime.datetime.now()).strftime('%d %b %Y %H:%M')"/>
+                            </span>
+                            <span>
+                                <strong>Company:</strong>
+                                <t t-out="wizard.company_id.display_name"/>
+                            </span>
+                            <span>
+                                <strong>Warehouses:</strong>
+                                <t t-if="wizard.warehouse_ids">
+                                    <t t-out="', '.join(wizard.warehouse_ids.mapped('name'))"/>
+                                </t>
+                                <t t-if="not wizard.warehouse_ids">All</t>
+                            </span>
+                            <span>
+                                <strong>Horizon:</strong>
+                                <t t-out="wizard.date_horizon"/> days
+                            </span>
+                            <span>
+                                <strong>Total Lines:</strong>
+                                <t t-out="len(wizard.line_ids)"/>
+                            </span>
+                        </div>
+
+                        <!-- ── Executive summary tiles ────────────── -->
+                        <t t-set="all_lines"      t-value="wizard.line_ids"/>
+                        <t t-set="uncovered_lines" t-value="all_lines.filtered(lambda l: l.uncovered_qty &gt; 0)"/>
+                        <t t-set="covered_lines"   t-value="all_lines.filtered(lambda l: l.uncovered_qty &lt;= 0 and (l.demand_qty or 0) &gt; 0)"/>
+                        <t t-set="no_vendor_lines" t-value="all_lines.filtered(lambda l: not l.vendor_id)"/>
+                        <t t-set="total_demand"    t-value="sum(all_lines.mapped('demand_qty'))"/>
+                        <t t-set="total_draft_po"  t-value="sum(all_lines.mapped('po_qty_draft'))"/>
+                        <t t-set="total_confirmed" t-value="sum(all_lines.mapped('po_qty_confirmed'))"/>
+                        <t t-set="total_uncovered" t-value="sum(all_lines.mapped('uncovered_qty'))"/>
+
+                        <table style="width:100%; border-collapse:collapse; margin-bottom:14pt;">
+                            <tr>
+                                <td style="width:20%; padding:6pt 8pt; border:0.5pt solid #adb5bd; background:#fafbfc; vertical-align:top;">
+                                    <div style="font-size:7.5pt; color:#6c757d; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:2pt;">Total Demand Qty</div>
+                                    <div style="font-size:12pt; font-weight:700; color:#2c3e50;">
+                                        <t t-out="'{:,.2f}'.format(total_demand)"/>
+                                    </div>
+                                </td>
+                                <td style="width:20%; padding:6pt 8pt; border:0.5pt solid #adb5bd; background:#fafbfc; vertical-align:top;">
+                                    <div style="font-size:7.5pt; color:#6c757d; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:2pt;">Draft PO Qty</div>
+                                    <div style="font-size:12pt; font-weight:700; color:#2c3e50;">
+                                        <t t-out="'{:,.2f}'.format(total_draft_po)"/>
+                                    </div>
+                                </td>
+                                <td style="width:20%; padding:6pt 8pt; border:0.5pt solid #adb5bd; background:#d4edda; vertical-align:top;">
+                                    <div style="font-size:7.5pt; color:#155724; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:2pt;">Covered Lines</div>
+                                    <div style="font-size:12pt; font-weight:700; color:#155724;">
+                                        <t t-out="len(covered_lines)"/>
+                                    </div>
+                                </td>
+                                <td style="width:20%; padding:6pt 8pt; border:0.5pt solid #adb5bd; background:#f8d7da; vertical-align:top;">
+                                    <div style="font-size:7.5pt; color:#721c24; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:2pt;">Uncovered Lines</div>
+                                    <div style="font-size:12pt; font-weight:700; color:#721c24;">
+                                        <t t-out="len(uncovered_lines)"/>
+                                    </div>
+                                </td>
+                                <td style="width:20%; padding:6pt 8pt; border:0.5pt solid #adb5bd; background:#fff3cd; vertical-align:top;">
+                                    <div style="font-size:7.5pt; color:#856404; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:2pt;">No Vendor</div>
+                                    <div style="font-size:12pt; font-weight:700; color:#856404;">
+                                        <t t-out="len(no_vendor_lines)"/>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- ── No-vendor warning block ────────────── -->
+                        <t t-if="no_vendor_lines">
+                            <h2 class="eh_pdf_subtitle" style="color:#856404; margin-top:10pt;">
+                                &#9888; Products Without Vendor Assignment
+                            </h2>
+                            <table class="eh_pdf_table" style="margin-bottom:14pt;">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Warehouse</th>
+                                        <th>Reorder Rule</th>
+                                        <th class="text-end">On Hand</th>
+                                        <th class="text-end">Forecast</th>
+                                        <th class="text-end">MPS To Order</th>
+                                        <th class="text-end">Demand Qty</th>
+                                        <th class="text-center">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="no_vendor_lines.sorted(key=lambda l: l.product_id.display_name)" t-as="line">
+                                        <tr>
+                                            <td>
+                                                <strong>
+                                                    <t t-out="line.product_id.display_name"/>
+                                                </strong>
+                                                <br/>
+                                                <span class="text-muted" style="font-size:8pt;">
+                                                    <t t-out="line.product_uom_id.name or ''"/>
+                                                </span>
+                                            </td>
+                                            <td><t t-out="line.warehouse_id.name or '—'"/></td>
+                                            <td><t t-out="line.orderpoint_id.name or '—'"/></td>
+                                            <td class="text-end">
+                                                <t t-out="'{:,.2f}'.format(line.qty_on_hand or 0)"/>
+                                            </td>
+                                            <td class="text-end">
+                                                <t t-out="'{:,.2f}'.format(line.qty_forecast or 0)"/>
+                                            </td>
+                                            <td class="text-end">
+                                                <t t-out="'{:,.2f}'.format(line.orderpoint_qty_to_order or 0)"/>
+                                            </td>
+                                            <td class="text-end">
+                                                <strong>
+                                                    <t t-out="'{:,.2f}'.format(line.demand_qty or 0)"/>
+                                                </strong>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-attf-class="eh_pdf_status_badge #{line.get_coverage_css()}">
+                                                    <t t-out="line.get_coverage_label()"/>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </t>
+
+                        <!-- ── Vendor-grouped detail tables ──────── -->
+
+                        <!--
+                            Build an ordered list of unique vendor ids preserving
+                            sort-by-vendor-name order. QWeb has no set/dedup
+                            primitive so we use an accumulator pattern.
+                        -->
+                        <t t-set="_seen_vids"    t-value="[]"/>
+                        <t t-set="_ordered_vids" t-value="[]"/>
+                        <t t-foreach="all_lines.filtered(lambda l: l.vendor_id).sorted(key=lambda l: (l.vendor_id.name or '', l.product_id.display_name))" t-as="_vl">
+                            <t t-if="_vl.vendor_id.id not in _seen_vids">
+                                <t t-set="_ordered_vids" t-value="_ordered_vids + [_vl.vendor_id.id]"/>
+                                <t t-set="_seen_vids"    t-value="_seen_vids    + [_vl.vendor_id.id]"/>
+                            </t>
+                        </t>
+
+                        <t t-foreach="_ordered_vids" t-as="vid">
+                            <t t-set="vlines"     t-value="all_lines.filtered(lambda l: l.vendor_id.id == vid)"/>
+                            <t t-set="vendor_rec" t-value="vlines[0].vendor_id"/>
+                            <t t-set="grp_demand" t-value="sum(vlines.mapped('demand_qty'))"/>
+                            <t t-set="grp_draft"  t-value="sum(vlines.mapped('po_qty_draft'))"/>
+                            <t t-set="grp_uncov"  t-value="sum(vlines.mapped('uncovered_qty'))"/>
+
+                            <!-- Vendor section heading -->
+                            <h2 class="eh_pdf_subtitle" style="margin-top:12pt;">
+                                <t t-out="vendor_rec.display_name"/>
+                                <span style="font-size:8.5pt; font-weight:400; color:#6c757d; margin-left:8pt;">
+                                    <t t-out="len(vlines)"/> product(s) ·
+                                    Demand: <t t-out="'{:,.2f}'.format(grp_demand)"/> ·
+                                    Draft PO: <t t-out="'{:,.2f}'.format(grp_draft)"/> ·
+                                    Uncovered: <t t-out="'{:,.2f}'.format(grp_uncov)"/>
+                                </span>
+                            </h2>
+
+                            <table class="eh_pdf_table" style="margin-bottom:14pt;">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Vendor SKU</th>
+                                        <th>Warehouse</th>
+                                        <th>Reorder Rule</th>
+                                        <th class="text-end">Lead (d)</th>
+                                        <th class="text-end">Horizon</th>
+                                        <th class="text-end">On Hand</th>
+                                        <th class="text-end">Forecast</th>
+                                        <th class="text-end">MPS To Order</th>
+                                        <th class="text-end">Min Qty</th>
+                                        <th class="text-end">Demand Qty</th>
+                                        <th class="text-end">Draft PO Qty</th>
+                                        <th class="text-end">Conf. PO Qty</th>
+                                        <th class="text-end">Uncovered</th>
+                                        <th class="text-center">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="vlines.sorted(key=lambda l: l.product_id.display_name)" t-as="line">
+                                        <tr>
+                                            <td>
+                                                <strong>
+                                                    <t t-out="line.product_id.display_name"/>
+                                                </strong>
+                                                <t t-if="line.vendor_product_name">
+                                                    <br/>
+                                                    <span class="text-muted" style="font-size:8pt;">
+                                                        <t t-out="line.vendor_product_name"/>
+                                                    </span>
+                                                </t>
+                                                <br/>
+                                                <span class="text-muted" style="font-size:8pt;">
+                                                    <t t-out="line.product_uom_id.name or ''"/>
+                                                </span>
+                                            </td>
+                                            <td class="text-muted">
+                                                <t t-out="line.vendor_product_code or '—'"/>
+                                            </td>
+                                            <td><t t-out="line.warehouse_id.name or '—'"/></td>
+                                            <td><t t-out="line.orderpoint_id.name or '—'"/></td>
+                                            <td class="text-end">
+                                                <t t-out="line.vendor_lead_time or 0"/>
+                                            </td>
+                                            <td class="text-end">
+                                                <t t-out="line.horizon_date and line.horizon_date.strftime('%d %b %Y') or '—'"/>
+                                            </td>
+                                            <td class="text-end">
+                                                <t t-out="'{:,.2f}'.format(line.qty_on_hand or 0)"/>
+                                            </td>
+                                            <td class="text-end">
+                                                <t t-out="'{:,.2f}'.format(line.qty_forecast or 0)"/>
+                                            </td>
+                                            <td class="text-end">
+                                                <t t-out="'{:,.2f}'.format(line.orderpoint_qty_to_order or 0)"/>
+                                            </td>
+                                            <td class="text-end">
+                                                <t t-out="'{:,.2f}'.format(line.vendor_min_qty or 0)"/>
+                                            </td>
+                                            <td class="text-end">
+                                                <strong>
+                                                    <t t-out="'{:,.2f}'.format(line.demand_qty or 0)"/>
+                                                </strong>
+                                            </td>
+                                            <td class="text-end">
+                                                <t t-out="'{:,.2f}'.format(line.po_qty_draft or 0)"/>
+                                            </td>
+                                            <td class="text-end">
+                                                <t t-out="'{:,.2f}'.format(line.po_qty_confirmed or 0)"/>
+                                            </td>
+                                            <td class="text-end"
+                                                t-attf-style="color: #{(line.uncovered_qty or 0) &gt; 0 and '#721c24' or '#155724'}; font-weight:600;">
+                                                <t t-out="'{:,.2f}'.format(line.uncovered_qty or 0)"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-attf-class="eh_pdf_status_badge #{line.get_coverage_css()}">
+                                                    <t t-out="line.get_coverage_label()"/>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </t>
+
+                                    <!-- Vendor subtotal row -->
+                                    <tr class="eh_pdf_section_total">
+                                        <td colspan="10"
+                                            class="text-end"
+                                            style="font-size:8.5pt; font-style:italic;">
+                                            Vendor Subtotal
+                                        </td>
+                                        <td class="text-end">
+                                            <strong>
+                                                <t t-out="'{:,.2f}'.format(grp_demand)"/>
+                                            </strong>
+                                        </td>
+                                        <td class="text-end">
+                                            <strong>
+                                                <t t-out="'{:,.2f}'.format(grp_draft)"/>
+                                            </strong>
+                                        </td>
+                                        <td class="text-end">—</td>
+                                        <td class="text-end">
+                                            <strong>
+                                                <t t-out="'{:,.2f}'.format(grp_uncov)"/>
+                                            </strong>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </t>
+
+                        <!-- ── Grand total ────────────────────────── -->
+                        <table class="eh_pdf_table" style="margin-top:10pt;">
+                            <tbody>
+                                <tr class="eh_pdf_grand_total">
+                                    <td colspan="10"
+                                        class="text-end"
+                                        style="font-size:9pt; font-weight:700;">
+                                        Grand Total
+                                    </td>
+                                    <td class="text-end">
+                                        <strong>
+                                            <t t-out="'{:,.2f}'.format(total_demand)"/>
+                                        </strong>
+                                    </td>
+                                    <td class="text-end">
+                                        <strong>
+                                            <t t-out="'{:,.2f}'.format(total_draft_po)"/>
+                                        </strong>
+                                    </td>
+                                    <td class="text-end">
+                                        <strong>
+                                            <t t-out="'{:,.2f}'.format(total_confirmed)"/>
+                                        </strong>
+                                    </td>
+                                    <td class="text-end">
+                                        <strong>
+                                            <t t-out="'{:,.2f}'.format(total_uncovered)"/>
+                                        </strong>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- ── ERP Heritage brand footer ─────────── -->
+                        <t t-call="eh_log_base.eh_log_report_footer"/>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

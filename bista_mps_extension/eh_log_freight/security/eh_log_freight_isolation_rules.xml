@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="0">
+    <data>
+
+        <record id="rule_eh_log_freight_job_company" model="ir.rule">
+            <field name="name">eh.log.freight.job: company isolation</field>
+            <field name="model_id" ref="model_eh_log_freight_job"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_freight_milestone_company" model="ir.rule">
+            <field name="name">eh.log.freight.milestone: company isolation</field>
+            <field name="model_id" ref="model_eh_log_freight_milestone"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_freight_container_company" model="ir.rule">
+            <field name="name">eh.log.freight.container: company isolation</field>
+            <field name="model_id" ref="model_eh_log_freight_container"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_freight_bl_company" model="ir.rule">
+            <field name="name">eh.log.freight.bl: company isolation</field>
+            <field name="model_id" ref="model_eh_log_freight_bl"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_freight_cost_line_company" model="ir.rule">
+            <field name="name">eh.log.freight.cost.line: company isolation</field>
+            <field name="model_id" ref="model_eh_log_freight_cost_line"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_freight_revenue_line_company" model="ir.rule">
+            <field name="name">eh.log.freight.revenue.line: company isolation</field>
+            <field name="model_id" ref="model_eh_log_freight_revenue_line"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_res_config_settings_eh_log" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.eh.log</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="inside">
+                    <app data-string="ERP Heritage Logistics"
+                         string="ERP Heritage Logistics"
+                         name="eh_log_base"
+                         groups="eh_log_base.group_eh_log_manager">
+                        <block title="General" id="eh_log_settings_general">
+                            <setting id="eh_log_default_incoterm"
+                                     string="Default Incoterm"
+                                     help="Pre-fills new logistics quotations.">
+                                <field name="eh_log_default_incoterm_id" options="{'no_create': True}"/>
+                            </setting>
+                            <setting id="eh_log_default_mode"
+                                     string="Default Logistics Mode"
+                                     help="Pre-fills new logistics quotations.">
+                                <field name="eh_log_default_mode"/>
+                            </setting>
+                            <setting id="eh_log_kyc_warning_days"
+                                     string="KYC Expiry Warning"
+                                     help="Days before expiry the system raises an activity to the account owner.">
+                                <field name="eh_log_kyc_warning_days"/> days
+                            </setting>
+                        </block>
+                        <block title="Approvals" id="eh_log_settings_approvals">
+                            <setting id="eh_log_margin_warning_threshold"
+                                     string="Margin Warning Threshold"
+                                     help="Quotations below this margin raise a warning.">
+                                <field name="eh_log_margin_warning_threshold"/> %
+                            </setting>
+                            <setting id="eh_log_margin_floor_threshold"
+                                     string="Margin Approval Threshold"
+                                     help="Quotations below this margin require manager approval.">
+                                <field name="eh_log_margin_floor_threshold"/> %
+                            </setting>
+                            <setting id="eh_log_credit_warning_pct"
+                                     string="Credit Exposure Warning"
+                                     help="Above this percentage of the credit limit the system raises a warning.">
+                                <field name="eh_log_credit_warning_pct"/> %
+                            </setting>
+                        </block>
+                        <block title="Adapters" id="eh_log_settings_adapters">
+                            <setting id="eh_log_adapter_payload_max_chars"
+                                     string="Adapter Message Payload Truncation"
+                                     help="Truncate adapter payloads above this size before storage to keep the database lean.">
+                                <field name="eh_log_adapter_payload_max_chars"/> characters
+                            </setting>
+                            <setting id="eh_log_event_retention_state_days"
+                                     string="State Transition Retention"
+                                     help="Days to keep state transition events.">
+                                <field name="eh_log_event_retention_state_days"/> days
+                            </setting>
+                            <setting id="eh_log_event_retention_adapter_days"
+                                     string="Adapter Call Retention"
+                                     help="Days to keep adapter call events.">
+                                <field name="eh_log_event_retention_adapter_days"/> days
+                            </setting>
+                            <setting id="eh_log_event_retention_override_days"
+                                     string="Override Retention"
+                                     help="Days to keep manual override events. Compliance evidence usually requires the longest window.">
+                                <field name="eh_log_event_retention_override_days"/> days
+                            </setting>
+                        </block>
+                    </app>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <!--
+            Universally recognised cargo and trade document types.
+
+            Country and vertical modules append country-specific
+            documents (e.g. Mirsal payment receipt, FASAH SAD, COO
+            chambers per country).
+        -->
+
+        <!-- Transport documents -->
+        <record id="doc_type_hbl" model="eh.log.document.type">
+            <field name="code">HBL</field>
+            <field name="name">House Bill of Lading</field>
+            <field name="category">transport</field>
+            <field name="is_required_default" eval="True"/>
+            <field name="applies_to_modes">sea</field>
+        </record>
+
+        <record id="doc_type_mbl" model="eh.log.document.type">
+            <field name="code">MBL</field>
+            <field name="name">Master Bill of Lading</field>
+            <field name="category">transport</field>
+            <field name="is_required_default" eval="True"/>
+            <field name="applies_to_modes">sea</field>
+        </record>
+
+        <record id="doc_type_hawb" model="eh.log.document.type">
+            <field name="code">HAWB</field>
+            <field name="name">House Air Waybill</field>
+            <field name="category">transport</field>
+            <field name="is_required_default" eval="True"/>
+            <field name="applies_to_modes">air</field>
+        </record>
+
+        <record id="doc_type_mawb" model="eh.log.document.type">
+            <field name="code">MAWB</field>
+            <field name="name">Master Air Waybill</field>
+            <field name="category">transport</field>
+            <field name="is_required_default" eval="True"/>
+            <field name="applies_to_modes">air</field>
+        </record>
+
+        <record id="doc_type_cmr" model="eh.log.document.type">
+            <field name="code">CMR</field>
+            <field name="name">CMR Road Consignment Note</field>
+            <field name="category">transport</field>
+            <field name="is_required_default" eval="True"/>
+            <field name="applies_to_modes">road</field>
+        </record>
+
+        <record id="doc_type_rwb" model="eh.log.document.type">
+            <field name="code">RWB</field>
+            <field name="name">Rail Waybill</field>
+            <field name="category">transport</field>
+            <field name="applies_to_modes">rail</field>
+        </record>
+
+        <!-- Commercial -->
+        <record id="doc_type_cominv" model="eh.log.document.type">
+            <field name="code">COMINV</field>
+            <field name="name">Commercial Invoice</field>
+            <field name="category">commercial</field>
+            <field name="is_required_default" eval="True"/>
+            <field name="applies_to_modes">any</field>
+        </record>
+
+        <record id="doc_type_pl" model="eh.log.document.type">
+            <field name="code">PL</field>
+            <field name="name">Packing List</field>
+            <field name="category">commercial</field>
+            <field name="is_required_default" eval="True"/>
+            <field name="applies_to_modes">any</field>
+        </record>
+
+        <record id="doc_type_po" model="eh.log.document.type">
+            <field name="code">PO</field>
+            <field name="name">Purchase Order</field>
+            <field name="category">commercial</field>
+            <field name="applies_to_modes">any</field>
+        </record>
+
+        <!-- Customs -->
+        <record id="doc_type_decl" model="eh.log.document.type">
+            <field name="code">DECL</field>
+            <field name="name">Customs Declaration</field>
+            <field name="category">customs</field>
+            <field name="applies_to_modes">any</field>
+        </record>
+
+        <record id="doc_type_manifest" model="eh.log.document.type">
+            <field name="code">MFST</field>
+            <field name="name">Cargo Manifest</field>
+            <field name="category">customs</field>
+            <field name="applies_to_modes">any</field>
+        </record>
+
+        <record id="doc_type_dlvord" model="eh.log.document.type">
+            <field name="code">DLVORD</field>
+            <field name="name">Delivery Order</field>
+            <field name="category">customs</field>
+            <field name="applies_to_modes">any</field>
+        </record>
+
+        <!-- Regulatory -->
+        <record id="doc_type_coo" model="eh.log.document.type">
+            <field name="code">COO</field>
+            <field name="name">Certificate of Origin</field>
+            <field name="category">regulatory</field>
+            <field name="expiry_aware" eval="True"/>
+            <field name="expiry_warning_days">60</field>
+            <field name="applies_to_modes">any</field>
+        </record>
+
+        <record id="doc_type_ppc" model="eh.log.document.type">
+            <field name="code">PPC</field>
+            <field name="name">Phytosanitary Certificate</field>
+            <field name="category">regulatory</field>
+            <field name="expiry_aware" eval="True"/>
+            <field name="expiry_warning_days">30</field>
+            <field name="applies_to_modes">any</field>
+        </record>
+
+        <record id="doc_type_health" model="eh.log.document.type">
+            <field name="code">HCERT</field>
+            <field name="name">Health Certificate</field>
+            <field name="category">regulatory</field>
+            <field name="expiry_aware" eval="True"/>
+            <field name="expiry_warning_days">30</field>
+            <field name="applies_to_modes">any</field>
+        </record>
+
+        <record id="doc_type_dgd" model="eh.log.document.type">
+            <field name="code">DGD</field>
+            <field name="name">Dangerous Goods Declaration</field>
+            <field name="category">regulatory</field>
+            <field name="applies_to_modes">any</field>
+        </record>
+
+        <record id="doc_type_ata" model="eh.log.document.type">
+            <field name="code">ATA</field>
+            <field name="name">ATA Carnet</field>
+            <field name="category">regulatory</field>
+            <field name="expiry_aware" eval="True"/>
+            <field name="expiry_warning_days">30</field>
+            <field name="applies_to_modes">any</field>
+        </record>
+
+        <!-- Insurance -->
+        <record id="doc_type_inscert" model="eh.log.document.type">
+            <field name="code">INSCERT</field>
+            <field name="name">Insurance Certificate</field>
+            <field name="category">insurance</field>
+            <field name="applies_to_modes">any</field>
+        </record>
+
+        <!-- Identity / KYC -->
+        <record id="doc_type_tradelic" model="eh.log.document.type">
+            <field name="code">TRDLIC</field>
+            <field name="name">Trade Licence</field>
+            <field name="category">identity</field>
+            <field name="expiry_aware" eval="True"/>
+            <field name="expiry_warning_days">60</field>
+        </record>
+
+        <record id="doc_type_vatreg" model="eh.log.document.type">
+            <field name="code">VATREG</field>
+            <field name="name">VAT Registration Certificate</field>
+            <field name="category">identity</field>
+            <field name="expiry_aware" eval="True"/>
+            <field name="expiry_warning_days">90</field>
+        </record>
+
+        <record id="doc_type_passport" model="eh.log.document.type">
+            <field name="code">PSPRT</field>
+            <field name="name">Passport (Authorised Signatory)</field>
+            <field name="category">identity</field>
+            <field name="expiry_aware" eval="True"/>
+            <field name="expiry_warning_days">180</field>
+        </record>
+
+        <!-- Compliance -->
+        <record id="doc_type_sanctions" model="eh.log.document.type">
+            <field name="code">SCRN</field>
+            <field name="name">Sanctions and PEP Screening Result</field>
+            <field name="category">compliance</field>
+            <field name="expiry_aware" eval="True"/>
+            <field name="expiry_warning_days">30</field>
+        </record>
+
+    </data>
+</odoo>

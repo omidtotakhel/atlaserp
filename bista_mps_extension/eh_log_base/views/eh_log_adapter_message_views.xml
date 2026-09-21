@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_adapter_message_list" model="ir.ui.view">
+            <field name="name">eh.log.adapter.message.list</field>
+            <field name="model">eh.log.adapter.message</field>
+            <field name="arch" type="xml">
+                <tree string="Adapter Messages" decoration-success="status == 'success'" decoration-warning="status in ('retry', 'rejected')" decoration-danger="status in ('failure', 'timeout', 'dead_letter')" decoration-muted="status == 'pending'" create="false">
+                    <field name="created_at"/>
+                    <field name="profile_id"/>
+                    <field name="message_type"/>
+                    <field name="direction"/>
+                    <field name="status"/>
+                    <field name="http_status" optional="show"/>
+                    <field name="latency_ms" optional="show"/>
+                    <field name="retry_count" optional="show"/>
+                    <field name="correlation_id" optional="hide"/>
+                    <field name="error_code" optional="show"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_eh_log_adapter_message_form" model="ir.ui.view">
+            <field name="name">eh.log.adapter.message.form</field>
+            <field name="model">eh.log.adapter.message</field>
+            <field name="arch" type="xml">
+                <form string="Adapter Message" create="false" edit="false">
+                    <header>
+                        <button name="action_open_related_record"
+                                string="Open Related Record"
+                                type="object" attrs="{'invisible': ['|', ('related_model', '=', False), ('related_record_id', '=', False)]}"/>
+                        <button name="action_replay"
+                                string="Replay"
+                                type="object"
+                                groups="eh_log_base.group_eh_log_manager" attrs="{'invisible': ['|', ('status', 'not in', ['failure', 'timeout', 'dead_letter']), ('direction', '!=', 'outbound')]}"/>
+                        <field name="status" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="correlation_id"/>
+                            </h1>
+                            <h3>
+                                <field name="message_type"/>
+                            </h3>
+                        </div>
+                        <group>
+                            <group string="Cycle">
+                                <field name="profile_id"/>
+                                <field name="direction"/>
+                                <field name="http_status"/>
+                                <field name="latency_ms"/>
+                                <field name="retry_count"/>
+                                <field name="created_at"/>
+                                <field name="completed_at"/>
+                            </group>
+                            <group string="Linkage">
+                                <field name="related_model"/>
+                                <field name="related_record_id"/>
+                                <field name="related_record_display"/>
+                                <field name="idempotency_key"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </group>
+                        </group>
+                        <group string="Outcome" attrs="{'invisible': ['&amp;', ('error_code', '=', False), ('error_message', '=', False)]}">
+                            <field name="error_code"/>
+                            <field name="error_message" colspan="2"/>
+                        </group>
+                        <notebook>
+                            <page string="Request">
+                                <field name="request_headers" widget="text" readonly="1"/>
+                                <field name="request_payload" widget="text" readonly="1"/>
+                            </page>
+                            <page string="Response">
+                                <field name="response_headers" widget="text" readonly="1"/>
+                                <field name="response_payload" widget="text" readonly="1"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_eh_log_adapter_message_search" model="ir.ui.view">
+            <field name="name">eh.log.adapter.message.search</field>
+            <field name="model">eh.log.adapter.message</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="correlation_id"/>
+                    <field name="message_type"/>
+                    <field name="profile_id"/>
+                    <field name="error_code"/>
+                    <field name="related_record_display"/>
+                    <separator/>
+                    <filter string="Success" name="filter_success" domain="[('status', '=', 'success')]"/>
+                    <filter string="Rejected" name="filter_rejected" domain="[('status', '=', 'rejected')]"/>
+                    <filter string="Timed Out" name="filter_timeout" domain="[('status', '=', 'timeout')]"/>
+                    <filter string="Dead Letter" name="filter_dead" domain="[('status', '=', 'dead_letter')]"/>
+                    <filter string="Outbound" name="filter_outbound" domain="[('direction', '=', 'outbound')]"/>
+                    <filter string="Inbound" name="filter_inbound" domain="[('direction', '=', 'inbound')]"/>
+                    <filter string="Last 7 days" name="filter_recent_7d" domain="[('created_at', '&gt;=', (context_today() - relativedelta(days=7)).strftime('%Y-%m-%d'))]"/>
+                    <filter string="Group by Profile" name="group_profile" context="{'group_by': 'profile_id'}"/>
+                    <filter string="Group by Status" name="group_status" context="{'group_by': 'status'}"/>
+                    <filter string="Group by Message Type" name="group_message_type" context="{'group_by': 'message_type'}"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_eh_log_adapter_message" model="ir.actions.act_window">
+            <field name="name">Adapter Messages</field>
+            <field name="res_model">eh.log.adapter.message</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_eh_log_adapter_message_search"/>
+            <field name="context">{'search_default_filter_recent_7d': 1}</field>
+        </record>
+
+    </data>
+</odoo>

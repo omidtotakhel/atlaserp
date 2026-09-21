@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_freight_job_search_full" model="ir.ui.view">
+        <field name="name">eh.log.freight.job.search.full</field>
+        <field name="model">eh.log.freight.job</field>
+        <field name="arch" type="xml">
+            <search string="Search Freight Jobs">
+                <field name="name" string="Reference"
+                       filter_domain="[('name', 'ilike', self)]"/>
+                <field name="customer_reference"
+                       filter_domain="[('customer_reference', 'ilike', self)]"/>
+                <field name="shipper_reference"
+                       filter_domain="[('shipper_reference', 'ilike', self)]"/>
+                <field name="customer_id"/>
+                <field name="shipper_id"/>
+                <field name="consignee_id"/>
+                <field name="origin_country_id" string="Origin Country"/>
+                <field name="destination_country_id" string="Destination Country"/>
+                <field name="incoterm_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+                <separator/>
+                <filter name="filter_state_draft" string="Draft"
+                        domain="[('state', '=', 'draft')]"/>
+                <filter name="filter_state_booked" string="Booked"
+                        domain="[('state', '=', 'booked')]"/>
+                <filter name="filter_state_in_transit" string="In Transit"
+                        domain="[('state', '=', 'in_transit')]"/>
+                <filter name="filter_state_at_destination" string="At Destination"
+                        domain="[('state', '=', 'at_destination')]"/>
+                <filter name="filter_state_delivered" string="Delivered"
+                        domain="[('state', '=', 'delivered')]"/>
+                <filter name="filter_state_closed" string="Closed"
+                        domain="[('state', '=', 'closed')]"/>
+                <filter name="filter_state_open" string="Open (not closed/cancelled)"
+                        domain="[('state', 'not in', ('closed', 'cancelled'))]"/>
+
+                <separator/>
+                <filter name="filter_mode_sea" string="Sea"
+                        domain="[('mode', '=', 'sea')]"/>
+                <filter name="filter_mode_air" string="Air"
+                        domain="[('mode', '=', 'air')]"/>
+                <filter name="filter_mode_road" string="Road"
+                        domain="[('mode', '=', 'road')]"/>
+                <filter name="filter_mode_rail" string="Rail"
+                        domain="[('mode', '=', 'rail')]"/>
+                <filter name="filter_mode_multimodal" string="Multimodal"
+                        domain="[('mode', '=', 'multimodal')]"/>
+
+                <separator/>
+                <filter name="filter_direction_import" string="Import"
+                        domain="[('direction', '=', 'import')]"/>
+                <filter name="filter_direction_export" string="Export"
+                        domain="[('direction', '=', 'export')]"/>
+                <filter name="filter_direction_cross_trade" string="Cross Trade"
+                        domain="[('direction', '=', 'cross_trade')]"/>
+
+                <separator/>
+                <filter name="filter_my_jobs" string="My Jobs"
+                        domain="[('create_uid', '=', uid)]"/>
+                <filter name="filter_my_company" string="My Company"
+                        domain="[('company_id', 'in', allowed_company_ids)]"/>
+
+                <separator/>
+                <filter name="filter_created_today" string="Created Today"
+                        domain="[('create_date', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00')),
+                                  ('create_date', '&lt;=', context_today().strftime('%Y-%m-%d 23:59:59'))]"/>
+                <filter name="filter_created_last_7_days" string="Last 7 Days"
+                        domain="[('create_date', '&gt;=', (context_today() - relativedelta(days=7)).strftime('%Y-%m-%d 00:00:00'))]"/>
+                <filter name="filter_created_last_30_days" string="Last 30 Days"
+                        domain="[('create_date', '&gt;=', (context_today() - relativedelta(days=30)).strftime('%Y-%m-%d 00:00:00'))]"/>
+                <filter name="filter_created_this_month" string="This Month"
+                        domain="[('create_date', '&gt;=', context_today().strftime('%Y-%m-01 00:00:00'))]"/>
+                <filter name="filter_created_this_year" string="This Year"
+                        domain="[('create_date', '&gt;=', context_today().strftime('%Y-01-01 00:00:00'))]"/>
+
+                <separator/>
+                <group>
+                    <filter name="group_by_state" string="State"
+                            context="{'group_by': 'state'}"/>
+                    <filter name="group_by_mode" string="Mode"
+                            context="{'group_by': 'mode'}"/>
+                    <filter name="group_by_direction" string="Direction"
+                            context="{'group_by': 'direction'}"/>
+                    <filter name="group_by_customer" string="Customer"
+                            context="{'group_by': 'customer_id'}"/>
+                    <filter name="group_by_shipper" string="Shipper"
+                            context="{'group_by': 'shipper_id'}"/>
+                    <filter name="group_by_consignee" string="Consignee"
+                            context="{'group_by': 'consignee_id'}"/>
+                    <filter name="group_by_origin_country"
+                            string="Origin Country"
+                            context="{'group_by': 'origin_country_id'}"/>
+                    <filter name="group_by_destination_country"
+                            string="Destination Country"
+                            context="{'group_by': 'destination_country_id'}"/>
+                    <filter name="group_by_create_month" string="Created Month"
+                            context="{'group_by': 'create_date:month'}"/>
+                    <filter name="group_by_create_quarter" string="Created Quarter"
+                            context="{'group_by': 'create_date:quarter'}"/>
+                    <filter name="group_by_create_year" string="Created Year"
+                            context="{'group_by': 'create_date:year'}"/>
+                    <filter name="group_by_company" string="Company"
+                            context="{'group_by': 'company_id'}"
+                            groups="base.group_multi_company"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+</odoo>

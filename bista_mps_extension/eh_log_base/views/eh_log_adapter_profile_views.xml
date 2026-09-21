@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_adapter_profile_list" model="ir.ui.view">
+            <field name="name">eh.log.adapter.profile.list</field>
+            <field name="model">eh.log.adapter.profile</field>
+            <field name="arch" type="xml">
+                <tree string="Adapter Profiles" decoration-success="health_check_status == 'ok'" decoration-warning="health_check_status == 'degraded'" decoration-danger="health_check_status == 'down'" decoration-muted="health_check_status == 'unknown'">
+                    <field name="provider_code"/>
+                    <field name="name"/>
+                    <field name="provider_kind"/>
+                    <field name="environment"/>
+                    <field name="api_version"/>
+                    <field name="health_check_status"/>
+                    <field name="health_check_at" optional="show"/>
+                    <field name="message_count" optional="show"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="active" optional="hide"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_eh_log_adapter_profile_form" model="ir.ui.view">
+            <field name="name">eh.log.adapter.profile.form</field>
+            <field name="model">eh.log.adapter.profile</field>
+            <field name="arch" type="xml">
+                <form string="Adapter Profile">
+                    <header>
+                        <button name="action_run_health_check"
+                                string="Run Health Check"
+                                type="object"
+                                class="btn-primary"
+                                groups="eh_log_base.group_eh_log_manager"/>
+                        <button name="action_test_credential"
+                                string="Test Credential"
+                                type="object"
+                                groups="eh_log_base.group_eh_log_manager"/>
+                        <field name="health_check_status" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_messages"
+                                    type="object"
+                                    class="oe_stat_button"
+                                    icon="fa-list">
+                                <field name="message_count" widget="statinfo" string="Messages"/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Mirsal 2 (UAE Sandbox)"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group string="Provider">
+                                <field name="provider_code"/>
+                                <field name="provider_kind"/>
+                                <field name="api_version"/>
+                                <field name="environment"/>
+                            </group>
+                            <group string="Endpoint">
+                                <field name="endpoint_url" placeholder="https://provider.example/v1"/>
+                                <field name="secondary_endpoint_url"/>
+                                <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Authentication">
+                                <group>
+                                    <group string="Method">
+                                        <field name="auth_method"/>
+                                        <field name="credential_purpose"/>
+                                        <field name="credential_status"/>
+                                    </group>
+                                </group>
+                                <div class="alert alert-info" role="status">
+                                    <strong>Credential resolution order</strong>
+                                    <ol>
+                                        <li>Environment variable (e.g. <code>EH_LOG_&lt;PROVIDER&gt;_&lt;PURPOSE&gt;</code>).</li>
+                                        <li>Encrypted ir.config_parameter under the <code>eh_log.credentials.</code> namespace.</li>
+                                        <li>Explicit caller default (avoid in production).</li>
+                                    </ol>
+                                    The actual secret is never displayed on this form.
+                                </div>
+                            </page>
+                            <page string="Resilience">
+                                <group>
+                                    <group string="Timeouts and Retries">
+                                        <field name="request_timeout_seconds"/>
+                                        <field name="retry_max_attempts"/>
+                                        <field name="rate_limit_per_minute"/>
+                                    </group>
+                                    <group string="Circuit Breaker">
+                                        <field name="circuit_breaker_threshold"/>
+                                        <field name="circuit_breaker_cooldown_seconds"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Health">
+                                <group>
+                                    <group>
+                                        <field name="health_check_status" readonly="1"/>
+                                        <field name="health_check_at" readonly="1"/>
+                                        <field name="health_check_latency_ms" readonly="1"/>
+                                    </group>
+                                </group>
+                                <field name="health_check_message" readonly="1"/>
+                            </page>
+                            <page string="Notes">
+                                <field name="notes"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_eh_log_adapter_profile_search" model="ir.ui.view">
+            <field name="name">eh.log.adapter.profile.search</field>
+            <field name="model">eh.log.adapter.profile</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="provider_code"/>
+                    <field name="name"/>
+                    <separator/>
+                    <filter string="Mock" name="filter_mock" domain="[('environment', '=', 'mock')]"/>
+                    <filter string="Sandbox" name="filter_sandbox" domain="[('environment', '=', 'sandbox')]"/>
+                    <filter string="Production" name="filter_production" domain="[('environment', '=', 'production')]"/>
+                    <separator/>
+                    <filter string="Healthy" name="filter_ok" domain="[('health_check_status', '=', 'ok')]"/>
+                    <filter string="Degraded" name="filter_degraded" domain="[('health_check_status', '=', 'degraded')]"/>
+                    <filter string="Down" name="filter_down" domain="[('health_check_status', '=', 'down')]"/>
+                    <filter string="Group by Provider Kind" name="group_kind" context="{'group_by': 'provider_kind'}"/>
+                    <filter string="Group by Environment" name="group_env" context="{'group_by': 'environment'}"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_eh_log_adapter_profile" model="ir.actions.act_window">
+            <field name="name">Adapter Profiles</field>
+            <field name="res_model">eh.log.adapter.profile</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_eh_log_adapter_profile_search"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No adapter profiles configured yet
+                </p>
+                <p>
+                    Country localisation modules ship default sandbox profiles
+                    on install. Profiles default to mock environment so a
+                    fresh install never accidentally calls a live regulator.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>
