@@ -1,0 +1,31 @@
+```scss
+// MPS Vendor Demand – custom styles
+
+.o_mps_vendor_demand {
+
+    // Highlight rows where replenish qty is below vendor minimum
+    .o_data_row.o_vendor_demand_warning td {
+        color: darken(#f0ad4e, 15%);
+        font-weight: 600;
+    }
+
+    // Pivot header for period columns
+    .o_pivot_header_cell_opened,
+    .o_pivot_header_cell_closed {
+        background-color: #e8f4fd;
+        font-weight: 700;
+    }
+
+    // Highlight vendor column in list
+    .o_list_view .o_data_row td[name="vendor_id"] {
+        font-weight: 600;
+    }
+}
+
+// Wizard modal – tighter spacing
+.modal .o_form_view[model="mps.vendor.demand.wizard"] {
+    .o_group {
+        margin-bottom: 12px;
+    }
+}
+```

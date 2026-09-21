@@ -1,0 +1,7 @@
+```csv
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mps_vendor_demand_user,mps.vendor.demand user,model_mps_vendor_demand,mrp.group_mrp_user,1,0,0,0
+access_mps_vendor_demand_manager,mps.vendor.demand manager,model_mps_vendor_demand,mrp.group_mrp_manager,1,0,0,0
+access_mps_vendor_demand_wizard_user,mps.vendor.demand.wizard user,model_mps_vendor_demand_wizard,mrp.group_mrp_user,1,1,1,1
+access_mps_vendor_demand_wizard_manager,mps.vendor.demand.wizard manager,model_mps_vendor_demand_wizard,mrp.group_mrp_manager,1,1,1,1
+```
