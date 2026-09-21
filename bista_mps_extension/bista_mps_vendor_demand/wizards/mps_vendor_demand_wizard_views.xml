@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!--
+        MPS Vendor Demand Wizard – Form View
+        =====================================
+        Wizard form opened from Logistics > Operations > MPS Vendor Demand.
+        The user sets filter parameters, clicks Generate, then either opens
+        the list view or prints the PDF from the footer buttons.
+    -->
+
+    <record id="view_mps_vendor_demand_wizard_form" model="ir.ui.view">
+        <field name="name">mps.vendor.demand.wizard.form</field>
+        <field name="model">mps.vendor.demand.wizard</field>
+        <field name="arch" type="xml">
+            <form string="MPS Vendor Demand">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>MPS Vendor Demand</h1>
+                        <p class="text-muted" style="font-size:10pt;">
+                            Configure filters, click <strong>Generate</strong> to compute
+                            vendor demand from reordering rules, then view lines or print
+                            the A4 Landscape PDF report.
+                        </p>
+                    </div>
+
+                    <group string="Report Filters" col="2">
+                        <group>
+                            <field name="company_id"
+                                   options="{'no_create': True}"
+                                   required="1"/>
+                            <field name="warehouse_ids"
+                                   widget="many2many_tags"
+                                   domain="[('company_id', '=', company_id)]"
+                                   placeholder="Leave empty for all warehouses…"/>
+                            <field name="date_horizon"/>
+                        </group>
+                        <group>
+                            <field name="include_zero_demand"/>
+                            <field name="only_uncovered"/>
+                            <div class="o_field_widget" attrs="{'invisible': [('line_count', '=', 0)]}">
+                                <field name="line_count" readonly="1"/>
+                                <span class="text-muted" style="font-size:9pt; margin-left:4pt;">
+                                    lines generated
+                                </span>
+                            </div>
+                        </group>
+                    </group>
+
+                </sheet>
+
+                <footer>
+                    <button name="action_generate"
+                            string="&#8635; Generate"
+                            type="object"
+                            class="btn-primary"/>
+                    <button name="action_view_lines"
+                            string="View Lines"
+                            type="object"
+                            class="btn-secondary"
+                            attrs="{'invisible': [('line_count', '=', 0)]}"/>
+                    <button name="action_print_report"
+                            string="Print PDF"
+                            type="object"
+                            class="btn-secondary"
+                            attrs="{'invisible': [('line_count', '=', 0)]}"/>
+                    <button string="Close"
+                            class="btn-secondary"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Window action that opens the wizard in a dialog -->
+    <record id="action_mps_vendor_demand_wizard" model="ir.actions.act_window">
+        <field name="name">MPS Vendor Demand</field>
+        <field name="res_model">mps.vendor.demand.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_mps_vendor_demand_wizard_form"/>
+        <field name="target">new</field>
+        <field name="context">{}</field>
+    </record>
+
+</odoo>
