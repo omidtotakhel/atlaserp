@@ -1,0 +1,2380 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 10:15+0000\n"
+"PO-Revision-Date: 2026-07-01 10:15+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+msgid "(none configured)"
+msgstr "(未設定)"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "<strong>Credential resolution order</strong>"
+msgstr "<strong>認証情報の解決順序</strong>"
+
+#. module: eh_log_base
+#: model_terms:ir.actions.act_window,help:eh_log_base.action_eh_log_charge_code
+msgid ""
+"A starter set of universally recognised codes is seeded\n"
+"                    on install. Add country or contract specific codes here."
+msgstr ""
+"普遍的に認識されているコードの初期セットが、インストール時に\n"
+"                    シードされます。国別または契約固有のコードをここに追加してください。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__api_key
+msgid "API Key"
+msgstr "APIキー"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__api_version
+msgid "API Version Implemented"
+msgstr "実装済み API バージョン"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__as2
+msgid "AS2 (EDI)"
+msgstr ""
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_ata
+msgid "ATA Carnet"
+msgstr "ATA カルネ"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Above this percentage of the credit limit the system raises a warning."
+msgstr "与信限度額のこの割合を超えると、システムは警告を発します。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_needaction
+msgid "Action Needed"
+msgstr "要アクション"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__active
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__active
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__active
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_search
+msgid "Active"
+msgstr "有効"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_ids
+msgid "Activities"
+msgstr "活動"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "例外の活動を示す装飾"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_state
+msgid "Activity State"
+msgstr "活動ステータス"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "活動タイプアイコン"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__adapter_call
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Adapter Call"
+msgstr "アダプター呼び出し"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Adapter Call Retention"
+msgstr "アダプター呼び出しの保持"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Adapter Message"
+msgstr "アダプターメッセージ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_adapter_payload_max_chars
+msgid "Adapter Message Payload Max Chars"
+msgstr "アダプターメッセージペイロードの最大文字数"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Adapter Message Payload Truncation"
+msgstr "アダプターメッセージペイロードの切り詰め"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_profile.py:0
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_adapter_message
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_adapter_messages
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_list
+msgid "Adapter Messages"
+msgstr "アダプターメッセージ"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Adapter Profile"
+msgstr "アダプタープロファイル"
+
+#. module: eh_log_base
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_adapter_profile
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_adapter_profiles
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_list
+msgid "Adapter Profiles"
+msgstr "アダプタープロファイル"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_adapter_payload_max_chars
+msgid ""
+"Adapter messages are truncated above this size before storage to keep the "
+"database lean. Truncation happens after redaction."
+msgstr "このサイズを超えるアダプターメッセージは、データベースを軽量に保つため保存前に切り詰められます。切り詰めはマスキングの後に行われます。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__message_type
+msgid ""
+"Adapter-defined message label, e.g. 'declaration_submit', 'health_check', "
+"'status_query'."
+msgstr ""
+"アダプター定義のメッセージラベル。例: 'declaration_submit'、'health_check'、'status_query'。"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_adapters
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Adapters"
+msgstr "アダプター"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__air
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__air
+msgid "Air"
+msgstr "航空"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__carrier_air
+msgid "Air Carrier"
+msgstr "航空会社"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_afr
+msgid "Air Freight"
+msgstr "航空貨物"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_awb
+msgid "Air Waybill Fee"
+msgstr "航空運送状手数料"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+msgid ""
+"An encrypted credential could not be decrypted. The encryption salt or "
+"database UUID has changed. Re-set the credential under Settings > ERP "
+"Heritage Logistics > Adapters."
+msgstr ""
+"暗号化された資格情報を復号できませんでした。暗号化ソルトまたはデータベース UUID が変更されています。設定 > ERP Heritage "
+"Logistics > Adapters で資格情報を再設定してください。"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+msgid ""
+"An encrypted credential is stored but the Python 'cryptography' library is "
+"not installed on the server. Install it or replace the parameter with an "
+"environment variable."
+msgstr ""
+"暗号化された資格情報が保存されていますが、サーバーに Python の 'cryptography' "
+"ライブラリがインストールされていません。インストールするか、パラメータを環境変数に置き換えてください。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__ancillary
+msgid "Ancillary"
+msgstr "付随的"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__any
+msgid "Any Mode"
+msgstr "任意のモード"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__applies_to_modes
+msgid "Applies To Modes"
+msgstr "モードに適用"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Approval"
+msgstr "承認"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__approval
+msgid "Approval Decision"
+msgstr "承認判断"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Approvals"
+msgstr "承認"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_attachment_count
+msgid "Attachment Count"
+msgstr "添付数"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_audit
+msgid "Audit"
+msgstr "監査"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__audit_note
+msgid "Audit Note"
+msgstr "監査メモ"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Authentication"
+msgstr "認証"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__auth_method
+msgid "Authentication Method"
+msgstr "認証方法"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__request_headers
+msgid ""
+"Authentication headers redacted before storage; Content-Type, Accept, and "
+"other operational headers retained."
+msgstr "認証ヘッダーは保存前に編集されます。Content-Type、Accept、およびその他の運用ヘッダーは保持されます。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__endpoint_url
+msgid ""
+"Base URL for sandbox or production calls. Mock environment ignores this "
+"field. Reference data files supply the published default; operators override"
+" for private endpoints."
+msgstr ""
+"サンドボックスまたは本番呼び出し用のベース "
+"URL。モック環境はこのフィールドを無視します。参照データファイルが公開デフォルト値を提供します。オペレーターはプライベートエンドポイント用に上書きします。"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "Behaviour"
+msgstr "動作"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_bl
+msgid "Bill of Lading Fee"
+msgstr "船荷証券手数料"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__direction__both
+msgid "Both"
+msgstr "両方"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_baf
+msgid "Bunker Adjustment Factor"
+msgstr "燃料油調整係数"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_cmr
+msgid "CMR Road Consignment Note"
+msgstr "CMR 道路運送状"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_insurance
+msgid "Cargo Insurance"
+msgstr "貨物保険"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_manifest
+msgid "Cargo Manifest"
+msgstr "貨物マニフェスト"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__category
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__category
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__category
+msgid "Category"
+msgstr "カテゴリー"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_coo
+msgid "Certificate of Origin"
+msgstr "原産地証明書"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Charge Code"
+msgstr "料金コード"
+
+#. module: eh_log_base
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_charge_code
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_charge_codes
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_list
+msgid "Charge Codes"
+msgstr "料金コード"
+
+#. module: eh_log_base
+#: model:ir.model.constraint,message:eh_log_base.constraint_eh_log_charge_code_code_unique
+msgid ""
+"Charge code must be unique. Pick a different code or edit the existing one "
+"instead of duplicating."
+msgstr "料金コードは一意である必要があります。複製せずに、別のコードを選択するか既存のコードを編集してください。"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Circuit Breaker"
+msgstr "サーキットブレーカー"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__circuit_breaker_cooldown_seconds
+msgid "Circuit Breaker Cooldown (s)"
+msgstr "サーキットブレーカーのクールダウン（秒）"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__circuit_breaker_threshold
+msgid "Circuit Breaker Threshold"
+msgstr "サーキットブレーカーのしきい値"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Classification"
+msgstr "分類"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__code
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__code
+msgid "Code"
+msgstr "コード"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__applies_to_modes
+msgid ""
+"Comma-separated list of modes the document applies to "
+"(sea,air,road,rail,multimodal,courier) or 'any'. Used to filter the "
+"checklist when the job mode is set."
+msgstr ""
+"文書が適用されるモードのカンマ区切りリスト（sea,air,road,rail,multimodal,courier）または "
+"'any'。ジョブモードが設定されているときにチェックリストをフィルタリングするために使用されます。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__commercial
+msgid "Commercial Document"
+msgstr "商業文書"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_cominv
+msgid "Commercial Invoice"
+msgstr "商業送り状"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_res_company
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__company_ids
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__company_ids
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__company_ids
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__company_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Companies"
+msgstr "会社"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__company_id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__company_id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__company_id
+msgid "Company"
+msgstr "会社"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__completed_at
+msgid "Completed"
+msgstr "完了"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__compliance
+msgid "Compliance and Sanctions"
+msgstr "コンプライアンスと制裁"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_res_config_settings
+msgid "Config Settings"
+msgstr "構成設定"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_configuration
+msgid "Configuration"
+msgstr "設定"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__config_change
+msgid "Configuration Change"
+msgstr "設定変更"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__circuit_breaker_threshold
+msgid ""
+"Consecutive failure count that trips the circuit breaker. While tripped, the"
+" adapter rejects calls immediately and schedules a half-open probe."
+msgstr "サーキットブレーカーを作動させる連続失敗回数。作動中は、アダプタは呼び出しを即座に拒否し、ハーフオープンのプローブをスケジュールします。"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_form
+msgid "Context"
+msgstr "コンテキスト"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__context_json
+msgid "Context (JSON)"
+msgstr "コンテキスト (JSON)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__correlation_id
+msgid "Correlation ID"
+msgstr "相関 ID"
+
+#. module: eh_log_base
+#: model_terms:ir.actions.act_window,help:eh_log_base.action_eh_log_adapter_profile
+msgid ""
+"Country localisation modules ship default sandbox profiles\n"
+"                    on install. Profiles default to mock environment so a\n"
+"                    fresh install never accidentally calls a live regulator."
+msgstr ""
+"国別ローカライゼーションモジュールは、インストール時に既定のサンドボックスプロファイル\n"
+"                    を提供します。プロファイルは既定でモック環境に設定されるため、\n"
+"                    新規インストールで誤って本番の規制当局を呼び出すことはありません。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__courier
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__courier
+msgid "Courier or Express"
+msgstr "宅配便または速達"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__created_at
+msgid "Created"
+msgstr "作成日"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__create_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__create_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__create_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__create_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__create_uid
+msgid "Created by"
+msgstr "作成者"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__create_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__create_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__create_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__create_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__create_date
+msgid "Created on"
+msgstr "作成日"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__credential_purpose
+msgid "Credential Purpose Key"
+msgstr "認証情報の用途キー"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__credential_status
+msgid "Credential Status"
+msgstr "認証情報のステータス"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+#, python-format
+msgid ""
+"Credential for '%(purpose)s' is not configured. Tried environment variables:"
+" %(env)s. Tried ir.config_parameter key: %(param)s. Set one of these values "
+"in your deployment configuration or under Settings > ERP Heritage Logistics "
+"> Adapters."
+msgstr ""
+"'%(purpose)s' の認証情報が構成されていません。試行した環境変数: %(env)s。試行した ir.config_parameter キー:"
+" %(param)s。これらの値のいずれかを、デプロイ構成または Settings > ERP Heritage Logistics > "
+"Adapters で設定してください。"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_profile.py:0
+#, python-format
+msgid ""
+"Credential for profile %(name)s is not resolvable. Underlying error: %(err)s"
+msgstr "プロファイル %(name)s の認証情報を解決できません。基となるエラー: %(err)s"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Credit Exposure Warning"
+msgstr "与信エクスポージャー警告"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_credit_warning_pct
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_credit_warning_pct
+msgid "Credit Exposure Warning (%)"
+msgstr "与信エクスポージャー警告 (%)"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_caf
+msgid "Currency Adjustment Factor"
+msgstr "通貨調整係数"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_clrnc
+msgid "Customs Clearance Fee"
+msgstr "通関手数料"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_decl
+msgid "Customs Declaration"
+msgstr "税関申告"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__customs
+msgid "Customs Document"
+msgstr "税関書類"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_duty
+msgid "Customs Duty"
+msgstr "関税"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__customs
+msgid "Customs and Duties"
+msgstr "税関と関税"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Cycle"
+msgstr "サイクル"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_dgd
+msgid "Dangerous Goods Declaration"
+msgstr "危険物申告"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__related_record_id
+msgid ""
+"Database id of the originating record. Pair with related_model for the back "
+"link."
+msgstr "元となるレコードのデータベース ID。バックリンクには related_model と組み合わせて使用します。"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Days before expiry the system raises an activity to the account owner."
+msgstr "有効期限の何日前にシステムがアカウント所有者へアクティビティを作成するか。"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Days to keep adapter call events."
+msgstr "アダプター呼び出しイベントを保持する日数。"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid ""
+"Days to keep manual override events. Compliance evidence usually requires "
+"the longest window."
+msgstr "手動オーバーライドイベントを保持する日数。コンプライアンスの証跡には通常、最も長い保持期間が必要です。"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Days to keep state transition events."
+msgstr "状態遷移イベントを保持する日数。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__dead_letter
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Dead Letter"
+msgstr "デッドレター"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__default_currency_id
+msgid "Default Currency"
+msgstr "デフォルト通貨"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__default_expense_account_id
+msgid "Default Expense Account"
+msgstr "デフォルトの費用勘定"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__expiry_warning_days
+msgid "Default Expiry Warning (days)"
+msgstr "デフォルト有効期限警告（日）"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_default_incoterm_id
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_default_incoterm_id
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Default Incoterm"
+msgstr "デフォルトインコタームズ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_default_mode
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_default_mode
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Default Logistics Mode"
+msgstr "デフォルト物流モード"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__default_revenue_account_id
+msgid "Default Revenue Account"
+msgstr "デフォルト収益勘定"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Defaults"
+msgstr "既定値"
+
+#. module: eh_log_base
+#: model_terms:ir.actions.act_window,help:eh_log_base.action_eh_log_charge_code
+msgid "Define your charge code catalogue"
+msgstr "料金コードのカタログを定義"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__health_check_status__degraded
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Degraded"
+msgstr "劣化"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_dlvord
+msgid "Delivery Order"
+msgstr "配送オーダー"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__description
+msgid "Description"
+msgstr "説明"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__destination
+msgid "Destination Charges"
+msgstr "仕向地料金"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_delivery
+msgid "Destination Delivery"
+msgstr "仕向地配送"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_destination_doc
+msgid "Destination Documentation"
+msgstr "仕向地書類"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_dthc
+msgid "Destination Terminal Handling"
+msgstr "仕向地ターミナル取扱料"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_dthc_air
+msgid "Destination Terminal Handling (Air)"
+msgstr "仕向地ターミナル取扱料(航空)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__description
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "Detail"
+msgstr "詳細"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__direction
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__direction
+msgid "Direction"
+msgstr "方向"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__is_disbursement
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+msgid "Disbursement"
+msgstr "支出"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__is_disbursement
+msgid ""
+"Disbursement charges are passed through at cost; the margin guard ignores "
+"them when checking gross margin."
+msgstr "支出手数料は原価で転嫁されます。マージン ガードは粗利益をチェックする際にこれらを無視します。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__display_name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__display_name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__display_name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__display_name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__display_name
+msgid "Display Name"
+msgstr "表示名"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "Document Type"
+msgstr "ドキュメントタイプ"
+
+#. module: eh_log_base
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_document_type
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_document_types
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_list
+msgid "Document Types"
+msgstr "文書タイプ"
+
+#. module: eh_log_base
+#: model:ir.model.constraint,message:eh_log_base.constraint_eh_log_document_type_code_unique
+msgid "Document type code must be unique."
+msgstr "文書タイプのコードは一意である必要があります。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__documentation
+msgid "Documentation"
+msgstr "ドキュメント"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__health_check_status__down
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Down"
+msgstr "切り捨て"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__edi_partner
+msgid "EDI Partner"
+msgstr "EDI パートナー"
+
+#. module: eh_log_base
+#: model:res.groups,name:eh_log_base.group_eh_log_auditor
+msgid "EH Logistics Auditor (read-only)"
+msgstr "EH ロジスティクス監査者（読み取り専用）"
+
+#. module: eh_log_base
+#: model:res.groups,name:eh_log_base.group_eh_log_manager
+msgid "EH Logistics Manager"
+msgstr "EH ロジスティクスマネージャー"
+
+#. module: eh_log_base
+#: model:res.groups,name:eh_log_base.group_eh_log_user
+msgid "EH Logistics User"
+msgstr "EH ロジスティクスユーザー"
+
+#. module: eh_log_base
+#: model:ir.actions.server,name:eh_log_base.ir_cron_eh_log_event_gc_ir_actions_server
+#: model:ir.cron,cron_name:eh_log_base.ir_cron_eh_log_event_gc
+msgid "EH Logistics: prune old operational events"
+msgstr "EH ロジスティクス: 古い運用イベントを削除"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_brand
+msgid "ERP Heritage Brand Attribution"
+msgstr "ERP Heritage ブランド帰属表示"
+
+#. module: eh_log_base
+#: model:ir.module.category,name:eh_log_base.privilege_eh_logistics
+#: model_terms:ir.ui.view,arch_db:eh_log_base.eh_log_report_footer
+#: model_terms:ir.ui.view,arch_db:eh_log_base.eh_log_report_header
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "ERP Heritage Logistics"
+msgstr "ERP Heritage ロジスティクス"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_ux_mixin
+msgid "ERP Heritage UX Mixin"
+msgstr ""
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+msgid ""
+"Encrypted credential storage requires the Python 'cryptography' library. "
+"Install it on the server or store credentials via environment variables "
+"instead."
+msgstr ""
+"暗号化された認証情報の保存には Python の 'cryptography' "
+"ライブラリが必要です。サーバーにインストールするか、代わりに環境変数を使用して認証情報を保存してください。"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid ""
+"Encrypted ir.config_parameter under the <code>eh_log.credentials.</code> "
+"namespace."
+msgstr "<code>eh_log.credentials.</code> 名前空間下の暗号化された ir.config_parameter。"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Endpoint"
+msgstr "エンドポイント"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__environment
+msgid "Environment"
+msgstr "環境"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid ""
+"Environment variable (e.g. "
+"<code>EH_LOG_&lt;PROVIDER&gt;_&lt;PURPOSE&gt;</code>)."
+msgstr "環境変数（例: <code>EH_LOG_&lt;PROVIDER&gt;_&lt;PURPOSE&gt;</code>）。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__severity__error
+msgid "Error"
+msgstr "エラー"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__error_code
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__error_code
+msgid "Error Code"
+msgstr "エラーコード"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__error_message
+msgid "Error Message"
+msgstr "エラーメッセージ"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Errors only"
+msgstr "エラーのみ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_event_retention_adapter_days
+msgid "Event Retention: Adapter Calls (days)"
+msgstr "イベント保持：アダプター呼び出し（日）"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_event_retention_override_days
+msgid "Event Retention: Manual Overrides (days)"
+msgstr "イベント保持：手動オーバーライド（日）"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_event_retention_state_days
+msgid "Event Retention: State Transitions (days)"
+msgstr "イベント保持：状態遷移（日）"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "Expiry Tracking"
+msgstr "有効期限トラッキング"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Explicit caller default (avoid in production)."
+msgstr "呼び出し元の明示的なデフォルト値（本番環境では使用しないでください）。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__direction__export
+msgid "Export"
+msgstr "エクスポート"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__carrier_express
+msgid "Express Carrier"
+msgstr "エクスプレス運送業者"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__failure
+msgid "Failure"
+msgstr "失敗"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__mode
+msgid ""
+"Filters rate-sheet selection so an air-only charge does not surface on a "
+"sea-freight quotation."
+msgstr "レートシートの選択をフィルターし、航空輸送専用の料金が海上輸送の見積もりに表示されないようにします。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__financial
+msgid "Financial Document"
+msgstr "財務書類"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_follower_ids
+msgid "Followers"
+msgstr "フォロワー"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "フォロワー (取引先)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesomeのアイコン 例. fa-tasks"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__description
+msgid ""
+"Free-form notes for the operator. Surfaced on the rate sheet editor and on "
+"charge-line tooltips in quotations."
+msgstr "オペレーター向けの自由形式のメモ。レートシートエディターおよび見積書の課金明細ツールチップに表示されます。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__freight
+msgid "Freight"
+msgstr "貨物"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_fsc
+msgid "Fuel Surcharge"
+msgstr "燃油サーチャージ"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "General"
+msgstr "一般"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__regulator
+msgid "Government Regulator"
+msgstr "政府規制当局"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_search
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Group by Category"
+msgstr "カテゴリでグループ化"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Group by Environment"
+msgstr "環境でグループ化"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Group by Message Type"
+msgstr "メッセージタイプでグループ化"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+msgid "Group by Mode"
+msgstr "モードでグループ化"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Group by Profile"
+msgstr "プロファイルでグループ化"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Group by Provider Kind"
+msgstr "プロバイダー種類でグループ化"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Group by Status"
+msgstr "ステータスでグループ化"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Group by User"
+msgstr "ユーザーでグループ化"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "HBL"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__basic
+msgid "HTTP Basic"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__http_status
+msgid "HTTP Status"
+msgstr "HTTP ステータス"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_handling
+msgid "Handling"
+msgstr "取り扱い"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__has_message
+msgid "Has Message"
+msgstr "メッセージあり"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Health"
+msgstr "健康"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_health
+msgid "Health Certificate"
+msgstr "健康証明書"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__health_check_message
+msgid "Health Check Message"
+msgstr "ヘルスチェックメッセージ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__health_check_at
+msgid "Health Checked At"
+msgstr "健康チェック日時"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__health_check_status
+msgid "Health Status"
+msgstr "健康状態"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__health_check_status__ok
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Healthy"
+msgstr "健康"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__is_taxable_at_destination
+msgid ""
+"Hint for the tax engine in the customs broker module. When False, the charge"
+" is exempt at destination clearance."
+msgstr "通関業者モジュールの税エンジンに対するヒント。False の場合、この料金は仕向地での通関時に免除されます。"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_hawb
+msgid "House Air Waybill"
+msgstr "ハウス航空運送状"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_hbl
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "House Bill of Lading"
+msgstr "ハウス船荷証券"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_kyc_warning_days
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_kyc_warning_days
+msgid ""
+"How many days before a KYC document expires the system creates an activity "
+"for the partner's account owner."
+msgstr "KYC 文書の有効期限が切れる何日前にシステムが取引先の担当者向けにアクティビティを作成するか。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__expiry_warning_days
+msgid ""
+"How many days before expiry the system raises an activity to the document "
+"owner. 0 disables the warning."
+msgstr "システムが有効期限の何日前に文書の所有者へアクティビティを発行するか。0 で警告を無効にします。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__related_record_display
+msgid ""
+"Human-readable reference (e.g. customs declaration number) snapshotted at "
+"write time so the log entry is readable even after the originating record is"
+" archived."
+msgstr ""
+"書き込み時にスナップショットされる可読の参照（例: 税関申告番号）。元のレコードがアーカイブされた後もログエントリを読めるようにするためのものです。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__id
+msgid "ID"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_exception_icon
+msgid "Icon"
+msgstr "アイコン"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "例外活動を示すアイコン"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__idempotency_key
+msgid "Idempotency Key"
+msgstr "冪等キー"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__identity
+msgid "Identity and KYC"
+msgstr "本人確認と KYC"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "チェックした場合は、新しいメッセージに注意が必要です。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_has_error
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "有効にすると、一部のメッセージに配信エラーが発生します。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__direction__import
+msgid "Import"
+msgstr "インポート"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_vat
+msgid "Import VAT"
+msgstr "VAT をインポート"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+msgid "Inactive"
+msgstr "無効"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__direction__inbound
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Inbound"
+msgstr "インバウンド"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__severity__info
+msgid "Info"
+msgstr "情報"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_haulage
+msgid "Inland Haulage"
+msgstr "内陸輸送"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__inland
+msgid "Inland Transport"
+msgstr "内陸輸送"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__insurance
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__insurance
+msgid "Insurance"
+msgstr "保険"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_inscert
+msgid "Insurance Certificate"
+msgstr "保険証書"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_is_follower
+msgid "Is Follower"
+msgstr "フォロー中"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__jwt_signed
+msgid "JWT Signed (private key)"
+msgstr "JWT 署名済み（秘密鍵）"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "KYC Expiry Warning"
+msgstr "KYC 有効期限警告"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_kyc_warning_days
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_kyc_warning_days
+msgid "KYC Expiry Warning (days)"
+msgstr "KYC 有効期限警告（日）"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Last 7 days"
+msgstr "直近7日"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__health_check_latency_ms
+msgid "Last Health Latency (ms)"
+msgstr "最終ヘルスレイテンシ (ms)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__last_message_at
+msgid "Last Message"
+msgstr "最新メッセージ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message____last_update
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile____last_update
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code____last_update
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type____last_update
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__write_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__write_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__write_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__write_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__write_uid
+msgid "Last Updated by"
+msgstr "最終更新者"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__write_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__write_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__write_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__write_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__write_date
+msgid "Last Updated on"
+msgstr "最終更新日"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__latency_ms
+msgid "Latency (ms)"
+msgstr "レイテンシ (ms)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__company_ids
+msgid ""
+"Leave empty to make this code available across all companies. Use to scope a"
+" code to specific companies."
+msgstr "このコードをすべての会社で利用可能にするには空欄のままにしてください。コードを特定の会社に限定するには使用します。"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Linkage"
+msgstr "連携"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__credential_status
+msgid ""
+"Live status of the credential as resolved by the helper. Read-only; "
+"recompute by clicking Test Credential."
+msgstr "ヘルパーによって解決された資格情報のライブステータス。読み取り専用です。Test Credential をクリックして再計算します。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__credential_purpose
+msgid ""
+"Logical key passed to eh.log.credentials.get(). The helper resolves it via "
+"environment variables and ir.config_parameter without exposing the secret on"
+" this form."
+msgstr ""
+"eh.log.credentials.get() に渡される論理キー。ヘルパーは、このフォームにシークレットを公開することなく、環境変数と "
+"ir.config_parameter を介して解決します。"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_root
+msgid "Logistics"
+msgstr "ロジスティクス"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_adapter_message
+msgid "Logistics Adapter Message Log"
+msgstr "物流アダプターメッセージログ"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_adapter_profile
+msgid "Logistics Adapter Profile"
+msgstr "物流アダプタープロファイル"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_charge_code
+msgid "Logistics Charge Code"
+msgstr "物流料金コード"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_credentials
+msgid "Logistics Credentials Helper"
+msgstr "物流資格情報ヘルパー"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_document_type
+msgid "Logistics Document Type"
+msgstr "物流ドキュメントタイプ"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_event
+msgid "Logistics Operational Event"
+msgstr "物流運用イベント"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: eh_log_base
+#: model:res.groups,comment:eh_log_base.group_eh_log_manager
+msgid ""
+"Manager access to ERP Heritage logistics modules: configuration, approval, "
+"override actions. Implies the Logistics User role."
+msgstr "ERP Heritage 物流モジュールへのマネージャーアクセス：構成、承認、オーバーライド操作。物流ユーザーロールを含みます。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__override
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Manual Override"
+msgstr "手動オーバーライド"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Margin Approval Threshold"
+msgstr "マージン承認しきい値"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_margin_floor_threshold
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_margin_floor_threshold
+msgid "Margin Approval Threshold (%)"
+msgstr "マージン承認しきい値 (%)"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Margin Warning Threshold"
+msgstr "マージン警告しきい値"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_margin_warning_threshold
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_margin_warning_threshold
+msgid "Margin Warning Threshold (%)"
+msgstr "マージン警告しきい値 (%)"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_mawb
+msgid "Master Air Waybill"
+msgstr "マスター航空運送状"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_mbl
+msgid "Master Bill of Lading"
+msgstr "マスター船荷証券"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_master_data
+msgid "Master Data"
+msgstr "マスタデータ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__retry_max_attempts
+msgid ""
+"Maximum retry attempts on transient errors. Backoff is exponential with "
+"jitter, base 1.5x."
+msgstr "一時的なエラー時の最大再試行回数。バックオフはジッター付きの指数関数で、基数 1.5x です。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_has_error
+msgid "Message Delivery error"
+msgstr "メッセージ配信エラー"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__message_type
+msgid "Message Type"
+msgstr "メッセージタイプ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_count
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Messages"
+msgstr "メッセージ"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Method"
+msgstr "方法"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__company_ids
+msgid ""
+"Mirrors company_id as an m2m so the global isolation rule can use a single "
+"'company_ids in company_ids' domain that holds whether the field is mono or "
+"multi-company in the future."
+msgstr ""
+"company_id を m2m としてミラーリングし、グローバル分離ルールが単一の 'company_ids in company_ids' "
+"ドメインを使用できるようにします。これは、フィールドが将来的に単一会社か複数会社かにかかわらず有効です。"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Mirsal 2 (UAE Sandbox)"
+msgstr "Mirsal 2（UAE サンドボックス）"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__credential_status__missing
+msgid "Missing"
+msgstr "不明"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Mock"
+msgstr "モック"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__environment__mock
+msgid "Mock (offline fixtures)"
+msgstr "モック（オフラインフィクスチャ）"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__environment
+msgid ""
+"Mock plays back canned fixtures from tests/fixtures/. Sandbox calls the "
+"provider's published test environment. Production hits live. Profiles "
+"default to mock so a fresh install never accidentally calls a real "
+"regulator."
+msgstr ""
+"モックは tests/fixtures/ "
+"の定義済みフィクスチャを再生します。サンドボックスはプロバイダーが公開しているテスト環境を呼び出します。本番環境はライブに接続します。プロファイルは既定でモックになっているため、新規インストールが誤って実際の規制当局を呼び出すことはありません。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__mode
+msgid "Mode"
+msgstr "モード"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__multimodal
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__multimodal
+msgid "Multimodal"
+msgstr "マルチモーダル"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__mtls
+msgid "Mutual TLS"
+msgstr "相互 TLS"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "活動期限"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__name
+msgid "Name"
+msgstr "名称"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "次の活動期限"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_summary
+msgid "Next Activity Summary"
+msgstr "次の活動概要"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_type_id
+msgid "Next Activity Type"
+msgstr "次の活動タイプ"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_profile.py:0
+#, python-format
+msgid ""
+"No adapter class is registered for provider code '%(code)s'. Available "
+"providers: %(list)s. If this is a new integration, the country pack or "
+"vertical module that owns it has not been installed."
+msgstr ""
+"プロバイダーコード '%(code)s' に対して登録されたアダプタークラスがありません。利用可能なプロバイダー: "
+"%(list)s。これが新しい統合である場合、それを所有する国別パックまたは業種別モジュールがインストールされていません。"
+
+#. module: eh_log_base
+#: model_terms:ir.actions.act_window,help:eh_log_base.action_eh_log_adapter_profile
+msgid "No adapter profiles configured yet"
+msgstr "アダプタープロファイルがまだ設定されていません"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__none
+msgid "None"
+msgstr "なし"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__health_check_status__unknown
+msgid "Not Yet Checked"
+msgstr "未確認"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Notes"
+msgstr "ノート"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__severity__notice
+msgid "Notice"
+msgstr "通知"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_needaction_counter
+msgid "Number of Actions"
+msgstr "アクション数"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_has_error_counter
+msgid "Number of errors"
+msgstr "エラー数"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "対応が必要なメッセージ数"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "配信エラーが発生されたメッセージ数"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__oauth2_authorization_code
+msgid "OAuth2 Authorization Code"
+msgstr "OAuth2 認可コード"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__oauth2_client_credentials
+msgid "OAuth2 Client Credentials"
+msgstr "OAuth2 クライアント認証情報"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "OFR"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__occurred_at
+msgid "Occurred At"
+msgstr "発生日時"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__carrier_ocean
+msgid "Ocean Carrier"
+msgstr "海上運送業者"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_ofr
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Ocean Freight"
+msgstr "海上運賃"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__related_model
+msgid ""
+"Odoo model name that originated this call, e.g. "
+"'eh.log.customs.declaration'. Lets the UI link back from the message log to "
+"the operational record."
+msgstr ""
+"この呼び出しを発生させた Odoo モデル名。例：'eh.log.customs.declaration'。UI "
+"がメッセージログから運用レコードへリンクできるようにします。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_event__summary
+msgid ""
+"One-line human-readable description of the event. The structured payload "
+"sits in the context_json field."
+msgstr "イベントの人間が読める1行の説明。構造化ペイロードは context_json フィールドにあります。"
+
+#. module: eh_log_base
+#: model:ir.model.constraint,message:eh_log_base.constraint_eh_log_adapter_profile_provider_company_environment_unique
+msgid ""
+"Only one profile per (provider, company, environment) is allowed. If you "
+"need a second sandbox configuration, use the secondary endpoint field on the"
+" existing profile."
+msgstr ""
+"(provider、company、environment) ごとにプロファイルは1つのみ許可されます。2つ目の sandbox "
+"構成が必要な場合は、既存のプロファイルのセカンダリエンドポイントフィールドを使用してください。"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Open Related Record"
+msgstr "関連レコードを開く"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_form
+msgid "Operational Event"
+msgstr "運用イベント"
+
+#. module: eh_log_base
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_event
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_events
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_list
+msgid "Operational Events"
+msgstr "運用イベント"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__notes
+msgid "Operational Notes"
+msgstr "運用メモ"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_operations
+msgid "Operations"
+msgstr "処理"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__name
+msgid ""
+"Operator-friendly label for this profile, e.g. 'Mirsal 2 (UAE Sandbox)'."
+msgstr "このプロファイルのオペレーターにわかりやすいラベル。例: 'Mirsal 2 (UAE Sandbox)'。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__idempotency_key
+msgid ""
+"Optional caller-supplied key the provider uses to deduplicate retried "
+"requests. Empty when the call is naturally idempotent (e.g. a status query)."
+msgstr ""
+"呼び出し元が提供するオプションのキーで、プロバイダーが再試行されたリクエストの重複排除に使用します。呼び出しが本質的にべき等である場合（例: "
+"ステータスクエリ）は空です。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__default_currency_id
+msgid ""
+"Optional default for rate sheets. Quotation currency wins when the two "
+"differ; this is a hint for the rate-sheet editor only."
+msgstr "レートシートのオプションのデフォルト値。両者が異なる場合は見積通貨が優先されます。これはレートシートエディターへのヒントにすぎません。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__secondary_endpoint_url
+msgid ""
+"Optional fallback URL used by adapters that publish a DR or read-replica "
+"endpoint."
+msgstr "DR またはリードレプリカのエンドポイントを公開するアダプターが使用する任意のフォールバック URL。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__origin
+msgid "Origin Charges"
+msgstr "出発地料金"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_origin_doc
+msgid "Origin Documentation"
+msgstr "出発地書類"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_pickup
+msgid "Origin Pickup"
+msgstr "出発地集荷"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_othc
+msgid "Origin Terminal Handling"
+msgstr "出発地ターミナル取扱"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_othc_air
+msgid "Origin Terminal Handling (Air)"
+msgstr "出発地ターミナル取扱（航空）"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_message.py:0
+msgid "Originating Record"
+msgstr "元のレコード"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__other
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__other
+msgid "Other"
+msgstr "その他"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__direction__outbound
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Outbound"
+msgstr "アウトバウンド"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Outcome"
+msgstr "結果"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Override Retention"
+msgstr "留保を上書き"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_pl
+msgid "Packing List"
+msgstr "梱包リスト"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.eh_log_clean_layout
+msgid "Page <span class=\"page\"/> / <span class=\"topage\"/>"
+msgstr "ページ <span class=\"page\"/> / <span class=\"topage\"/>"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_passport
+msgid "Passport (Authorised Signatory)"
+msgstr "パスポート（署名権限者）"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__payment
+msgid "Payment Provider"
+msgstr "決済プロバイダー"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_peak
+msgid "Peak Season Surcharge"
+msgstr "繁忙期割増料金"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__pending
+msgid "Pending"
+msgstr "保留"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__request_timeout_seconds
+msgid ""
+"Per-call timeout. Adapter raises AdapterTimeoutError on expiry and the "
+"circuit breaker increments its counter."
+msgstr ""
+"呼び出しごとのタイムアウト。期限切れ時にアダプターは AdapterTimeoutError を発生させ、サーキットブレーカーはカウンターを加算します。"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_ppc
+msgid "Phytosanitary Certificate"
+msgstr "植物検疫証明書"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__default_revenue_account_id
+msgid ""
+"Posted on customer invoice lines billed against this charge code. Per-"
+"company because account hierarchies vary."
+msgstr "この課金コードで請求される顧客請求書明細に記帳されます。勘定階層が異なるため会社ごとです。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__default_expense_account_id
+msgid ""
+"Posted on vendor bill lines costed against this charge code. Per-company "
+"because account hierarchies vary."
+msgstr "この課金コードで原価計上されるベンダー請求書明細に記帳されます。勘定階層が異なるため会社ごとです。"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Pre-fills new logistics quotations."
+msgstr "新しい物流見積を事前入力します。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_default_incoterm_id
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_default_incoterm_id
+msgid "Pre-fills new logistics quotations. Operators can change per quote."
+msgstr "新しい物流見積を事前入力します。オペレーターは見積ごとに変更できます。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__endpoint_url
+msgid "Primary Endpoint"
+msgstr "プライマリエンドポイント"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__environment__production
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Production"
+msgstr "生産"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__profile_id
+msgid "Profile"
+msgstr "プロファイル"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Provider"
+msgstr "プロバイダ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__api_version
+msgid ""
+"Provider API version this profile speaks (e.g. '2.4', '2026-01'). Adapters "
+"refuse to dispatch when this does not match the implementing class's "
+"declared version."
+msgstr ""
+"このプロファイルが使用するプロバイダー API バージョン（例: "
+"'2.4'、'2026-01'）。これが実装クラスの宣言されたバージョンと一致しない場合、アダプターはディスパッチを拒否します。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__provider_code
+msgid "Provider Code"
+msgstr "プロバイダコード"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__provider_kind
+msgid "Provider Kind"
+msgstr "プロバイダー種別"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__error_code
+msgid ""
+"Provider-returned error code, surfaced verbatim. The human message is in the"
+" body; this field is for grep."
+msgstr "プロバイダーが返したエラーコードをそのまま表示します。人間が読めるメッセージは本文にあります。このフィールドは grep 用です。"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_po
+msgid "Purchase Order"
+msgstr "購買オーダ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_margin_warning_threshold
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_margin_warning_threshold
+msgid ""
+"Quotation margin below this percentage raises a warning in the form. "
+"Approval is still required only if the margin is below the company's hard "
+"floor."
+msgstr "見積の利益率がこの割合を下回ると、フォームに警告が表示されます。承認が必要なのは、利益率が会社の絶対的な下限を下回る場合のみです。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_margin_floor_threshold
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_margin_floor_threshold
+msgid ""
+"Quotation margin below this percentage requires explicit manager approval "
+"before confirmation."
+msgstr "見積の利益率がこの割合を下回る場合、確定前にマネージャーの明示的な承認が必要です。"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Quotations below this margin raise a warning."
+msgstr "この利益率を下回る見積は警告を表示します。"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Quotations below this margin require manager approval."
+msgstr "この利益率を下回る見積にはマネージャーの承認が必要です。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__rail
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__rail
+msgid "Rail"
+msgstr "鉄道"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__carrier_rail
+msgid "Rail Carrier"
+msgstr "鉄道運送業者"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_rlfr
+msgid "Rail Freight"
+msgstr "鉄道貨物"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_rwb
+msgid "Rail Waybill"
+msgstr "鉄道運送状"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__rate_limit_per_minute
+msgid "Rate Limit (per minute)"
+msgstr "レート制限（毎分）"
+
+#. module: eh_log_base
+#: model:res.groups,comment:eh_log_base.group_eh_log_user
+msgid ""
+"Read and operational access to ERP Heritage logistics modules. Implies the "
+"standard Salesperson role."
+msgstr "ERP Heritage の物流モジュールへの読み取りおよび運用アクセス。標準の Salesperson ロールを含みます。"
+
+#. module: eh_log_base
+#: model:res.groups,comment:eh_log_base.group_eh_log_auditor
+msgid ""
+"Read-only auditor: visibility on every ERP Heritage logistics audit log "
+"without write access. Cannot edit operational data."
+msgstr "読み取り専用監査者：書き込み権限なしで、すべての ERP Heritage 物流監査ログを参照できます。業務データの編集はできません。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__regulatory
+msgid "Regulatory Certificate"
+msgstr "規制証明書"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Rejected"
+msgstr "拒否済"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__rejected
+msgid "Rejected by Provider"
+msgstr "プロバイダーにより拒否"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__related_model
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__related_model
+msgid "Related Model"
+msgstr "関連モデル"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__related_record_display
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__related_record_display
+msgid "Related Record"
+msgstr "関連レコード"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__related_record_id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__related_record_id
+msgid "Related Record ID"
+msgstr "関連レコード ID"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Replay"
+msgstr "再生"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_message.py:0
+msgid "Replayed Messages"
+msgstr "再実行されたメッセージ"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Request"
+msgstr "依頼"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__request_headers
+msgid "Request Headers (sanitised)"
+msgstr "リクエストヘッダー（サニタイズ済み）"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__request_payload
+msgid "Request Payload"
+msgstr "リクエストペイロード"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__request_timeout_seconds
+msgid "Request Timeout (s)"
+msgstr "リクエストタイムアウト（秒）"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__is_required_default
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_search
+msgid "Required by Default"
+msgstr "デフォルトで必須"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Resilience"
+msgstr "レジリエンス"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__credential_status__ok
+msgid "Resolved"
+msgstr "解決済"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Response"
+msgstr "レスポンス"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__response_headers
+msgid "Response Headers"
+msgstr "レスポンスヘッダー"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__response_payload
+msgid "Response Payload"
+msgstr "レスポンスペイロード"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_user_id
+msgid "Responsible User"
+msgstr "担当ユーザ"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__retry
+msgid "Retried"
+msgstr "再試行しました"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__retry_count
+msgid "Retry Count"
+msgstr "再試行回数"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__retry_max_attempts
+msgid "Retry Max Attempts"
+msgstr "最大再試行回数"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__road
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__road
+msgid "Road"
+msgstr "道路"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_rfr
+msgid "Road Freight"
+msgstr "陸上貨物輸送"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__routing
+msgid "Routing or Mapping"
+msgstr "ルーティングまたはマッピング"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Run Health Check"
+msgstr "ヘルスチェックを実行"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__sftp_key
+msgid "SFTP Key"
+msgstr "SFTP キー"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS配信エラー"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_sanctions
+msgid "Sanctions and PEP Screening Result"
+msgstr "制裁および PEP スクリーニング結果"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__screening
+msgid "Sanctions or PEP Screening"
+msgstr "制裁または PEP スクリーニング"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__environment__sandbox
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Sandbox"
+msgstr "サンドボックス"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__request_payload
+msgid ""
+"Sanitised request payload. Original PII redacted per the profile's redaction"
+" rules. Truncated above the size limit set by ir.config_parameter "
+"eh_log.base.adapter_message_payload_max_chars."
+msgstr ""
+"サニタイズされたリクエストペイロード。元の PII はプロファイルの秘匿ルールに従って秘匿されています。ir.config_parameter "
+"eh_log.base.adapter_message_payload_max_chars で設定されたサイズ上限を超える部分は切り捨てられます。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__response_payload
+msgid ""
+"Sanitised response payload. Same redaction and truncation rules as the "
+"request payload."
+msgstr "サニタイズされたレスポンスペイロード。リクエストペイロードと同じ秘匿および切り捨てルールが適用されます。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__sea
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__sea
+msgid "Sea"
+msgstr "海上"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__secondary_endpoint_url
+msgid "Secondary Endpoint"
+msgstr "セカンダリエンドポイント"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_isps
+msgid "Security Surcharge (ISPS)"
+msgstr "セキュリティ割増料金 (ISPS)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__product_id
+msgid "Service Product"
+msgstr "サービスプロダクト"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__product_id
+msgid ""
+"Service product carried by quotation and invoice lines billed against this "
+"charge code. Odoo requires every billable order line to reference a product "
+"before the order can be confirmed or invoiced; logistics charge lines reuse "
+"this one. Left empty, it is auto-provisioned the first time the code is sold"
+" so operators never have to maintain a parallel product catalogue."
+msgstr ""
+"この課金コードに対して請求される見積および請求書の明細行で使用されるサービス製品。Odoo "
+"では、注文を確認または請求する前に、請求可能なすべての注文明細が製品を参照する必要があります。物流課金明細はこの製品を再利用します。空のままにすると、コードが初めて販売されたときに自動的にプロビジョニングされるため、オペレーターは並行する製品カタログを維持する必要がありません。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__severity
+msgid "Severity"
+msgstr "重大度"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__rate_limit_per_minute
+msgid ""
+"Soft per-minute rate limit honoured client-side. 0 means no client-side "
+"throttling; the adapter still respects server-side 429 responses."
+msgstr ""
+"クライアント側で適用される毎分のソフトレート制限。0 はクライアント側でのスロットリングなしを意味します。アダプターはサーバー側の 429 "
+"応答を引き続き尊重します。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__code
+msgid ""
+"Stable identifier referenced from rate sheets and invoice lines. Convention:"
+" short uppercase alphanumeric, e.g. OFR for Ocean Freight, OTHC for Origin "
+"Terminal Handling."
+msgstr ""
+"レート表および請求書明細行から参照される安定した識別子。規約: 短い大文字英数字（例: 海上運賃は OFR、仕出地ターミナル荷役は OTHC）。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__provider_code
+msgid ""
+"Stable provider identifier referenced by adapter classes (e.g. 'mirsal2', "
+"'fasah', 'dcsa', 'iata_cargo_xml'). Adapter dispatch keys on this code; do "
+"not rename in place."
+msgstr ""
+"アダプタークラスから参照される安定したプロバイダー識別子（例: "
+"'mirsal2'、'fasah'、'dcsa'、'iata_cargo_xml'）。アダプターのディスパッチはこのコードに依存します。その場で名前を変更しないでください。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__code
+msgid ""
+"Stable short identifier (HBL, HAWB, MBL, MAWB, COI, COO, PL, COMINV, ...). "
+"Referenced from checklists."
+msgstr ""
+"安定した短い識別子（HBL, HAWB, MBL, MAWB, COI, COO, PL, COMINV, ...）。チェックリストから参照されます。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__state_transition
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "State Transition"
+msgstr "状態遷移"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "State Transition Retention"
+msgstr "状態遷移の保持期間"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_ux_mixin.py:0
+#, python-format
+msgid "State changed: %(from)s -> %(to)s"
+msgstr "状態が変更されました: %(from)s -> %(to)s"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__status
+msgid "Status"
+msgstr "ステータス"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"活動に基づくステータス\n"
+"期限超過：期限日がすでに過ぎています\n"
+"今日: 活動日は今日です\n"
+"予定: 将来の活動。"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_storage
+msgid "Storage"
+msgstr "ストレージ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_event__context_json
+msgid ""
+"Structured payload serialised as JSON. Audit reviewers search this field for"
+" specific keys and values."
+msgstr "JSON としてシリアライズされた構造化ペイロード。監査レビュー担当者は、このフィールドで特定のキーと値を検索します。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__success
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Success"
+msgstr "成功"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__summary
+msgid "Summary"
+msgstr "概要"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__surcharge
+msgid "Surcharge"
+msgstr "追加料金"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__is_taxable_at_destination
+msgid "Taxable at Destination"
+msgstr "仕向地で課税"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__telematics
+msgid "Telematics Provider"
+msgstr "テレマティクスプロバイダー"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Test Credential"
+msgstr "テスト認証情報"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "The actual secret is never displayed on this form."
+msgstr "実際のシークレットはこのフォームには表示されません。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__circuit_breaker_cooldown_seconds
+msgid "Time to wait before the half-open probe runs."
+msgstr "ハーフオープンプローブの実行前に待機する時間。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__timeout
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Timed Out"
+msgstr "タイムアウト"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Timeouts and Retries"
+msgstr "タイムアウトと再試行"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Today"
+msgstr "今日"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_count
+msgid "Total messages logged against this profile."
+msgstr "このプロファイルに記録されたメッセージの合計数。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__expiry_aware
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_search
+msgid "Tracks Expiry"
+msgstr "有効期限を追跡"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_tradelic
+msgid "Trade Licence"
+msgstr "営業許可証"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__transport
+msgid "Transport Document"
+msgstr "輸送書類"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid ""
+"Truncate adapter payloads above this size before storage to keep the "
+"database lean."
+msgstr "データベースを軽量に保つため、このサイズを超えるアダプターのペイロードを保存前に切り詰めます。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "記録上の例外活動の種類。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__correlation_id
+msgid ""
+"Unique per-call identifier propagated to the provider for traceability. "
+"Generated client-side as a UUID4."
+msgstr "追跡可能性のためにプロバイダーに伝播される、呼び出しごとの一意の識別子。クライアント側で UUID4 として生成されます。"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__credential_status__unknown
+msgid "Unknown"
+msgstr "不明"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__user_id
+msgid "User"
+msgstr "ユーザ"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_vatreg
+msgid "VAT Registration Certificate"
+msgstr "VAT 登録証明書"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_war
+msgid "War Risk Surcharge"
+msgstr "戦争危険割増料金"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__warehousing
+msgid "Warehousing and Handling"
+msgstr "倉庫保管および荷役"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__severity__warning
+msgid "Warning"
+msgstr "警告"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__website_message_ids
+msgid "Website Messages"
+msgstr "ウェブサイトメッセージ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__website_message_ids
+msgid "Website communication history"
+msgstr "ウェブサイト通信履歴"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__is_required_default
+msgid ""
+"When checked, the document is auto-added to the job checklist when "
+"applicable. Operators can still remove it for non-standard scenarios."
+msgstr ""
+"オンにすると、該当する場合に書類がジョブのチェックリストに自動追加されます。オペレーターは非標準のシナリオではそれを削除することもできます。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__expiry_aware
+msgid ""
+"When checked, the related upload captures an expiry date and the system "
+"raises a warning before expiry per the default warning days field."
+msgstr "オンにすると、関連するアップロードで有効期限が記録され、システムはデフォルトの警告日数フィールドに従って有効期限前に警告を発します。"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_credit_warning_pct
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_credit_warning_pct
+msgid ""
+"When customer exposure crosses this percentage of the approved limit, new "
+"quotations raise a warning. The hard stop is always 100% of the limit."
+msgstr "顧客のエクスポージャーが承認済み限度額のこの割合を超えると、新しい見積もりで警告が発生します。強制停止は常に限度額の 100% です。"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_event.py:0
+#, python-format
+msgid ""
+"[EHL-EVENT-001] Operational events are append-only. Editing the following "
+"fields is not permitted: %(fields)s."
+msgstr "[EHL-EVENT-001] 運用イベントは追加のみ可能です。次のフィールドの編集は許可されていません: %(fields)s。"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "characters"
+msgstr "文字"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "days"
+msgstr "日"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "https://provider.example/v1"
+msgstr ""

@@ -1,0 +1,2492 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 10:15+0000\n"
+"PO-Revision-Date: 2026-07-01 10:15+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Vietnamese\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+msgid "(none configured)"
+msgstr "(chưa cấu hình)"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "<strong>Credential resolution order</strong>"
+msgstr "<strong>Thứ tự phân giải thông tin xác thực</strong>"
+
+#. module: eh_log_base
+#: model_terms:ir.actions.act_window,help:eh_log_base.action_eh_log_charge_code
+msgid ""
+"A starter set of universally recognised codes is seeded\n"
+"                    on install. Add country or contract specific codes here."
+msgstr ""
+"Một bộ mã ban đầu được công nhận rộng rãi được tạo sẵn\n"
+"                    khi cài đặt. Thêm các mã dành riêng cho quốc gia hoặc hợp đồng tại đây."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__api_key
+msgid "API Key"
+msgstr "Khóa API"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__api_version
+msgid "API Version Implemented"
+msgstr "Phiên bản API đã triển khai"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__as2
+msgid "AS2 (EDI)"
+msgstr ""
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_ata
+msgid "ATA Carnet"
+msgstr "Sổ ATA Carnet"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Above this percentage of the credit limit the system raises a warning."
+msgstr ""
+"Vượt quá tỷ lệ phần trăm này của hạn mức tín dụng, hệ thống sẽ đưa ra cảnh "
+"báo."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_needaction
+msgid "Action Needed"
+msgstr "Tác vụ cần thiết"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__active
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__active
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__active
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_search
+msgid "Active"
+msgstr "Đang hoạt động"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_ids
+msgid "Activities"
+msgstr "Hoạt động"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Hoạt động ngoại lệ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_state
+msgid "Activity State"
+msgstr "Trạng thái hoạt động"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Biểu tượng loại hoạt động"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__adapter_call
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Adapter Call"
+msgstr "Lời gọi bộ chuyển đổi"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Adapter Call Retention"
+msgstr "Lưu giữ lời gọi bộ chuyển đổi"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Adapter Message"
+msgstr "Thông báo bộ chuyển đổi"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_adapter_payload_max_chars
+msgid "Adapter Message Payload Max Chars"
+msgstr "Số ký tự tối đa của payload thông báo bộ chuyển đổi"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Adapter Message Payload Truncation"
+msgstr "Cắt bớt payload thông báo bộ chuyển đổi"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_profile.py:0
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_adapter_message
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_adapter_messages
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_list
+msgid "Adapter Messages"
+msgstr "Thông báo bộ chuyển đổi"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Adapter Profile"
+msgstr "Hồ sơ bộ chuyển đổi"
+
+#. module: eh_log_base
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_adapter_profile
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_adapter_profiles
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_list
+msgid "Adapter Profiles"
+msgstr "Hồ sơ bộ chuyển đổi"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_adapter_payload_max_chars
+msgid ""
+"Adapter messages are truncated above this size before storage to keep the "
+"database lean. Truncation happens after redaction."
+msgstr ""
+"Các thông báo bộ chuyển đổi vượt quá kích thước này sẽ được cắt bớt trước "
+"khi lưu trữ để giữ cơ sở dữ liệu gọn nhẹ. Việc cắt bớt diễn ra sau khi ẩn "
+"thông tin nhạy cảm."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__message_type
+msgid ""
+"Adapter-defined message label, e.g. 'declaration_submit', 'health_check', "
+"'status_query'."
+msgstr ""
+"Nhãn thông báo do bộ điều hợp xác định, ví dụ 'declaration_submit', "
+"'health_check', 'status_query'."
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_adapters
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Adapters"
+msgstr "Bộ điều hợp"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__air
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__air
+msgid "Air"
+msgstr "Đường hàng không"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__carrier_air
+msgid "Air Carrier"
+msgstr "Hãng vận chuyển hàng không"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_afr
+msgid "Air Freight"
+msgstr "Vận chuyển hàng không"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_awb
+msgid "Air Waybill Fee"
+msgstr "Phí vận đơn hàng không"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+msgid ""
+"An encrypted credential could not be decrypted. The encryption salt or "
+"database UUID has changed. Re-set the credential under Settings > ERP "
+"Heritage Logistics > Adapters."
+msgstr ""
+"Không thể giải mã một thông tin xác thực đã mã hóa. Salt mã hóa hoặc UUID cơ"
+" sở dữ liệu đã thay đổi. Hãy đặt lại thông tin xác thực trong Cài đặt > ERP "
+"Heritage Logistics > Adapters."
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+msgid ""
+"An encrypted credential is stored but the Python 'cryptography' library is "
+"not installed on the server. Install it or replace the parameter with an "
+"environment variable."
+msgstr ""
+"Một thông tin xác thực đã mã hóa được lưu trữ nhưng thư viện 'cryptography' "
+"của Python chưa được cài đặt trên máy chủ. Hãy cài đặt nó hoặc thay thế tham"
+" số bằng một biến môi trường."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__ancillary
+msgid "Ancillary"
+msgstr "Phụ trợ"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__any
+msgid "Any Mode"
+msgstr "Bất kỳ chế độ nào"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__applies_to_modes
+msgid "Applies To Modes"
+msgstr "Áp dụng cho các chế độ"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Approval"
+msgstr "Phê duyệt"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__approval
+msgid "Approval Decision"
+msgstr "Quyết định phê duyệt"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Approvals"
+msgstr "Phê duyệt"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số lượng tệp đính kèm"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_audit
+msgid "Audit"
+msgstr "Kiểm toán"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__audit_note
+msgid "Audit Note"
+msgstr "Ghi chú kiểm toán"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Authentication"
+msgstr "Xác thực"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__auth_method
+msgid "Authentication Method"
+msgstr "Phương thức xác thực"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__request_headers
+msgid ""
+"Authentication headers redacted before storage; Content-Type, Accept, and "
+"other operational headers retained."
+msgstr ""
+"Các tiêu đề xác thực được biên tập trước khi lưu trữ; Content-Type, Accept "
+"và các tiêu đề vận hành khác được giữ lại."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__endpoint_url
+msgid ""
+"Base URL for sandbox or production calls. Mock environment ignores this "
+"field. Reference data files supply the published default; operators override"
+" for private endpoints."
+msgstr ""
+"URL cơ sở cho các lệnh gọi sandbox hoặc sản xuất. Môi trường giả lập bỏ qua "
+"trường này. Các tệp dữ liệu tham chiếu cung cấp giá trị mặc định đã công bố;"
+" người vận hành ghi đè cho các endpoint riêng."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "Behaviour"
+msgstr "Hành vi"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_bl
+msgid "Bill of Lading Fee"
+msgstr "Phí vận đơn"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__direction__both
+msgid "Both"
+msgstr "Cả hai"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_baf
+msgid "Bunker Adjustment Factor"
+msgstr "Hệ số điều chỉnh nhiên liệu"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_cmr
+msgid "CMR Road Consignment Note"
+msgstr "Vận đơn đường bộ CMR"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_insurance
+msgid "Cargo Insurance"
+msgstr "Bảo hiểm hàng hóa"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_manifest
+msgid "Cargo Manifest"
+msgstr "Bản kê hàng hóa"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__category
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__category
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__category
+msgid "Category"
+msgstr "Danh mục"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_coo
+msgid "Certificate of Origin"
+msgstr "Giấy chứng nhận xuất xứ"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Charge Code"
+msgstr "Mã phí"
+
+#. module: eh_log_base
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_charge_code
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_charge_codes
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_list
+msgid "Charge Codes"
+msgstr "Mã phí"
+
+#. module: eh_log_base
+#: model:ir.model.constraint,message:eh_log_base.constraint_eh_log_charge_code_code_unique
+msgid ""
+"Charge code must be unique. Pick a different code or edit the existing one "
+"instead of duplicating."
+msgstr ""
+"Mã phí phải là duy nhất. Hãy chọn mã khác hoặc chỉnh sửa mã hiện có thay vì "
+"tạo trùng lặp."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Circuit Breaker"
+msgstr "Bộ ngắt mạch"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__circuit_breaker_cooldown_seconds
+msgid "Circuit Breaker Cooldown (s)"
+msgstr "Thời gian hồi phục bộ ngắt mạch (giây)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__circuit_breaker_threshold
+msgid "Circuit Breaker Threshold"
+msgstr "Ngưỡng bộ ngắt mạch"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Classification"
+msgstr "Phân loại"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__code
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__code
+msgid "Code"
+msgstr "Mã"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__applies_to_modes
+msgid ""
+"Comma-separated list of modes the document applies to "
+"(sea,air,road,rail,multimodal,courier) or 'any'. Used to filter the "
+"checklist when the job mode is set."
+msgstr ""
+"Danh sách các phương thức mà tài liệu áp dụng, phân tách bằng dấu phẩy "
+"(sea,air,road,rail,multimodal,courier) hoặc 'any'. Được dùng để lọc danh "
+"sách kiểm tra khi phương thức công việc được đặt."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__commercial
+msgid "Commercial Document"
+msgstr "Chứng từ thương mại"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_cominv
+msgid "Commercial Invoice"
+msgstr "Hóa đơn thương mại"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_res_company
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__company_ids
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__company_ids
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__company_ids
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__company_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__company_id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__company_id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__completed_at
+msgid "Completed"
+msgstr "Đã hoàn thành"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__compliance
+msgid "Compliance and Sanctions"
+msgstr "Tuân thủ và Chế tài"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_res_config_settings
+msgid "Config Settings"
+msgstr "Cài đặt cấu hình"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_configuration
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__config_change
+msgid "Configuration Change"
+msgstr "Thay đổi cấu hình"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__circuit_breaker_threshold
+msgid ""
+"Consecutive failure count that trips the circuit breaker. While tripped, the"
+" adapter rejects calls immediately and schedules a half-open probe."
+msgstr ""
+"Số lần thất bại liên tiếp làm ngắt bộ ngắt mạch. Khi bị ngắt, bộ điều hợp từ"
+" chối các lệnh gọi ngay lập tức và lên lịch một lần thăm dò nửa mở."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_form
+msgid "Context"
+msgstr "Ngữ cảnh"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__context_json
+msgid "Context (JSON)"
+msgstr "Ngữ cảnh (JSON)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__correlation_id
+msgid "Correlation ID"
+msgstr "ID tương quan"
+
+#. module: eh_log_base
+#: model_terms:ir.actions.act_window,help:eh_log_base.action_eh_log_adapter_profile
+msgid ""
+"Country localisation modules ship default sandbox profiles\n"
+"                    on install. Profiles default to mock environment so a\n"
+"                    fresh install never accidentally calls a live regulator."
+msgstr ""
+"Các mô-đun bản địa hóa theo quốc gia đi kèm hồ sơ hộp cát mặc định\n"
+"                    khi cài đặt. Hồ sơ mặc định sử dụng môi trường giả lập để\n"
+"                    một lần cài đặt mới không bao giờ vô tình gọi đến cơ quan quản lý đang hoạt động."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__courier
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__courier
+msgid "Courier or Express"
+msgstr "Chuyển phát nhanh hoặc hỏa tốc"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__created_at
+msgid "Created"
+msgstr "Đã tạo"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__create_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__create_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__create_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__create_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__create_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__create_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__create_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__create_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__credential_purpose
+msgid "Credential Purpose Key"
+msgstr "Khóa mục đích thông tin xác thực"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__credential_status
+msgid "Credential Status"
+msgstr "Trạng thái thông tin xác thực"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+#, python-format
+msgid ""
+"Credential for '%(purpose)s' is not configured. Tried environment variables:"
+" %(env)s. Tried ir.config_parameter key: %(param)s. Set one of these values "
+"in your deployment configuration or under Settings > ERP Heritage Logistics "
+"> Adapters."
+msgstr ""
+"Thông tin xác thực cho '%(purpose)s' chưa được cấu hình. Các biến môi trường"
+" đã thử: %(env)s. Khóa ir.config_parameter đã thử: %(param)s. Đặt một trong "
+"các giá trị này trong cấu hình triển khai của bạn hoặc trong Settings > ERP "
+"Heritage Logistics > Adapters."
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_profile.py:0
+#, python-format
+msgid ""
+"Credential for profile %(name)s is not resolvable. Underlying error: %(err)s"
+msgstr ""
+"Không thể phân giải thông tin xác thực cho hồ sơ %(name)s. Lỗi cơ bản: "
+"%(err)s"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Credit Exposure Warning"
+msgstr "Cảnh báo mức phơi nhiễm tín dụng"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_credit_warning_pct
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_credit_warning_pct
+msgid "Credit Exposure Warning (%)"
+msgstr "Cảnh báo mức phơi nhiễm tín dụng (%)"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_caf
+msgid "Currency Adjustment Factor"
+msgstr "Hệ số điều chỉnh tiền tệ"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_clrnc
+msgid "Customs Clearance Fee"
+msgstr "Phí thông quan"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_decl
+msgid "Customs Declaration"
+msgstr "Tờ khai hải quan"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__customs
+msgid "Customs Document"
+msgstr "Chứng từ hải quan"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_duty
+msgid "Customs Duty"
+msgstr "Thuế hải quan"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__customs
+msgid "Customs and Duties"
+msgstr "Hải quan và thuế"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Cycle"
+msgstr "Chu kỳ"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_dgd
+msgid "Dangerous Goods Declaration"
+msgstr "Khai báo hàng nguy hiểm"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__related_record_id
+msgid ""
+"Database id of the originating record. Pair with related_model for the back "
+"link."
+msgstr ""
+"ID cơ sở dữ liệu của bản ghi gốc. Ghép với related_model để tạo liên kết "
+"ngược."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Days before expiry the system raises an activity to the account owner."
+msgstr ""
+"Số ngày trước khi hết hạn mà hệ thống tạo một hoạt động cho chủ tài khoản."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Days to keep adapter call events."
+msgstr "Số ngày lưu giữ các sự kiện gọi adapter."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid ""
+"Days to keep manual override events. Compliance evidence usually requires "
+"the longest window."
+msgstr ""
+"Số ngày lưu giữ các sự kiện ghi đè thủ công. Bằng chứng tuân thủ thường yêu "
+"cầu khoảng thời gian dài nhất."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Days to keep state transition events."
+msgstr "Số ngày lưu giữ các sự kiện chuyển đổi trạng thái."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__dead_letter
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Dead Letter"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__default_currency_id
+msgid "Default Currency"
+msgstr "Tiền tệ mặc định"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__default_expense_account_id
+msgid "Default Expense Account"
+msgstr "Tài khoản chi phí mặc định"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__expiry_warning_days
+msgid "Default Expiry Warning (days)"
+msgstr "Cảnh báo Hết hạn Mặc định (ngày)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_default_incoterm_id
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_default_incoterm_id
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Default Incoterm"
+msgstr "Điều khoản Incoterm mặc định"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_default_mode
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_default_mode
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Default Logistics Mode"
+msgstr "Chế độ Hậu cần Mặc định"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__default_revenue_account_id
+msgid "Default Revenue Account"
+msgstr "Tài khoản Doanh thu Mặc định"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Defaults"
+msgstr "Giá trị mặc định"
+
+#. module: eh_log_base
+#: model_terms:ir.actions.act_window,help:eh_log_base.action_eh_log_charge_code
+msgid "Define your charge code catalogue"
+msgstr "Xác định danh mục mã phí của bạn"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__health_check_status__degraded
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Degraded"
+msgstr "Suy giảm"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_dlvord
+msgid "Delivery Order"
+msgstr "Lệnh giao hàng"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__destination
+msgid "Destination Charges"
+msgstr "Phí điểm đến"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_delivery
+msgid "Destination Delivery"
+msgstr "Giao hàng tại điểm đến"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_destination_doc
+msgid "Destination Documentation"
+msgstr "Chứng từ tại điểm đến"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_dthc
+msgid "Destination Terminal Handling"
+msgstr "Xử lý tại bến cảng điểm đến"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_dthc_air
+msgid "Destination Terminal Handling (Air)"
+msgstr "Xử lý tại bến điểm đến (Hàng không)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__description
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__direction
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__direction
+msgid "Direction"
+msgstr "Hướng"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__is_disbursement
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+msgid "Disbursement"
+msgstr "Giải ngân"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__is_disbursement
+msgid ""
+"Disbursement charges are passed through at cost; the margin guard ignores "
+"them when checking gross margin."
+msgstr ""
+"Phí giải ngân được chuyển qua theo giá gốc; bộ bảo vệ biên lợi nhuận bỏ qua "
+"chúng khi kiểm tra biên lợi nhuận gộp."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__display_name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__display_name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__display_name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__display_name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "Document Type"
+msgstr "Loại tài liệu"
+
+#. module: eh_log_base
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_document_type
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_document_types
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_list
+msgid "Document Types"
+msgstr "Các loại tài liệu"
+
+#. module: eh_log_base
+#: model:ir.model.constraint,message:eh_log_base.constraint_eh_log_document_type_code_unique
+msgid "Document type code must be unique."
+msgstr "Mã loại tài liệu phải là duy nhất."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__documentation
+msgid "Documentation"
+msgstr "Tài liệu"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__health_check_status__down
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Down"
+msgstr "Xuống"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__edi_partner
+msgid "EDI Partner"
+msgstr "Đối tác EDI"
+
+#. module: eh_log_base
+#: model:res.groups,name:eh_log_base.group_eh_log_auditor
+msgid "EH Logistics Auditor (read-only)"
+msgstr "Kiểm toán viên Logistics EH (chỉ đọc)"
+
+#. module: eh_log_base
+#: model:res.groups,name:eh_log_base.group_eh_log_manager
+msgid "EH Logistics Manager"
+msgstr "Quản lý Logistics EH"
+
+#. module: eh_log_base
+#: model:res.groups,name:eh_log_base.group_eh_log_user
+msgid "EH Logistics User"
+msgstr "Người dùng Logistics EH"
+
+#. module: eh_log_base
+#: model:ir.actions.server,name:eh_log_base.ir_cron_eh_log_event_gc_ir_actions_server
+#: model:ir.cron,cron_name:eh_log_base.ir_cron_eh_log_event_gc
+msgid "EH Logistics: prune old operational events"
+msgstr "EH Logistics: xóa các sự kiện vận hành cũ"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_brand
+msgid "ERP Heritage Brand Attribution"
+msgstr "Ghi nhận thương hiệu ERP Heritage"
+
+#. module: eh_log_base
+#: model:ir.module.category,name:eh_log_base.privilege_eh_logistics
+#: model_terms:ir.ui.view,arch_db:eh_log_base.eh_log_report_footer
+#: model_terms:ir.ui.view,arch_db:eh_log_base.eh_log_report_header
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "ERP Heritage Logistics"
+msgstr "Logistics ERP Heritage"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_ux_mixin
+msgid "ERP Heritage UX Mixin"
+msgstr ""
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_credentials.py:0
+msgid ""
+"Encrypted credential storage requires the Python 'cryptography' library. "
+"Install it on the server or store credentials via environment variables "
+"instead."
+msgstr ""
+"Lưu trữ thông tin xác thực được mã hóa yêu cầu thư viện Python "
+"'cryptography'. Hãy cài đặt nó trên máy chủ hoặc lưu trữ thông tin xác thực "
+"thông qua biến môi trường thay thế."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid ""
+"Encrypted ir.config_parameter under the <code>eh_log.credentials.</code> "
+"namespace."
+msgstr ""
+"ir.config_parameter được mã hóa trong không gian tên "
+"<code>eh_log.credentials.</code>."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Endpoint"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__environment
+msgid "Environment"
+msgstr "Môi trường"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid ""
+"Environment variable (e.g. "
+"<code>EH_LOG_&lt;PROVIDER&gt;_&lt;PURPOSE&gt;</code>)."
+msgstr ""
+"Biến môi trường (ví dụ "
+"<code>EH_LOG_&lt;PROVIDER&gt;_&lt;PURPOSE&gt;</code>)."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__severity__error
+msgid "Error"
+msgstr "Lỗi"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__error_code
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__error_code
+msgid "Error Code"
+msgstr "Mã lỗi"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__error_message
+msgid "Error Message"
+msgstr "Thông điệp lỗi"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Errors only"
+msgstr "Chỉ lỗi"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_event_retention_adapter_days
+msgid "Event Retention: Adapter Calls (days)"
+msgstr "Lưu giữ sự kiện: Lệnh gọi bộ điều hợp (ngày)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_event_retention_override_days
+msgid "Event Retention: Manual Overrides (days)"
+msgstr "Lưu giữ sự kiện: Ghi đè thủ công (ngày)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_event_retention_state_days
+msgid "Event Retention: State Transitions (days)"
+msgstr "Lưu giữ sự kiện: Chuyển đổi trạng thái (ngày)"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "Expiry Tracking"
+msgstr "Theo dõi hết hạn"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Explicit caller default (avoid in production)."
+msgstr ""
+"Giá trị mặc định rõ ràng của bên gọi (tránh dùng trong môi trường sản xuất)."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__direction__export
+msgid "Export"
+msgstr "Xuất"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__carrier_express
+msgid "Express Carrier"
+msgstr "Đơn vị vận chuyển nhanh"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__failure
+msgid "Failure"
+msgstr "Không thành công"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__mode
+msgid ""
+"Filters rate-sheet selection so an air-only charge does not surface on a "
+"sea-freight quotation."
+msgstr ""
+"Lọc lựa chọn bảng giá để một khoản phí chỉ dành cho đường hàng không không "
+"xuất hiện trên báo giá vận tải đường biển."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__financial
+msgid "Financial Document"
+msgstr "Tài liệu tài chính"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_follower_ids
+msgid "Followers"
+msgstr "Người theo dõi"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Đối tác)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font biểu tượng, ví dụ: fa-tasks"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__description
+msgid ""
+"Free-form notes for the operator. Surfaced on the rate sheet editor and on "
+"charge-line tooltips in quotations."
+msgstr ""
+"Ghi chú dạng tự do cho người vận hành. Hiển thị trên trình chỉnh sửa bảng "
+"giá và trên chú giải công cụ của dòng phí trong báo giá."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__freight
+msgid "Freight"
+msgstr "Vận chuyển hàng hóa"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_fsc
+msgid "Fuel Surcharge"
+msgstr "Phụ phí nhiên liệu"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "General"
+msgstr "Chung"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__regulator
+msgid "Government Regulator"
+msgstr "Cơ quan quản lý nhà nước"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_search
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Group by Category"
+msgstr "Nhóm theo danh mục"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Group by Environment"
+msgstr "Nhóm theo môi trường"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Group by Message Type"
+msgstr "Nhóm theo loại thông báo"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+msgid "Group by Mode"
+msgstr "Nhóm theo chế độ"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Group by Profile"
+msgstr "Nhóm theo hồ sơ"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Group by Provider Kind"
+msgstr "Nhóm theo loại nhà cung cấp"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Group by Status"
+msgstr "Nhóm theo trạng thái"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Group by User"
+msgstr "Nhóm theo người dùng"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "HBL"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__basic
+msgid "HTTP Basic"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__http_status
+msgid "HTTP Status"
+msgstr "Trạng thái HTTP"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_handling
+msgid "Handling"
+msgstr "Xử lý hàng"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__has_message
+msgid "Has Message"
+msgstr "Có tin nhắn"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Health"
+msgstr "Sức khỏe"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_health
+msgid "Health Certificate"
+msgstr "Giấy chứng nhận sức khỏe"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__health_check_message
+msgid "Health Check Message"
+msgstr "Thông báo kiểm tra tình trạng"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__health_check_at
+msgid "Health Checked At"
+msgstr "Kiểm tra tình trạng lúc"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__health_check_status
+msgid "Health Status"
+msgstr "Tình trạng sức khỏe"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__health_check_status__ok
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Healthy"
+msgstr "Khỏe mạnh"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__is_taxable_at_destination
+msgid ""
+"Hint for the tax engine in the customs broker module. When False, the charge"
+" is exempt at destination clearance."
+msgstr ""
+"Gợi ý cho công cụ thuế trong mô-đun môi giới hải quan. Khi False, khoản phí "
+"được miễn khi thông quan tại điểm đến."
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_hawb
+msgid "House Air Waybill"
+msgstr "Vận đơn hàng không thứ cấp"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_hbl
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_form
+msgid "House Bill of Lading"
+msgstr "Vận đơn thứ cấp"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_kyc_warning_days
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_kyc_warning_days
+msgid ""
+"How many days before a KYC document expires the system creates an activity "
+"for the partner's account owner."
+msgstr ""
+"Bao nhiêu ngày trước khi tài liệu KYC hết hạn thì hệ thống tạo một hoạt động"
+" cho chủ tài khoản của đối tác."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__expiry_warning_days
+msgid ""
+"How many days before expiry the system raises an activity to the document "
+"owner. 0 disables the warning."
+msgstr ""
+"Hệ thống tạo một hoạt động cho chủ sở hữu tài liệu bao nhiêu ngày trước khi "
+"hết hạn. 0 sẽ tắt cảnh báo."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__related_record_display
+msgid ""
+"Human-readable reference (e.g. customs declaration number) snapshotted at "
+"write time so the log entry is readable even after the originating record is"
+" archived."
+msgstr ""
+"Tham chiếu dễ đọc (ví dụ số tờ khai hải quan) được chụp nhanh tại thời điểm "
+"ghi để mục nhật ký vẫn đọc được ngay cả sau khi bản ghi gốc bị lưu trữ."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__id
+msgid "ID"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_exception_icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng cho thấy một hoạt động ngoại lệ."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__idempotency_key
+msgid "Idempotency Key"
+msgstr "Khóa Idempotency"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__identity
+msgid "Identity and KYC"
+msgstr "Danh tính và KYC"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Nếu chọn, bạn cần chú ý tới các tin nhắn mới."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_has_error
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu chọn, một số tin nhắn sẽ có lỗi gửi."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__direction__import
+msgid "Import"
+msgstr "Nhập"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_vat
+msgid "Import VAT"
+msgstr "Nhập VAT"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_search
+msgid "Inactive"
+msgstr "Không hoạt động"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__direction__inbound
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Inbound"
+msgstr "Đến"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__severity__info
+msgid "Info"
+msgstr "Thông tin"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_haulage
+msgid "Inland Haulage"
+msgstr "Vận chuyển nội địa"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__inland
+msgid "Inland Transport"
+msgstr "Vận tải nội địa"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__insurance
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__insurance
+msgid "Insurance"
+msgstr "Bảo hiểm"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_inscert
+msgid "Insurance Certificate"
+msgstr "Chứng nhận bảo hiểm"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__jwt_signed
+msgid "JWT Signed (private key)"
+msgstr "JWT đã ký (khóa riêng)"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "KYC Expiry Warning"
+msgstr "Cảnh báo Hết hạn KYC"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_kyc_warning_days
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_kyc_warning_days
+msgid "KYC Expiry Warning (days)"
+msgstr "Cảnh báo Hết hạn KYC (ngày)"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Last 7 days"
+msgstr "7 ngày qua"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__health_check_latency_ms
+msgid "Last Health Latency (ms)"
+msgstr "Độ trễ tình trạng gần nhất (ms)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__last_message_at
+msgid "Last Message"
+msgstr "Tin nhắn cuối"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message____last_update
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile____last_update
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code____last_update
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type____last_update
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__write_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__write_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__write_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__write_uid
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__write_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__write_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__write_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__write_date
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__latency_ms
+msgid "Latency (ms)"
+msgstr "Độ trễ (ms)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__company_ids
+msgid ""
+"Leave empty to make this code available across all companies. Use to scope a"
+" code to specific companies."
+msgstr ""
+"Để trống để mã này khả dụng cho tất cả các công ty. Dùng để giới hạn mã cho "
+"các công ty cụ thể."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Linkage"
+msgstr "Liên kết"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__credential_status
+msgid ""
+"Live status of the credential as resolved by the helper. Read-only; "
+"recompute by clicking Test Credential."
+msgstr ""
+"Trạng thái trực tiếp của thông tin xác thực do trình trợ giúp giải quyết. "
+"Chỉ đọc; tính lại bằng cách nhấp vào Test Credential."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__credential_purpose
+msgid ""
+"Logical key passed to eh.log.credentials.get(). The helper resolves it via "
+"environment variables and ir.config_parameter without exposing the secret on"
+" this form."
+msgstr ""
+"Khóa logic được truyền đến eh.log.credentials.get(). Trình trợ giúp phân "
+"giải khóa này thông qua biến môi trường và ir.config_parameter mà không để "
+"lộ khóa bí mật trên biểu mẫu này."
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_root
+msgid "Logistics"
+msgstr "Hậu cần"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_adapter_message
+msgid "Logistics Adapter Message Log"
+msgstr "Nhật ký thông báo bộ điều hợp hậu cần"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_adapter_profile
+msgid "Logistics Adapter Profile"
+msgstr "Hồ sơ bộ điều hợp hậu cần"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_charge_code
+msgid "Logistics Charge Code"
+msgstr "Mã phí hậu cần"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_credentials
+msgid "Logistics Credentials Helper"
+msgstr "Trình trợ giúp thông tin xác thực hậu cần"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_document_type
+msgid "Logistics Document Type"
+msgstr "Loại tài liệu hậu cần"
+
+#. module: eh_log_base
+#: model:ir.model,name:eh_log_base.model_eh_log_event
+msgid "Logistics Operational Event"
+msgstr "Sự kiện vận hành hậu cần"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: eh_log_base
+#: model:res.groups,comment:eh_log_base.group_eh_log_manager
+msgid ""
+"Manager access to ERP Heritage logistics modules: configuration, approval, "
+"override actions. Implies the Logistics User role."
+msgstr ""
+"Quyền truy cập cấp quản lý vào các mô-đun logistics ERP Heritage: cấu hình, "
+"phê duyệt, thao tác ghi đè. Bao gồm vai trò Người dùng Logistics."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__override
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Manual Override"
+msgstr "Ghi đè thủ công"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Margin Approval Threshold"
+msgstr "Ngưỡng phê duyệt biên lợi nhuận"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_margin_floor_threshold
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_margin_floor_threshold
+msgid "Margin Approval Threshold (%)"
+msgstr "Ngưỡng phê duyệt biên lợi nhuận (%)"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Margin Warning Threshold"
+msgstr "Ngưỡng cảnh báo biên lợi nhuận"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_res_company__eh_log_margin_warning_threshold
+#: model:ir.model.fields,field_description:eh_log_base.field_res_config_settings__eh_log_margin_warning_threshold
+msgid "Margin Warning Threshold (%)"
+msgstr "Ngưỡng cảnh báo biên lợi nhuận (%)"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_mawb
+msgid "Master Air Waybill"
+msgstr "Vận đơn hàng không chủ"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_mbl
+msgid "Master Bill of Lading"
+msgstr "Vận đơn chủ"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_master_data
+msgid "Master Data"
+msgstr "Dữ liệu chủ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__retry_max_attempts
+msgid ""
+"Maximum retry attempts on transient errors. Backoff is exponential with "
+"jitter, base 1.5x."
+msgstr ""
+"Số lần thử lại tối đa khi gặp lỗi tạm thời. Backoff theo cấp số nhân có "
+"jitter, cơ số 1.5x."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_has_error
+msgid "Message Delivery error"
+msgstr "Lỗi gửi tin nhắn"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__message_type
+msgid "Message Type"
+msgstr "Kiểu tin nhắn"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_count
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Messages"
+msgstr "Tin nhắn"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Method"
+msgstr "Phương thức"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__company_ids
+msgid ""
+"Mirrors company_id as an m2m so the global isolation rule can use a single "
+"'company_ids in company_ids' domain that holds whether the field is mono or "
+"multi-company in the future."
+msgstr ""
+"Phản chiếu company_id dưới dạng m2m để quy tắc cô lập toàn cục có thể sử "
+"dụng một miền 'company_ids in company_ids' duy nhất vẫn đúng dù trường này "
+"là đơn công ty hay đa công ty trong tương lai."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Mirsal 2 (UAE Sandbox)"
+msgstr "Mirsal 2 (Sandbox UAE)"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__credential_status__missing
+msgid "Missing"
+msgstr "Thiếu"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Mock"
+msgstr "Mô phỏng"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__environment__mock
+msgid "Mock (offline fixtures)"
+msgstr "Mô phỏng (fixture ngoại tuyến)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__environment
+msgid ""
+"Mock plays back canned fixtures from tests/fixtures/. Sandbox calls the "
+"provider's published test environment. Production hits live. Profiles "
+"default to mock so a fresh install never accidentally calls a real "
+"regulator."
+msgstr ""
+"Chế độ giả lập phát lại các fixture định sẵn từ tests/fixtures/. Sandbox gọi"
+" môi trường thử nghiệm do nhà cung cấp công bố. Môi trường sản xuất truy cập"
+" trực tiếp. Hồ sơ mặc định ở chế độ giả lập nên bản cài đặt mới không bao "
+"giờ vô tình gọi đến cơ quan quản lý thật."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__mode
+msgid "Mode"
+msgstr "Chế độ"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__multimodal
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__multimodal
+msgid "Multimodal"
+msgstr "Đa phương thức"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__mtls
+msgid "Mutual TLS"
+msgstr "TLS tương hỗ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Thời hạn hoạt động của tôi"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__name
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Thời hạn cho hoạt động tiếp theo"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_type_id
+msgid "Next Activity Type"
+msgstr "Loại hoạt động tiếp theo"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_profile.py:0
+#, python-format
+msgid ""
+"No adapter class is registered for provider code '%(code)s'. Available "
+"providers: %(list)s. If this is a new integration, the country pack or "
+"vertical module that owns it has not been installed."
+msgstr ""
+"Không có lớp bộ điều hợp nào được đăng ký cho mã nhà cung cấp '%(code)s'. "
+"Nhà cung cấp khả dụng: %(list)s. Nếu đây là tích hợp mới, gói quốc gia hoặc "
+"mô-đun theo ngành sở hữu nó chưa được cài đặt."
+
+#. module: eh_log_base
+#: model_terms:ir.actions.act_window,help:eh_log_base.action_eh_log_adapter_profile
+msgid "No adapter profiles configured yet"
+msgstr "Chưa cấu hình hồ sơ bộ điều hợp nào"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__none
+msgid "None"
+msgstr "Không"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__health_check_status__unknown
+msgid "Not Yet Checked"
+msgstr "Chưa kiểm tra"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Notes"
+msgstr "Ghi chú"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__severity__notice
+msgid "Notice"
+msgstr "Thông báo"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng tác vụ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng lỗi"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Số tin nhắn cần xử lý"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số tin nhắn bị gửi lỗi"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__oauth2_authorization_code
+msgid "OAuth2 Authorization Code"
+msgstr "Mã ủy quyền OAuth2"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__oauth2_client_credentials
+msgid "OAuth2 Client Credentials"
+msgstr "Thông tin xác thực máy khách OAuth2"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "OFR"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__occurred_at
+msgid "Occurred At"
+msgstr "Đã xảy ra vào"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__carrier_ocean
+msgid "Ocean Carrier"
+msgstr "Hãng vận tải biển"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_ofr
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_charge_code_form
+msgid "Ocean Freight"
+msgstr "Cước vận tải biển"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__related_model
+msgid ""
+"Odoo model name that originated this call, e.g. "
+"'eh.log.customs.declaration'. Lets the UI link back from the message log to "
+"the operational record."
+msgstr ""
+"Tên mô hình Odoo khởi tạo lệnh gọi này, ví dụ 'eh.log.customs.declaration'. "
+"Cho phép giao diện liên kết ngược từ nhật ký thông báo về bản ghi vận hành."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_event__summary
+msgid ""
+"One-line human-readable description of the event. The structured payload "
+"sits in the context_json field."
+msgstr ""
+"Mô tả một dòng dễ đọc cho con người về sự kiện. Dữ liệu có cấu trúc nằm "
+"trong trường context_json."
+
+#. module: eh_log_base
+#: model:ir.model.constraint,message:eh_log_base.constraint_eh_log_adapter_profile_provider_company_environment_unique
+msgid ""
+"Only one profile per (provider, company, environment) is allowed. If you "
+"need a second sandbox configuration, use the secondary endpoint field on the"
+" existing profile."
+msgstr ""
+"Chỉ cho phép một hồ sơ cho mỗi (provider, company, environment). Nếu bạn cần"
+" cấu hình sandbox thứ hai, hãy sử dụng trường điểm cuối phụ trên hồ sơ hiện "
+"có."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Open Related Record"
+msgstr "Mở bản ghi liên quan"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_form
+msgid "Operational Event"
+msgstr "Sự kiện vận hành"
+
+#. module: eh_log_base
+#: model:ir.actions.act_window,name:eh_log_base.action_eh_log_event
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_events
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_list
+msgid "Operational Events"
+msgstr "Các sự kiện vận hành"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__notes
+msgid "Operational Notes"
+msgstr "Ghi chú vận hành"
+
+#. module: eh_log_base
+#: model:ir.ui.menu,name:eh_log_base.menu_eh_log_operations
+msgid "Operations"
+msgstr "Hoạt động"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__name
+msgid ""
+"Operator-friendly label for this profile, e.g. 'Mirsal 2 (UAE Sandbox)'."
+msgstr ""
+"Nhãn thân thiện với người vận hành cho hồ sơ này, ví dụ 'Mirsal 2 (UAE "
+"Sandbox)'."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__idempotency_key
+msgid ""
+"Optional caller-supplied key the provider uses to deduplicate retried "
+"requests. Empty when the call is naturally idempotent (e.g. a status query)."
+msgstr ""
+"Khóa tùy chọn do bên gọi cung cấp mà nhà cung cấp dùng để loại bỏ trùng lặp "
+"các yêu cầu thử lại. Để trống khi lệnh gọi vốn đã idempotent (ví dụ một truy"
+" vấn trạng thái)."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__default_currency_id
+msgid ""
+"Optional default for rate sheets. Quotation currency wins when the two "
+"differ; this is a hint for the rate-sheet editor only."
+msgstr ""
+"Giá trị mặc định tùy chọn cho bảng giá. Tiền tệ báo giá được ưu tiên khi hai"
+" giá trị khác nhau; đây chỉ là gợi ý dành cho trình chỉnh sửa bảng giá."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__secondary_endpoint_url
+msgid ""
+"Optional fallback URL used by adapters that publish a DR or read-replica "
+"endpoint."
+msgstr ""
+"URL dự phòng tùy chọn được sử dụng bởi các bộ điều hợp phát hành điểm cuối "
+"DR hoặc bản sao chỉ đọc."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__origin
+msgid "Origin Charges"
+msgstr "Phí nơi xuất phát"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_origin_doc
+msgid "Origin Documentation"
+msgstr "Chứng từ nơi xuất phát"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_pickup
+msgid "Origin Pickup"
+msgstr "Lấy hàng tại nơi xuất phát"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_othc
+msgid "Origin Terminal Handling"
+msgstr "Xử lý tại cảng/nhà ga nơi xuất phát"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_othc_air
+msgid "Origin Terminal Handling (Air)"
+msgstr "Xử lý tại nhà ga nơi xuất phát (Hàng không)"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_message.py:0
+msgid "Originating Record"
+msgstr "Bản ghi nguồn"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__other
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__other
+msgid "Other"
+msgstr "Khác"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__direction__outbound
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Outbound"
+msgstr "Đi"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Outcome"
+msgstr "Kết quả"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Override Retention"
+msgstr "Ghi đè khoản giữ lại"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_pl
+msgid "Packing List"
+msgstr "Phiếu đóng gói"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.eh_log_clean_layout
+msgid "Page <span class=\"page\"/> / <span class=\"topage\"/>"
+msgstr "Trang <span class=\"page\"/>/<span class=\"topage\"/>"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_passport
+msgid "Passport (Authorised Signatory)"
+msgstr "Hộ chiếu (Người ký có thẩm quyền)"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__payment
+msgid "Payment Provider"
+msgstr "Nhà cung cấp dịch vụ thanh toán"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_peak
+msgid "Peak Season Surcharge"
+msgstr "Phụ phí mùa cao điểm"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__pending
+msgid "Pending"
+msgstr "Đang chờ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__request_timeout_seconds
+msgid ""
+"Per-call timeout. Adapter raises AdapterTimeoutError on expiry and the "
+"circuit breaker increments its counter."
+msgstr ""
+"Thời gian chờ cho mỗi lần gọi. Khi hết hạn, bộ điều hợp phát sinh "
+"AdapterTimeoutError và bộ ngắt mạch tăng bộ đếm của nó."
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_ppc
+msgid "Phytosanitary Certificate"
+msgstr "Giấy chứng nhận kiểm dịch thực vật"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__default_revenue_account_id
+msgid ""
+"Posted on customer invoice lines billed against this charge code. Per-"
+"company because account hierarchies vary."
+msgstr ""
+"Ghi sổ trên các dòng hóa đơn khách hàng được xuất theo mã phí này. Theo từng"
+" công ty vì phân cấp tài khoản khác nhau."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__default_expense_account_id
+msgid ""
+"Posted on vendor bill lines costed against this charge code. Per-company "
+"because account hierarchies vary."
+msgstr ""
+"Ghi sổ trên các dòng hóa đơn nhà cung cấp được tính chi phí theo mã phí này."
+" Theo từng công ty vì phân cấp tài khoản khác nhau."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Pre-fills new logistics quotations."
+msgstr "Điền trước các báo giá logistics mới."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_default_incoterm_id
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_default_incoterm_id
+msgid "Pre-fills new logistics quotations. Operators can change per quote."
+msgstr ""
+"Điền trước các báo giá logistics mới. Người vận hành có thể thay đổi theo "
+"từng báo giá."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__endpoint_url
+msgid "Primary Endpoint"
+msgstr "Endpoint chính"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__environment__production
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Production"
+msgstr "Sản xuất"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__profile_id
+msgid "Profile"
+msgstr "Hồ sơ"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Provider"
+msgstr "Nhà cung cấp"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__api_version
+msgid ""
+"Provider API version this profile speaks (e.g. '2.4', '2026-01'). Adapters "
+"refuse to dispatch when this does not match the implementing class's "
+"declared version."
+msgstr ""
+"Phiên bản API của nhà cung cấp mà hồ sơ này sử dụng (ví dụ: '2.4', "
+"'2026-01'). Bộ điều hợp từ chối gửi khi phiên bản này không khớp với phiên "
+"bản đã khai báo của lớp triển khai."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__provider_code
+msgid "Provider Code"
+msgstr "Mã nhà cung cấp"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__provider_kind
+msgid "Provider Kind"
+msgstr "Loại nhà cung cấp"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__error_code
+msgid ""
+"Provider-returned error code, surfaced verbatim. The human message is in the"
+" body; this field is for grep."
+msgstr ""
+"Mã lỗi do nhà cung cấp trả về, hiển thị nguyên văn. Thông báo dễ đọc nằm "
+"trong phần thân; trường này dùng cho grep."
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_po
+msgid "Purchase Order"
+msgstr "Đơn mua hàng"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_margin_warning_threshold
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_margin_warning_threshold
+msgid ""
+"Quotation margin below this percentage raises a warning in the form. "
+"Approval is still required only if the margin is below the company's hard "
+"floor."
+msgstr ""
+"Biên lợi nhuận báo giá dưới tỷ lệ phần trăm này sẽ tạo cảnh báo trong biểu "
+"mẫu. Việc phê duyệt vẫn chỉ bắt buộc nếu biên lợi nhuận dưới ngưỡng sàn "
+"tuyệt đối của công ty."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_margin_floor_threshold
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_margin_floor_threshold
+msgid ""
+"Quotation margin below this percentage requires explicit manager approval "
+"before confirmation."
+msgstr ""
+"Biên lợi nhuận báo giá dưới tỷ lệ phần trăm này cần sự phê duyệt rõ ràng của"
+" quản lý trước khi xác nhận."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Quotations below this margin raise a warning."
+msgstr "Báo giá dưới biên lợi nhuận này sẽ tạo cảnh báo."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "Quotations below this margin require manager approval."
+msgstr "Báo giá dưới biên lợi nhuận này cần phê duyệt của quản lý."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__rail
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__rail
+msgid "Rail"
+msgstr "Đường sắt"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__carrier_rail
+msgid "Rail Carrier"
+msgstr "Đơn vị vận chuyển đường sắt"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_rlfr
+msgid "Rail Freight"
+msgstr "Vận tải hàng hóa đường sắt"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_rwb
+msgid "Rail Waybill"
+msgstr "Vận đơn đường sắt"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__rate_limit_per_minute
+msgid "Rate Limit (per minute)"
+msgstr "Giới hạn Tốc độ (mỗi phút)"
+
+#. module: eh_log_base
+#: model:res.groups,comment:eh_log_base.group_eh_log_user
+msgid ""
+"Read and operational access to ERP Heritage logistics modules. Implies the "
+"standard Salesperson role."
+msgstr ""
+"Quyền đọc và vận hành đối với các mô-đun logistics ERP Heritage. Bao hàm vai"
+" trò Salesperson tiêu chuẩn."
+
+#. module: eh_log_base
+#: model:res.groups,comment:eh_log_base.group_eh_log_auditor
+msgid ""
+"Read-only auditor: visibility on every ERP Heritage logistics audit log "
+"without write access. Cannot edit operational data."
+msgstr ""
+"Kiểm toán viên chỉ đọc: xem được mọi nhật ký kiểm toán logistics ERP "
+"Heritage mà không có quyền ghi. Không thể chỉnh sửa dữ liệu vận hành."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__regulatory
+msgid "Regulatory Certificate"
+msgstr "Chứng nhận quy định"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Rejected"
+msgstr "Bị từ chối"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__rejected
+msgid "Rejected by Provider"
+msgstr "Bị nhà cung cấp từ chối"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__related_model
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__related_model
+msgid "Related Model"
+msgstr "Đối tượng liên quan"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__related_record_display
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__related_record_display
+msgid "Related Record"
+msgstr "Bản ghi liên quan"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__related_record_id
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__related_record_id
+msgid "Related Record ID"
+msgstr "ID bản ghi liên quan"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Replay"
+msgstr "Phát lại"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_adapter_message.py:0
+msgid "Replayed Messages"
+msgstr "Tin nhắn đã phát lại"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Request"
+msgstr "Yêu cầu"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__request_headers
+msgid "Request Headers (sanitised)"
+msgstr "Tiêu đề yêu cầu (đã làm sạch)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__request_payload
+msgid "Request Payload"
+msgstr "Tải trọng yêu cầu"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__request_timeout_seconds
+msgid "Request Timeout (s)"
+msgstr "Thời gian chờ yêu cầu (giây)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__is_required_default
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_search
+msgid "Required by Default"
+msgstr "Bắt buộc theo mặc định"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Resilience"
+msgstr "Khả năng phục hồi"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__credential_status__ok
+msgid "Resolved"
+msgstr "Đã xử lý"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_form
+msgid "Response"
+msgstr "Phản hồi"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__response_headers
+msgid "Response Headers"
+msgstr "Tiêu đề phản hồi"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__response_payload
+msgid "Response Payload"
+msgstr "Payload phản hồi"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__activity_user_id
+msgid "Responsible User"
+msgstr "Người phụ trách"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__retry
+msgid "Retried"
+msgstr "Đã thử lại"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__retry_count
+msgid "Retry Count"
+msgstr "Số lần thử lại"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__retry_max_attempts
+msgid "Retry Max Attempts"
+msgstr "Số lần thử lại tối đa"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__road
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__road
+msgid "Road"
+msgstr "Đường"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_rfr
+msgid "Road Freight"
+msgstr "Vận tải Đường bộ"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__routing
+msgid "Routing or Mapping"
+msgstr "Định tuyến hoặc ánh xạ"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Run Health Check"
+msgstr "Chạy kiểm tra tình trạng"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__auth_method__sftp_key
+msgid "SFTP Key"
+msgstr "Khóa SFTP"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Lỗi gửi SMS"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_sanctions
+msgid "Sanctions and PEP Screening Result"
+msgstr "Kết quả sàng lọc lệnh trừng phạt và PEP"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__screening
+msgid "Sanctions or PEP Screening"
+msgstr "Sàng lọc lệnh trừng phạt hoặc PEP"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__environment__sandbox
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_search
+msgid "Sandbox"
+msgstr ""
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__request_payload
+msgid ""
+"Sanitised request payload. Original PII redacted per the profile's redaction"
+" rules. Truncated above the size limit set by ir.config_parameter "
+"eh_log.base.adapter_message_payload_max_chars."
+msgstr ""
+"Payload yêu cầu đã được làm sạch. PII gốc được ẩn theo quy tắc biên tập của "
+"hồ sơ. Bị cắt bớt khi vượt quá giới hạn kích thước được đặt bởi "
+"ir.config_parameter eh_log.base.adapter_message_payload_max_chars."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__response_payload
+msgid ""
+"Sanitised response payload. Same redaction and truncation rules as the "
+"request payload."
+msgstr ""
+"Payload phản hồi đã được làm sạch. Cùng quy tắc biên tập và cắt bớt như "
+"payload yêu cầu."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__mode__sea
+#: model:ir.model.fields.selection,name:eh_log_base.selection__res_company__eh_log_default_mode__sea
+msgid "Sea"
+msgstr "Đường biển"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__secondary_endpoint_url
+msgid "Secondary Endpoint"
+msgstr "Endpoint phụ"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_isps
+msgid "Security Surcharge (ISPS)"
+msgstr "Phụ phí an ninh (ISPS)"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__product_id
+msgid "Service Product"
+msgstr "Sản phẩm dịch vụ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__product_id
+msgid ""
+"Service product carried by quotation and invoice lines billed against this "
+"charge code. Odoo requires every billable order line to reference a product "
+"before the order can be confirmed or invoiced; logistics charge lines reuse "
+"this one. Left empty, it is auto-provisioned the first time the code is sold"
+" so operators never have to maintain a parallel product catalogue."
+msgstr ""
+"Sản phẩm dịch vụ được sử dụng bởi các dòng báo giá và hóa đơn được tính theo"
+" mã phí này. Odoo yêu cầu mọi dòng đơn hàng có thể lập hóa đơn phải tham "
+"chiếu đến một sản phẩm trước khi đơn hàng có thể được xác nhận hoặc lập hóa "
+"đơn; các dòng phí hậu cần sử dụng lại sản phẩm này. Nếu để trống, sản phẩm "
+"sẽ được tự động cung cấp trong lần đầu tiên mã được bán, để người vận hành "
+"không bao giờ phải duy trì một danh mục sản phẩm song song."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__severity
+msgid "Severity"
+msgstr "Mức độ nghiêm trọng"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__rate_limit_per_minute
+msgid ""
+"Soft per-minute rate limit honoured client-side. 0 means no client-side "
+"throttling; the adapter still respects server-side 429 responses."
+msgstr ""
+"Giới hạn tốc độ mềm mỗi phút được áp dụng ở phía máy khách. 0 nghĩa là không"
+" điều tiết ở phía máy khách; bộ điều hợp vẫn tuân thủ các phản hồi 429 ở "
+"phía máy chủ."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_charge_code__code
+msgid ""
+"Stable identifier referenced from rate sheets and invoice lines. Convention:"
+" short uppercase alphanumeric, e.g. OFR for Ocean Freight, OTHC for Origin "
+"Terminal Handling."
+msgstr ""
+"Mã định danh ổn định được tham chiếu từ bảng cước và dòng hóa đơn. Quy ước: "
+"chữ và số viết hoa ngắn gọn, ví dụ OFR cho cước vận tải biển, OTHC cho xử lý"
+" tại cảng gốc."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__provider_code
+msgid ""
+"Stable provider identifier referenced by adapter classes (e.g. 'mirsal2', "
+"'fasah', 'dcsa', 'iata_cargo_xml'). Adapter dispatch keys on this code; do "
+"not rename in place."
+msgstr ""
+"Mã định danh nhà cung cấp ổn định được các lớp adapter tham chiếu (ví dụ: "
+"'mirsal2', 'fasah', 'dcsa', 'iata_cargo_xml'). Việc điều phối adapter dựa "
+"trên mã này; không đổi tên tại chỗ."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__code
+msgid ""
+"Stable short identifier (HBL, HAWB, MBL, MAWB, COI, COO, PL, COMINV, ...). "
+"Referenced from checklists."
+msgstr ""
+"Mã định danh ngắn ổn định (HBL, HAWB, MBL, MAWB, COI, COO, PL, COMINV, ...)."
+" Được tham chiếu từ danh sách kiểm tra."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__category__state_transition
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "State Transition"
+msgstr "Chuyển tiếp Trạng thái"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "State Transition Retention"
+msgstr "Lưu giữ Chuyển tiếp Trạng thái"
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_ux_mixin.py:0
+#, python-format
+msgid "State changed: %(from)s -> %(to)s"
+msgstr "Trạng thái đã thay đổi: %(from)s -> %(to)s"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_message__status
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Hạn chót hạn đã qua\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Kế hoạch: Cần thực hiện trong tương lai."
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_storage
+msgid "Storage"
+msgstr "Lưu trữ"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_event__context_json
+msgid ""
+"Structured payload serialised as JSON. Audit reviewers search this field for"
+" specific keys and values."
+msgstr ""
+"Tải trọng có cấu trúc được tuần tự hóa dưới dạng JSON. Người đánh giá kiểm "
+"toán tìm kiếm các khóa và giá trị cụ thể trong trường này."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__success
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Success"
+msgstr "Thành công"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__summary
+msgid "Summary"
+msgstr "Tóm tắt"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__surcharge
+msgid "Surcharge"
+msgstr "Phụ phí"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_charge_code__is_taxable_at_destination
+msgid "Taxable at Destination"
+msgstr "Chịu thuế tại điểm đến"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__provider_kind__telematics
+msgid "Telematics Provider"
+msgstr "Nhà cung cấp Telematics"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Test Credential"
+msgstr "Thông tin xác thực kiểm thử"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "The actual secret is never displayed on this form."
+msgstr "Bí mật thực tế không bao giờ được hiển thị trên biểu mẫu này."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__circuit_breaker_cooldown_seconds
+msgid "Time to wait before the half-open probe runs."
+msgstr "Thời gian chờ trước khi chạy thăm dò half-open."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_message__status__timeout
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_message_search
+msgid "Timed Out"
+msgstr "Đã hết thời gian"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "Timeouts and Retries"
+msgstr "Thời gian chờ và thử lại"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_event_search
+msgid "Today"
+msgstr "Hôm nay"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__message_count
+msgid "Total messages logged against this profile."
+msgstr "Tổng số tin nhắn được ghi lại đối với hồ sơ này."
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_document_type__expiry_aware
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_document_type_search
+msgid "Tracks Expiry"
+msgstr "Theo dõi ngày hết hạn"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_tradelic
+msgid "Trade Licence"
+msgstr "Giấy phép kinh doanh"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_document_type__category__transport
+msgid "Transport Document"
+msgstr "Chứng từ vận tải"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid ""
+"Truncate adapter payloads above this size before storage to keep the "
+"database lean."
+msgstr ""
+"Cắt bớt payload của bộ điều hợp vượt quá kích thước này trước khi lưu trữ để"
+" giữ cho cơ sở dữ liệu gọn nhẹ."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Loại hoạt động ngoại lệ trong bản ghi."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_message__correlation_id
+msgid ""
+"Unique per-call identifier propagated to the provider for traceability. "
+"Generated client-side as a UUID4."
+msgstr ""
+"Định danh duy nhất cho mỗi lần gọi được truyền tới nhà cung cấp để phục vụ "
+"truy vết. Được tạo ở phía máy khách dưới dạng UUID4."
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_adapter_profile__credential_status__unknown
+msgid "Unknown"
+msgstr "Không xác định"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_event__user_id
+msgid "User"
+msgstr "Người dùng"
+
+#. module: eh_log_base
+#: model:eh.log.document.type,name:eh_log_base.doc_type_vatreg
+msgid "VAT Registration Certificate"
+msgstr "Giấy chứng nhận đăng ký VAT"
+
+#. module: eh_log_base
+#: model:eh.log.charge.code,name:eh_log_base.charge_code_war
+msgid "War Risk Surcharge"
+msgstr "Phụ phí rủi ro chiến tranh"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_charge_code__category__warehousing
+msgid "Warehousing and Handling"
+msgstr "Lưu kho và xử lý hàng"
+
+#. module: eh_log_base
+#: model:ir.model.fields.selection,name:eh_log_base.selection__eh_log_event__severity__warning
+msgid "Warning"
+msgstr "Cảnh báo"
+
+#. module: eh_log_base
+#: model:ir.model.fields,field_description:eh_log_base.field_eh_log_adapter_profile__website_message_ids
+msgid "Website Messages"
+msgstr "Thông báo trên trang web"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_adapter_profile__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử trao đổi qua trang web"
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__is_required_default
+msgid ""
+"When checked, the document is auto-added to the job checklist when "
+"applicable. Operators can still remove it for non-standard scenarios."
+msgstr ""
+"Khi được chọn, tài liệu sẽ tự động được thêm vào danh sách kiểm tra công "
+"việc khi phù hợp. Người điều hành vẫn có thể xóa nó cho các tình huống không"
+" tiêu chuẩn."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_eh_log_document_type__expiry_aware
+msgid ""
+"When checked, the related upload captures an expiry date and the system "
+"raises a warning before expiry per the default warning days field."
+msgstr ""
+"Khi được chọn, tệp tải lên liên quan sẽ ghi lại ngày hết hạn và hệ thống đưa"
+" ra cảnh báo trước khi hết hạn theo trường số ngày cảnh báo mặc định."
+
+#. module: eh_log_base
+#: model:ir.model.fields,help:eh_log_base.field_res_company__eh_log_credit_warning_pct
+#: model:ir.model.fields,help:eh_log_base.field_res_config_settings__eh_log_credit_warning_pct
+msgid ""
+"When customer exposure crosses this percentage of the approved limit, new "
+"quotations raise a warning. The hard stop is always 100% of the limit."
+msgstr ""
+"Khi mức phơi nhiễm của khách hàng vượt qua tỷ lệ phần trăm này của hạn mức "
+"đã duyệt, các báo giá mới sẽ đưa ra cảnh báo. Điểm dừng cứng luôn là 100% "
+"của hạn mức."
+
+#. module: eh_log_base
+#. odoo-python
+#: code:addons/eh_log_base/models/eh_log_event.py:0
+#, python-format
+msgid ""
+"[EHL-EVENT-001] Operational events are append-only. Editing the following "
+"fields is not permitted: %(fields)s."
+msgstr ""
+"[EHL-EVENT-001] Các sự kiện vận hành chỉ có thể thêm. Không được phép chỉnh "
+"sửa các trường sau: %(fields)s."
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "characters"
+msgstr "ký tự"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_res_config_settings_eh_log
+msgid "days"
+msgstr "ngày"
+
+#. module: eh_log_base
+#: model_terms:ir.ui.view,arch_db:eh_log_base.view_eh_log_adapter_profile_form
+msgid "https://provider.example/v1"
+msgstr ""

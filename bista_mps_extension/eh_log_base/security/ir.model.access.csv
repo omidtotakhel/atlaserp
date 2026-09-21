@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_eh_log_adapter_profile_user,eh.log.adapter.profile.user,model_eh_log_adapter_profile,eh_log_base.group_eh_log_user,1,0,0,0
+access_eh_log_adapter_profile_manager,eh.log.adapter.profile.manager,model_eh_log_adapter_profile,eh_log_base.group_eh_log_manager,1,1,1,0
+access_eh_log_adapter_profile_auditor,eh.log.adapter.profile.auditor,model_eh_log_adapter_profile,eh_log_base.group_eh_log_auditor,1,0,0,0
+access_eh_log_adapter_message_user,eh.log.adapter.message.user,model_eh_log_adapter_message,eh_log_base.group_eh_log_user,1,0,0,0
+access_eh_log_adapter_message_manager,eh.log.adapter.message.manager,model_eh_log_adapter_message,eh_log_base.group_eh_log_manager,1,1,1,0
+access_eh_log_adapter_message_auditor,eh.log.adapter.message.auditor,model_eh_log_adapter_message,eh_log_base.group_eh_log_auditor,1,0,0,0
+access_eh_log_event_user,eh.log.event.user,model_eh_log_event,eh_log_base.group_eh_log_user,1,0,0,0
+access_eh_log_event_manager,eh.log.event.manager,model_eh_log_event,eh_log_base.group_eh_log_manager,1,1,0,0
+access_eh_log_event_auditor,eh.log.event.auditor,model_eh_log_event,eh_log_base.group_eh_log_auditor,1,0,0,0
+access_eh_log_charge_code_user,eh.log.charge.code.user,model_eh_log_charge_code,eh_log_base.group_eh_log_user,1,0,0,0
+access_eh_log_charge_code_manager,eh.log.charge.code.manager,model_eh_log_charge_code,eh_log_base.group_eh_log_manager,1,1,1,1
+access_eh_log_document_type_user,eh.log.document.type.user,model_eh_log_document_type,eh_log_base.group_eh_log_user,1,0,0,0
+access_eh_log_document_type_manager,eh.log.document.type.manager,model_eh_log_document_type,eh_log_base.group_eh_log_manager,1,1,1,1
+access_eh_log_credentials_user,eh.log.credentials.user,model_eh_log_credentials,eh_log_base.group_eh_log_user,1,0,0,0

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="demo_charge_template_sea_imp_aecn" model="eh.log.charge.template">
+            <field name="code">SEA_IMP_CN_AE</field>
+            <field name="name">Sea Import - China to UAE (FCL)</field>
+            <field name="mode">sea</field>
+            <field name="direction">import</field>
+            <field name="origin_country_id" ref="base.cn"/>
+            <field name="destination_country_id" ref="base.ae"/>
+            <field name="default_currency_id" ref="base.USD"/>
+            <field name="description">Standard FCL sea import lane Shanghai > Jebel Ali, 20ft / 40ft GP, including local THC at both ends.</field>
+        </record>
+
+        <record id="demo_charge_template_sea_exp_saus" model="eh.log.charge.template">
+            <field name="code">SEA_EXP_SA_US</field>
+            <field name="name">Sea Export - KSA to USA (FCL)</field>
+            <field name="mode">sea</field>
+            <field name="direction">export</field>
+            <field name="origin_country_id" ref="base.sa"/>
+            <field name="destination_country_id" ref="base.us"/>
+            <field name="default_currency_id" ref="base.USD"/>
+        </record>
+
+        <record id="demo_charge_template_air_imp_aede" model="eh.log.charge.template">
+            <field name="code">AIR_IMP_DE_AE</field>
+            <field name="name">Air Import - Germany to UAE (Express)</field>
+            <field name="mode">air</field>
+            <field name="direction">import</field>
+            <field name="origin_country_id" ref="base.de"/>
+            <field name="destination_country_id" ref="base.ae"/>
+            <field name="default_currency_id" ref="base.USD"/>
+        </record>
+
+        <record id="demo_charge_template_air_imp_qain" model="eh.log.charge.template">
+            <field name="code">AIR_IMP_IN_QA</field>
+            <field name="name">Air Import - India to Qatar (Pharma)</field>
+            <field name="mode">air</field>
+            <field name="direction">import</field>
+            <field name="origin_country_id" ref="base.in"/>
+            <field name="destination_country_id" ref="base.qa"/>
+            <field name="default_currency_id" ref="base.USD"/>
+        </record>
+
+        <record id="demo_charge_template_road_aesa" model="eh.log.charge.template">
+            <field name="code">ROAD_AE_SA</field>
+            <field name="name">Road - UAE to KSA (Land Bridge)</field>
+            <field name="mode">road</field>
+            <field name="direction">cross_trade</field>
+            <field name="origin_country_id" ref="base.ae"/>
+            <field name="destination_country_id" ref="base.sa"/>
+            <field name="default_currency_id" ref="base.AED"/>
+        </record>
+
+        <!-- Lines for sea import lane -->
+
+        <record id="demo_charge_line_sea_imp_aecn_ofr" model="eh.log.charge.template.line">
+            <field name="template_id" ref="demo_charge_template_sea_imp_aecn"/>
+            <field name="charge_code_id" ref="eh_log_base.charge_code_ofr"/>
+            <field name="leg">main</field>
+            <field name="default_quantity">1</field>
+            <field name="default_unit_price">1850</field>
+            <field name="default_planned_cost">1500</field>
+            <field name="description">Ocean Freight 40ft HC SHA-AUH</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="demo_charge_line_sea_imp_aecn_othc" model="eh.log.charge.template.line">
+            <field name="template_id" ref="demo_charge_template_sea_imp_aecn"/>
+            <field name="charge_code_id" ref="eh_log_base.charge_code_othc"/>
+            <field name="leg">origin</field>
+            <field name="default_quantity">1</field>
+            <field name="default_unit_price">320</field>
+            <field name="default_planned_cost">280</field>
+            <field name="description">Origin THC Shanghai</field>
+            <field name="sequence">20</field>
+        </record>
+
+        <record id="demo_charge_line_sea_imp_aecn_dthc" model="eh.log.charge.template.line">
+            <field name="template_id" ref="demo_charge_template_sea_imp_aecn"/>
+            <field name="charge_code_id" ref="eh_log_base.charge_code_dthc"/>
+            <field name="leg">destination</field>
+            <field name="default_quantity">1</field>
+            <field name="default_unit_price">450</field>
+            <field name="default_planned_cost">390</field>
+            <field name="description">Destination THC Jebel Ali</field>
+            <field name="sequence">30</field>
+        </record>
+
+        <record id="demo_charge_line_sea_imp_aecn_doc" model="eh.log.charge.template.line">
+            <field name="template_id" ref="demo_charge_template_sea_imp_aecn"/>
+            <field name="charge_code_id" ref="eh_log_base.charge_code_destination_doc"/>
+            <field name="leg">destination</field>
+            <field name="default_quantity">1</field>
+            <field name="default_unit_price">120</field>
+            <field name="default_planned_cost">90</field>
+            <field name="description">Destination Documentation</field>
+            <field name="sequence">40</field>
+        </record>
+
+        <record id="demo_charge_line_sea_imp_aecn_clrnc" model="eh.log.charge.template.line">
+            <field name="template_id" ref="demo_charge_template_sea_imp_aecn"/>
+            <field name="charge_code_id" ref="eh_log_base.charge_code_clrnc"/>
+            <field name="leg">destination</field>
+            <field name="default_quantity">1</field>
+            <field name="default_unit_price">280</field>
+            <field name="default_planned_cost">220</field>
+            <field name="description">Customs Clearance Dubai</field>
+            <field name="sequence">50</field>
+        </record>
+
+        <!-- Lines for air import lane -->
+
+        <record id="demo_charge_line_air_imp_aede_afr" model="eh.log.charge.template.line">
+            <field name="template_id" ref="demo_charge_template_air_imp_aede"/>
+            <field name="charge_code_id" ref="eh_log_base.charge_code_afr"/>
+            <field name="leg">main</field>
+            <field name="default_quantity">100</field>
+            <field name="default_unit_price">4.20</field>
+            <field name="default_planned_cost">3.50</field>
+            <field name="description">Air Freight per kg, FRA-DXB</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="demo_charge_line_air_imp_aede_fsc" model="eh.log.charge.template.line">
+            <field name="template_id" ref="demo_charge_template_air_imp_aede"/>
+            <field name="charge_code_id" ref="eh_log_base.charge_code_fsc"/>
+            <field name="leg">main</field>
+            <field name="default_quantity">100</field>
+            <field name="default_unit_price">0.85</field>
+            <field name="default_planned_cost">0.70</field>
+            <field name="description">Fuel Surcharge per kg</field>
+            <field name="sequence">20</field>
+        </record>
+
+        <record id="demo_charge_line_air_imp_aede_clrnc" model="eh.log.charge.template.line">
+            <field name="template_id" ref="demo_charge_template_air_imp_aede"/>
+            <field name="charge_code_id" ref="eh_log_base.charge_code_clrnc"/>
+            <field name="leg">destination</field>
+            <field name="default_quantity">1</field>
+            <field name="default_unit_price">320</field>
+            <field name="default_planned_cost">240</field>
+            <field name="description">Clearance Dubai Cargo Village</field>
+            <field name="sequence">30</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,2570 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_freight
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 10:16+0000\n"
+"PO-Revision-Date: 2026-07-01 10:16+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#, python-format
+msgid "%(count)d job(s) closed."
+msgstr "%(count)d задание(-й) закрыто."
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#, python-format
+msgid "%(count)d job(s) marked delivered."
+msgstr "%(count)d задание(-й) отмечено как доставленное."
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#, python-format
+msgid "%(count)d job(s) marked in transit."
+msgstr "%(count)d задание(-й) отмечено как в пути."
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#, python-format
+msgid "%(count)d job(s) moved to Booked."
+msgstr "%(count)d задание(-й) перемещено в «Забронировано»."
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_kanban
+msgid "&gt;"
+msgstr ""
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+msgid "(none)"
+msgstr "(нет)"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.container.iso.type,name:eh_log_freight.iso_22r1
+msgid "20-foot Reefer"
+msgstr "20-футовый рефрижератор"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.container.iso.type,name:eh_log_freight.iso_22g1
+msgid "20-foot Standard Dry"
+msgstr "20-футовый стандартный сухой"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_iso_type_form
+msgid "40' High Cube Standard Container"
+msgstr "Стандартный контейнер High Cube 40'"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.container.iso.type,name:eh_log_freight.iso_45g1
+msgid "40-foot High Cube Dry"
+msgstr "40-футовый сухой контейнер High Cube"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.container.iso.type,name:eh_log_freight.iso_45r1
+msgid "40-foot Reefer High Cube"
+msgstr "40-футовый рефрижераторный контейнер High Cube"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.container.iso.type,name:eh_log_freight.iso_42g1
+msgid "40-foot Standard Dry"
+msgstr "40-футовый стандартный сухой контейнер"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_iso_type_form
+msgid "40HC"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:eh.log.freight.container.iso.type,name:eh_log_freight.iso_l5g1
+msgid "45-foot High Cube Dry"
+msgstr "45-футовый сухой контейнер High Cube"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid ""
+"<i class=\"fa fa-ship\" title=\"Sea\" style=\"font-size:1.6rem;color:#D4A055;\" attrs=\"{'invisible': [('mode', '!=', 'sea')]}\"/>\n"
+"                                        <i class=\"fa fa-plane\" title=\"Air\" style=\"font-size:1.6rem;color:#D4A055;\" attrs=\"{'invisible': [('mode', '!=', 'air')]}\"/>\n"
+"                                        <i class=\"fa fa-truck\" title=\"Road\" style=\"font-size:1.6rem;color:#D4A055;\" attrs=\"{'invisible': [('mode', '!=', 'road')]}\"/>\n"
+"                                        <i class=\"fa fa-train\" title=\"Rail\" style=\"font-size:1.6rem;color:#D4A055;\" attrs=\"{'invisible': [('mode', '!=', 'rail')]}\"/>\n"
+"                                        <i class=\"fa fa-random\" style=\"font-size:1.6rem;color:#D4A055;\" attrs=\"{'invisible': [('mode', '!=', 'multimodal')]}\"/>"
+msgstr ""
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "<span class=\"o_stat_text\">Sale Order</span>"
+msgstr "<span class=\"o_stat_text\">Заказ на продажу</span>"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "<strong>Direction:</strong>"
+msgstr "<strong>Направление:</strong>"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "<strong>Job:</strong>"
+msgstr "<strong>Должность:</strong>"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "<strong>Mode:</strong>"
+msgstr "<strong>Режим:</strong>"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "<strong>State:</strong>"
+msgstr "<strong>Состояние:</strong>"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone__source__api
+msgid "API"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__accrual_date
+msgid "Accrual Date"
+msgstr "Дата начисления"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_cost_line__state__accrued
+msgid "Accrued"
+msgstr "Начислено"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_needaction
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_needaction
+msgid "Action Needed"
+msgstr "Требуются действия"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__active
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__active
+msgid "Active"
+msgstr "Активный"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_freight_job_activity
+msgid "Activities"
+msgstr "Активность"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Оформление задачи-исключения"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_state
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_state
+msgid "Activity State"
+msgstr "Состояние активности"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Значок типа активности"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__actual_at
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Actual"
+msgstr "Фактически"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Actual (from cost and revenue ledger)"
+msgstr "Фактический (из книги затрат и доходов)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__total_actual_cost
+msgid "Actual Cost"
+msgstr "Фактическая стоимость"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__eta_actual
+msgid "Actual ETA"
+msgstr "Фактический ETA"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__etd_actual
+msgid "Actual ETD"
+msgstr "Фактический ETD"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__actual_gross_margin
+msgid "Actual Gross Margin"
+msgstr "Фактическая валовая маржа"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__actual_gross_margin_pct
+msgid "Actual Gross Margin (%)"
+msgstr "Фактическая валовая маржа (%)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__milestone_actual_count
+msgid "Actual Milestones"
+msgstr "Фактические этапы"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__total_actual_revenue
+msgid "Actual Revenue"
+msgstr "Фактическая выручка"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__margin_drift_pct
+msgid ""
+"Actual margin percentage minus planned margin percentage expressed in "
+"percentage points. Negative drift means the job is performing worse than the"
+" original quotation; positive means better."
+msgstr ""
+"Фактический процент маржи за вычетом планового процента маржи, выраженный в "
+"процентных пунктах. Отрицательное отклонение означает, что работа "
+"выполняется хуже исходного предложения; положительное — лучше."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_milestone__variance_hours
+msgid ""
+"Actual minus planned in hours. Positive means late, negative means early. "
+"Empty when either side is missing."
+msgstr ""
+"Фактический за вычетом планового в часах. Положительное означает опоздание, "
+"отрицательное — опережение. Пусто, если одна из сторон отсутствует."
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone__source__adapter
+msgid "Adapter"
+msgstr "Адаптер"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_mass_advance_form
+msgid "Advance"
+msgstr "Аванс"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__mode__air
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__air
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Air"
+msgstr "Воздух"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__flight_number
+msgid "Air only."
+msgstr "Только авиа."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__chargeable_weight_kg
+msgid "Air: max(actual, volumetric)."
+msgstr "Авиа: max(actual, volumetric)."
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_air_arrived
+msgid "Aircraft Arrived at Destination Airport"
+msgstr "Воздушное судно прибыло в аэропорт назначения"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_air_departed
+msgid "Aircraft Departed"
+msgstr "Воздушное судно вылетело"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__amount
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__amount
+msgid "Amount"
+msgstr "Сумма"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__amount_company_currency
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__amount_company_currency
+msgid "Amount (Company Currency)"
+msgstr "Сумма (валюта компании)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__analytic_account_id
+msgid "Analytic Account"
+msgstr "Аналитический Счёт"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__any
+msgid "Any Mode"
+msgstr "Любой режим"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__at_destination
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__at_destination
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_mass_advance__target_state__at_destination
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "At Destination"
+msgstr "В пункте назначения"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__at_terminal
+msgid "At Terminal"
+msgstr "На терминале"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_sale_order__eh_log_attach_freight_job_id
+msgid "Attach to existing job"
+msgstr "Прикрепить к существующему заданию"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_attachment_count
+msgid "Attachment Count"
+msgstr "Количество вложений"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__analytic_account_id
+msgid ""
+"Auto-created on demand. Cost lines and revenue lines tagged with this "
+"account roll up into the job's P and L."
+msgstr ""
+"Создаётся автоматически по требованию. Строки затрат и доходов, помеченные "
+"этим счётом, объединяются в отчёт о прибылях и убытках задания."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__number
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "BL Number"
+msgstr "Номер BL"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__bl_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Bill of Lading"
+msgstr "Коносамент"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#, python-format
+msgid ""
+"Bill of lading %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"Коносамент %(name)s не может перейти из %(current)s в %(target)s. "
+"Разрешенные переходы из %(current)s: %(allowed)s."
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#, python-format
+msgid "Bill of lading %(name)s moved to %(state)s."
+msgstr "Коносамент %(name)s перемещен в %(state)s."
+
+#. module: eh_log_freight
+#: model:ir.model.constraint,message:eh_log_freight.constraint_eh_log_freight_bl_number_unique_per_company
+msgid ""
+"Bill of lading number must be unique per (company, type). If you are "
+"receiving a duplicate from a carrier, contact the carrier for clarification "
+"before recording it."
+msgstr ""
+"Номер коносамента должен быть уникальным для каждой пары (компания, тип). "
+"Если вы получаете дубликат от перевозчика, обратитесь к перевозчику за "
+"разъяснением, прежде чем регистрировать его."
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#: model:ir.actions.act_window,name:eh_log_freight.action_eh_log_freight_bl
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__bl_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__bl_ids
+#: model:ir.ui.menu,name:eh_log_freight.menu_eh_log_freight_bls
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_list
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Bills of Lading"
+msgstr "Коносаменты"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__booked
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_mass_advance__target_state__booked
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Booked"
+msgstr "Забронированно"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_booked
+msgid "Booking Confirmed"
+msgstr "Бронирование подтверждено"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_air_booked
+msgid "Booking Confirmed (Air)"
+msgstr "Бронирование подтверждено (авиа)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__booking_date
+msgid "Booking Date"
+msgstr "Дата бронирования"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_road_border
+msgid "Border Crossing"
+msgstr "Пересечение границы"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__bulk
+msgid "Bulk"
+msgstr "Массово"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_mass_advance_form
+msgid "Cancel"
+msgstr "Отменить"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_cost_line__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_revenue_line__state__cancelled
+msgid "Cancelled"
+msgstr "Отменен"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid "Cancelled freight job(s): <strong>%(names)s</strong>."
+msgstr "Отменённые фрахтовые задания: <strong>%(names)s</strong>."
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid ""
+"Cannot attach to freight job %(name)s because it is %(state)s. Only open "
+"jobs accept new attached orders; for closed jobs raise a Variation."
+msgstr ""
+"Невозможно прикрепить к фрахтовому заданию %(name)s, так как оно в состоянии"
+" %(state)s. Новые прикреплённые заказы принимают только открытые задания; "
+"для закрытых заданий создайте Variation."
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Cargo"
+msgstr "Груз"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__cargo_description
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__cargo_description
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__cargo_description
+msgid "Cargo Description"
+msgstr "Описание груза"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_road_loaded
+msgid "Cargo Loaded"
+msgstr "Груз загружен"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_air_received
+msgid "Cargo Received at Origin Airport"
+msgstr "Груз получен в аэропорту отправления"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_air_released
+msgid "Cargo Released at Destination"
+msgstr "Груз выдан в пункте назначения"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Cargo Summary"
+msgstr "Сводка по грузу"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__carrier_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Carrier"
+msgstr "Перевозчик"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__number
+msgid ""
+"Carrier-issued bill of lading number (e.g. MAEU1234567 for sea, 020-12345678"
+" for air). Captured on issue."
+msgstr ""
+"Номер коносамента, выданный перевозчиком (например, MAEU1234567 для моря, "
+"020-12345678 для авиа). Регистрируется при выдаче."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__charge_code_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__charge_code_id
+msgid "Charge Code"
+msgstr "Код начисления"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Chargeable (kg)"
+msgstr "Расчётный (кг)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__chargeable_weight_kg
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__chargeable_weight_kg
+msgid "Chargeable Weight (kg)"
+msgstr "Расчётный вес (кг)"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Close"
+msgstr "Закрыть"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Close Job"
+msgstr "Закрыть задание"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__state__closed
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__closed
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_mass_advance__target_state__closed
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Closed"
+msgstr "Закрыто"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__closed_at
+msgid "Closed At"
+msgstr "Закрыто"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__is_terminal
+msgid "Closes the Job"
+msgstr "Закрывает задание"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__code
+msgid "Code"
+msgstr "Код"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__freight_payment_terms__collect
+msgid "Collect"
+msgstr "Сбор"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_cost_line__state__committed
+msgid "Committed (PO)"
+msgstr "Зафиксировано (PO)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container_iso_type__alias_code
+msgid ""
+"Common operator alias (20GP, 40GP, 40HC, 20RF, 40RF, 20OT, 40FR, ...). "
+"Operators search by alias more than by the formal ISO code."
+msgstr ""
+"Распространённый псевдоним оператора (20GP, 40GP, 40HC, 20RF, 40RF, 20OT, "
+"40FR, ...). Операторы чаще выполняют поиск по псевдониму, чем по "
+"официальному коду ISO."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__company_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__company_ids
+msgid "Companies"
+msgstr "Компании"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__company_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__company_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__company_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__company_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__company_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__company_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Company"
+msgstr "Компания"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Confirm Booking"
+msgstr "Подтвердить бронирование"
+
+#. module: eh_log_freight
+#: model_terms:ir.actions.act_window,help:eh_log_freight.action_eh_log_freight_job
+msgid ""
+"Confirm a logistics quotation to spawn a freight job here.\n"
+"                    Direct creation from this menu is restricted to managers."
+msgstr ""
+"Подтвердите логистическое коммерческое предложение, чтобы создать здесь задание на перевозку.\n"
+"                    Прямое создание из этого меню доступно только менеджерам."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__consignee_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__consignee_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Consignee"
+msgstr "Грузополучатель"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Consolidation"
+msgstr "Консолидация"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_form
+msgid "Container"
+msgstr "Контейнер"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_discharged
+msgid "Container Discharged"
+msgstr "Контейнер выгружен"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_gate_in
+msgid "Container Gate-In at Origin Terminal"
+msgstr "Прием контейнера на терминале отправления"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_gate_out
+msgid "Container Gate-Out at Destination Terminal"
+msgstr "Выдача контейнера на терминале назначения"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_iso_type_form
+msgid "Container ISO Type"
+msgstr "Тип ISO контейнера"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_container_iso_type
+msgid "Container ISO Type (ISO 6346)"
+msgstr "Тип ISO контейнера (ISO 6346)"
+
+#. module: eh_log_freight
+#: model:ir.actions.act_window,name:eh_log_freight.action_eh_log_freight_container_iso_type
+#: model:ir.ui.menu,name:eh_log_freight.menu_eh_log_freight_container_iso_types
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_iso_type_list
+msgid "Container ISO Types"
+msgstr "Типы ISO контейнеров"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_loaded
+msgid "Container Loaded On Vessel"
+msgstr "Контейнер погружен на судно"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__container_number
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Container No."
+msgstr "№ контейнера"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_container.py:0
+#, python-format
+msgid ""
+"Container number %(num)s does not match the ISO 6346 format (4 letters + 7 "
+"digits, e.g. MSCU1234567). Either fix the number, set Manual Number "
+"Override, or untick the check."
+msgstr ""
+"Номер контейнера %(num)s не соответствует формату ISO 6346 (4 буквы + 7 "
+"цифр, например MSCU1234567). Исправьте номер, задайте ручное переопределение"
+" номера или снимите флажок проверки."
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_container.py:0
+#, python-format
+msgid ""
+"Container number %(num)s fails the ISO 6346 check digit. Expected check "
+"digit %(expected)d, got %(actual)d. Either correct the number or set Manual "
+"Number Override if you have verified the discrepancy is intentional."
+msgstr ""
+"Номер контейнера %(num)s не проходит проверку контрольной цифры ISO 6346. "
+"Ожидаемая контрольная цифра %(expected)d, получено %(actual)d. Исправьте "
+"номер или задайте ручное переопределение номера, если вы убедились, что "
+"расхождение является преднамеренным."
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#: model:ir.actions.act_window,name:eh_log_freight.action_eh_log_freight_container
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__container_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__container_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__container_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__container_ids
+#: model:ir.ui.menu,name:eh_log_freight.menu_eh_log_freight_containers
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_list
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Containers"
+msgstr "Контейнеры"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Cost"
+msgstr "Стоимость"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Cost Ledger"
+msgstr "Книга учёта затрат"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__cost_line_ids
+msgid "Cost Lines"
+msgstr "Линии затрат"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__mode__courier
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__courier
+msgid "Courier or Express"
+msgstr "Курьер или экспресс"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Created Month"
+msgstr "Месяц создания"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Created Quarter"
+msgstr "Квартал создания"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Created Today"
+msgstr "Создано сегодня"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Created Year"
+msgstr "Год создания"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__create_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__create_uid
+msgid "Created by"
+msgstr "Создано:"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__create_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__create_date
+msgid "Created on"
+msgstr "Дата создания:"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__direction__cross_trade
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Cross Trade"
+msgstr "Перекрестная торговля"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__company_currency_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__currency_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__currency_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__company_currency_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__currency_id
+msgid "Currency"
+msgstr "Валюта"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__customer_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__customer_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Customer"
+msgstr "Клиент"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__customer_invoice_line_id
+msgid "Customer Invoice Line"
+msgstr "Строка счёта клиента"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone__source__portal
+msgid "Customer Portal"
+msgstr "Клиентский портал"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__customer_reference
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Customer Reference"
+msgstr "Ссылка на клиента"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_any_customs_cleared
+msgid "Customs Cleared"
+msgstr "Таможенное оформление завершено"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__cutoff_date
+msgid "Cutoff Date"
+msgstr "Дата отсечения"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Dates"
+msgstr "Даты"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__delivered
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__delivered
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_mass_advance__target_state__delivered
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Delivered"
+msgstr "Отгружено"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__delivered_at
+msgid "Delivered At"
+msgstr "Доставлено в"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__description
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__description
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__description
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__description
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Description"
+msgstr "Описание"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Destination"
+msgstr "Место назначения"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__destination_country_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Destination Country"
+msgstr "Страна назначения"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__destination_location
+msgid "Destination Location"
+msgstr "Место назначения"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__direction
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Direction"
+msgstr "Направление"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__is_disbursement
+msgid "Disbursement"
+msgstr "Выплата"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__discharged_at
+msgid "Discharged"
+msgstr "Погашено"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__display_name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__display_name
+msgid "Display Name"
+msgstr "Отображаемое имя"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Document"
+msgstr "Документ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__bl_type
+msgid "Document Type"
+msgstr "Тип документа"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__state__draft
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Draft"
+msgstr "Черновик"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__dry
+msgid "Dry"
+msgstr "Сухой"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone__source__edi
+msgid "EDI"
+msgstr ""
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+msgid "ERP Heritage Logistics"
+msgstr "Логистика ERP Heritage"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_kanban
+msgid "ETA"
+msgstr "Ожидаемое время прибытия"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "ETA planned"
+msgstr "ETA плановое"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "ETD planned"
+msgstr "ETD плановое"
+
+#. module: eh_log_freight
+#: model:ir.model.constraint,message:eh_log_freight.constraint_eh_log_freight_milestone_job_type_unique
+msgid ""
+"Each milestone type may appear only once per job. Edit the existing row "
+"instead of creating a duplicate."
+msgstr ""
+"Каждый тип вехи может встречаться только один раз для каждой задачи. "
+"Отредактируйте существующую строку вместо создания дубликата."
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__direction__export
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Export"
+msgstr "Экспорт"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__release_type__express
+msgid "Express Release"
+msgstr "Экспресс-выпуск"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__family
+msgid "Family"
+msgstr "Семья"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Field"
+msgstr "Поле"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__flat_rack
+msgid "Flat Rack"
+msgstr "Флэт-рэк"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__flight_number
+msgid "Flight"
+msgstr "Рейс"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_follower_ids
+msgid "Followers"
+msgstr "Подписчики"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Подписчики"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__activity_type_icon
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Шрифт, отличный значок, например. к.-а.-задачи"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__parent_bl_id
+msgid ""
+"For HBL or HAWB, points to the consolidating MBL or MAWB. Drives the "
+"consolidation report."
+msgstr ""
+"Для HBL или HAWB указывает на консолидирующий MBL или MAWB. Формирует отчёт "
+"о консолидации."
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_bl
+msgid "Freight Bill of Lading"
+msgstr "Грузовой коносамент"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_container
+msgid "Freight Container or ULD"
+msgstr "Грузовой контейнер или ULD"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_job
+msgid "Freight Forwarding Job"
+msgstr "Задание на экспедирование груза"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Freight Job"
+msgstr "Задание на перевозку груза"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid "Freight Job %s"
+msgstr "Грузовое задание %s"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_cost_line
+msgid "Freight Job Cost Line"
+msgstr "Строка затрат грузового задания"
+
+#. module: eh_log_freight
+#: model:ir.actions.report,name:eh_log_freight.action_report_eh_log_freight_job
+msgid "Freight Job File"
+msgstr "Дело грузового задания"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_revenue_line
+msgid "Freight Job Revenue Line"
+msgstr "Строка дохода грузового задания"
+
+#. module: eh_log_freight
+#: model:ir.actions.act_window,name:eh_log_freight.action_eh_log_freight_job
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__job_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_sale_order__eh_log_freight_job_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_sale_order__eh_log_freight_job_ids
+#: model:ir.ui.menu,name:eh_log_freight.menu_eh_log_freight_jobs
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_list
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_sale_order_form_eh_log_freight
+msgid "Freight Jobs"
+msgstr "Грузовые задания"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_pivot
+msgid "Freight Jobs Analysis"
+msgstr "Анализ грузовых заданий"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_calendar
+msgid "Freight Jobs by Created Date"
+msgstr "Грузовые задания по дате создания"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_graph
+msgid "Freight Jobs by State"
+msgstr "Грузовые задания по состоянию"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid "Freight Jobs from %s"
+msgstr "Грузовые задания от %s"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_milestone
+msgid "Freight Milestone"
+msgstr "Веха фрахта"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_milestone_type
+msgid "Freight Milestone Type"
+msgstr "Тип вехи фрахта"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__freight_payment_terms
+msgid "Freight Terms"
+msgstr "Условия фрахта"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+msgid "Freight booked"
+msgstr "Фрахт забронирован"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#, python-format
+msgid "Freight job %(name)s moved to %(state)s."
+msgstr "Грузовое задание %(name)s перемещено в %(state)s."
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid ""
+"Freight job <strong>%(name)s</strong> already exists for this order; "
+"skipping duplicate spawn."
+msgstr ""
+"Грузовое задание <strong>%(name)s</strong> уже существует для этого заказа; "
+"пропуск повторного создания."
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid "Freight job <strong>%(name)s</strong> reactivated on re-confirmation."
+msgstr ""
+"Грузовое задание <strong>%(name)s</strong> повторно активировано при "
+"повторном подтверждении."
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid "Freight job <strong>%(name)s</strong> spawned from this confirmation."
+msgstr ""
+"Грузовое задание <strong>%(name)s</strong> создано из этого подтверждения."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__gate_in_at
+msgid "Gate-In"
+msgstr "Въезд через ворота"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__gate_out_at
+msgid "Gate-Out"
+msgstr "Выезд через ворота"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Gross (kg)"
+msgstr "Брутто (kg)"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Gross Margin"
+msgstr "Валовая маржа"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__gross_margin_pct
+msgid "Gross Margin (%)"
+msgstr "Валовая маржа (%)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__gross_margin
+msgid "Gross Margin (Planned)"
+msgstr "Валовая маржа (плановая)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__gross_weight_kg
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__gross_weight_kg
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__gross_weight_kg
+msgid "Gross Weight (kg)"
+msgstr "Масса брутто (kg)"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Gross margin"
+msgstr "Валовая маржа"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+msgid "Group by Customer"
+msgstr "Группировать по клиенту"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+msgid "Group by Mode"
+msgstr "Группировать по режиму"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+msgid "Group by Stage"
+msgstr "Группировать по этапу"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "Group by State"
+msgstr "Группировать по состоянию"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "Group by Type"
+msgstr "Группировать по типу"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "HAWB"
+msgstr ""
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "HBL"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__has_message
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__has_message
+msgid "Has Message"
+msgstr "Есть сообщение"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__height_high_cube
+msgid "High Cube"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__bl_type__hawb
+msgid "House Air Waybill"
+msgstr "Домашняя авианакладная"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__child_bl_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "House BLs"
+msgstr "Домовые коносаменты"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__bl_type__hbl
+msgid "House Bill of Lading"
+msgstr "Домашний коносамент"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__id
+msgid "ID"
+msgstr "Номер"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "ISO"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container__container_number
+msgid ""
+"ISO 6346 container number: 4 letters (owner code + category) + 6 digits "
+"(serial) + 1 check digit. Validated on save unless 'Manual Override' is set."
+msgstr ""
+"Номер контейнера ISO 6346: 4 буквы (код владельца + категория) + 6 цифр "
+"(серийный номер) + 1 контрольная цифра. Проверяется при сохранении, если не "
+"установлено «Ручное переопределение»."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container_iso_type__code
+msgid ""
+"ISO 6346 size and type code (e.g. 22G1 for 20' Standard, 42G1 for 40' "
+"Standard, 45G1 for 40' High Cube). The human-friendly short alias goes in "
+"alias_code."
+msgstr ""
+"Код размера и типа ISO 6346 (например, 22G1 для 20' Standard, 42G1 для 40' "
+"Standard, 45G1 для 40' High Cube). Удобный короткий псевдоним указывается в "
+"alias_code."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container__iso_type_id
+msgid ""
+"ISO 6346 size/type code (e.g. 22G1 = 20ft general purpose, 42G1 = 40ft "
+"general, 45R1 = 40ft HC reefer). Drives capacity defaults and reefer / DG "
+"flags."
+msgstr ""
+"Код размера/типа ISO 6346 (например, 22G1 = 20 футов общего назначения, 42G1"
+" = 40 футов общий, 45R1 = 40 футов HC рефрижератор). Задаёт значения "
+"вместимости по умолчанию и флаги рефрижератора / DG."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__code
+msgid "ISO Code"
+msgstr "Код ISO"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__iso_type_id
+msgid "ISO Type"
+msgstr "Тип ISO"
+
+#. module: eh_log_freight
+#: model:ir.model.constraint,message:eh_log_freight.constraint_eh_log_freight_container_iso_type_code_unique
+msgid "ISO container code must be unique."
+msgstr "Код контейнера ISO должен быть уникальным."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_exception_icon
+msgid "Icon"
+msgstr "Иконка"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Иконка, указывающая на задачу-исключение."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__message_needaction
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+"Если флажок установлен, значит, новые сообщения требуют вашего внимания."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__message_has_error
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__message_has_error
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Если отмечено, некоторые сообщения имеют ошибку доставки."
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__direction__import
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Import"
+msgstr "Импорт"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__state__in_transit
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_mass_advance__target_state__in_transit
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "In Transit"
+msgstr "Внутри"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+msgid "In transit"
+msgstr "В пути"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__incoterm_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__incoterm_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Incoterm"
+msgstr "Инкотерм"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__incoterm_id
+msgid ""
+"Incoterm 2020 governing the cargo handover. Drives whose insurance covers "
+"the trip, who pays freight, and where the risk transfer occurs."
+msgstr ""
+"Incoterm 2020, регулирующий передачу груза. Определяет, чья страховка "
+"покрывает перевозку, кто оплачивает фрахт и где происходит переход риска."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__alias_code
+msgid "Industry Alias"
+msgstr "Псевдоним отрасли"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__inner_volume_cbm
+msgid "Inner Volume (m3)"
+msgstr "Внутренний объём (m3)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__invoice_date
+msgid "Invoice Date"
+msgstr "Дата счета"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_revenue_line__state__invoiced
+msgid "Invoiced"
+msgstr "Выставлен счет"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_cost_line__state__invoiced
+msgid "Invoiced (Vendor Bill)"
+msgstr "Выставлен счет (счет поставщика)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_is_follower
+msgid "Is Follower"
+msgstr "Является подписчиком"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Issue"
+msgstr "Вопрос"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__issue_date
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Issue Date"
+msgstr "Дата выпуска"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__state__issued
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "Issued"
+msgstr "Выпущено"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__carrier_id
+msgid "Issuing carrier (shipping line for sea, airline for air)."
+msgstr ""
+"Перевозчик-эмитент (судоходная линия для моря, авиакомпания для воздуха)."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__job_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__job_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__job_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__job_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__job_id
+msgid "Job"
+msgstr "Работа"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#, python-format
+msgid ""
+"Job %(name)s cannot move from %(current)s to %(target)s. Allowed transitions"
+" from %(current)s: %(allowed)s."
+msgstr ""
+"Задание %(name)s не может перейти из %(current)s в %(target)s. Разрешенные "
+"переходы из %(current)s: %(allowed)s."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__name
+msgid "Job Reference"
+msgstr "Ссылка на задание"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Lane"
+msgstr "Маршрут"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Lane and Parties"
+msgstr "Маршрут и стороны"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Last 30 Days"
+msgstr "Последние 30 дней"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Last 7 Days"
+msgstr "Последние 7 дней"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type____last_update
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__write_uid
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__write_uid
+msgid "Last Updated by"
+msgstr "Последнее обновление:"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__write_date
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__write_date
+msgid "Last Updated on"
+msgstr "Дата последнего обновления:"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__length_ft
+msgid "Length (ft)"
+msgstr "Длина (ft)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__state
+msgid ""
+"Lifecycle: Draft (created from quote) > Booked (carrier confirmed) > In "
+"Transit (departed) > At Destination (arrived) > Delivered (POD signed) > "
+"Closed (file finalised). State changes only via the action buttons; direct "
+"writes to this field are blocked."
+msgstr ""
+"Жизненный цикл: Draft (создано из предложения) > Booked (перевозчик "
+"подтверждён) > In Transit (отправлено) > At Destination (прибыло) > "
+"Delivered (POD подписан) > Closed (дело завершено). Смена состояния возможна"
+" только через кнопки действий; прямая запись в это поле заблокирована."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__loaded_at
+msgid "Loaded On Board"
+msgstr "Погружено на борт"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "MAWB"
+msgstr ""
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "MBL"
+msgstr ""
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_form
+msgid "MSCU1234567"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_main_attachment_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone__source__manual
+msgid "Manual"
+msgstr "Руководство"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__manual_number_override
+msgid "Manual Number Override"
+msgstr "Ручное переопределение номера"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_kanban
+msgid "Margin"
+msgstr "Отступ"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__margin_drift_pct
+msgid "Margin Drift (pp)"
+msgstr "Отклонение маржи (п.п.)"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Margin Summary"
+msgstr "Сводка по марже"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Mark Delivered"
+msgstr "Отметить как доставлено"
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_eh_log_freight_mass_advance
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_mass_advance_form
+msgid "Mass-advance Freight Jobs"
+msgstr "Массово продвинуть грузовые задания"
+
+#. module: eh_log_freight
+#: model:ir.actions.act_window,name:eh_log_freight.action_eh_log_freight_mass_advance
+msgid "Mass-advance State"
+msgstr "Массово продвинуть состояние"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/wizards/eh_log_freight_mass_action.py:0
+msgid "Mass-advance complete"
+msgstr "Массовое продвижение завершено"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__bl_type__mawb
+msgid "Master Air Waybill"
+msgstr "Мастер-авианакладная"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__bl_type__mbl
+msgid "Master Bill of Lading"
+msgstr "Мастер-коносамент"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__max_gross_kg
+msgid "Max Gross Weight (kg)"
+msgstr "Макс. масса брутто (kg)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__max_payload_kg
+msgid "Max Payload (kg)"
+msgstr "Макс. полезная нагрузка (kg)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_has_error
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_has_error
+msgid "Message Delivery error"
+msgstr "Ошибка доставки сообщения"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_ids
+msgid "Messages"
+msgstr "Сообщения"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__type_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Milestone"
+msgstr "Этап"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Milestone Timeline"
+msgstr "Хронология вех"
+
+#. module: eh_log_freight
+#: model:ir.model.constraint,message:eh_log_freight.constraint_eh_log_freight_milestone_type_code_unique
+msgid "Milestone type code must be unique."
+msgstr "Код типа вехи должен быть уникальным."
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__milestone_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Milestones"
+msgstr "Этапы"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_revenue_line__is_disbursement
+msgid ""
+"Mirrors the charge code's disbursement flag. Disbursement lines are excluded"
+" from gross-margin computation."
+msgstr ""
+"Отражает флаг возмещаемых расходов кода начисления. Строки возмещаемых "
+"расходов исключаются из расчёта валовой маржи."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__mode
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__mode
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Mode"
+msgstr "Режим"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/wizards/eh_log_freight_mass_action.py:0
+#, python-format
+msgid ""
+"Moved %(moved)d job(s) to %(state)s. Skipped %(skipped)d job(s) that were "
+"not in a compatible state."
+msgstr ""
+"Перемещено заданий: %(moved)d в %(state)s. Пропущено заданий: %(skipped)d, "
+"которые не находились в совместимом состоянии."
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__mode__multimodal
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__multimodal
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Multimodal"
+msgstr "Мультимодальный"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Крайний срок моей активности"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "My Company"
+msgstr "Компания"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "My Jobs"
+msgstr "Мои задания"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container_iso_type__name
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__name
+msgid "Name"
+msgstr "Имя"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+msgid "New"
+msgstr "Новый"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Следующий срок мероприятия"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_summary
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_summary
+msgid "Next Activity Summary"
+msgstr "Резюме следующего действия"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_type_id
+msgid "Next Activity Type"
+msgstr "Следующий Тип Мероприятия"
+
+#. module: eh_log_freight
+#: model_terms:ir.actions.act_window,help:eh_log_freight.action_eh_log_freight_job
+msgid "No freight jobs yet"
+msgstr "Заданий по перевозке пока нет"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__notes
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__notes
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__notes
+msgid "Notes"
+msgstr "Заметки"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__notify_party_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__notify_party_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Notify Party"
+msgstr "Уведомляемая сторона"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Number"
+msgstr "Номер"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Число действий"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_has_error_counter
+msgid "Number of errors"
+msgstr "Число ошибок"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Количество сообщений, требующих принятия мер"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Количество недоставленных сообщений"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__on_board
+msgid "On Board"
+msgstr "На борту"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__onboard_date
+msgid "On Board Date"
+msgstr "Дата погрузки на борт"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search
+msgid "Open"
+msgstr "Открыть"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Open (not closed/cancelled)"
+msgstr "Открыто (не закрыто/не отменено)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__open_top
+msgid "Open Top"
+msgstr "Открытый верх"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container__bl_id
+msgid ""
+"Optional link to the bill of lading carrying this container. Set "
+"automatically when a BL line references the container."
+msgstr ""
+"Необязательная ссылка на коносамент, перевозящий этот контейнер. "
+"Устанавливается автоматически, когда строка BL ссылается на контейнер."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__notify_party_id
+msgid ""
+"Optional. Third party to notify on arrival, typically the customs broker or "
+"warehouse operator. Goes onto the BL."
+msgstr ""
+"Необязательно. Третья сторона, уведомляемая по прибытии, обычно таможенный "
+"брокер или оператор склада. Указывается в BL."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_sale_order__eh_log_attach_freight_job_id
+msgid ""
+"Optional. When set, confirming this quotation does NOT spawn a new freight "
+"job; the lines on this order are treated as additional revenue / cost lines "
+"for the selected existing job. Use this when you raise an extra charge "
+"(additional THC, demurrage, customs query fee, etc.) against a freight job "
+"that's already in flight."
+msgstr ""
+"Необязательно. Если задано, подтверждение этой сметы НЕ создаёт новую "
+"фрахтовую задачу; строки этого заказа рассматриваются как дополнительные "
+"строки дохода / затрат для выбранной существующей задачи. Используйте это, "
+"когда выставляете дополнительный сбор (дополнительный THC, демередж, плата "
+"за таможенный запрос и т. д.) по уже выполняемой фрахтовой задаче."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__sale_order_line_ids
+msgid "Order Lines"
+msgstr "Позиции заказов"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Origin"
+msgstr "Источник"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__origin_country_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Origin Country"
+msgstr "Страна происхождения"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__origin_location
+msgid "Origin Location"
+msgstr "Место отправления"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__release_type__original
+msgid "Original BL"
+msgstr "Оригинал BL"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__other
+msgid "Other"
+msgstr "Другое"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__purchase_order_line_id
+msgid "PO Line"
+msgstr "Строка заказа на закупку"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__package_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__package_count
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__package_count
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Packages"
+msgstr "Пакеты"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_revenue_line__state__paid
+msgid "Paid"
+msgstr "Оплачено"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__parent_bl_id
+msgid "Parent BL"
+msgstr "Родительский BL"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Parties"
+msgstr "Стороны"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__pickup_at
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__picked_up
+msgid "Picked Up"
+msgstr "Забрано"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__place_of_delivery
+msgid "Place of Delivery"
+msgstr "Место доставки"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__place_of_receipt
+msgid "Place of Receipt"
+msgstr "Место получения"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__planned_at
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__planned
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_cost_line__state__planned
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_revenue_line__state__planned
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Planned"
+msgstr "Проектируемый"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Planned (from quotation)"
+msgstr "Запланировано (из предложения)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__total_planned_cost
+msgid "Planned Cost"
+msgstr "Плановая стоимость"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__eta_planned
+msgid "Planned ETA"
+msgstr "Плановое ETA"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__etd_planned
+msgid "Planned ETD"
+msgstr "Плановое ETD"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__milestone_planned_count
+msgid "Planned Milestones"
+msgstr "Плановые вехи"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__pod_name
+msgid "Port or Airport of Discharge"
+msgstr "Порт или аэропорт выгрузки"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__pol_name
+msgid "Port or Airport of Loading"
+msgstr "Порт или аэропорт погрузки"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__freight_payment_terms__prepaid
+msgid "Prepaid"
+msgstr "Оплачены по предоплате"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_any_pod_received
+msgid "Proof of Delivery Received"
+msgstr "Получено подтверждение доставки"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__quantity
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__quantity
+msgid "Quantity"
+msgstr "Количество"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__sale_order_id
+msgid ""
+"Quotation the job was spawned from. Optional: operators also open jobs "
+"directly for shipments booked outside a quotation (agent nominations, inter-"
+"branch moves, ad-hoc bookings), so a job may legitimately have no sale "
+"order."
+msgstr ""
+"Предложение, из которого была создана задача. Необязательно: операторы также"
+" открывают задачи напрямую для отправлений, забронированных вне предложения "
+"(назначения агентов, перемещения между филиалами, разовые бронирования), "
+"поэтому задача может законно не иметь заказа на продажу."
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__mode__rail
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__rail
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Rail"
+msgstr "Железная дорога"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__reefer
+msgid "Reefer"
+msgstr "Рефрижератор"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__name
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Reference"
+msgstr "Справка"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_form
+msgid "Release"
+msgstr "Освободить"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__release_type
+msgid "Release Type"
+msgstr "Тип освобождения"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__state__released
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_bl_search
+msgid "Released"
+msgstr "Освобождено"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__is_required
+msgid "Required"
+msgstr "Обязательно"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__activity_user_id
+msgid "Responsible User"
+msgstr "Ответственный пользователь"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container__state__returned
+msgid "Returned"
+msgstr "Возвращено"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__returned_at
+msgid "Returned to Depot"
+msgstr "Возвращено на склад"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Revenue"
+msgstr "Доход"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__total_revenue
+msgid "Revenue (Planned)"
+msgstr "Выручка (планируемая)"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Revenue Ledger"
+msgstr "Книга учёта доходов"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__revenue_line_ids
+msgid "Revenue Lines"
+msgstr "Строки доходов"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__mode__road
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__road
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Road"
+msgstr "Дорога"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Ошибка доставки SMS"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__sale_order_line_id
+msgid "SO Line"
+msgstr "Строка SO"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__sale_order_id
+msgid "Sale Order"
+msgstr "Заказ на продажу"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Sale Order Lines"
+msgstr "Позиции заказа на продажу"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid ""
+"Sale order <strong>%(so)s</strong> attached as an additional charge / "
+"variation source."
+msgstr ""
+"Заказ на продажу <strong>%(so)s</strong> прикреплён как источник "
+"дополнительной платы / изменения."
+
+#. module: eh_log_freight
+#: model:ir.model,name:eh_log_freight.model_sale_order
+msgid "Sales Order"
+msgstr "Заказ на продажу"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_job__mode__sea
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone_type__mode__sea
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Sea"
+msgstr "Море"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__vessel_name
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__voyage_number
+msgid "Sea only."
+msgstr "Только море."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__onboard_date
+msgid "Sea: shipped-on-board endorsement date. Air: cargo received date."
+msgstr "Море: дата отметки о погрузке на борт. Воздух: дата получения груза."
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Seal"
+msgstr "Пломба"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__seal_number
+msgid "Seal No."
+msgstr "№ пломбы"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Search Freight Jobs"
+msgstr "Поиск грузовых заданий"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__release_type__seaway
+msgid "Seaway"
+msgstr "Морской путь"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__sequence
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__sequence
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__sequence
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone_type__sequence
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__sequence
+msgid "Sequence"
+msgstr "Последовательность"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Set At Destination"
+msgstr "Установить в пункте назначения"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_form
+msgid "Set In Transit"
+msgstr "Установить в пути"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_cost_line__vendor_bill_line_id
+msgid "Set when the cost has been billed by the vendor."
+msgstr "Устанавливается, когда затраты выставлены поставщиком в счёт."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_cost_line__purchase_order_line_id
+msgid ""
+"Set when the cost was raised through procurement. Empty for manual accruals."
+msgstr ""
+"Устанавливается, когда затраты возникли через снабжение. Пусто для ручных "
+"начислений."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__shipper_id
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__shipper_id
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "Shipper"
+msgstr "Грузоотправитель"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__shipper_reference
+msgid "Shipper Reference"
+msgstr "Ссылка грузоотправителя"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+msgid "Shipper country mismatch"
+msgstr "Несоответствие страны грузоотправителя"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#, python-format
+msgid ""
+"Shipper is in %(shipper_country)s but the declared origin is %(origin)s. "
+"Verify before creating the customs declaration."
+msgstr ""
+"Грузоотправитель находится в %(shipper_country)s, но заявленное "
+"происхождение — %(origin)s. Проверьте перед созданием таможенной декларации."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container__manual_number_override
+msgid ""
+"Skip ISO 6346 check digit validation. Use only for known-bad numbers from "
+"upstream documents that must flow through unchanged for traceability."
+msgstr ""
+"Пропустить проверку контрольной цифры ISO 6346. Используйте только для "
+"заведомо ошибочных номеров из исходных документов, которые должны проходить "
+"без изменений для обеспечения прослеживаемости."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__source
+msgid "Source"
+msgstr "Источник"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_milestone_type__code
+msgid ""
+"Stable identifier (BOOKED, GATE_IN, VESSEL_SAILED, VESSEL_ARRIVED, GATE_OUT,"
+" DELIVERED, CUSTOMS_CLEARED, POD_RECEIVED, ...)."
+msgstr ""
+"Стабильный идентификатор (BOOKED, GATE_IN, VESSEL_SAILED, VESSEL_ARRIVED, "
+"GATE_OUT, DELIVERED, CUSTOMS_CLEARED, POD_RECEIVED, ...)."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_cost_line__charge_code_id
+msgid ""
+"Standardised charge code so cost analytics group consistently with the "
+"corresponding revenue line."
+msgstr ""
+"Стандартизированный код сбора, чтобы аналитика затрат группировалась "
+"согласованно с соответствующей строкой дохода."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__state
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__state
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__state
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__state
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__state
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "State"
+msgstr "Область"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__activity_state
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Статус, основанный на мероприятии\n"
+"Просроченная: Дата, уже прошла\n"
+"Сегодня: Дата мероприятия сегодня\n"
+"Запланировано: будущая деятельность."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__total_actual_cost
+msgid ""
+"Sum of cost ledger lines (in company currency) excluding cancelled lines. "
+"Reflects committed and accrued and invoiced costs against the job."
+msgstr ""
+"Сумма строк учёта затрат (в валюте компании), исключая отменённые строки. "
+"Отражает принятые, начисленные и выставленные в счетах затраты по заданию."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__total_actual_revenue
+msgid ""
+"Sum of non-disbursement revenue ledger lines in company currency, excluding "
+"cancelled lines."
+msgstr ""
+"Сумма строк учёта доходов, не связанных с расходами, в валюте компании, "
+"исключая отменённые строки."
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__tank
+msgid "Tank"
+msgstr "Резервуар"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_mass_advance__target_state
+msgid "Target State"
+msgstr "Целевое состояние"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_milestone__source__telematics
+msgid "Telematics"
+msgstr "Телематика"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_bl__release_type__telex
+msgid "Telex Release"
+msgstr "Телекс-релиз"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__consignee_id
+msgid "The party taking delivery at destination."
+msgstr "Сторона, принимающая доставку в пункте назначения."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__shipper_id
+msgid "The party tendering the cargo at origin."
+msgstr "Сторона, передающая груз в пункте отправления."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__customer_id
+msgid ""
+"The party who placed the booking and is invoiced. Defaults from the sale "
+"order partner."
+msgstr ""
+"Сторона, оформившая бронирование и получающая счёт. По умолчанию берётся из "
+"партнёра заказа на продажу."
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "This Month"
+msgstr "Этот месяц"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_search_full
+msgid "This Year"
+msgstr "В этом году"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/sale_order.py:0
+#, python-format
+msgid ""
+"This order's lines are attached to existing freight job "
+"<strong>%(name)s</strong>. No new job spawned."
+msgstr ""
+"Строки этого заказа прикреплены к существующему грузовому заданию "
+"<strong>%(name)s</strong>. Новое задание не создано."
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_container_form
+msgid "Timeline"
+msgstr "Временная шкала"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_road_booked
+msgid "Trip Confirmed"
+msgstr "Рейс подтверждён"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_container_iso_type__height_high_cube
+msgid "True for 9'6\" containers; False for standard 8'6\"."
+msgstr "True для контейнеров 9'6\"; False для стандартных 8'6\"."
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Type"
+msgstr "Тип"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Тип задачи-исключения в записи."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__unit_cost
+msgid "Unit Cost"
+msgstr "Стоимость единицы продукции"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_revenue_line__unit_price
+msgid "Unit Price"
+msgstr "Цена за единицу"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Value"
+msgstr "Значение"
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Variance (h)"
+msgstr "Отклонение (ч)"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_milestone__variance_hours
+msgid "Variance (hours)"
+msgstr "Отклонение (часы)"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_road_arrived
+msgid "Vehicle Arrived Destination"
+msgstr "Транспорт прибыл в пункт назначения"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_road_departed
+msgid "Vehicle Departed Origin"
+msgstr "Транспортное средство покинуло пункт отправления"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__vendor_id
+msgid "Vendor"
+msgstr "Продавец"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_cost_line__vendor_bill_line_id
+msgid "Vendor Bill Line"
+msgstr "Строка счёта поставщика"
+
+#. module: eh_log_freight
+#: model:ir.model.fields.selection,name:eh_log_freight.selection__eh_log_freight_container_iso_type__family__ventilated
+msgid "Ventilated"
+msgstr "Вентилируемый"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__vessel_name
+msgid "Vessel"
+msgstr "Судно"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_arrived
+msgid "Vessel Arrived at Destination Port"
+msgstr "Судно прибыло в порт назначения"
+
+#. module: eh_log_freight
+#: model:eh.log.freight.milestone.type,name:eh_log_freight.ms_sea_sailed
+msgid "Vessel Sailed"
+msgstr "Судно отплыло"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__volume_cbm
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_container__volume_cbm
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__volume_cbm
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.report_freight_job_document
+msgid "Volume (m3)"
+msgstr "Объём (m3)"
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+#, python-format
+msgid ""
+"Volumetric chargeable weight (%(vol).1f kg) is significantly higher than "
+"gross weight (%(gross).1f kg). Confirm the chargeable basis with the carrier"
+" and the customer."
+msgstr ""
+"Объёмный тарифицируемый вес (%(vol).1f kg) значительно превышает вес брутто "
+"(%(gross).1f kg). Подтвердите основу тарификации с перевозчиком и клиентом."
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job_ux.py:0
+msgid "Volumetric weight dominates"
+msgstr "Преобладает объёмный вес"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__voyage_number
+msgid "Voyage"
+msgstr "Рейс"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_bl__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_freight.field_eh_log_freight_job__website_message_ids
+msgid "Website Messages"
+msgstr "Веб-сайт сообщения"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_bl__website_message_ids
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_job__website_message_ids
+msgid "Website communication history"
+msgstr "История общений с сайта"
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_milestone_type__is_terminal
+msgid ""
+"When checked, recording an actual datetime for this milestone advances the "
+"job into its terminal closed state."
+msgstr ""
+"При установке флажка запись фактических даты и времени для этой вехи "
+"переводит задание в его конечное закрытое состояние."
+
+#. module: eh_log_freight
+#: model:ir.model.fields,help:eh_log_freight.field_eh_log_freight_milestone_type__is_required
+msgid ""
+"When checked, the milestone is auto-added to every job timeline matching the"
+" mode."
+msgstr ""
+"При установке флажка веха автоматически добавляется в каждую временную шкалу"
+" задания, соответствующую режиму."
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+#, python-format
+msgid ""
+"[EHL-BL-001] %(name)s cannot be issued without a BL number. Capture the "
+"carrier-issued number first."
+msgstr ""
+"[EHL-BL-001] %(name)s не может быть выпущен без номера BL. Сначала "
+"зафиксируйте номер, выданный перевозчиком."
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_bl.py:0
+msgid ""
+"[EHL-BL-002] State changes on a bill of lading must go through the action "
+"buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-BL-002] Изменения состояния коносамента должны выполняться через кнопки"
+" действий. Прямая запись отклоняется."
+
+#. module: eh_log_freight
+#. odoo-python
+#: code:addons/eh_log_freight/models/eh_log_freight_job.py:0
+msgid ""
+"[EHL-JOB-STATE-002] State changes on a freight job must go through the "
+"action buttons (Book, Set In Transit, Deliver, Close, Cancel). Direct writes"
+" are rejected."
+msgstr ""
+"[EHL-JOB-STATE-002] Изменения состояния грузового задания должны выполняться"
+" через кнопки действий (Book, Set In Transit, Deliver, Close, Cancel). "
+"Прямая запись отклоняется."
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_kanban
+msgid "cbm"
+msgstr ""
+
+#. module: eh_log_freight
+#: model_terms:ir.ui.view,arch_db:eh_log_freight.view_eh_log_freight_job_kanban
+msgid "kg /"
+msgstr ""

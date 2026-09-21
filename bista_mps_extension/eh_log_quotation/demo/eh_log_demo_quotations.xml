@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Open quotations (state=draft) - count appears on dashboard -->
+
+        <record id="demo_quote_q001" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_alpha_trading"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">sea</field>
+            <field name="eh_log_direction">import</field>
+            <field name="eh_log_origin_country_id" ref="base.cn"/>
+            <field name="eh_log_destination_country_id" ref="base.ae"/>
+            <field name="eh_log_origin_location">Shanghai (CNSHA)</field>
+            <field name="eh_log_destination_location">Jebel Ali (AEJEA)</field>
+            <field name="eh_log_charge_template_id" ref="demo_charge_template_sea_imp_aecn"/>
+            <field name="client_order_ref">PO-AT-2026-0042</field>
+        </record>
+
+        <record id="demo_quote_q002" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_falcon_industries"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">air</field>
+            <field name="eh_log_direction">import</field>
+            <field name="eh_log_origin_country_id" ref="base.de"/>
+            <field name="eh_log_destination_country_id" ref="base.ae"/>
+            <field name="eh_log_origin_location">Frankfurt (DEFRA)</field>
+            <field name="eh_log_destination_location">Dubai Cargo Village (AEDXB)</field>
+            <field name="eh_log_charge_template_id" ref="demo_charge_template_air_imp_aede"/>
+            <field name="client_order_ref">PO-FAL-2026-0118</field>
+        </record>
+
+        <record id="demo_quote_q003" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_najd_petrochem"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">sea</field>
+            <field name="eh_log_direction">export</field>
+            <field name="eh_log_origin_country_id" ref="base.sa"/>
+            <field name="eh_log_destination_country_id" ref="base.us"/>
+            <field name="eh_log_origin_location">Jubail (SAJUB)</field>
+            <field name="eh_log_destination_location">Houston (USHOU)</field>
+            <field name="client_order_ref">NPC-EXP-2026-0007</field>
+        </record>
+
+        <record id="demo_quote_q004" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_palm_retail"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">sea</field>
+            <field name="eh_log_direction">import</field>
+            <field name="eh_log_origin_country_id" ref="base.cn"/>
+            <field name="eh_log_destination_country_id" ref="base.qa"/>
+            <field name="eh_log_origin_location">Ningbo (CNNGB)</field>
+            <field name="eh_log_destination_location">Hamad Port (QAHMD)</field>
+            <field name="client_order_ref">PRG-IMP-263</field>
+        </record>
+
+        <record id="demo_quote_q005" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_oasis_consumer"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">road</field>
+            <field name="eh_log_direction">cross_trade</field>
+            <field name="eh_log_origin_country_id" ref="base.ae"/>
+            <field name="eh_log_destination_country_id" ref="base.kw"/>
+            <field name="eh_log_origin_location">Dubai DIP-1</field>
+            <field name="eh_log_destination_location">Kuwait City</field>
+            <field name="eh_log_charge_template_id" ref="demo_charge_template_road_aesa"/>
+            <field name="client_order_ref">OCG-LB-2026-0091</field>
+        </record>
+
+        <record id="demo_quote_q006" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_pearl_pharma"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">air</field>
+            <field name="eh_log_direction">import</field>
+            <field name="eh_log_origin_country_id" ref="base.in"/>
+            <field name="eh_log_destination_country_id" ref="base.bh"/>
+            <field name="eh_log_origin_location">Mumbai (INBOM)</field>
+            <field name="eh_log_destination_location">Bahrain Airport (BHBAH)</field>
+            <field name="client_order_ref">PHARMA-2026-441</field>
+        </record>
+
+        <record id="demo_quote_q007" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_arabian_food"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">sea</field>
+            <field name="eh_log_direction">import</field>
+            <field name="eh_log_origin_country_id" ref="base.us"/>
+            <field name="eh_log_destination_country_id" ref="base.ae"/>
+            <field name="eh_log_origin_location">Long Beach (USLGB)</field>
+            <field name="eh_log_destination_location">Sharjah (AESHJ)</field>
+            <field name="client_order_ref">AFD-COLD-2026-0205</field>
+        </record>
+
+        <record id="demo_quote_q008" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_riyadh_proj"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">multimodal</field>
+            <field name="eh_log_direction">import</field>
+            <field name="eh_log_origin_country_id" ref="base.de"/>
+            <field name="eh_log_destination_country_id" ref="base.sa"/>
+            <field name="eh_log_origin_location">Hamburg (DEHAM)</field>
+            <field name="eh_log_destination_location">NEOM Site (KSA)</field>
+            <field name="client_order_ref">RPL-NEOM-OOG-014</field>
+        </record>
+
+        <record id="demo_quote_q009" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_jeddah_apparel"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">sea</field>
+            <field name="eh_log_direction">import</field>
+            <field name="eh_log_origin_country_id" ref="base.in"/>
+            <field name="eh_log_destination_country_id" ref="base.sa"/>
+            <field name="eh_log_origin_location">Mumbai (INNSA)</field>
+            <field name="eh_log_destination_location">Jeddah Islamic (SAJED)</field>
+            <field name="client_order_ref">JAH-IMP-2026-0612</field>
+        </record>
+
+        <record id="demo_quote_q010" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_muscat_marine"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">sea</field>
+            <field name="eh_log_direction">import</field>
+            <field name="eh_log_origin_country_id" ref="base.cn"/>
+            <field name="eh_log_destination_country_id" ref="base.om"/>
+            <field name="eh_log_origin_location">Qingdao (CNTAO)</field>
+            <field name="eh_log_destination_location">Sohar (OMSOH)</field>
+            <field name="client_order_ref">MMS-2026-079</field>
+        </record>
+
+    </data>
+</odoo>

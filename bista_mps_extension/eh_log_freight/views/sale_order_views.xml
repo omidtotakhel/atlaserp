@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_sale_order_form_eh_log_freight" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit.eh.log.freight</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_eh_log_freight_jobs"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-truck"
+                            groups="eh_log_base.group_eh_log_user" attrs="{'invisible': ['|', ('eh_log_is_logistics', '=', False), ('state', 'in', ['draft', 'sent', 'cancel'])]}">
+                        <field name="eh_log_freight_job_count" widget="statinfo" string="Freight Jobs"/>
+                    </button>
+                </xpath>
+
+                <!-- Optional: attach to an existing freight job -->
+                <xpath expr="//page[@name='eh_log_logistics']/group[1]/group[2]" position="inside">
+                    <field name="eh_log_attach_freight_job_id"
+                           options="{'no_create': True}" attrs="{'invisible': ['|', ('eh_log_is_logistics', '=', False), ('state', 'not in', ['draft', 'sent'])]}"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

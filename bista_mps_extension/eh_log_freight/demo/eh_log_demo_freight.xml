@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Reusable demo product for freight order lines -->
+        <record id="demo_product_freight_service" model="product.product">
+            <field name="name">Freight Forwarding Service (Demo)</field>
+            <field name="type">service</field>
+            <field name="sale_ok" eval="True"/>
+            <field name="purchase_ok" eval="False"/>
+            <field name="list_price">2500.0</field>
+        </record>
+
+        <!-- Sale orders backing freight jobs (will be confirmed via function below) -->
+
+        <record id="demo_so_freight_001" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_alpha_trading"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">sea</field>
+            <field name="eh_log_direction">import</field>
+            <field name="eh_log_origin_country_id" ref="base.cn"/>
+            <field name="eh_log_destination_country_id" ref="base.ae"/>
+            <field name="eh_log_origin_location">Shanghai (CNSHA)</field>
+            <field name="eh_log_destination_location">Jebel Ali (AEJEA)</field>
+            <field name="client_order_ref">AT-FCL-2026-101</field>
+            <field name="order_line" eval="[(0, 0, {'product_id': ref('demo_product_freight_service'), 'name': 'Sea import 40HC SHA-AUH', 'product_uom_qty': 1, 'price_unit': 3200})]"/>
+        </record>
+
+        <record id="demo_so_freight_002" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_falcon_industries"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">air</field>
+            <field name="eh_log_direction">import</field>
+            <field name="eh_log_origin_country_id" ref="base.de"/>
+            <field name="eh_log_destination_country_id" ref="base.ae"/>
+            <field name="eh_log_origin_location">Frankfurt (DEFRA)</field>
+            <field name="eh_log_destination_location">Dubai Cargo Village (AEDXB)</field>
+            <field name="client_order_ref">FAL-AIR-2026-102</field>
+            <field name="order_line" eval="[(0, 0, {'product_id': ref('demo_product_freight_service'), 'name': 'Air import express FRA-DXB', 'product_uom_qty': 1, 'price_unit': 5800})]"/>
+        </record>
+
+        <record id="demo_so_freight_003" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_najd_petrochem"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">sea</field>
+            <field name="eh_log_direction">export</field>
+            <field name="eh_log_origin_country_id" ref="base.sa"/>
+            <field name="eh_log_destination_country_id" ref="base.us"/>
+            <field name="eh_log_origin_location">Jubail (SAJUB)</field>
+            <field name="eh_log_destination_location">Houston (USHOU)</field>
+            <field name="client_order_ref">NPC-EXP-2026-103</field>
+            <field name="order_line" eval="[(0, 0, {'product_id': ref('demo_product_freight_service'), 'name': 'Sea export tanker JUB-HOU', 'product_uom_qty': 1, 'price_unit': 14500})]"/>
+        </record>
+
+        <record id="demo_so_freight_004" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_palm_retail"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">sea</field>
+            <field name="eh_log_direction">import</field>
+            <field name="eh_log_origin_country_id" ref="base.cn"/>
+            <field name="eh_log_destination_country_id" ref="base.qa"/>
+            <field name="eh_log_origin_location">Ningbo (CNNGB)</field>
+            <field name="eh_log_destination_location">Hamad Port (QAHMD)</field>
+            <field name="client_order_ref">PRG-IMP-104</field>
+            <field name="order_line" eval="[(0, 0, {'product_id': ref('demo_product_freight_service'), 'name': 'Sea import retail NGB-DOH', 'product_uom_qty': 1, 'price_unit': 4200})]"/>
+        </record>
+
+        <record id="demo_so_freight_005" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_pearl_pharma"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">air</field>
+            <field name="eh_log_direction">import</field>
+            <field name="eh_log_origin_country_id" ref="base.in"/>
+            <field name="eh_log_destination_country_id" ref="base.bh"/>
+            <field name="eh_log_origin_location">Mumbai (INBOM)</field>
+            <field name="eh_log_destination_location">Bahrain (BHBAH)</field>
+            <field name="client_order_ref">PHARMA-105</field>
+            <field name="order_line" eval="[(0, 0, {'product_id': ref('demo_product_freight_service'), 'name': 'Air pharma BOM-BAH', 'product_uom_qty': 1, 'price_unit': 4900})]"/>
+        </record>
+
+        <record id="demo_so_freight_006" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_arabian_food"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">sea</field>
+            <field name="eh_log_direction">import</field>
+            <field name="eh_log_origin_country_id" ref="base.us"/>
+            <field name="eh_log_destination_country_id" ref="base.ae"/>
+            <field name="eh_log_origin_location">Long Beach (USLGB)</field>
+            <field name="eh_log_destination_location">Sharjah (AESHJ)</field>
+            <field name="client_order_ref">AFD-COLD-106</field>
+            <field name="order_line" eval="[(0, 0, {'product_id': ref('demo_product_freight_service'), 'name': 'Reefer LGB-SHJ', 'product_uom_qty': 1, 'price_unit': 6800})]"/>
+        </record>
+
+        <record id="demo_so_freight_007" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_oasis_consumer"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">road</field>
+            <field name="eh_log_direction">cross_trade</field>
+            <field name="eh_log_origin_country_id" ref="base.ae"/>
+            <field name="eh_log_destination_country_id" ref="base.kw"/>
+            <field name="eh_log_origin_location">Dubai DIP-1</field>
+            <field name="eh_log_destination_location">Kuwait City</field>
+            <field name="client_order_ref">OCG-ROAD-107</field>
+            <field name="order_line" eval="[(0, 0, {'product_id': ref('demo_product_freight_service'), 'name': 'Land bridge DXB-KWI', 'product_uom_qty': 1, 'price_unit': 3100})]"/>
+        </record>
+
+        <record id="demo_so_freight_008" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_jeddah_apparel"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">sea</field>
+            <field name="eh_log_direction">import</field>
+            <field name="eh_log_origin_country_id" ref="base.in"/>
+            <field name="eh_log_destination_country_id" ref="base.sa"/>
+            <field name="eh_log_origin_location">Mumbai (INNSA)</field>
+            <field name="eh_log_destination_location">Jeddah Islamic (SAJED)</field>
+            <field name="client_order_ref">JAH-IMP-108</field>
+            <field name="order_line" eval="[(0, 0, {'product_id': ref('demo_product_freight_service'), 'name': 'Apparel BOM-JED', 'product_uom_qty': 1, 'price_unit': 3850})]"/>
+        </record>
+
+        <record id="demo_so_freight_009" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_muscat_marine"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">sea</field>
+            <field name="eh_log_direction">import</field>
+            <field name="eh_log_origin_country_id" ref="base.cn"/>
+            <field name="eh_log_destination_country_id" ref="base.om"/>
+            <field name="eh_log_origin_location">Qingdao (CNTAO)</field>
+            <field name="eh_log_destination_location">Sohar (OMSOH)</field>
+            <field name="client_order_ref">MMS-109</field>
+            <field name="order_line" eval="[(0, 0, {'product_id': ref('demo_product_freight_service'), 'name': 'Marine spares TAO-SOH', 'product_uom_qty': 1, 'price_unit': 3200})]"/>
+        </record>
+
+        <record id="demo_so_freight_010" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_riyadh_proj"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">multimodal</field>
+            <field name="eh_log_direction">import</field>
+            <field name="eh_log_origin_country_id" ref="base.de"/>
+            <field name="eh_log_destination_country_id" ref="base.sa"/>
+            <field name="eh_log_origin_location">Hamburg (DEHAM)</field>
+            <field name="eh_log_destination_location">NEOM (KSA)</field>
+            <field name="client_order_ref">RPL-MM-110</field>
+            <field name="order_line" eval="[(0, 0, {'product_id': ref('demo_product_freight_service'), 'name': 'Heavy multimodal HAM-NEOM', 'product_uom_qty': 1, 'price_unit': 28500})]"/>
+        </record>
+
+        <record id="demo_so_freight_011" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_alpha_trading"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">sea</field>
+            <field name="eh_log_direction">import</field>
+            <field name="eh_log_origin_country_id" ref="base.cn"/>
+            <field name="eh_log_destination_country_id" ref="base.ae"/>
+            <field name="eh_log_origin_location">Shenzhen (CNSZN)</field>
+            <field name="eh_log_destination_location">Khalifa Port (AEAUH)</field>
+            <field name="client_order_ref">AT-FCL-111</field>
+            <field name="order_line" eval="[(0, 0, {'product_id': ref('demo_product_freight_service'), 'name': 'Sea import 20DC SZN-AUH', 'product_uom_qty': 1, 'price_unit': 2400})]"/>
+        </record>
+
+        <record id="demo_so_freight_012" model="sale.order">
+            <field name="partner_id" ref="eh_log_base.demo_partner_falcon_industries"/>
+            <field name="eh_log_is_logistics" eval="True"/>
+            <field name="eh_log_mode">sea</field>
+            <field name="eh_log_direction">import</field>
+            <field name="eh_log_origin_country_id" ref="base.us"/>
+            <field name="eh_log_destination_country_id" ref="base.ae"/>
+            <field name="eh_log_origin_location">Long Beach (USLGB)</field>
+            <field name="eh_log_destination_location">Jebel Ali (AEJEA)</field>
+            <field name="client_order_ref">FAL-FCL-112</field>
+            <field name="order_line" eval="[(0, 0, {'product_id': ref('demo_product_freight_service'), 'name': 'Sea import 40HC LGB-JEA', 'product_uom_qty': 1, 'price_unit': 4100})]"/>
+        </record>
+
+        <!-- Confirm 8 orders so freight jobs get spawned through the normal flow.
+             demo_so_freight_009..012 stay as draft to swell the dashboard "Open Quotations" tile. -->
+
+        <function model="sale.order" name="action_confirm"
+                 eval="[[ref('demo_so_freight_001'),
+                         ref('demo_so_freight_002'),
+                         ref('demo_so_freight_003'),
+                         ref('demo_so_freight_004'),
+                         ref('demo_so_freight_005'),
+                         ref('demo_so_freight_006'),
+                         ref('demo_so_freight_007'),
+                         ref('demo_so_freight_008')]]"/>
+
+    </data>
+</odoo>

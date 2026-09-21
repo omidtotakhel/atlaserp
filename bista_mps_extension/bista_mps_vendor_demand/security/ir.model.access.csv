@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mps_vendor_demand_line_user,mps.vendor.demand.line.user,model_mps_vendor_demand_line,eh_log_base.group_eh_log_user,1,1,1,1
+access_mps_vendor_demand_line_manager,mps.vendor.demand.line.manager,model_mps_vendor_demand_line,eh_log_base.group_eh_log_manager,1,1,1,1
+access_mps_vendor_demand_wizard_user,mps.vendor.demand.wizard.user,model_mps_vendor_demand_wizard,eh_log_base.group_eh_log_user,1,1,1,1
+access_mps_vendor_demand_wizard_manager,mps.vendor.demand.wizard.manager,model_mps_vendor_demand_wizard,eh_log_base.group_eh_log_manager,1,1,1,1

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <!--
+            Universally recognised milestone types per mode.
+
+            Country localisation packs and EDI integrations append
+            country-specific or partner-specific milestones. The seed
+            here covers the milestones every freight forwarder tracks
+            regardless of provider.
+        -->
+
+        <!-- Sea -->
+        <record id="ms_sea_booked" model="eh.log.freight.milestone.type">
+            <field name="code">SEA_BOOKED</field>
+            <field name="name">Booking Confirmed</field>
+            <field name="mode">sea</field>
+            <field name="sequence">10</field>
+            <field name="is_required" eval="True"/>
+        </record>
+
+        <record id="ms_sea_gate_in" model="eh.log.freight.milestone.type">
+            <field name="code">SEA_GATE_IN</field>
+            <field name="name">Container Gate-In at Origin Terminal</field>
+            <field name="mode">sea</field>
+            <field name="sequence">20</field>
+            <field name="is_required" eval="True"/>
+        </record>
+
+        <record id="ms_sea_loaded" model="eh.log.freight.milestone.type">
+            <field name="code">SEA_LOADED</field>
+            <field name="name">Container Loaded On Vessel</field>
+            <field name="mode">sea</field>
+            <field name="sequence">30</field>
+            <field name="is_required" eval="True"/>
+        </record>
+
+        <record id="ms_sea_sailed" model="eh.log.freight.milestone.type">
+            <field name="code">SEA_SAILED</field>
+            <field name="name">Vessel Sailed</field>
+            <field name="mode">sea</field>
+            <field name="sequence">40</field>
+            <field name="is_required" eval="True"/>
+        </record>
+
+        <record id="ms_sea_arrived" model="eh.log.freight.milestone.type">
+            <field name="code">SEA_ARRIVED</field>
+            <field name="name">Vessel Arrived at Destination Port</field>
+            <field name="mode">sea</field>
+            <field name="sequence">50</field>
+            <field name="is_required" eval="True"/>
+        </record>
+
+        <record id="ms_sea_discharged" model="eh.log.freight.milestone.type">
+            <field name="code">SEA_DISCHARGED</field>
+            <field name="name">Container Discharged</field>
+            <field name="mode">sea</field>
+            <field name="sequence">60</field>
+            <field name="is_required" eval="True"/>
+        </record>
+
+        <record id="ms_sea_gate_out" model="eh.log.freight.milestone.type">
+            <field name="code">SEA_GATE_OUT</field>
+            <field name="name">Container Gate-Out at Destination Terminal</field>
+            <field name="mode">sea</field>
+            <field name="sequence">70</field>
+            <field name="is_required" eval="True"/>
+        </record>
+
+        <!-- Air -->
+        <record id="ms_air_booked" model="eh.log.freight.milestone.type">
+            <field name="code">AIR_BOOKED</field>
+            <field name="name">Booking Confirmed (Air)</field>
+            <field name="mode">air</field>
+            <field name="sequence">10</field>
+            <field name="is_required" eval="True"/>
+        </record>
+
+        <record id="ms_air_received" model="eh.log.freight.milestone.type">
+            <field name="code">AIR_RECEIVED</field>
+            <field name="name">Cargo Received at Origin Airport</field>
+            <field name="mode">air</field>
+            <field name="sequence">20</field>
+            <field name="is_required" eval="True"/>
+        </record>
+
+        <record id="ms_air_departed" model="eh.log.freight.milestone.type">
+            <field name="code">AIR_DEPARTED</field>
+            <field name="name">Aircraft Departed</field>
+            <field name="mode">air</field>
+            <field name="sequence">30</field>
+            <field name="is_required" eval="True"/>
+        </record>
+
+        <record id="ms_air_arrived" model="eh.log.freight.milestone.type">
+            <field name="code">AIR_ARRIVED</field>
+            <field name="name">Aircraft Arrived at Destination Airport</field>
+            <field name="mode">air</field>
+            <field name="sequence">40</field>
+            <field name="is_required" eval="True"/>
+        </record>
+
+        <record id="ms_air_released" model="eh.log.freight.milestone.type">
+            <field name="code">AIR_RELEASED</field>
+            <field name="name">Cargo Released at Destination</field>
+            <field name="mode">air</field>
+            <field name="sequence">50</field>
+            <field name="is_required" eval="True"/>
+        </record>
+
+        <!-- Road -->
+        <record id="ms_road_booked" model="eh.log.freight.milestone.type">
+            <field name="code">ROAD_BOOKED</field>
+            <field name="name">Trip Confirmed</field>
+            <field name="mode">road</field>
+            <field name="sequence">10</field>
+            <field name="is_required" eval="True"/>
+        </record>
+
+        <record id="ms_road_loaded" model="eh.log.freight.milestone.type">
+            <field name="code">ROAD_LOADED</field>
+            <field name="name">Cargo Loaded</field>
+            <field name="mode">road</field>
+            <field name="sequence">20</field>
+            <field name="is_required" eval="True"/>
+        </record>
+
+        <record id="ms_road_departed" model="eh.log.freight.milestone.type">
+            <field name="code">ROAD_DEPARTED</field>
+            <field name="name">Vehicle Departed Origin</field>
+            <field name="mode">road</field>
+            <field name="sequence">30</field>
+            <field name="is_required" eval="True"/>
+        </record>
+
+        <record id="ms_road_border" model="eh.log.freight.milestone.type">
+            <field name="code">ROAD_BORDER</field>
+            <field name="name">Border Crossing</field>
+            <field name="mode">road</field>
+            <field name="sequence">40</field>
+        </record>
+
+        <record id="ms_road_arrived" model="eh.log.freight.milestone.type">
+            <field name="code">ROAD_ARRIVED</field>
+            <field name="name">Vehicle Arrived Destination</field>
+            <field name="mode">road</field>
+            <field name="sequence">50</field>
+            <field name="is_required" eval="True"/>
+        </record>
+
+        <!-- Mode-agnostic -->
+        <record id="ms_any_customs_cleared" model="eh.log.freight.milestone.type">
+            <field name="code">CUSTOMS_CLEARED</field>
+            <field name="name">Customs Cleared</field>
+            <field name="mode">any</field>
+            <field name="sequence">80</field>
+        </record>
+
+        <record id="ms_any_pod_received" model="eh.log.freight.milestone.type">
+            <field name="code">POD_RECEIVED</field>
+            <field name="name">Proof of Delivery Received</field>
+            <field name="mode">any</field>
+            <field name="sequence">90</field>
+            <field name="is_required" eval="True"/>
+            <field name="is_terminal" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

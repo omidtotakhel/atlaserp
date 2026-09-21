@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <!--
+            Universally recognised charge codes seeded at install.
+
+            These cover the codes that show up on every freight
+            forwarder's quotation regardless of country. Country and
+            mode-specific codes (Mirsal stamp duty, IATA fuel surcharge
+            of the day, etc.) are added by their respective country
+            and vertical modules.
+
+            The seed is noupdate=1 so customers can rename a description
+            without losing it on the next module upgrade. The code field
+            is the stable identifier; the name field is the customer-
+            facing label.
+        -->
+
+        <!-- Freight -->
+        <record id="charge_code_ofr" model="eh.log.charge.code">
+            <field name="code">OFR</field>
+            <field name="name">Ocean Freight</field>
+            <field name="category">freight</field>
+            <field name="mode">sea</field>
+        </record>
+
+        <record id="charge_code_afr" model="eh.log.charge.code">
+            <field name="code">AFR</field>
+            <field name="name">Air Freight</field>
+            <field name="category">freight</field>
+            <field name="mode">air</field>
+        </record>
+
+        <record id="charge_code_rfr" model="eh.log.charge.code">
+            <field name="code">RFR</field>
+            <field name="name">Road Freight</field>
+            <field name="category">freight</field>
+            <field name="mode">road</field>
+        </record>
+
+        <record id="charge_code_rlfr" model="eh.log.charge.code">
+            <field name="code">RLFR</field>
+            <field name="name">Rail Freight</field>
+            <field name="category">freight</field>
+            <field name="mode">rail</field>
+        </record>
+
+        <!-- Origin charges -->
+        <record id="charge_code_othc" model="eh.log.charge.code">
+            <field name="code">OTHC</field>
+            <field name="name">Origin Terminal Handling</field>
+            <field name="category">origin</field>
+            <field name="mode">sea</field>
+            <field name="direction">export</field>
+        </record>
+
+        <record id="charge_code_othc_air" model="eh.log.charge.code">
+            <field name="code">OTHC-AIR</field>
+            <field name="name">Origin Terminal Handling (Air)</field>
+            <field name="category">origin</field>
+            <field name="mode">air</field>
+            <field name="direction">export</field>
+        </record>
+
+        <record id="charge_code_pickup" model="eh.log.charge.code">
+            <field name="code">PCKUP</field>
+            <field name="name">Origin Pickup</field>
+            <field name="category">origin</field>
+            <field name="direction">export</field>
+        </record>
+
+        <record id="charge_code_origin_doc" model="eh.log.charge.code">
+            <field name="code">ODOC</field>
+            <field name="name">Origin Documentation</field>
+            <field name="category">documentation</field>
+            <field name="direction">export</field>
+        </record>
+
+        <!-- Destination charges -->
+        <record id="charge_code_dthc" model="eh.log.charge.code">
+            <field name="code">DTHC</field>
+            <field name="name">Destination Terminal Handling</field>
+            <field name="category">destination</field>
+            <field name="mode">sea</field>
+            <field name="direction">import</field>
+        </record>
+
+        <record id="charge_code_dthc_air" model="eh.log.charge.code">
+            <field name="code">DTHC-AIR</field>
+            <field name="name">Destination Terminal Handling (Air)</field>
+            <field name="category">destination</field>
+            <field name="mode">air</field>
+            <field name="direction">import</field>
+        </record>
+
+        <record id="charge_code_delivery" model="eh.log.charge.code">
+            <field name="code">DLVRY</field>
+            <field name="name">Destination Delivery</field>
+            <field name="category">destination</field>
+            <field name="direction">import</field>
+        </record>
+
+        <record id="charge_code_destination_doc" model="eh.log.charge.code">
+            <field name="code">DDOC</field>
+            <field name="name">Destination Documentation</field>
+            <field name="category">documentation</field>
+            <field name="direction">import</field>
+        </record>
+
+        <!-- Surcharges -->
+        <record id="charge_code_baf" model="eh.log.charge.code">
+            <field name="code">BAF</field>
+            <field name="name">Bunker Adjustment Factor</field>
+            <field name="category">surcharge</field>
+            <field name="mode">sea</field>
+        </record>
+
+        <record id="charge_code_caf" model="eh.log.charge.code">
+            <field name="code">CAF</field>
+            <field name="name">Currency Adjustment Factor</field>
+            <field name="category">surcharge</field>
+            <field name="mode">sea</field>
+        </record>
+
+        <record id="charge_code_fsc" model="eh.log.charge.code">
+            <field name="code">FSC</field>
+            <field name="name">Fuel Surcharge</field>
+            <field name="category">surcharge</field>
+        </record>
+
+        <record id="charge_code_isps" model="eh.log.charge.code">
+            <field name="code">ISPS</field>
+            <field name="name">Security Surcharge (ISPS)</field>
+            <field name="category">surcharge</field>
+            <field name="mode">sea</field>
+        </record>
+
+        <record id="charge_code_war" model="eh.log.charge.code">
+            <field name="code">WAR</field>
+            <field name="name">War Risk Surcharge</field>
+            <field name="category">surcharge</field>
+        </record>
+
+        <record id="charge_code_peak" model="eh.log.charge.code">
+            <field name="code">PSS</field>
+            <field name="name">Peak Season Surcharge</field>
+            <field name="category">surcharge</field>
+            <field name="mode">sea</field>
+        </record>
+
+        <!-- Customs -->
+        <record id="charge_code_clrnc" model="eh.log.charge.code">
+            <field name="code">CLRNC</field>
+            <field name="name">Customs Clearance Fee</field>
+            <field name="category">customs</field>
+        </record>
+
+        <record id="charge_code_duty" model="eh.log.charge.code">
+            <field name="code">DUTY</field>
+            <field name="name">Customs Duty</field>
+            <field name="category">customs</field>
+            <field name="is_disbursement" eval="True"/>
+        </record>
+
+        <record id="charge_code_vat" model="eh.log.charge.code">
+            <field name="code">VAT-IMP</field>
+            <field name="name">Import VAT</field>
+            <field name="category">customs</field>
+            <field name="is_disbursement" eval="True"/>
+        </record>
+
+        <!-- Documentation -->
+        <record id="charge_code_bl" model="eh.log.charge.code">
+            <field name="code">BL-FEE</field>
+            <field name="name">Bill of Lading Fee</field>
+            <field name="category">documentation</field>
+            <field name="mode">sea</field>
+        </record>
+
+        <record id="charge_code_awb" model="eh.log.charge.code">
+            <field name="code">AWB-FEE</field>
+            <field name="name">Air Waybill Fee</field>
+            <field name="category">documentation</field>
+            <field name="mode">air</field>
+        </record>
+
+        <!-- Inland -->
+        <record id="charge_code_haulage" model="eh.log.charge.code">
+            <field name="code">HAUL</field>
+            <field name="name">Inland Haulage</field>
+            <field name="category">inland</field>
+            <field name="mode">road</field>
+        </record>
+
+        <!-- Warehousing -->
+        <record id="charge_code_storage" model="eh.log.charge.code">
+            <field name="code">STOR</field>
+            <field name="name">Storage</field>
+            <field name="category">warehousing</field>
+        </record>
+
+        <record id="charge_code_handling" model="eh.log.charge.code">
+            <field name="code">HNDL</field>
+            <field name="name">Handling</field>
+            <field name="category">warehousing</field>
+        </record>
+
+        <!-- Insurance -->
+        <record id="charge_code_insurance" model="eh.log.charge.code">
+            <field name="code">INS</field>
+            <field name="name">Cargo Insurance</field>
+            <field name="category">insurance</field>
+        </record>
+
+    </data>
+</odoo>

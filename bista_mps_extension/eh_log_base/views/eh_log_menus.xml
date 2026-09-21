@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!--
+            Top-level Logistics menu. Vertical modules (freight,
+            customs, transport) plug their operational menus into the
+            "operations" parent below; this base ships the menu
+            structure plus the configuration entries it owns.
+        -->
+
+        <menuitem id="menu_eh_log_root"
+                  name="Logistics"
+                  sequence="48"
+                  web_icon="eh_log_base,static/description/icon.png"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+        <menuitem id="menu_eh_log_operations"
+                  name="Operations"
+                  parent="menu_eh_log_root"
+                  sequence="10"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+        <menuitem id="menu_eh_log_audit"
+                  name="Audit"
+                  parent="menu_eh_log_root"
+                  sequence="80"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+        <menuitem id="menu_eh_log_configuration"
+                  name="Configuration"
+                  parent="menu_eh_log_root"
+                  sequence="90"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+        <menuitem id="menu_eh_log_master_data"
+                  name="Master Data"
+                  parent="menu_eh_log_configuration"
+                  sequence="10"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+        <menuitem id="menu_eh_log_adapters"
+                  name="Adapters"
+                  parent="menu_eh_log_configuration"
+                  sequence="20"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+        <menuitem id="menu_eh_log_charge_codes"
+                  name="Charge Codes"
+                  parent="menu_eh_log_master_data"
+                  sequence="10"
+                  action="action_eh_log_charge_code"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+        <menuitem id="menu_eh_log_document_types"
+                  name="Document Types"
+                  parent="menu_eh_log_master_data"
+                  sequence="20"
+                  action="action_eh_log_document_type"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+        <menuitem id="menu_eh_log_adapter_profiles"
+                  name="Adapter Profiles"
+                  parent="menu_eh_log_adapters"
+                  sequence="10"
+                  action="action_eh_log_adapter_profile"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+        <menuitem id="menu_eh_log_adapter_messages"
+                  name="Adapter Messages"
+                  parent="menu_eh_log_adapters"
+                  sequence="20"
+                  action="action_eh_log_adapter_message"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+        <menuitem id="menu_eh_log_events"
+                  name="Operational Events"
+                  parent="menu_eh_log_audit"
+                  sequence="10"
+                  action="action_eh_log_event"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+    </data>
+</odoo>
