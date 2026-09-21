@@ -1,0 +1,18 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<templates xml:space="preserve">
+
+    <!--
+        Simple button template used by the MpsVendorDemandButton component.
+        This is intentionally minimal; the primary entry point is the menu item.
+    -->
+    <t t-name="mrp_mps_vendor_demand.VendorDemandButton" owl="1">
+        <button class="btn btn-secondary btn-sm o_mps_vendor_demand_btn"
+                t-on-click="openVendorDemand">
+            <i class="fa fa-truck me-1"/>
+            Vendor Demand
+        </button>
+    </t>
+
+</templates>
+```
