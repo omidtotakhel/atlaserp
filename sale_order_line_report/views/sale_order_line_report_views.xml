@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ============================================================
+         Sale Order Lines – List View (reporting, read-only style)
+    ============================================================ -->
+    <record id="view_sale_order_line_report_tree" model="ir.ui.view">
+        <field name="name">sale.order.line.report.tree</field>
+        <field name="model">sale.order.line</field>
+        <field name="arch" type="xml">
+            <tree string="Sales Order Lines"
+                  create="false"
+                  delete="false"
+                  decoration-info="invoice_status == 'to invoice'"
+                  decoration-success="invoice_status == 'invoiced'"
+                  decoration-warning="invoice_status == 'upselling'"
+                  decoration-muted="state == 'cancel'">
+
+                <field name="order_id"         string="Order"       decoration-bf="1"/>
+                <field name="order_partner_id" string="Customer"/>
+                <field name="name"             string="Description" optional="show"/>
+                <field name="salesman_id"      string="Salesperson"
+                       widget="many2one_avatar_user" optional="show"/>
+                <field name="company_id"
+                       groups="base.group_multi_company"
+                       optional="show"/>
+                <field name="state"
+                       string="Order Status"
+                       widget="badge"
+                       decoration-info="state in ('draft','sent')"
+                       decoration-success="state in ('sale','done')"
+                       optional="show"/>
+
+                <!-- Product -->
+                <field name="product_id" string="Product"/>
+                <field name="product_uom" string="UoM"
+                       groups="uom.group_uom" optional="show"/>
+
+                <!-- Quantities -->
+                <field name="product_uom_qty" string="Ordered Qty"/>
+                <field name="qty_delivered"   string="Delivered Qty"  optional="show"/>
+                <field name="qty_invoiced"    string="Invoiced Qty"   optional="show"/>
+                <field name="qty_to_invoice"  string="To Invoice Qty" optional="show"/>
+
+                <!-- Pricing -->
+                <field name="price_unit"     string="Unit Price"  optional="show"/>
+                <field name="discount"
+                       string="Disc.%"
+                       groups="product.group_discount_per_so_line"
+                       optional="show"/>
+                <field name="price_subtotal" string="Subtotal"
+                       widget="monetary"
+                       sum="Total Untaxed"/>
+                <field name="price_total"    string="Total (incl. tax)"
+                       widget="monetary"
+                       sum="Grand Total"
+                       optional="hide"/>
+
+                <!-- Invoice Status -->
+                <field name="invoice_status"
+                       string="Invoice Status"
+                       widget="badge"
+                       decoration-success="invoice_status == 'invoiced'"
+                       decoration-info="invoice_status == 'to invoice'"
+                       decoration-warning="invoice_status == 'upselling'"
+                       optional="show"/>
+
+                <!-- Hidden helper fields -->
+                <field name="currency_id"    invisible="1"/>
+                <field name="display_type"   invisible="1"/>
+                <field name="is_downpayment" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         Sale Order Lines – Pivot View
+    ============================================================ -->
+    <record id="view_sale_order_line_report_pivot" model="ir.ui.view">
+        <field name="name">sale.order.line.report.pivot</field>
+        <field name="model">sale.order.line</field>
+        <field name="arch" type="xml">
+            <pivot string="Sales Order Lines Analysis" sample="1">
+                <field name="salesman_id"     type="row"/>
+                <field name="product_id"      type="row"/>
+                <field name="state"           type="col"/>
+                <field name="price_subtotal"  type="measure"/>
+                <field name="product_uom_qty" type="measure"/>
+                <field name="qty_delivered"   type="measure"/>
+                <field name="qty_invoiced"    type="measure"/>
+                <field name="qty_to_invoice"  type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         Sale Order Lines – Graph View
+    ============================================================ -->
+    <record id="view_sale_order_line_report_graph" model="ir.ui.view">
+        <field name="name">sale.order.line.report.graph</field>
+        <field name="model">sale.order.line</field>
+        <field name="arch" type="xml">
+            <graph string="Sales Order Lines Analysis" type="bar" sample="1">
+                <field name="salesman_id"    type="row"/>
+                <field name="price_subtotal" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         Sale Order Lines – Search View
+    ============================================================ -->
+    <record id="view_sale_order_line_report_search" model="ir.ui.view">
+        <field name="name">sale.order.line.report.search</field>
+        <field name="model">sale.order.line</field>
+        <field name="arch" type="xml">
+            <search string="Search Sales Order Lines">
+
+                <!-- Quick-search fields -->
+                <field name="order_id"        string="Order"/>
+                <field name="order_partner_id" string="Customer" operator="child_of"/>
+                <field name="product_id"       string="Product"/>
+                <field name="salesman_id"      string="Salesperson"/>
+
+                <!-- Filters -->
+                <separator/>
+                <filter string="My Lines"
+                        name="my_lines"
+                        domain="[('salesman_id', '=', uid)]"
+                        help="Show only lines assigned to me"/>
+
+                <separator/>
+                <filter string="Quotations"
+                        name="quotations"
+                        domain="[('state', 'in', ('draft', 'sent'))]"/>
+                <filter string="Sales Orders"
+                        name="sales_orders"
+                        domain="[('state', 'in', ('sale', 'done'))]"/>
+                <filter string="Cancelled"
+                        name="cancelled"
+                        domain="[('state', '=', 'cancel')]"/>
+
+                <separator/>
+                <filter string="To Invoice"
+                        name="to_invoice"
+                        domain="[('qty_to_invoice', '!=', 0)]"
+                        help="Lines ready to be invoiced"/>
+                <filter string="Fully Invoiced"
+                        name="invoiced"
+                        domain="[('invoice_status', '=', 'invoiced')]"/>
+                <filter string="To Upsell"
+                        name="upselling"
+                        domain="[('invoice_status', '=', 'upselling')]"/>
+
+                <!-- Group By -->
+                <group string="Group By">
+                    <filter string="Salesperson"
+                            name="groupby_salesperson"
+                            context="{'group_by': 'salesman_id'}"/>
+                    <filter string="Customer"
+                            name="groupby_customer"
+                            context="{'group_by': 'order_partner_id'}"/>
+                    <filter string="Product"
+                            name="groupby_product"
+                            context="{'group_by': 'product_id'}"/>
+                    <filter string="Product Category"
+                            name="groupby_categ"
+                            context="{'group_by': 'product_id.categ_id'}"/>
+                    <filter string="Order"
+                            name="groupby_order"
+                            context="{'group_by': 'order_id'}"/>
+                    <filter string="Order Status"
+                            name="groupby_state"
+                            context="{'group_by': 'state'}"/>
+                    <filter string="Invoice Status"
+                            name="groupby_invoice_status"
+                            context="{'group_by': 'invoice_status'}"/>
+                    <filter string="Company"
+                            name="groupby_company"
+                            context="{'group_by': 'company_id'}"
+                            groups="base.group_multi_company"/>
+                </group>
+
+            </search>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         Action – Sales Order Lines Report
+    ============================================================ -->
+    <record id="action_sale_order_line_report" model="ir.actions.act_window">
+        <field name="name">Sales Order Lines</field>
+        <field name="res_model">sale.order.line</field>
+        <field name="view_mode">tree,pivot,graph</field>
+        <field name="search_view_id" ref="view_sale_order_line_report_search"/>
+        <field name="domain">[('display_type', '=', False), ('is_downpayment', '=', False)]</field>
+        <field name="context">{
+            'search_default_sales_orders': 1
+        }</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No sales order lines found.
+            </p>
+            <p>
+                Confirm a quotation to create sales orders and populate this
+                report with line-level detail.
+            </p>
+        </field>
+    </record>
+
+    <!-- Bind the custom list view to the action -->
+    <record id="action_sale_order_line_report_view_tree" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_sale_order_line_report_tree"/>
+        <field name="act_window_id" ref="action_sale_order_line_report"/>
+    </record>
+
+    <record id="action_sale_order_line_report_view_pivot" model="ir.actions.act_window.view">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">pivot</field>
+        <field name="view_id" ref="view_sale_order_line_report_pivot"/>
+        <field name="act_window_id" ref="action_sale_order_line_report"/>
+    </record>
+
+    <record id="action_sale_order_line_report_view_graph" model="ir.actions.act_window.view">
+        <field name="sequence" eval="3"/>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="view_sale_order_line_report_graph"/>
+        <field name="act_window_id" ref="action_sale_order_line_report"/>
+    </record>
+
+    <!-- ============================================================
+         Reporting sub-menu parent
+         The core sale module's "Reporting" menuitem (sale.menu_sale_report)
+         links directly to an action and therefore cannot be used as a parent.
+         We create a dedicated parent container and add both the standard
+         Sales Analysis and the new Sales Order Lines entries beneath it.
+    ============================================================ -->
+
+    <!-- Parent: Sales ▸ Reporting (new sub-menu container) -->
+    <menuitem
+        id="menu_sale_reporting_parent"
+        name="Reporting"
+        parent="sale.sale_menu_root"
+        groups="sales_team.group_sale_manager"
+        sequence="41"/>
+
+    <!-- Child 1: Sales Analysis (mirrors the existing top-level entry) -->
+    <menuitem
+        id="menu_sale_reporting_analysis"
+        name="Sales Analysis"
+        parent="menu_sale_reporting_parent"
+        action="sale.action_order_report_all"
+        groups="sales_team.group_sale_manager"
+        sequence="10"/>
+
+    <!-- Child 2: Sales Order Lines (new) -->
+    <menuitem
+        id="menu_sale_order_line_report"
+        name="Sales Order Lines"
+        parent="menu_sale_reporting_parent"
+        action="action_sale_order_line_report"
+        groups="sales_team.group_sale_manager"
+        sequence="20"/>
+
+</odoo>
