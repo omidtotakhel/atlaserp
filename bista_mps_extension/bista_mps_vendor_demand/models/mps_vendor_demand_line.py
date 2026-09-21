@@ -214,7 +214,7 @@ class MpsVendorDemandLine(models.Model):
         for line in self:
             line.uncovered_qty = max(
                 0.0,
-                (line.demand_qty or 0.0) - (line.po_qty_draft or 0.0)
+                (line.demand_qty or 0.0) - (line.po_qty_draft or 0.0),
             )
 
     # ------------------------------------------------------------------ #

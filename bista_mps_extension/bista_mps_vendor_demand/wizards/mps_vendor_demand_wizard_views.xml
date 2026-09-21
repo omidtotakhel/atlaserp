@@ -38,7 +38,7 @@
                         <group>
                             <field name="include_zero_demand"/>
                             <field name="only_uncovered"/>
-                            <div class="o_field_widget" attrs="{'invisible': [('line_count', '=', 0)]}">
+                            <div class="o_field_widget" invisible="line_count == 0">
                                 <field name="line_count" readonly="1"/>
                                 <span class="text-muted" style="font-size:9pt; margin-left:4pt;">
                                     lines generated
@@ -51,19 +51,19 @@
 
                 <footer>
                     <button name="action_generate"
-                            string="&#8635; Generate"
+                            string="⟳ Generate"
                             type="object"
                             class="btn-primary"/>
                     <button name="action_view_lines"
                             string="View Lines"
                             type="object"
                             class="btn-secondary"
-                            attrs="{'invisible': [('line_count', '=', 0)]}"/>
+                            invisible="line_count == 0"/>
                     <button name="action_print_report"
                             string="Print PDF"
                             type="object"
                             class="btn-secondary"
-                            attrs="{'invisible': [('line_count', '=', 0)]}"/>
+                            invisible="line_count == 0"/>
                     <button string="Close"
                             class="btn-secondary"
                             special="cancel"/>

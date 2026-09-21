@@ -24,109 +24,6 @@
                   decoration-success="uncovered_qty &lt;= 0 and demand_qty &gt; 0"
                   decoration-muted="demand_qty &lt;= 0">
 
-                <field name="vendor_id"              optional="show"  string="Vendor"/>
-                <field name="product_id"             optional="show"  string="Product"/>
-                <field name="vendor_product_code"    optional="show"  string="Vendor SKU"/>
-                <field name="warehouse_id"           optional="show"  string="Warehouse"/>
-                <field name="orderpoint_id"          optional="show"  string="Reorder Rule"/>
-                <field name="vendor_lead_time"       optional="show"  string="Lead (d)"/>
-                <field name="horizon_date"           optional="show"  string="Horizon"/>
-                <field name="qty_on_hand"            optional="show"  string="On Hand"         digits="[16,2]"/>
-                <field name="qty_forecast"           optional="show"  string="Forecast"         digits="[16,2]"/>
-                <field name="vendor_min_qty"         optional="show"  string="Min Qty"          digits="[16,2]"/>
-                <field name="orderpoint_qty_to_order" optional="show" string="MPS To Order"     digits="[16,2]"/>
-                <field name="demand_qty"             optional="show"  string="Demand Qty"       digits="[16,2]"/>
-                <field name="po_qty_draft"           optional="show"  string="Draft PO Qty"     digits="[16,2]"/>
-                <field name="po_qty_confirmed"       optional="show"  string="Confirmed PO Qty" digits="[16,2]"/>
-                <field name="open_po_count"          optional="show"  string="Open POs"/>
-                <field name="uncovered_qty"          optional="show"  string="Uncovered Qty"    digits="[16,2]"/>
-                <field name="vendor_price"           optional="hide"  string="Vendor Price"     digits="[16,4]"/>
-                <field name="vendor_currency_id"     optional="hide"  string="Currency"/>
-                <field name="vendor_sequence"        optional="hide"  string="Priority"/>
-                <field name="product_uom_id"         optional="hide"  string="UoM"/>
-                <field name="company_id"             optional="hide"  string="Company"/>
-
-            </tree>
-        </field>
-    </record>
-
-    <!-- ── Form view (read-only detail) ───────────────────────────── -->
-
-    <record id="view_mps_vendor_demand_line_form" model="ir.ui.view">
-        <field name="name">mps.vendor.demand.line.form</field>
-        <field name="model">mps.vendor.demand.line</field>
-        <field name="arch" type="xml">
-            <form string="MPS Vendor Demand Line" create="false" edit="false">
-                <sheet>
-                    <div class="oe_title">
-                        <h1>
-                            <field name="product_id" readonly="1"/>
-                        </h1>
-                        <h3 class="text-muted">
-                            <field name="vendor_id" readonly="1" placeholder="No vendor assigned"/>
-                        </h3>
-                    </div>
-
-                    <group string="Product &amp; Vendor" col="2">
-                        <group>
-                            <field name="product_id"          readonly="1"/>
-                            <field name="product_uom_id"      readonly="1" string="Unit of Measure"/>
-                            <field name="vendor_id"           readonly="1"/>
-                            <field name="vendor_product_name" readonly="1" string="Vendor Description"/>
-                            <field name="vendor_product_code" readonly="1" string="Vendor SKU"/>
-                            <field name="vendor_sequence"     readonly="1" string="Vendor Priority"/>
-                        </group>
-                        <group>
-                            <field name="company_id"      readonly="1"/>
-                            <field name="warehouse_id"    readonly="1"/>
-                            <field name="orderpoint_id"   readonly="1" string="Reorder Rule"/>
-                            <field name="vendor_lead_time" readonly="1" string="Lead Time (days)"/>
-                            <field name="horizon_date"    readonly="1" string="Estimated Arrival"/>
-                        </group>
-                    </group>
-
-                    <group string="Vendor Pricing" col="2">
-                        <group>
-                            <field name="vendor_min_qty"     readonly="1" string="Min Order Qty"/>
-                            <field name="vendor_price"       readonly="1" string="Unit Price"/>
-                            <field name="vendor_currency_id" readonly="1" string="Currency"/>
-                        </group>
-                    </group>
-
-                    <group string="Stock &amp; Demand" col="2">
-                        <group>
-                            <field name="qty_on_hand"              readonly="1" string="On Hand"/>
-                            <field name="qty_forecast"             readonly="1" string="Forecasted Qty"/>
-                            <field name="orderpoint_qty_to_order"  readonly="1" string="MPS To Order"/>
-                            <field name="demand
-
-===FILE: bista_mps_extension/bista_mps_vendor_demand/views/mps_vendor_demand_views.xml===
-<?xml version="1.0" encoding="UTF-8" ?>
-<odoo>
-
-    <!--
-        MPS Vendor Demand Line – List / Form / Search views
-        ====================================================
-        Opened by the wizard's "View Lines" button (domain-filtered to the
-        current session) and also accessible from the standalone menu entry
-        "Vendor Demand Lines" (shows all lines across all sessions).
-        All views are read-only; data is managed exclusively by the wizard.
-    -->
-
-    <!-- ── List (tree) view ───────────────────────────────────────── -->
-
-    <record id="view_mps_vendor_demand_line_list" model="ir.ui.view">
-        <field name="name">mps.vendor.demand.line.list</field>
-        <field name="model">mps.vendor.demand.line</field>
-        <field name="arch" type="xml">
-            <tree string="MPS Vendor Demand"
-                  create="false"
-                  edit="false"
-                  delete="false"
-                  decoration-danger="uncovered_qty &gt; 0"
-                  decoration-success="uncovered_qty &lt;= 0 and demand_qty &gt; 0"
-                  decoration-muted="demand_qty &lt;= 0">
-
                 <field name="vendor_id"               optional="show"  string="Vendor"/>
                 <field name="product_id"              optional="show"  string="Product"/>
                 <field name="vendor_product_code"     optional="show"  string="Vendor SKU"/>
@@ -134,16 +31,25 @@
                 <field name="orderpoint_id"           optional="show"  string="Reorder Rule"/>
                 <field name="vendor_lead_time"        optional="show"  string="Lead (d)"/>
                 <field name="horizon_date"            optional="show"  string="Horizon"/>
-                <field name="qty_on_hand"             optional="show"  string="On Hand"          digits="[16,2]"/>
-                <field name="qty_forecast"            optional="show"  string="Forecast"          digits="[16,2]"/>
-                <field name="vendor_min_qty"          optional="show"  string="Min Qty"           digits="[16,2]"/>
-                <field name="orderpoint_qty_to_order" optional="show"  string="MPS To Order"      digits="[16,2]"/>
-                <field name="demand_qty"              optional="show"  string="Demand Qty"        digits="[16,2]"/>
-                <field name="po_qty_draft"            optional="show"  string="Draft PO Qty"      digits="[16,2]"/>
-                <field name="po_qty_confirmed"        optional="show"  string="Confirmed PO Qty"  digits="[16,2]"/>
+                <field name="qty_on_hand"             optional="show"  string="On Hand"
+                       digits="[16,2]"/>
+                <field name="qty_forecast"            optional="show"  string="Forecast"
+                       digits="[16,2]"/>
+                <field name="vendor_min_qty"          optional="show"  string="Min Qty"
+                       digits="[16,2]"/>
+                <field name="orderpoint_qty_to_order" optional="show"  string="MPS To Order"
+                       digits="[16,2]"/>
+                <field name="demand_qty"              optional="show"  string="Demand Qty"
+                       digits="[16,2]"/>
+                <field name="po_qty_draft"            optional="show"  string="Draft PO Qty"
+                       digits="[16,2]"/>
+                <field name="po_qty_confirmed"        optional="show"  string="Confirmed PO Qty"
+                       digits="[16,2]"/>
                 <field name="open_po_count"           optional="show"  string="Open POs"/>
-                <field name="uncovered_qty"           optional="show"  string="Uncovered Qty"     digits="[16,2]"/>
-                <field name="vendor_price"            optional="hide"  string="Vendor Price"      digits="[16,4]"/>
+                <field name="uncovered_qty"           optional="show"  string="Uncovered Qty"
+                       digits="[16,2]"/>
+                <field name="vendor_price"            optional="hide"  string="Vendor Price"
+                       digits="[16,4]"/>
                 <field name="vendor_currency_id"      optional="hide"  string="Currency"/>
                 <field name="vendor_sequence"         optional="hide"  string="Priority"/>
                 <field name="product_uom_id"          optional="hide"  string="UoM"/>
@@ -166,48 +72,67 @@
                             <field name="product_id" readonly="1"/>
                         </h1>
                         <h3 class="text-muted">
-                            <field name="vendor_id" readonly="1" placeholder="No vendor assigned"/>
+                            <field name="vendor_id" readonly="1"
+                                   placeholder="No vendor assigned"/>
                         </h3>
                     </div>
 
                     <group string="Product &amp; Vendor" col="2">
                         <group>
                             <field name="product_id"          readonly="1"/>
-                            <field name="product_uom_id"      readonly="1" string="Unit of Measure"/>
+                            <field name="product_uom_id"      readonly="1"
+                                   string="Unit of Measure"/>
                             <field name="vendor_id"           readonly="1"/>
-                            <field name="vendor_product_name" readonly="1" string="Vendor Description"/>
-                            <field name="vendor_product_code" readonly="1" string="Vendor SKU"/>
-                            <field name="vendor_sequence"     readonly="1" string="Vendor Priority"/>
+                            <field name="vendor_product_name" readonly="1"
+                                   string="Vendor Description"/>
+                            <field name="vendor_product_code" readonly="1"
+                                   string="Vendor SKU"/>
+                            <field name="vendor_sequence"     readonly="1"
+                                   string="Vendor Priority"/>
                         </group>
                         <group>
                             <field name="company_id"       readonly="1"/>
                             <field name="warehouse_id"     readonly="1"/>
-                            <field name="orderpoint_id"    readonly="1" string="Reorder Rule"/>
-                            <field name="vendor_lead_time" readonly="1" string="Lead Time (days)"/>
-                            <field name="horizon_date"     readonly="1" string="Estimated Arrival"/>
+                            <field name="orderpoint_id"    readonly="1"
+                                   string="Reorder Rule"/>
+                            <field name="vendor_lead_time" readonly="1"
+                                   string="Lead Time (days)"/>
+                            <field name="horizon_date"     readonly="1"
+                                   string="Estimated Arrival"/>
                         </group>
                     </group>
 
                     <group string="Vendor Pricing" col="2">
                         <group>
-                            <field name="vendor_min_qty"     readonly="1" string="Min Order Qty"/>
-                            <field name="vendor_price"       readonly="1" string="Unit Price"/>
-                            <field name="vendor_currency_id" readonly="1" string="Currency"/>
+                            <field name="vendor_min_qty"     readonly="1"
+                                   string="Min Order Qty"/>
+                            <field name="vendor_price"       readonly="1"
+                                   string="Unit Price"/>
+                            <field name="vendor_currency_id" readonly="1"
+                                   string="Currency"/>
                         </group>
                     </group>
 
                     <group string="Stock &amp; Demand" col="2">
                         <group>
-                            <field name="qty_on_hand"             readonly="1" string="On Hand"/>
-                            <field name="qty_forecast"            readonly="1" string="Forecasted Qty"/>
-                            <field name="orderpoint_qty_to_order" readonly="1" string="MPS To Order"/>
-                            <field name="demand_qty"              readonly="1" string="Effective Demand"/>
+                            <field name="qty_on_hand"             readonly="1"
+                                   string="On Hand"/>
+                            <field name="qty_forecast"            readonly="1"
+                                   string="Forecasted Qty"/>
+                            <field name="orderpoint_qty_to_order" readonly="1"
+                                   string="MPS To Order"/>
+                            <field name="demand_qty"              readonly="1"
+                                   string="Effective Demand"/>
                         </group>
                         <group>
-                            <field name="po_qty_draft"    readonly="1" string="Draft PO Qty"/>
-                            <field name="po_qty_confirmed" readonly="1" string="Confirmed PO Qty"/>
-                            <field name="open_po_count"   readonly="1" string="Open POs (draft/sent)"/>
-                            <field name="uncovered_qty"   readonly="1" string="Uncovered Qty"/>
+                            <field name="po_qty_draft"     readonly="1"
+                                   string="Draft PO Qty"/>
+                            <field name="po_qty_confirmed" readonly="1"
+                                   string="Confirmed PO Qty"/>
+                            <field name="open_po_count"    readonly="1"
+                                   string="Open POs (draft/sent)"/>
+                            <field name="uncovered_qty"    readonly="1"
+                                   string="Uncovered Qty"/>
                         </group>
                     </group>
 
@@ -224,11 +149,12 @@
         <field name="arch" type="xml">
             <search string="MPS Vendor Demand">
 
-                <field name="vendor_id"          string="Vendor"
+                <field name="vendor_id"
+                       string="Vendor"
                        filter_domain="[('vendor_id', 'child_of', self)]"/>
-                <field name="product_id"         string="Product"/>
-                <field name="warehouse_id"       string="Warehouse"/>
-                <field name="orderpoint_id"      string="Reorder Rule"/>
+                <field name="product_id"          string="Product"/>
+                <field name="warehouse_id"        string="Warehouse"/>
+                <field name="orderpoint_id"       string="Reorder Rule"/>
                 <field name="vendor_product_code" string="Vendor SKU"/>
 
                 <separator/>

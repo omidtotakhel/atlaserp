@@ -121,7 +121,7 @@ class MpsVendorDemandWizard(models.TransientModel):
             domain.append(('warehouse_id', 'in', self.warehouse_ids.ids))
         else:
             wh = self.env['stock.warehouse'].search([
-                ('company_id', '=', self.company_id.id)
+                ('company_id', '=', self.company_id.id),
             ])
             domain.append(('warehouse_id', 'in', wh.ids))
 
@@ -338,7 +338,7 @@ class MpsVendorDemandWizard(models.TransientModel):
                 })
 
         if vals_list:
-            self.env['mps.vendor.demand.line'].create(vals_list)
+            self.env['mps.vendor.demand.line'].sudo().create(vals_list)
 
     # ------------------------------------------------------------------ #
     # Button actions                                                       #

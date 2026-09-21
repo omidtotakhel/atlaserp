@@ -33,7 +33,7 @@
         'purchase',
         'purchase_stock',
         'stock',
-        'mrp',
+        'mrp_mps',
     ],
     'data': [
         'security/ir.model.access.csv',
