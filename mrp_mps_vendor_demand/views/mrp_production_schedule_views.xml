@@ -1,0 +1,33 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--
+        Inherit the MPS list view to add a Vendor Demand smart button.
+        The native MPS uses a custom JS client action rather than
+        a standard form/list, so we also inject a stat button into
+        the form view if one exists.
+    -->
+
+    <!-- Extend the MPS form view with the Vendor Demand smart button -->
+    <record id="view_mrp_production_schedule_form_inherit" model="ir.ui.view">
+        <field name="name">mrp.production.schedule.form.vendor.demand</field>
+        <field name="model">mrp.production.schedule</field>
+        <field name="inherit_id" ref="mrp_mps.mrp_production_schedule_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button name="action_view_vendor_demand"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-truck"
+                        attrs="{'invisible': [('vendor_demand_count', '=', 0)]}">
+                    <field name="vendor_demand_count"
+                           widget="statinfo"
+                           string="Vendor Demand"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
+```

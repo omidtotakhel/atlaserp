@@ -1,0 +1,211 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ============================================================
+         Vendor Demand Analysis – List View
+    ============================================================ -->
+    <record id="view_mps_vendor_demand_list" model="ir.ui.view">
+        <field name="name">mps.vendor.demand.list</field>
+        <field name="model">mps.vendor.demand</field>
+        <field name="arch" type="xml">
+            <tree string="MPS Vendor Demand" default_order="date_start, vendor_id, product_id"
+                  decoration-warning="replenish_qty &lt; vendor_min_qty"
+                  decoration-muted="replenish_qty = 0">
+                <field name="date_start" string="Period Start"/>
+                <field name="date_stop" string="Period End"/>
+                <field name="vendor_id"/>
+                <field name="vendor_currency_id" optional="hide"/>
+                <field name="product_id"/>
+                <field name="product_tmpl_id" optional="hide"/>
+                <field name="categ_id" optional="show"/>
+                <field name="warehouse_id" optional="show"/>
+                <field name="company_id" groups="base.group_multi_company" optional="show"/>
+                <field name="uom_id" optional="show"/>
+                <field name="priority" string="Vendor Priority" optional="show"/>
+                <field name="vendor_min_qty" optional="show"/>
+                <field name="vendor_lead_time" optional="show"/>
+                <field name="vendor_price" optional="show"/>
+                <field name="replenish_qty" string="Replenish Qty" sum="Total Replenish Qty"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         Vendor Demand Analysis – Pivot View
+    ============================================================ -->
+    <record id="view_mps_vendor_demand_pivot" model="ir.ui.view">
+        <field name="name">mps.vendor.demand.pivot</field>
+        <field name="model">mps.vendor.demand</field>
+        <field name="arch" type="xml">
+            <pivot string="MPS Vendor Demand" sample="1">
+                <field name="vendor_id"  type="row"/>
+                <field name="product_id" type="row"/>
+                <field name="date_start" type="col" interval="month"/>
+                <field name="replenish_qty" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         Vendor Demand Analysis – Graph View
+    ============================================================ -->
+    <record id="view_mps_vendor_demand_graph" model="ir.ui.view">
+        <field name="name">mps.vendor.demand.graph</field>
+        <field name="model">mps.vendor.demand</field>
+        <field name="arch" type="xml">
+            <graph string="MPS Vendor Demand" type="bar" sample="1">
+                <field name="vendor_id"    type="row"/>
+                <field name="date_start"   type="col" interval="month"/>
+                <field name="replenish_qty" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         Vendor Demand Analysis – Search View
+    ============================================================ -->
+    <record id="view_mps_vendor_demand_search" model="ir.ui.view">
+        <field name="name">mps.vendor.demand.search</field>
+        <field name="model">mps.vendor.demand</field>
+        <field name="arch" type="xml">
+            <search string="Search MPS Vendor Demand">
+
+                <!-- Quick-search fields -->
+                <field name="vendor_id"   string="Vendor"/>
+                <field name="product_id"  string="Product"/>
+                <field name="categ_id"    string="Category"/>
+                <field name="warehouse_id"/>
+                <field name="company_id"  groups="base.group_multi_company"/>
+                <field name="schedule_id" string="MPS Line"/>
+
+                <!-- Filters -->
+                <separator/>
+                <filter string="This Month"
+                        name="filter_this_month"
+                        domain="[
+                            ('date_start', '&gt;=', (context_today()).strftime('%Y-%m-01')),
+                            ('date_start', '&lt;',  (context_today() + relativedelta(months=1)).strftime('%Y-%m-01'))
+                        ]"/>
+                <filter string="Next 3 Months"
+                        name="filter_next_3months"
+                        domain="[
+                            ('date_start', '&gt;=', context_today().strftime('%Y-%m-%d')),
+                            ('date_stop',  '&lt;=', (context_today() + relativedelta(months=3)).strftime('%Y-%m-%d'))
+                        ]"/>
+                <filter string="Has Replenish Qty"
+                        name="filter_has_qty"
+                        domain="[('replenish_qty', '&gt;', 0)]"/>
+                <filter string="Below Min Qty"
+                        name="filter_below_min"
+                        domain="[
+                            ('replenish_qty', '&gt;', 0),
+                            ('replenish_qty', '&lt;', ('vendor_min_qty', ))
+                        ]"/>
+
+                <!-- Group by -->
+                <separator/>
+                <group string="Group By">
+                    <filter string="Vendor"    name="groupby_vendor"    context="{'group_by': 'vendor_id'}"/>
+                    <filter string="Product"   name="groupby_product"   context="{'group_by': 'product_id'}"/>
+                    <filter string="Category"  name="groupby_categ"     context="{'group_by': 'categ_id'}"/>
+                    <filter string="Warehouse" name="groupby_warehouse"  context="{'group_by': 'warehouse_id'}"/>
+                    <filter string="Period"    name="groupby_period"     context="{'group_by': 'date_start:month'}"/>
+                    <filter string="Company"   name="groupby_company"    context="{'group_by': 'company_id'}"
+                            groups="base.group_multi_company"/>
+                </group>
+
+            </search>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         Main Action
+    ============================================================ -->
+    <record id="action_mps_vendor_demand" model="ir.actions.act_window">
+        <field name="name">MPS Vendor Demand</field>
+        <field name="res_model">mps.vendor.demand</field>
+        <field name="view_mode">pivot,graph,tree</field>
+        <field name="search_view_id" ref="view_mps_vendor_demand_search"/>
+        <field name="context">{
+            'search_default_filter_has_qty': 1,
+            'search_default_groupby_vendor': 1
+        }</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No vendor demand data found.
+            </p>
+            <p>
+                Create MPS lines with replenishment quantities for purchased
+                products, then come back here to see the demand split by vendor.
+            </p>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         Wizard View
+    ============================================================ -->
+    <record id="view_mps_vendor_demand_wizard" model="ir.ui.view">
+        <field name="name">mps.vendor.demand.wizard.form</field>
+        <field name="model">mps.vendor.demand.wizard</field>
+        <field name="arch" type="xml">
+            <form string="MPS Vendor Demand Report">
+                <group>
+                    <group string="Date Range">
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                    </group>
+                    <group string="Grouping">
+                        <field name="group_by"/>
+                    </group>
+                </group>
+                <group>
+                    <group string="Filter by Product">
+                        <field name="product_ids" widget="many2many_tags"
+                               options="{'no_create': True}"/>
+                    </group>
+                    <group string="Filter by Vendor">
+                        <field name="vendor_ids" widget="many2many_tags"
+                               options="{'no_create': True}"/>
+                    </group>
+                </group>
+                <group>
+                    <group string="Filter by Warehouse">
+                        <field name="warehouse_ids" widget="many2many_tags"
+                               options="{'no_create': True}"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_open_report" type="object"
+                            string="Open Report" class="btn-primary"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Wizard action -->
+    <record id="action_mps_vendor_demand_wizard" model="ir.actions.act_window">
+        <field name="name">MPS Vendor Demand Report</field>
+        <field name="res_model">mps.vendor.demand.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <!-- ============================================================
+         Menu Items
+    ============================================================ -->
+    <menuitem id="menu_mps_vendor_demand"
+              name="Vendor Demand"
+              parent="mrp_mps.menu_mrp_mps"
+              action="action_mps_vendor_demand"
+              sequence="20"/>
+
+    <menuitem id="menu_mps_vendor_demand_wizard"
+              name="Vendor Demand Report"
+              parent="mrp_mps.menu_mrp_mps"
+              action="action_mps_vendor_demand_wizard"
+              sequence="30"/>
+
+</odoo>
+```
